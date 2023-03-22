@@ -149,19 +149,23 @@ Claramente, $\operatorname{rg}(A)\le \min(m,n)$.
 Dadas $A,B\in \mathcal{M} _ {m\times n}(K)$,  
 
 $$
-\operatorname{rg}(A+B)=\operatorname{rg}
+\operatorname{rg}(A+B)
+=\operatorname{rg}
 \begin{pmatrix} 
-A+B \\  \hline 
+A+B \\
+\hline
 0 
 \end{pmatrix}
 \le \operatorname{rg}
 \begin{pmatrix} 
-A+B \\ \hline 
+A+B \\ 
+\hline 
 B 
 \end{pmatrix} 
 = \operatorname{rg}
 \begin{pmatrix}
-A \\ \hline 
+A \\ 
+\hline 
 B 
 \end{pmatrix}
 \le \operatorname{rg}(A)+\operatorname{rg}(B).
@@ -178,7 +182,8 @@ Una matriz de rango $r$ es siempre equivalente a una matriz de la forma
 
 $$
 \left(\begin{array}{c|c}
-I_r & 0 \\ \hline
+I_r & 0 \\ 
+\hline
 0 & 0
 \end{array}\right).
 $$
@@ -217,10 +222,14 @@ $$
 a_{m1} & \ldots & a_{mn}
 \end{pmatrix} 
 \begin{pmatrix}
-x_1\\ \vdots \\ x_n
+x_1\\ 
+\vdots \\ 
+x_n
 \end{pmatrix}=
 \begin{pmatrix}
-b_1\\ \vdots \\ b_m
+b_1\\ 
+\vdots \\ 
+b_m
 \end{pmatrix},
 $$
 
