@@ -5,7 +5,7 @@
 
 ## Matrices
 
-Sean $I=\{1,2,\dots,m\}$ y $J=\{1,2,\dots,n\}$. Una *matriz* de orden $m\times n$ sobre un cuerpo $K$ es una aplicación 
+Sean $I=\lbrace 1,2,\dots,m\rbrace$ y $J=\lbrace 1,2,\dots,n\rbrace$. Una *matriz* de orden $m\times n$ sobre un cuerpo $K$ es una aplicación 
 
 $$
  A:I\times J\to K,\ (i,j)\mapsto a_{ij}.
@@ -202,7 +202,7 @@ $$
 
 Un *sistema de ecuaciones lineales* con $n$ incógnitas sobre un cuerpo $K$ es una expresión de la forma 
 
-$$\left\{
+$$\left\lbrace
 \begin{matrix}
 a_{11}x_1+\cdots+a_{1n}x_n=b_1,\\
 \vdots \\
@@ -279,7 +279,7 @@ Dada $A=(a_{ij})\in \mathcal M_{n\times n}(K)$, definimos $|A|$, el determinante
 
 Para $n=1$, $|(a_{11})|=a_{11}$ (el determinante de una matriz de orden $1\times 1$ es su único coeficiente).
 
-Supuesto que sabemos calcular el determinante de matrices de orden $n-1$, dado $i\in\{1,\ldots,n\}$, 
+Supuesto que sabemos calcular el determinante de matrices de orden $n-1$, dado $i\in\lbrace 1,\ldots,n\rbrace$, 
 
 $$
 |A|=a_{i1}\alpha_{i1}+\dots+a_{in}\alpha_{in},
@@ -315,7 +315,7 @@ Sea $A\in \mathcal M_{n\times n}(K)$.
 1. Si se intercambian dos filas (o dos columnas) de $A$ se obtiene una nueva matriz cuyo determinante es $-|A|$. 
 1. Si multiplicamos todos los elementos de una fila (o de una columna) de $A$ por $\alpha\in K$, obtenemos una matriz con determinante $\alpha |A|$. 
 1. Si a una fila de $A$ le sumamos otra fila de $A$ multiplicada por un elemento de $K$, entonces la nueva matriz tiene el mismo determinante que $A$ (lo mismo ocurre si hacemos esta operación con columnas).
-1. Si $f$ es una de las filas de $A$ y $f=f_1+f_2$, entonces $|A| = |A_1|+|A_2|$, siendo $A_i$ la matriz resultante de cambar la fila $f$ en $A$ por $f_i$, $i\in\{1,2\}$.
+1. Si $f$ es una de las filas de $A$ y $f=f_1+f_2$, entonces $|A| = |A_1|+|A_2|$, siendo $A_i$ la matriz resultante de cambar la fila $f$ en $A$ por $f_i$, $i\in\lbrace 1,2\rbrace$.
 1. Si una de las filas de $A$ tiene todas sus entradas nulas, entonces $|A|=0$. 
 1. Si $B\in \mathcal M_{n\times n}(K)$, entonces $|A B|=|A||B|$.
 
