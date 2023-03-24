@@ -46,7 +46,7 @@ son espacios vectoriales sobre $K$.
 ## Subespacios vectoriales
 
 Un subconjunto $U$ no vacío de un espacio vectorial $V$ (sobre un cuerpo $K$) es un *subespacio vectorial* de $V$ si
-1. si $\mathbf{u},\mathbf{v}\in U$, entonces $\mathbf{u}-\mathbf{v}\in U$ ($U$ es un subgrupo del grupo $(V,+)$ ),
+1. si $\mathbf{u},\mathbf{v}\in U$, entonces $\mathbf{u}-\mathbf{v}\in U$ ($U$ es un subgrupo del grupo $\left(V,+\right)$ ),
 2. si $a\in K$ y $\mathbf{u}\in U$, entonces $a\mathbf{u}\in U$.
 
 Estas dos propiedades se pueden substituir por
@@ -136,9 +136,9 @@ Queremos ver qué relación hay entre las coordenadas de $\mathbf{x}$ respecto d
 
 $$
 \begin{matrix}
-\mathbf{v}_1& = &a_{11}\mathbf{v}_1'+\cdots +a_{n1}\mathbf{v}_n',\\
+\mathbf{v} _1& = &a _{11}\mathbf{v} _1'+\cdots +a _{n1}\mathbf{v} _n',\\
 &\vdots& \\
-\mathbf{v}_n&=&a_{1n}\mathbf{v}_1'+\cdots+ a_{nn}\mathbf{v}_n'.
+\mathbf{v} _n&=&a _{1n}\mathbf{v} _1'+\cdots+ a _{nn}\mathbf{v} _n'.
 \end{matrix}
 $$
 
