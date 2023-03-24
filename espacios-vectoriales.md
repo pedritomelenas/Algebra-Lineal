@@ -46,7 +46,7 @@ son espacios vectoriales sobre $K$.
 ## Subespacios vectoriales
 
 Un subconjunto $U$ no vacío de un espacio vectorial $V$ (sobre un cuerpo $K$) es un *subespacio vectorial* de $V$ si
-1. si $\mathbf{u},\mathbf{v}\in U$, entonces $\mathbf{u}-\mathbf{v}\in U$ ($U$ es un subgrupo del grupo $\left(V,+\right)$),
+1. si $\mathbf{u},\mathbf{v}\in U$, entonces $\mathbf{u}-\mathbf{v}\in U$ ($U$ es un subgrupo del grupo $V$),
 2. si $a\in K$ y $\mathbf{u}\in U$, entonces $a\mathbf{u}\in U$.
 
 Estas dos propiedades se pueden substituir por
