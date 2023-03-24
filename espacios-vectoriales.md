@@ -26,7 +26,7 @@ Si $K$ es un cuerpo, entonces para cualesquiera enteros
 positivos $n$ y $m$,
 
 1. $K^n$,
-2. $\{a(x)\in K[x]  : {\rm gr}(a(x))\le n\}$,
+2. $\lbracea(x)\in K[x]  : {\rm gr}(a(x))\le n\rbrace$,
 3. $\mathcal{M}_{m\times n}(K)$,
 
 son espacios vectoriales sobre $K$.
@@ -54,7 +54,7 @@ Estas dos propiedades se pueden substituir por
 1. si $\mathbf{u},\mathbf{v}\in U$ y $a, b\in K$, entonces $a\mathbf{u} + b\mathbf{v}\in U$ ($U$ es cerrado para combinaciones lineales de sus elementos).
 
 ### Ejemplo
-El conjunto $\{(x,y,z)\in \mathbb{Q}^3  : x+y+z=0\}$ es un subespacio vectorial de $\mathbb{Q}^3$.
+El conjunto $\lbrace(x,y,z)\in \mathbb{Q}^3  : x+y+z=0\rbrace$ es un subespacio vectorial de $\mathbb{Q}^3$.
 
 ### Propiedad
 
@@ -63,33 +63,33 @@ Sea $V$ un espacio vectorial sobre el cuerpo $K$. Un subespacio vectorial de $V$
 Sea $S$ un subconjunto no vacío de un espacio vectorial $V$. El subespacio vectorial de $V$ *generado* por $S$ es la intersección de todos los subespacios vectoriales de $V$ que contienen a $S$. A dicho subespacio lo denotaremos por $\langle S\rangle$, y diremos que $S$ es un *sistema de generadores* de $\langle S\rangle$.
 
 ### Caracterización
-Sea $V$ un espacio vectorial sobre el cuerpo $K$. Si $S=\{\mathbf{u}_1,\ldots,\mathbf{u}_n\}$, entonces
-$$\langle S\rangle=\{a_1\mathbf{u}_1+\cdots +a_n\mathbf{u}_n  : a_1,\ldots,a_n\in K\}.$$
+Sea $V$ un espacio vectorial sobre el cuerpo $K$. Si $S=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_n\rbrace$, entonces
+$$\langle S\rangle=\lbracea_1\mathbf{u}_1+\cdots +a_n\mathbf{u}_n  : a_1,\ldots,a_n\in K\rbrace.$$
 
 ## Bases
 
-Dado un espacio vectorial $V$ sobre el cuerpo $K$, un conjunto de vectores $S\subseteq V$ es *linealmente dependiente* si existen $n$ un entero positivo, $\{\mathbf{v}_1,\dots,\mathbf{v}_n\}\subseteq S$, con $\mathbf{v}_i\neq \mathbf{v}_j$ para todo $i\neq j$, y $(a_1,\ldots,a_n)\in K^n\setminus\{(0,\dots,0)\}$ tales que $a_1\mathbf{v}_1+\dots +a_n\mathbf{v}_n=\mathbf{0}$. En caso contrario, decimos que $S$ es un conjunto de vectores
+Dado un espacio vectorial $V$ sobre el cuerpo $K$, un conjunto de vectores $S\subseteq V$ es *linealmente dependiente* si existen $n$ un entero positivo, $\lbrace\mathbf{v}_1,\dots,\mathbf{v}_n\rbrace\subseteq S$, con $\mathbf{v}_i\neq \mathbf{v}_j$ para todo $i\neq j$, y $(a_1,\ldots,a_n)\in K^n\setminus\lbrace(0,\dots,0)\rbrace$ tales que $a_1\mathbf{v}_1+\dots +a_n\mathbf{v}_n=\mathbf{0}$. En caso contrario, decimos que $S$ es un conjunto de vectores
 linealmente independientes.
 
 ### Ejemplo
 
-El conjunto $\{(1,1,0),(0,1,1),(1,0,1)\}\subset\mathbb{R}^3$ es un conjunto de vectores linealmente independientes.
+El conjunto $\lbrace(1,1,0),(0,1,1),(1,0,1)\rbrace\subset\mathbb{R}^3$ es un conjunto de vectores linealmente independientes.
 
 ### Propiedades
 
-- $S$ es un conjunto de vectores linealmente dependientes si y sólo si existe $\mathbf{v}\in S$ tal que $\mathbf{v}\in \langle S\setminus \{\mathbf{v}\}\rangle$.
+- $S$ es un conjunto de vectores linealmente dependientes si y sólo si existe $\mathbf{v}\in S$ tal que $\mathbf{v}\in \langle S\setminus \lbrace\mathbf{v}\rbrace\rangle$.
 
 - Si $\mathbf{0}\in S$, entonces $S$ es un conjunto de vectores linealmente dependientes.
 
-- Si $S$ es un conjunto de vectores linealmente dependientes, entonces para todo $\mathbf{v}\in V$, $S\cup\{\mathbf{v}\}$ también es un conjunto de vectores linealmente dependientes.
+- Si $S$ es un conjunto de vectores linealmente dependientes, entonces para todo $\mathbf{v}\in V$, $S\cup\lbrace\mathbf{v}\rbrace$ también es un conjunto de vectores linealmente dependientes.
 
-- Si $S$, con $\sharp S\geq 2$, es un conjunto de vectores linealmente    independientes, entonces para todo $v\in S$, el conjunto  $S\setminus \{\mathbf{v}\}$ también es un conjunto de vectores linealmente independientes.
+- Si $S$, con $\sharp S\geq 2$, es un conjunto de vectores linealmente    independientes, entonces para todo $v\in S$, el conjunto  $S\setminus \lbrace\mathbf{v}\rbrace$ también es un conjunto de vectores linealmente independientes.
 
 Una *base* de $V$ es un subconjunto $S$ de vectores linealmente independientes de $V$ tal que $V=\langle S\rangle$.
 
 ### Propiedad
 
-Si $B=\{\mathbf{v}_1,\ldots,\mathbf{v}_n\}$ es una base de $V$, entonces para todo vector $\mathbf{v}\in V$, existen $a_1,\ldots,a_n\in K$ únicos tales que $\mathbf{v}=a_1\mathbf{v}_1+\cdots +a_n\mathbf{v}_n$.
+Si $B=\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_n\rbrace$ es una base de $V$, entonces para todo vector $\mathbf{v}\in V$, existen $a_1,\ldots,a_n\in K$ únicos tales que $\mathbf{v}=a_1\mathbf{v}_1+\cdots +a_n\mathbf{v}_n$.
 
 A la $n$-upla $(a_1,\ldots,a_n)$ se le llama *coordenadas* del vector $\mathbf{v}$ respecto de la base $B$. Escribiremos $\mathbf{v}\equiv (a_1,\dots,a_n)_B$ para denotar que $(a_1,\dots,a_n)$ son las coordenadas de $\mathbf{v}$ respecto de $B$.
 
@@ -105,17 +105,17 @@ es decir, las coordenadas de una combinación lineal de un par de vectores son l
 
 ### Teorema de la base
 
-Todo espacio vectorial distinto de $\{\mathbf{0}\}$ tiene al menos una base. Además todas sus bases tienen el mismo cardinal.
+Todo espacio vectorial distinto de $\lbrace\mathbf{0}\rbrace$ tiene al menos una base. Además todas sus bases tienen el mismo cardinal.
 
 Al cardinal de una base de $V$ lo denotamos por $\dim(V)$, y nos referiremos a él como la *dimensión* de $V$.
 
 ### Ejemplo
 Si $K$ es un cuerpo, $\dim(K^n)=n$, $\dim(\mathcal M_{m\times n}(K))=nm$ y
-$\dim(\{a(x)\in K[x] : {\rm gr}(a(x))\le n\})=n+1$.
+$\dim(\lbracea(x)\in K[x] : {\rm gr}(a(x))\le n\rbrace)=n+1$.
 
 ### Teorema de ampliación a base
 
-Si $\dim(V)=n$ y $\{\mathbf{v}_1,\ldots,\mathbf{v}_m\}$ es un conjunto de vectores linealmente independientes de $V$, entonces $m\le n$. Además existen $\mathbf{v}_{m+1},\ldots,\mathbf{v}_n\in V$, de forma que $\{\mathbf{v}_1,\ldots,\mathbf{v}_m,\mathbf{v}_{m+1},\ldots,\mathbf{v}_n\}$ es una base de $V$.
+Si $\dim(V)=n$ y $\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_m\rbrace$ es un conjunto de vectores linealmente independientes de $V$, entonces $m\le n$. Además existen $\mathbf{v}_{m+1},\ldots,\mathbf{v}_n\in V$, de forma que $\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_m,\mathbf{v}_{m+1},\ldots,\mathbf{v}_n\rbrace$ es una base de $V$.
 
 ### Consecuencia
 
@@ -123,11 +123,11 @@ Si $\dim(V)=n$, entonces cualquier conjunto de vectores de $V$ linealmente indep
 
 ### Ejemplo
 
-Los vectores $(0,1)$, $(1,-1)$ son linealmente independientes en $\mathbb{R}^2$, y por tanto $\{(0,1),(1,-1)\}$ es una base de $\mathbb{R}^2$.
+Los vectores $(0,1)$, $(1,-1)$ son linealmente independientes en $\mathbb{R}^2$, y por tanto $\lbrace(0,1),(1,-1)\rbrace$ es una base de $\mathbb{R}^2$.
 
 ## Ecuaciones del cambio de base
 
-Sean $B=\{\mathbf{v}_1,\ldots,\mathbf{v}_n\}$ y $B'=\{\mathbf{v}_1',\ldots,\mathbf{v}_n'\}$ dos bases de $V$. Sea $\mathbf{x}\in V$. Entonces existen $x_1,\ldots,x_n,x_1',\ldots,x_n'\in K$ tales que $\mathbf{x}=x_1\mathbf{v}_1+\cdots +x_n\mathbf{v}_n$
+Sean $B=\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_n\rbrace$ y $B'=\lbrace\mathbf{v}_1',\ldots,\mathbf{v}_n'\rbrace$ dos bases de $V$. Sea $\mathbf{x}\in V$. Entonces existen $x_1,\ldots,x_n,x_1',\ldots,x_n'\in K$ tales que $\mathbf{x}=x_1\mathbf{v}_1+\cdots +x_n\mathbf{v}_n$
 y $\mathbf{x}=x_1'\mathbf{v}_1'+\cdots +x_n'\mathbf{v}_n'$. 
 
 Queremos ver qué relación hay entre las coordenadas de $\mathbf{x}$ respecto de $B$ y de $B'$. Para ello utilizaremos las coordenadas de los vectores de $B$ respecto de $B'$. Supongamos que
@@ -142,7 +142,7 @@ $$\begin{matrix}
 & =(x_1a_{11}+\cdots+ x_n a_{1n})\mathbf{v}_1'+\cdots+ (x_1a_{nn}+\cdots+x_na_{nn})\mathbf{v}_n'= x_1'\mathbf{v}_1'+\cdots+ x_n'\mathbf{v}_n'.
 \end{matrix}$$
 Como las coordenadas son únicas,
-$$\left\{
+$$\left\lbrace
  \begin{matrix}
   x_1'= x_1a_{11}+\cdots+ x_n a_{1n},\\
   \vdots \\
@@ -168,7 +168,7 @@ se le llama *matriz de cambio de base* de $B$ a $B'$. Esta matriz es siempre reg
 
 ## Ecuaciones paramétricas de un subespacio vectorial
 
-Supongamos que $\dim(V)=n$ y que $U$ es un subespacio vectorial de $V$ de dimensión $r$. Sea $B=\{\mathbf{v}_1,\ldots,\mathbf{v}_n\}$ una base de $V$, y $B_U=\{\mathbf{u}_1,\ldots,\mathbf{u}_r\}$ una base de $U$. Supongamos que
+Supongamos que $\dim(V)=n$ y que $U$ es un subespacio vectorial de $V$ de dimensión $r$. Sea $B=\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_n\rbrace$ una base de $V$, y $B_U=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_r\rbrace$ una base de $U$. Supongamos que
 $$\begin{matrix}
 \mathbf{u}_1=a_{11}\mathbf{v}_1+\cdots +a_{1n}\mathbf{v}_n,\\
 \vdots \\
@@ -183,7 +183,7 @@ $$\begin{matrix}
 &=& (\lambda_1a_{11}+\cdots+\lambda_ra_{r1})\mathbf{v}_1+\cdots+ (\lambda_1 a_{1n}+\cdots+\lambda_r a_{rn})\mathbf{v}_n.
 \end{matrix}$$ 
 Como las coordenadas son únicas, 
-$$\left\{
+$$\left\lbrace
 \begin{matrix}
 x_1= \lambda_1 a_{11}+\cdots+ \lambda_r a_{r1},\\
 \vdots\\
@@ -194,7 +194,7 @@ Estas ecuaciones son las *ecuaciones paramétricas* de $U$ respecto de la base $
 
 ## Ecuaciones cartesianas o implícitas de un subespacio vectorial
 
-Sea $U$ un subespacio vectorial de $V$. Sea $B=\{\mathbf{v}_1,\ldots,\mathbf{v}_n\}$ una base de $V$, y $B_U=\{\mathbf{u}_1,\ldots,\mathbf{u}_r\}$ una base de $U$. Supongamos que
+Sea $U$ un subespacio vectorial de $V$. Sea $B=\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_n\rbrace$ una base de $V$, y $B_U=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_r\rbrace$ una base de $U$. Supongamos que
 $$\begin{matrix}
 \mathbf{u}_1=a_{11}\mathbf{v}_1+\cdots +a_{1n}\mathbf{v}_n,\\
 \vdots \\
@@ -202,7 +202,7 @@ $$\begin{matrix}
 \end{matrix}$$
 
 Sea $\mathbf{x}=x_1\mathbf{v}_1+\cdots+x_n\mathbf{v}_n$ un vector de $V$. Recordemos que el vector $\mathbf{x}\in U$ si y sólo si existen $\lambda_1,\ldots,\lambda r\in K$ tales que 
-$$\left\{
+$$\left\lbrace
 \begin{matrix}
 x_1= \lambda_1 a_{11}+\cdots+ \lambda_r a_{r1},\\
 \vdots\\
@@ -244,7 +244,7 @@ b_{11}x_1+\cdots+b_{1n}x_n=0\\
 \vdots \\
 b_{k1}x_1+\cdots+b_{kn}x_n=0
 \end{matrix}
-\right\},$$ 
+\right\rbrace,$$ 
 a las que llamaremos ecuaciones cartesianas de $U$ respecto de la base $B$ de $V$.
 
 ### Propiedad
@@ -253,7 +253,7 @@ Si $k$ es el número de ecuaciones cartesianas independientes que describen a $U
 
 Una forma alternativa de calcular la ecuaciones cartesianas de $U$ es considerar $x_1,\dots,x_n$ como las componentes del término independiente del sistema
 
-$$\left\{
+$$\left\lbrace
 \begin{matrix}
 \lambda_1 a_{11}+\cdots+ \lambda_r a_{r1}=x_1,\\
 \vdots\\
@@ -270,7 +270,7 @@ y transformar el sistema en otro equivalente que esté en forma escalonada. El n
 La intersección de subespacios vectoriales de $V$ es de nuevo un subespacio vectorial de $V$. Si conocemos las ecuaciones cartesianas de cada uno de los subespacios, las ecuaciones cartesianas de la intersección serán la unión de todas las ecuaciones de cada uno de los subespacios.
 
 Sean $U_1,\dots,U_n$ subespacios vectoriales de $V$. El subespacio vectorial suma de $U_1,\ldots, U_n$ es
-$$U_1+\dots+ U_n=\{\mathbf{u}_1+\dots +\mathbf{u}_n :\mathbf{u}_1\in U_1,\dots,\mathbf{u}_n\in U_n\}.$$
+$$U_1+\dots+ U_n=\lbrace\mathbf{u}_1+\dots +\mathbf{u}_n :\mathbf{u}_1\in U_1,\dots,\mathbf{u}_n\in U_n\rbrace.$$
 
 ### Propiedades
 
@@ -291,9 +291,9 @@ Sean $U$ y $W$ subespacios vectoriales del espacio vectorial $V$. Decimos que $V
 
 ### Caracterización
 Sea $V$ un espacio vectorial, y sean $U$y $W$ dos subespacios suyos. Entonces,
-$V=U\oplus W$ si, y sólo si, $V=U+W$ y $U\cap W=\{\mathbf{0}\}$.
+$V=U\oplus W$ si, y sólo si, $V=U+W$ y $U\cap W=\lbrace\mathbf{0}\rbrace$.
 
 ### Ejemplo
-Sean $U=\{(x,y)\in \mathbb{R}^2  : x+y =0\}$ y $W=\{(x,y)\in \mathbb\{R\}^2  : x-y=0\}$. Entonces $\mathbb{R}^2=U\oplus W$.
+Sean $U=\lbrace(x,y)\in \mathbb{R}^2  : x+y =0\rbrace$ y $W=\lbrace(x,y)\in \mathbb\lbraceR\rbrace^2  : x-y=0\rbrace$. Entonces $\mathbb{R}^2=U\oplus W$.
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-5.html)
