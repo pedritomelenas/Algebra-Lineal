@@ -46,7 +46,7 @@ son espacios vectoriales sobre $K$.
 ## Subespacios vectoriales
 
 Un subconjunto $U$ no vacío de un espacio vectorial $V$ (sobre un cuerpo $K$) es un *subespacio vectorial* de $V$ si
-1. si $\mathbf{u},\mathbf{v}\in U$, entonces $\mathbf{u}-\mathbf{v}\in U$ ($U$ es un subgrupo de $(V,+)$),
+1. si $\mathbf{u},\mathbf{v}\in U$, entonces $\mathbf{u}-\mathbf{v}\in U$ ($U$ es un subgrupo del grupo $(V,+)$ ),
 2. si $a\in K$ y $\mathbf{u}\in U$, entonces $a\mathbf{u}\in U$.
 
 Estas dos propiedades se pueden substituir por
@@ -133,37 +133,57 @@ Sean $B=\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_n\rbrace$ y $B'=\lbrace\mathbf{v}_
 y $\mathbf{x}=x_1'\mathbf{v}_1'+\cdots +x_n'\mathbf{v}_n'$. 
 
 Queremos ver qué relación hay entre las coordenadas de $\mathbf{x}$ respecto de $B$ y de $B'$. Para ello utilizaremos las coordenadas de los vectores de $B$ respecto de $B'$. Supongamos que
-$$\begin{matrix}
+
+$$
+\begin{matrix}
 \mathbf{v}_1& = &a_{11}\mathbf{v}_1'+\cdots +a_{n1}\mathbf{v}_n',\\
 &\vdots& \\
 \mathbf{v}_n&=&a_{1n}\mathbf{v}_1'+\cdots+ a_{nn}\mathbf{v}_n'.
-\end{matrix}$$
+\end{matrix}
+$$
+
 Entonces,
-$$\begin{matrix}
+
+$$
+\begin{matrix}
 \mathbf{x} & = x_1\mathbf{v}_1+\cdots +x_n\mathbf{v}_n = x_1(a_{11}\mathbf{v}_1'+\cdots +a_{n1}\mathbf{v}_n')+\cdots +x_n(a_{1n}\mathbf{v}_1'+\cdots+ a_{nn}\mathbf{v}_n')\\
 & =(x_1a_{11}+\cdots+ x_n a_{1n})\mathbf{v}_1'+\cdots+ (x_1a_{nn}+\cdots+x_na_{nn})\mathbf{v}_n'= x_1'\mathbf{v}_1'+\cdots+ x_n'\mathbf{v}_n'.
-\end{matrix}$$
+\end{matrix}
+$$
+
 Como las coordenadas son únicas,
-$$\left\lbrace
+
+$$
+\left\lbrace
  \begin{matrix}
   x_1'= x_1a_{11}+\cdots+ x_n a_{1n},\\
   \vdots \\
   x_n'= x_1a_{n1}+\cdots+x_na_{nn},
  \end{matrix}
- \right.$$
+ \right.
+ $$
+
 que se conocen como las *ecuaciones de cambio* de base de $B$ a $B'$. Éstas se pueden también expresar en forma matricial 
-$$\begin{pmatrix}x_1'\\ \vdots\\ x_n'\end{pmatrix} = 
+
+$$
+\begin{pmatrix}x_1'\\ \vdots\\ x_n'\end{pmatrix} = 
 \begin{pmatrix}
  a_{11} & \ldots & a_{1n}\\
  \vdots & \ddots & \vdots \\
  a_{n1} & \ldots & a_{nn}
-\end{pmatrix} \begin{pmatrix} x_1\\ \vdots \\x_n\end{pmatrix}.$$ 
+\end{pmatrix} \begin{pmatrix} x_1\\ \vdots \\x_n\end{pmatrix}.
+$$ 
+
 A la matriz 
-$$A=\begin{pmatrix}
+
+$$
+A=\begin{pmatrix}
  a_{11} & \ldots & a_{1n}\\
  \vdots & \ddots & \vdots \\
  a_{n1} & \ldots & a_{nn}
-\end{pmatrix}$$
+\end{pmatrix}
+$$
+
 se le llama *matriz de cambio de base* de $B$ a $B'$. Esta matriz es siempre regular y su inversa, $A^{-1}$ es justamente la matriz de cambio de base de $B'$ a $B$.
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-2.html)
