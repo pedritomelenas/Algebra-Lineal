@@ -96,9 +96,11 @@ A la $n$-upla $(a_1,\ldots,a_n)$ se le llama *coordenadas* del vector $\mathbf{v
 ### Observación
 
 Si $B$ es una base de un espacio vectorial $V$, y $\mathbf{u}\equiv (a_1,\dots,a_n)_B$ y $\mathbf{v}\equiv (b_1,\dots,a_n)_B$, entonces para todo $\lambda,\mu\in K$, 
+
 $$
 \lambda \mathbf{u}+\mu\mathbf{v}\equiv (\lambda a_1+\mu b_1,\dots, \lambda a_n+\mu a_n)_B, 
 $$
+
 es decir, las coordenadas de una combinación lineal de un par de vectores son la combinación lineal de las coordenadas de esos vectores. Por tanto, una vez fijamos una base $B$, trabajar en $V$ es equivalente a trabajar con las coordenadas de los vectores de $V$ y por tanto en $K^n$.
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-1.html)
@@ -115,7 +117,7 @@ $\dim(\lbrace a(x)\in K[x] : {\rm gr}(a(x))\le n\rbrace)=n+1$.
 
 ### Teorema de ampliación a base
 
-Si $\dim(V)=n$ y $\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_m\rbrace$ es un conjunto de vectores linealmente independientes de $V$, entonces $m\le n$. Además existen $\mathbf{v}_{m+1},\ldots,\mathbf{v}_n\in V$, de forma que $\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_m,\mathbf{v}_{m+1},\ldots,\mathbf{v}_n\rbrace$ es una base de $V$.
+Si $\dim(V)=n$ y $\lbrace\mathbf{v} _1,\ldots,\mathbf{v} _m\rbrace$ es un conjunto de vectores linealmente independientes de $V$, entonces $m\le n$. Además existen $\mathbf{v} _{m+1},\ldots,\mathbf{v} _n\in V$, de forma que $\lbrace\mathbf{v} _1,\ldots,\mathbf{v} _m,\mathbf{v} _{m+1},\ldots,\mathbf{v} _n\rbrace$ es una base de $V$.
 
 ### Consecuencia
 
@@ -169,48 +171,68 @@ se le llama *matriz de cambio de base* de $B$ a $B'$. Esta matriz es siempre reg
 ## Ecuaciones paramétricas de un subespacio vectorial
 
 Supongamos que $\dim(V)=n$ y que $U$ es un subespacio vectorial de $V$ de dimensión $r$. Sea $B=\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_n\rbrace$ una base de $V$, y $B_U=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_r\rbrace$ una base de $U$. Supongamos que
-$$\begin{matrix}
+
+$$
+\begin{matrix}
 \mathbf{u}_1=a_{11}\mathbf{v}_1+\cdots +a_{1n}\mathbf{v}_n,\\
 \vdots \\
 \mathbf{u}_r=a_{r1}\mathbf{v}_1+\cdots+ a_{rn}\mathbf{v}_n.
-\end{matrix}$$
+\end{matrix}
+$$
 
 Sea $\mathbf{x}=x_1\mathbf{v}_1+\cdots+x_n\mathbf{v}_n$ un vector de $V$. Veamos qué tienen que verificar las coordenadas $(x_1,\ldots,x_n)$ para que $\mathbf{x}\in U$.
 
 El vector $\mathbf{x}\in U$ si y sólo si existen $\lambda_1,\ldots,\lambda_r\in K$ tales que $\mathbf{x}= \lambda_1\mathbf{u}_1+ \cdots +\lambda_r\mathbf{u}_r$, y esto equivale a que 
-$$\begin{matrix}
+
+$$
+\begin{matrix}
 \mathbf{x}&=&\lambda_1(a_{11}\mathbf{v}_1+\cdots +a_{1n}\mathbf{v}_n)+ \cdots + \lambda_r (a_{r1}\mathbf{v}_1+\cdots+ a_{rn}\mathbf{v}_n) \\
 &=& (\lambda_1a_{11}+\cdots+\lambda_ra_{r1})\mathbf{v}_1+\cdots+ (\lambda_1 a_{1n}+\cdots+\lambda_r a_{rn})\mathbf{v}_n.
-\end{matrix}$$ 
+\end{matrix}
+$$ 
+
 Como las coordenadas son únicas, 
-$$\left\lbrace
+
+$$
+\left\lbrace
 \begin{matrix}
 x_1= \lambda_1 a_{11}+\cdots+ \lambda_r a_{r1},\\
 \vdots\\
 x_n= \lambda_1 a_{1n}+\cdots+ \lambda_r a_{rn}.
 \end{matrix}
-\right.$$ 
+\right.
+$$ 
+
 Estas ecuaciones son las *ecuaciones paramétricas* de $U$ respecto de la base $B$.
 
 ## Ecuaciones cartesianas o implícitas de un subespacio vectorial
 
 Sea $U$ un subespacio vectorial de $V$. Sea $B=\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_n\rbrace$ una base de $V$, y $B_U=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_r\rbrace$ una base de $U$. Supongamos que
-$$\begin{matrix}
+
+$$
+\begin{matrix}
 \mathbf{u}_1=a_{11}\mathbf{v}_1+\cdots +a_{1n}\mathbf{v}_n,\\
 \vdots \\
 \mathbf{u}_r=a_{r1}\mathbf{v}_1+\cdots+ a_{rn}\mathbf{v}_n.        
-\end{matrix}$$
+\end{matrix}
+$$
 
 Sea $\mathbf{x}=x_1\mathbf{v}_1+\cdots+x_n\mathbf{v}_n$ un vector de $V$. Recordemos que el vector $\mathbf{x}\in U$ si y sólo si existen $\lambda_1,\ldots,\lambda r\in K$ tales que 
-$$\left\lbrace
+
+$$
+\left\lbrace
 \begin{matrix}
 x_1= \lambda_1 a_{11}+\cdots+ \lambda_r a_{r1},\\
 \vdots\\
 x_n= \lambda_1 a_{1n}+\cdots+ \lambda_r a_{rn},
 \end{matrix}
-\right.$$ 
+\right.
+$$ 
+
 Luego $\mathbf{x}\in U$ si y sólo si el sistema con incógnitas $\lambda_1,\ldots \lambda_r$ 
-$$\begin{pmatrix}
+
+$$
+\begin{pmatrix}
 a_{11} & \ldots & a_{r1}\\
 \vdots & \ddots & \vdots\\
 a_{1n} & \ldots & a_{rn}
@@ -224,27 +246,37 @@ a_{1n} & \ldots & a_{rn}
 x_1 \\
 \vdots\\
 x_n
-\end{pmatrix}$$ 
+\end{pmatrix}
+$$
+
 tiene solución. Y sabemos que esto equivale a que
-$${\rm rango} \begin{pmatrix}
+
+$$
+\operatorname{rg}\begin{pmatrix}
 a_{11} & \ldots & a_{r1}\\
 \vdots & \ddots & \vdots\\
 a_{1n} & \ldots & a_{rn}
-\end{pmatrix} = {\rm rango} \begin{pmatrix}
+\end{pmatrix} = 
+\operatorname{rg}\begin{pmatrix}
 a_{11} & \ldots & a_{r1} & x_1\\
 \vdots & \ddots & & \vdots\\
 a_{1n} & \ldots & a_{rn} & x_n
-\end{pmatrix}.$$ 
+\end{pmatrix}.
+$$ 
 
 Esto ocurre cuando unos cuantos determinantes valen
 cero, proporcionándonos así una sistema de ecuaciones de la forma
-$$\left.
+
+$$
+\left.
 \begin{matrix}
 b_{11}x_1+\cdots+b_{1n}x_n=0\\
 \vdots \\
 b_{k1}x_1+\cdots+b_{kn}x_n=0
 \end{matrix}
-\right\rbrace,$$ 
+\right\rbrace,
+$$ 
+
 a las que llamaremos ecuaciones cartesianas de $U$ respecto de la base $B$ de $V$.
 
 ### Propiedad
@@ -253,13 +285,15 @@ Si $k$ es el número de ecuaciones cartesianas independientes que describen a $U
 
 Una forma alternativa de calcular la ecuaciones cartesianas de $U$ es considerar $x_1,\dots,x_n$ como las componentes del término independiente del sistema
 
-$$\left\lbrace
+$$
+\left\lbrace
 \begin{matrix}
 \lambda_1 a_{11}+\cdots+ \lambda_r a_{r1}=x_1,\\
 \vdots\\
 \lambda_1 a_{1n}+\cdots+ \lambda_r a_{rn}=x_n,
 \end{matrix}
-\right.$$ 
+\right.
+$$ 
 
 y transformar el sistema en otro equivalente que esté en forma escalonada. El número de ecuaciones en las que no aparecerán $\lambda_1,\dots,\lambda_r$ será la dimensión de $U$, mientras que el resto serán ecuaciones de la forma $0$ igual a una expresión lineal en $x_1,\dots,x_n$, que son las que imponen que el sistema original sea compatible, y por tanto las ecuaciones de $U$.
 
@@ -281,6 +315,7 @@ $$U_1+\dots+ U_n=\lbrace\mathbf{u}_1+\dots +\mathbf{u}_n :\mathbf{u}_1\in U_1,\d
 ## Resultado
 
 Sean $U$ y $W$ dos subespacios del espacio vectorial $V$. Entonces 
+
 $$
 \dim(U\cap W)+\dim(U+W)=\dim(U)+\dim(W).
 $$
