@@ -26,7 +26,7 @@ Si $K$ es un cuerpo, entonces para cualesquiera enteros
 positivos $n$ y $m$,
 
 1. $K^n$,
-2. $\lbracea(x)\in K[x]  : {\rm gr}(a(x))\le n\rbrace$,
+2. $\lbrace a(x)\in K[x]  : {\rm gr}(a(x))\le n\rbrace$,
 3. $\mathcal{M}_{m\times n}(K)$,
 
 son espacios vectoriales sobre $K$.
@@ -64,7 +64,7 @@ Sea $S$ un subconjunto no vacío de un espacio vectorial $V$. El subespacio vect
 
 ### Caracterización
 Sea $V$ un espacio vectorial sobre el cuerpo $K$. Si $S=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_n\rbrace$, entonces
-$$\langle S\rangle=\lbracea_1\mathbf{u}_1+\cdots +a_n\mathbf{u}_n  : a_1,\ldots,a_n\in K\rbrace.$$
+$$\langle S\rangle=\lbrace a_1\mathbf{u}_1+\cdots +a_n\mathbf{u}_n  : a_1,\ldots,a_n\in K\rbrace.$$
 
 ## Bases
 
@@ -111,7 +111,7 @@ Al cardinal de una base de $V$ lo denotamos por $\dim(V)$, y nos referiremos a �
 
 ### Ejemplo
 Si $K$ es un cuerpo, $\dim(K^n)=n$, $\dim(\mathcal M_{m\times n}(K))=nm$ y
-$\dim(\lbracea(x)\in K[x] : {\rm gr}(a(x))\le n\rbrace)=n+1$.
+$\dim(\lbrace a(x)\in K[x] : {\rm gr}(a(x))\le n\rbrace)=n+1$.
 
 ### Teorema de ampliación a base
 
@@ -294,6 +294,6 @@ Sea $V$ un espacio vectorial, y sean $U$y $W$ dos subespacios suyos. Entonces,
 $V=U\oplus W$ si, y sólo si, $V=U+W$ y $U\cap W=\lbrace\mathbf{0}\rbrace$.
 
 ### Ejemplo
-Sean $U=\lbrace(x,y)\in \mathbb{R}^2  : x+y =0\rbrace$ y $W=\lbrace(x,y)\in \mathbb\lbraceR\rbrace^2  : x-y=0\rbrace$. Entonces $\mathbb{R}^2=U\oplus W$.
+Sean $U=\lbrace(x,y)\in \mathbb{R}^2  : x+y =0\rbrace$ y $W=\lbrace(x,y)\in \mathbb\lbrace R\rbrace^2  : x-y=0\rbrace$. Entonces $\mathbb{R}^2=U\oplus W$.
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-5.html)
