@@ -121,7 +121,7 @@ Si $\dim(V)=n$ y $\lbrace\mathbf{v} _1,\ldots,\mathbf{v} _m\rbrace$ es un conjun
 
 ### Teorema de reducción a base
 
-Si $\dim(V)=n$ y $S=\{\mathbf{v} _1,\ldots,\mathbf{v} _m\}$ es un sistema de generadores de $V$, entonces $m\ge n$. Además existen $\mathbf{v} _{i_1},\ldots,\mathbf{v} _{i_n}\in S$, de forma que $\{\mathbf{v} _{i_1},\ldots,\mathbf{v} _{i_n}\}$ es una base de $V$.
+Si $\dim(V)=n$ y $S=\lbrace\mathbf{v} _1,\ldots,\mathbf{v} _m\rbrace$ es un sistema de generadores de $V$, entonces $m\ge n$. Además existen $\mathbf{v} _{i_1},\ldots,\mathbf{v} _{i_n}\in S$, de forma que $\lbrace\mathbf{v} _{i_1},\ldots,\mathbf{v} _{i_n}\rbrace$ es una base de $V$.
 
 ### Consecuencia
 
