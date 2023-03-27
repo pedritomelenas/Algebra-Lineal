@@ -164,13 +164,13 @@ $$
 \dim(\operatorname{Im}(f))=\operatorname{rg}(A)
 $$ 
 
-y 
+    y 
 
 $$
 \dim(\operatorname{N}(f))=\dim(V)-\operatorname{rg}(A).
 $$ 
 
-En particular, 
+    En particular, 
 
 $$
 \dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f))=\dim(V).
