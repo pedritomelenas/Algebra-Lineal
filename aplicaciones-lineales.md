@@ -322,7 +322,13 @@ Nos falta un vector, que lo buscamos en $\operatorname{N}(A+I)^2=\mathcal{L}(\lb
 Completamos nuestra base con $u_3=(1,0,-2,0)\in \operatorname{N}(A-I)$ y $u_3=(3,-4,0,-2)\in\operatorname{N}(A-I)$, y escribimos $P=(u_1 u_2 u_3 u_4)$ (por columnas), obteniendo
 
 $$
-P^{-1}AP=J=\left(\begin{array}{rrrr}-1 & 1 & 0 & 0\\0 & -1 & 0 & 0\\0 & 0 & 1 & 0\\0 & 0 & 0 & 1\end{array}\right).
+P^{-1}AP=J=\left(
+\begin{array}{rrrr}
+-1 & 1 & 0 & 0\\
+0 & -1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right).
 $$
 
 Así, $A=PJP^{-1}$.
