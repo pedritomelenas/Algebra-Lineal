@@ -23,11 +23,11 @@ Sea $f:V\to V'$ una aplicación lineal entre los espacios vectoriales $V$ y $V'$
 
 - $f(-\mathbf{v})=-f(\mathbf{v})$.
 
-- Sea $B=\{\mathbf{v}_1,\ldots, \mathbf{v}_n\}$ una base de  $V$, y $\{\mathbf{v}_1',\ldots, \mathbf{v}_n'\}\subseteq V'$. Entonces existe una única aplicación lineal $f:V\to V'$ verificando que $f(\mathbf{v}_1)=\mathbf{v}_1',\ldots, f(\mathbf{v}_n)=\mathbf{v}_n'$ (toda aplicación lineal queda unívocamente determinada por las imágenes de los elementos de una base).
+- Sea $B=\lbrace\mathbf{v}_1,\ldots, \mathbf{v}_n\rbrace$ una base de  $V$, y $\lbrace\mathbf{v}_1',\ldots, \mathbf{v}_n'\rbrace\subseteq V'$. Entonces existe una única aplicación lineal $f:V\to V'$ verificando que $f(\mathbf{v}_1)=\mathbf{v}_1',\ldots, f(\mathbf{v}_n)=\mathbf{v}_n'$ (toda aplicación lineal queda unívocamente determinada por las imágenes de los elementos de una base).
 
 ## Expresión matricial una aplicación lineal
 
-Sea $f:V\to V'$ una aplicación lineal, y $B=\{\mathbf{v}_1,\ldots, \mathbf{v}_n\}$ y $B'=\{\mathbf{v}_1',\ldots, \mathbf{v}_m'\}$ bases de $V$ y $V'$, respectivamente. Sean $\mathbf{x}=x_1\mathbf{v}_1+\cdots+ x_n \mathbf{v}_n$ y $f(\mathbf{x})=x_1'\mathbf{v}_1'+\cdots + x_m'\mathbf{v}_m\in V'$. Queremos estudiar la relación que existe entre las coordenadas de $\mathbf{x}$ y $f(\mathbf{x})$ en $B$ y $B'$, respectivamente.
+Sea $f:V\to V'$ una aplicación lineal, y $B=\lbrace\mathbf{v}_1,\ldots, \mathbf{v}_n\rbrace$ y $B'=\lbrace\mathbf{v}_1',\ldots, \mathbf{v}_m'\rbrace$ bases de $V$ y $V'$, respectivamente. Sean $\mathbf{x}=x_1\mathbf{v}_1+\cdots+ x_n \mathbf{v}_n$ y $f(\mathbf{x})=x_1'\mathbf{v}_1'+\cdots + x_m'\mathbf{v}_m\in V'$. Queremos estudiar la relación que existe entre las coordenadas de $\mathbf{x}$ y $f(\mathbf{x})$ en $B$ y $B'$, respectivamente.
 
 Supongamos que 
 $$
@@ -46,7 +46,7 @@ $$
 \end{aligned}
 $$ 
 Así 
-$$\left\{
+$$\left\lbrace 
  \begin{aligned}
   x_1' & =a_{11}x_1+\cdots+ a_{1n}x_n,\\
   \vdots\\
@@ -104,13 +104,13 @@ La matriz $A_1$ toma las coordenadas de un vector $v$ en $V_1$ respecto de $\bar
 
 El *núcleo* de $f$,  
 $$
-\operatorname{N}(f)=\{ \mathbf{v}\in V : f(\mathbf{v})=\mathbf{0}\},
+\operatorname{N}(f)=\lbrace  \mathbf{v}\in V : f(\mathbf{v})=\mathbf{0}\rbrace,
 $$ 
 es un subespacio vectorial de $V$.
 
 La *imagen* de $f$, 
 $$
-\operatorname{Im}(f)=\{f(\mathbf{v}) : \mathbf{v}\in V\},
+\operatorname{Im}(f)=\lbrace f(\mathbf{v}) : \mathbf{v}\in V\rbrace,
 $$ 
 es un subespacio vectorial de $V'$.
 
@@ -127,13 +127,17 @@ Una aplicación lineal es un
 
 Sea $f:V\to V'$ una aplicación lineal.
 
+- $f$ es un monomorfismo si y sólo si $\operatorname{N}(f)=\lbrace\mathbf{0}\rbrace$.
+
+- $f$ es un epimorfismo si y sólo si $\operatorname{Im}(f)=V'$.
+
+- Si $V=\mathcal{L}(\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_n\rbrace)$, entonces $\operatorname{Im}(f)=\mathcal{L}(\lbrace  f(\mathbf{v}_1),\ldots, f(\mathbf{v}_n)\rbrace)$.
+
+- Si $f$ es un monomorfismo y $\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_n\rbrace$ son linealmente  independientes, entonces $\lbrace f(\mathbf{v}_1),\ldots, f(\mathbf{v}_n)\rbrace$ también son linealmente independientes.
+
+- Si $f$ es un epimorfismo y $\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_m\rbrace$ es un sistema de generadores de $V$, entonces $\lbrace f(\mathbf{v}_1),\ldots, f(\mathbf{v}_m)\rbrace$ es un sistema de generadores de $V'$. 
+
 - Si $f$ es un isomorfismo, también lo es $f^{-1}$.
-
-- $f$ es un monomorfismo si y sólo si $\operatorname{N}(f)=\{\mathbf{0}\}$.
-
-- Si $V=\langle \{\mathbf{v}_1,\ldots,\mathbf{v}_n\}\rangle$, entonces $\operatorname{Im}(f)=\langle \{ f(\mathbf{v}_1),\ldots, f(\mathbf{v}_n)\}\rangle$.
-
-- Si $f$ es un monomorfismo y $\{\mathbf{v}_1,\ldots,\mathbf{v}_n\}$ son linealmente  independientes, entonces $\{f(\mathbf{v}_1),\ldots, f(\mathbf{v}_n)\}$ también son linealmente independientes.
 
 - Si $A$ es la matriz asociada a $f$ respecto de unas bases $B$ y $B'$ de $V$ y $V'$, respectivamente, entonces 
     $$
@@ -146,10 +150,9 @@ Sea $f:V\to V'$ una aplicación lineal.
     \dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f))=\dim(V).
     $$
 
-## Propiedad
-Sean $V$ y $V'$ dos espacios vectoriales sobre un cuerpo $K$. Sea $B=\{\mathbf{v}_1,\ldots, \mathbf{v}_n\}$ una base de $V$. Entonces, $\{f(\mathbf{v}_1),\dots, f(\mathbf{v}_n)\}$ es una base de $V'$ si y sólo si $f$ es un isomorfismo. Esto equivale a que $\mathcal{M}(f;B,B')$ es regular.
+- Si $B=\lbrace\mathbf{v}_1,\ldots, \mathbf{v}_n\rbrace$ una base de $V$, entonces, $\lbrace f(\mathbf{v}_1),\dots, f(\mathbf{v}_n)\rbrace$ es una base de $V'$ si y sólo si $f$ es un isomorfismo. Esto equivale a que $\mathcal{M}(f;B,B')$ es regular.
 
-Los espacios vectoriales $V$ y $V'$ diremos que son isomorfos si existe un isomorfismo $f:V\to V'$.
+Los espacios vectoriales $V$ y $V'$ diremos que son isomorfos si existe un isomorfismo $f:V\to V'$, y lo denotaremos por $V\cong V'$.
 
 ## Consecuencia
 Los espacios $V$ y $V'$ son isomorfos si y sólo si $\dim(V)=\dim(V')$.
@@ -162,8 +165,8 @@ Sea $U$ un subespacio vectorial de $V$. Definimos en $V$ la siguiente relación 
 
 - El conjunto $\frac{V}U$ es un espacio vectorial con las operaciones $[\mathbf{x}]+[\mathbf{y}]=[\mathbf{x}+\mathbf{y}]$ y $k[\mathbf{x}]=[k\mathbf{x}]$. A dicho espacio vectorial se le conoce como espacio vectorial cociente de $V$ sobre $U$.
 
-- Si $\{\mathbf{u}_1,\ldots,\mathbf{u}_m\}$ es una base
-de $U$ y la ampliamos a una base de $V$, $\{\mathbf{u}_1,\ldots, \mathbf{u}_m,\mathbf{u}_{m+1},\ldots,\mathbf{u}_n\}$, entonces $\{[\mathbf{u}_{m+1}],\ldots, [\mathbf{u}_n]\}$ es una base de $\frac{V}U$. Así
+- Si $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ es una base
+de $U$ y la ampliamos a una base de $V$, $\lbrace\mathbf{u}_1,\ldots, \mathbf{u}_m,\mathbf{u}_{m+1},\ldots,\mathbf{u}_n\rbrace$, entonces $\lbrace [\mathbf{u}_{m+1}],\ldots, [\mathbf{u}_n]\rbrace$ es una base de $\frac{V}U$. Así
     $$\dim\left(\frac{V}U\right) = \dim(V)-\dim(U).$$
 
 ### Primer teorema de isomorfía 
@@ -194,7 +197,7 @@ $$
 
 En adelante, $A$ representará una matriz cuadrada de orden $n\times n$ sobre un cuerpo $K$.
 
-Un elemento $\lambda\in K$ es un *valor propio* de $A$ si existe $\mathbf{v}\in K^n\setminus\{(0,\ldots,0)\}$ tal que $A\mathbf{v}=\lambda \mathbf{x}$. En tal caso diremos que $\mathbf{v}$ es un *vector propio* asociado al valor propio $\lambda$.
+Un elemento $\lambda\in K$ es un *valor propio* de $A$ si existe $\mathbf{v}\in K^n\setminus\lbrace (0,\ldots,0)\rbrace$ tal que $A\mathbf{v}=\lambda \mathbf{x}$. En tal caso diremos que $\mathbf{v}$ es un *vector propio* asociado al valor propio $\lambda$.
 
 ### Teorema de caracterización de los valores propios 
 
@@ -219,7 +222,7 @@ $\operatorname{gr}(p_A(\lambda)=n$.
 
 Si $\lambda$ es un valor propio de $A$, entonces
 $$
-V(\lambda)=\{ \mathbf{x}\in K^n \: (A-\lambda I_n)\mathbf{x}=\mathbf{0}\},
+V(\lambda)=\lbrace  \mathbf{x}\in K^n \: (A-\lambda I_n)\mathbf{x}=\mathbf{0}\rbrace,
 $$ 
 (en este caso $\mathbf{0}=(0,\ldots,0)\in K^n$) es un subespacio vectorial de $K^n$. Dicho subespacio lo llamamos *subespacio vectorial propio* asociado al valor propio $\lambda$.
 
@@ -274,9 +277,9 @@ $$
 
 Su polinomio característico es $p_A(x)= x^{4} - 2 x^{2} + 1$, cuyas raíces son $1$ y $-1$ con multiplicidad $2$.
 
-Por un lado $V(1)=\operatorname{N}(A-I)=\mathcal{L}(\{(1,0,-2,0),(3,-4,0,-2)\})$ y $V(-1)=\operatorname{N}(A+I)=\mathcal{L}(\{(0,0,1,-1)\})$. Por tanto $A$ no es diagonalizable, pues la multiplicidad algebraica de $-1$ es $2$, mientras que la geométrica es $1$. 
+Por un lado $V(1)=\operatorname{N}(A-I)=\mathcal{L}(\lbrace (1,0,-2,0),(3,-4,0,-2)\rbrace)$ y $V(-1)=\operatorname{N}(A+I)=\mathcal{L}(\lbrace (0,0,1,-1)\rbrace)$. Por tanto $A$ no es diagonalizable, pues la multiplicidad algebraica de $-1$ es $2$, mientras que la geométrica es $1$. 
 
-Nos falta un vector, que lo buscamos en $\operatorname{N}(A+I)^2=\mathcal{L}(\{(0,0,1,0),(0,0,0,1)\})$. Tenemos pues que $(A+I)^2(0,0,0,1)^t=(0,0,0,0)$, por lo que $(A+I)(0,0,0,1)^t\in \operatorname{N}(A+I)$. Si tomamos $u_2=(0,0,0,1)\not\in \operatorname{N}(A+I)$ y $u_1=(A+I)u_2=(0,0,1,-1)\in \operatorname{N}(A+I)$, tenemos que $A u_1=-u_1$ y $A u_2=u_1-u_2$. 
+Nos falta un vector, que lo buscamos en $\operatorname{N}(A+I)^2=\mathcal{L}(\lbrace (0,0,1,0),(0,0,0,1)\rbrace)$. Tenemos pues que $(A+I)^2(0,0,0,1)^t=(0,0,0,0)$, por lo que $(A+I)(0,0,0,1)^t\in \operatorname{N}(A+I)$. Si tomamos $u_2=(0,0,0,1)\not\in \operatorname{N}(A+I)$ y $u_1=(A+I)u_2=(0,0,1,-1)\in \operatorname{N}(A+I)$, tenemos que $A u_1=-u_1$ y $A u_2=u_1-u_2$. 
 
 Completamos nuestra base con $u_3=(1,0,-2,0)\in \operatorname{N}(A-I)$ y $u_3=(3,-4,0,-2)\in\operatorname{N}(A-I)$, y escribimos $P=(u_1 u_2 u_3 u_4)$ (por columnas), obteniendo
 $$
