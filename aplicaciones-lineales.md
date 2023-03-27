@@ -267,7 +267,8 @@ Nótese que si $\lambda$ es un valor propio de $A$, y si tomamos una base de $V(
 
 $$
 \left(\begin{array}{c|c}
-\lambda I_r & M \\ \hline
+\lambda I_r & M \\ 
+\hline
 0 & N
 \end{array}
 \right),
