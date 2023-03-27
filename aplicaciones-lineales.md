@@ -160,21 +160,21 @@ Sea $f:V\to V'$ una aplicación lineal.
 
 - Si $A$ es la matriz asociada a $f$ respecto de unas bases $B$ y $B'$ de $V$ y $V'$, respectivamente, entonces 
 
-    $$
-    \dim(\operatorname{Im}(f))=\operatorname{rg}(A)
-    $$ 
+$$
+\dim(\operatorname{Im}(f))=\operatorname{rg}(A)
+$$ 
 
-    y 
+y 
 
-    $$
-    \dim(\operatorname{N}(f))=\dim(V)-\operatorname{rg}(A).
-    $$ 
-    
-    En particular, 
-    
-    $$
-    \dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f))=\dim(V).
-    $$
+$$
+\dim(\operatorname{N}(f))=\dim(V)-\operatorname{rg}(A).
+$$ 
+
+En particular, 
+
+$$
+\dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f))=\dim(V).
+$$
 
 - Si $B=\lbrace\mathbf{v}_1,\ldots, \mathbf{v}_n\rbrace$ una base de $V$, entonces, $\lbrace f(\mathbf{v}_1),\dots, f(\mathbf{v}_n)\rbrace$ es una base de $V'$ si y sólo si $f$ es un isomorfismo. Esto equivale a que $\mathcal{M}(f;B,B')$ es regular.
 
