@@ -67,8 +67,9 @@ Estas ecuaciones se pueden expresar de forma matricial como
 
 $$
 \begin{pmatrix}
-x_1' \\ \vdots 
-\\x_m'
+x_1' \\ 
+\vdots \\
+x_m'
 \end{pmatrix}= 
 \begin{pmatrix}
  a_{11} & \ldots & a_{1n} \\
@@ -191,7 +192,7 @@ Sea $U$ un subespacio vectorial de $V$. Definimos en $V$ la siguiente relación 
 - El conjunto $\frac{V}U$ es un espacio vectorial con las operaciones $[\mathbf{x}]+[\mathbf{y}]=[\mathbf{x}+\mathbf{y}]$ y $k[\mathbf{x}]=[k\mathbf{x}]$. A dicho espacio vectorial se le conoce como espacio vectorial cociente de $V$ sobre $U$.
 
 - Si $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ es una base
-de $U$ y la ampliamos a una base de $V$, $\lbrace\mathbf{u}_1,\ldots, \mathbf{u}_m,\mathbf{u}_{m+1},\ldots,\mathbf{u}_n\rbrace$, entonces $\lbrace [\mathbf{u}_{m+1}],\ldots, [\mathbf{u}_n]\rbrace$ es una base de $\frac{V}U$. Así
+de $U$ y la ampliamos a una base de $V$, $\lbrace\mathbf{u}_1,\ldots, \mathbf{u} _m,\mathbf{u} _{m+1},\ldots,\mathbf{u} _n\rbrace$, entonces $\lbrace [\mathbf{u} _{m+1}],\ldots, [\mathbf{u} _n]\rbrace$ es una base de $\frac{V}U$. Así
 
     $$
     \dim\left(\frac{V}U\right) = \dim(V)-\dim(U).
