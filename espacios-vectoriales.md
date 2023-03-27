@@ -119,6 +119,10 @@ $\dim(\lbrace a(x)\in K[x] : {\rm gr}(a(x))\le n\rbrace)=n+1$.
 
 Si $\dim(V)=n$ y $\lbrace\mathbf{v} _1,\ldots,\mathbf{v} _m\rbrace$ es un conjunto de vectores linealmente independientes de $V$, entonces $m\le n$. Además existen $\mathbf{v} _{m+1},\ldots,\mathbf{v} _n\in V$, de forma que $\lbrace\mathbf{v} _1,\ldots,\mathbf{v} _m,\mathbf{v} _{m+1},\ldots,\mathbf{v} _n\rbrace$ es una base de $V$.
 
+### Teorema de reducción a base
+
+Si $\dim(V)=n$ y $S=\{\mathbf{v}_1,\ldots,\mathbf{v}_m\}$ es un sistema de generadores de $V$, entonces $m\ge n$. Además existen $\mathbf{v}_{i_1},\ldots,\mathbf{v}_{i_n}\in S$, de forma que $\{\mathbf{v}_{i_1},\ldots,\mathbf{v}_{i_n}\}$ es una base de $V$.
+
 ### Consecuencia
 
 Si $\dim(V)=n$, entonces cualquier conjunto de vectores de $V$ linealmente independientes de cardinal $n$ es una base de $V$.
