@@ -194,9 +194,9 @@ Sea $U$ un subespacio vectorial de $V$. Definimos en $V$ la siguiente relación 
 - Si $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ es una base
 de $U$ y la ampliamos a una base de $V$, $\lbrace\mathbf{u}_1,\ldots, \mathbf{u} _m,\mathbf{u} _{m+1},\ldots,\mathbf{u} _n\rbrace$, entonces $\lbrace [\mathbf{u} _{m+1}],\ldots, [\mathbf{u} _n]\rbrace$ es una base de $\frac{V}U$. Así
 
-    $$
-    \dim\left(\frac{V}U\right) = \dim(V)-\dim(U).
-    $$
+ $$
+ \dim\left(\frac{V}U\right) = \dim(V)-\dim(U).
+ $$
 
 ### Primer teorema de isomorfía 
 
