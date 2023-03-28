@@ -114,8 +114,8 @@ Los vectores $\lbrace\mathbf{u}_1,\mathbf{u}_2,\ldots,\mathbf{u}_n\rbrace$ defin
 
 $$
 \begin{aligned}
-    \mathbf{u}_1&=\mathbf{v}_1,\\[1mm]
-    \mathbf{u}_2&=\mathbf{v}_2-\dfrac{\langle \mathbf{v}_2, \mathbf{u}_1 \rangle}{\Vert \mathbf{u}_1\Vert^2} \mathbf{u}_1,\\[3mm]
+    \mathbf{u}_1&=\mathbf{v}_1,\\
+    \mathbf{u}_2&=\mathbf{v}_2-\dfrac{\langle \mathbf{v}_2, \mathbf{u}_1 \rangle}{\Vert \mathbf{u}_1\Vert^2} \mathbf{u}_1,\\
     \mathbf{u}_3&=\mathbf{v}_3-\dfrac{\langle \mathbf{v}_3, \mathbf{u}_1 \rangle}{\Vert \mathbf{u}_1\Vert^2} \mathbf{u}_1-\dfrac{\langle \mathbf{v}_3, \mathbf{u}_2 \rangle}{\Vert \mathbf{u}_2\Vert^2} \mathbf{u}_2,\\
     & \vdots\\
     \mathbf{u}_n&=\mathbf{v}_n-\dfrac{\langle \mathbf{v}_n, \mathbf{u}_1 \rangle}{\Vert \mathbf{u}_1\Vert^2}\mathbf{u}_1 - \dfrac{\langle \mathbf{v}_n, \mathbf{u}_2 \rangle}{\Vert \mathbf{u}_n\Vert^2} \mathbf{u}_2-\dots-\dfrac{\langle \mathbf{v}_n, \mathbf{u}_{n-1} \rangle}{\Vert \mathbf{u}_{n-1}\Vert^2} \mathbf{u}_{n-1},
