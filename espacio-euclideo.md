@@ -172,7 +172,7 @@ Además, $\left\lbrace (1,-4,3,0),(1,-2,0,1) \right\rbrace$ es una base de $U^\p
 
 ## Proyección ortogonal
 
-En un espacio vectorial euclídeo $(V;\langle \cdot, \cdot \rangle)$, consideremos un conjunto de vectores linealmente independientes $S=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace\subset V$. Además, sean $U=\mathcal{L}(S)$ y $\lbrace\mathbf{u}_{m+1},\ldots,\mathbf{u}_n\rbrace$ una base de $U^\perp$.
+En un espacio vectorial euclídeo $(V;\langle \cdot, \cdot \rangle)$, consideremos un conjunto de vectores linealmente independientes $S=\lbrace\mathbf{u} _1,\ldots,\mathbf{u} _m\rbrace\subset V$. Además, sean $U=\mathcal{L}(S)$ y $\lbrace\mathbf{u} _{m+1},\ldots,\mathbf{u} _n\rbrace$ una base de $U^\perp$.
 
 Si $\mathbf{v}\in V$, entonces
 
@@ -189,8 +189,7 @@ $$
 \end{aligned}
 $$
 
-Se llama *proyección ortogonal de $\mathbf{v}$ sobre $U$* al (único) vector
-$\mathbf{u}\in U$ tal que $(\mathbf{v}-\mathbf{u})\perp U$, al que denotaremos por $\mathbf{u}=p_U(\mathbf{v})$.
+Se llama *proyección ortogonal* de $\mathbf{v}$ sobre $U$ al (único) vector $\mathbf{u}\in U$ tal que $(\mathbf{v}-\mathbf{u})\perp U$, al que denotaremos por $\mathbf{u}=p_U(\mathbf{v})$.
 
 Para obtener $\mathbf{u}=p_U(\mathbf{v})$ podemos distinguir dos situaciones posibles.
 
