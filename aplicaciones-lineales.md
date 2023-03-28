@@ -200,7 +200,7 @@ de $U$ y la ampliamos a una base de $V$, $\lbrace\mathbf{u}_1,\ldots, \mathbf{u}
 
 ### Primer teorema de isomorfía 
 
-Si $f:V\to V'$ es una aplicación lineal, entonces los espacios vectoriales $\frac{V}{\operatorname{N}(f)}$ e $\operatorname{Im}(f)$ son isomorfos (el isomorfismo viene dado por $[ \mathbf{v} ]\mapsto f(v)$).
+Si $f:V\to V'$ es una aplicación lineal, entonces los espacios vectoriales $\frac{V}{\operatorname{N}(f)}$ e $\operatorname{Im}(f)$ son isomorfos; el isomorfismo viene dado por $[\mathbf{v}]\mapsto f(v)$.
 
 En particular, recuperamos así la fórmula $\dim(V)=\dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f))$.
 
