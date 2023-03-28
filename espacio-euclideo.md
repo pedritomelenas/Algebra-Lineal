@@ -199,15 +199,15 @@ Para obtener $\mathbf{u}=p_U(\mathbf{v})$ podemos distinguir dos situaciones pos
 
     $$
     \begin{aligned}
-        v = & \dfrac{\langle \mathbf{v}, \mathbf{u}_1 \rangle}{\Vert \mathbf{u}_1\Vert^2}\mathbf{u}_1+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u}_m \rangle}{\Vert \mathbf{u}_m\Vert^2}\mathbf{u}_m + \\
-        & \dfrac{\langle \mathbf{v}, \mathbf{u}_{m+1} \rangle}{\Vert \mathbf{u}_{m+1}\Vert^2}\mathbf{u}_{m+1}+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u}_n \rangle}{\Vert \mathbf{u}_n\Vert^2}\mathbf{u}_n.
+        v = & \dfrac{\langle \mathbf{v}, \mathbf{u} _1 \rangle}{\Vert \mathbf{u} _1\Vert^2}\mathbf{u} _1+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u} _m \rangle}{\Vert \mathbf{u} _m\Vert^2}\mathbf{u} _m + \\
+        & \dfrac{\langle \mathbf{v}, \mathbf{u} _{m+1} \rangle}{\Vert \mathbf{u} _{m+1}\Vert^2}\mathbf{u} _{m+1}+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u} _n \rangle}{\Vert \mathbf{u} _n\Vert^2}\mathbf{u} _n.
     \end{aligned}
     $$
 
     Por tanto, la proyección ortogonal de $\mathbf{v}$ sobre $U$ es
 
     $$
-    p_U(v)=\dfrac{\langle \mathbf{v}, \mathbf{u}_1 \rangle}{\Vert \mathbf{u}_1\Vert^2}\mathbf{u}_1+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u}_m \rangle}{\Vert \mathbf{u}_m\Vert^2}\mathbf{u}_m.
+    p_U(v)=\dfrac{\langle \mathbf{v}, \mathbf{u} _1 \rangle}{\Vert \mathbf{u} _1\Vert^2}\mathbf{u} _1+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u} _m \rangle}{\Vert \mathbf{u} _m\Vert^2}\mathbf{u} _m.
     $$
 
 - Supongamos ahora que $(V;\langle \cdot, \cdot \rangle)$ es un espacio vectorial euclídeo y que $S=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ es una base (no necesariamente ortogonal) de un subespacio vectorial $U$ de $V$.
