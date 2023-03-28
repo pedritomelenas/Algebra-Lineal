@@ -172,7 +172,9 @@ Además, $\left\lbrace (1,-4,3,0),(1,-2,0,1) \right\rbrace$ es una base de $U^\p
 
 ## Proyección ortogonal
 
-En un espacio vectorial euclídeo $(V;\langle \cdot, \cdot \rangle)$, consideremos un conjunto de vectores linealmente independientes $S=\lbrace\mathbf{u} _1,\ldots,\mathbf{u} _m\rbrace\subset V$. Además, sean $U=\mathcal{L}(S)$ y $\lbrace\mathbf{u} _{m+1},\ldots,\mathbf{u} _n\rbrace$ una base de $U^\perp$.
+En un espacio vectorial euclídeo $(V;\langle \cdot, \cdot \rangle)$, consideremos un conjunto de vectores linealmente independientes 
+$S=\lbrace\mathbf{u} _1,\ldots,\mathbf{u} _m \rbrace \subset V$. Además, sean $U=\mathcal{L}(S)$ y 
+$\lbrace\mathbf{u} _{m+1},\ldots,\mathbf{u} _n \rbrace$ una base de $U^\perp$.
 
 Si $\mathbf{v}\in V$, entonces
 
