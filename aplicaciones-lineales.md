@@ -228,7 +228,7 @@ $$
 
 En adelante, $A$ representará una matriz cuadrada de orden $n\times n$ sobre un cuerpo $K$.
 
-Un elemento $\lambda\in K$ es un *valor propio* de $A$ si existe $\mathbf{v}\in K^n\setminus\lbrace (0,\ldots,0)\rbrace$ tal que $A\mathbf{v}=\lambda \mathbf{x}$. En tal caso diremos que $\mathbf{v}$ es un *vector propio* asociado al valor propio $\lambda$.
+Un elemento $\lambda\in K$ es un *valor propio* de $A$ si existe $\mathbf{v}\in K^n\setminus\lbrace (0,\ldots,0)\rbrace$ tal que $A\mathbf{v}=\lambda \mathbf{v}$. En tal caso diremos que $\mathbf{v}$ es un *vector propio* asociado al valor propio $\lambda$.
 
 ### Teorema de caracterización de los valores propios 
 
