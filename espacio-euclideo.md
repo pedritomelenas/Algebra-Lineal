@@ -195,7 +195,7 @@ Se llama *proyección ortogonal* de $\mathbf{v}$ sobre $U$ al (único) vector $\
 
 Para obtener $\mathbf{u}=p_U(\mathbf{v})$ podemos distinguir dos situaciones posibles.
 
-- Consideramos $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_n\rbrace$ base ortogonal de $(V;\langle \cdot, \cdot \rangle)$ tal que $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ es base de $U$ y $\lbrace\mathbf{u}_{m+1},\ldots,\mathbf{u}_n\rbrace$ es base de $U^\perp$.
+- Consideramos $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_n\rbrace$ base ortogonal de $(V;\langle \cdot, \cdot \rangle)$ tal que $\lbrace\mathbf{u} _1,\ldots,\mathbf{u} _m\rbrace$ es base de $U$ y $\lbrace\mathbf{u} _{m+1},\ldots,\mathbf{u} _n\rbrace$ es base de $U^\perp$.
 
     Si $\mathbf{v}\in V$, entonces 
 
