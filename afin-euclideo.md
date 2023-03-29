@@ -104,8 +104,7 @@ $$
 que se denota por $\mathcal{L}=P+W$.
 
 ### Ejemplo
-En el espacio afín tridimensional usual, calculemos la
-variedad afín $\mathcal{L}$ que pasa por el punto $P=(1,-1,1)$ con subespacio asociado
+En el espacio afín tridimensional usual, calculemos la variedad afín $\mathcal{L}$ que pasa por el punto $P=(1,-1,1)$ con subespacio asociado
 
 $$
 W=\left\lbrace (w_{1},w_{2},w_{3})\in\mathbb{R}^{3}\mid w_{3}=w_{1}+w_{2} \right\rbrace.
@@ -300,7 +299,7 @@ Si aplicamos eliminación por filas, obtendremos $n-r$ ecuaciones (no homogénea
 
 ### Ejemplo
 
-En el espacio afín usual tridimensional se considera un sistema de referencia $\mathcal{R}=\lbrace O;B=\lbrace\mathbf{e} _{1},\mathbf{e} _{2},\mathbf{e} _{3}\rbrace\rbrace$, el punto $P$ con coordenadas en $(1,-2,1)_\mathcal{R}$ y el susbepacio vectorial $W$ generado por los vectores $\mathbf{u} _{1}$ y $\mathbf{u} _{2}$, siendo $(1,2,-1)$ y $(2,1,1)$ las coordenadas de $\mathbf{u} _{1}$ y $\mathbf{u} _{2}$ en la base $B$, respectivamente.
+En el espacio afín usual tridimensional se considera un sistema de referencia $\mathcal{R}=\lbrace O;B=\lbrace \mathbf{e} _{1},\mathbf{e} _{2},\mathbf{e} _{3} \rbrace \rbrace$, el punto $P$ con coordenadas en $(1,-2,1) _\mathcal{R}$ y el susbepacio vectorial $W$ generado por los vectores $\mathbf{u} _{1}$ y $\mathbf{u} _{2}$, siendo $(1,2,-1)$ y $(2,1,1)$ las coordenadas de $\mathbf{u} _{1}$ y $\mathbf{u} _{2}$ en la base $B$, respectivamente.
 
 Las ecuaciones paramétricas de la variedad afín que pasa por $P$ con dirección $W$ son
 
