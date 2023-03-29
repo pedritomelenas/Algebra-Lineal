@@ -290,7 +290,7 @@ $$
 \begin{aligned}
     \omega_{11}\lambda_{1}+\omega_{12}\lambda_{2}+\cdots+\omega_{1r}\lambda_{r} & = x_{1} - p_{1},\\
     \omega_{21}\lambda_{1}+\omega_{22}\lambda_{2}+\cdots+\omega_{2r}\lambda_{r} & = x_{2} - p_{2}, \\
-    & \;\; \vdots \\
+    & \vdots \\
     \omega_{n1}\lambda_{1}+\omega_{n2}\lambda_{2}+\cdots+\omega_{nr}\lambda_{r} & = x_{n} -p_{n}.
 \end{aligned} 
 \right.
@@ -300,8 +300,7 @@ Si aplicamos eliminación por filas, obtendremos $n-r$ ecuaciones (no homogénea
 
 ### Ejemplo
 
-En el espacio afín usual tridimensional se considera un sistema de referencia $\mathcal{R}=\lbrace O;B=\lbrace\mathbf{e}_{1},\mathbf{e}_{2},\mathbf{e}_{3}\rbrace\rbrace$, el punto $P$ con coordenadas en $(1,-2,1)_\mathcal{R}$ y el susbepacio vectorial $W$ generado por los vectores $\mathbf{u}_{1}$ y $\mathbf{u}_{2}$, siendo
-$(1,2,-1)$ y $(2,1,1)$ las coordenadas de $\mathbf{u}_{1}$ y $\mathbf{u}_{2}$ en la base $B$, respectivamente.
+En el espacio afín usual tridimensional se considera un sistema de referencia $\mathcal{R}=\lbrace O;B=\lbrace\mathbf{e} _{1},\mathbf{e} _{2},\mathbf{e} _{3}\rbrace\rbrace$, el punto $P$ con coordenadas en $(1,-2,1)_\mathcal{R}$ y el susbepacio vectorial $W$ generado por los vectores $\mathbf{u} _{1}$ y $\mathbf{u} _{2}$, siendo $(1,2,-1)$ y $(2,1,1)$ las coordenadas de $\mathbf{u} _{1}$ y $\mathbf{u} _{2}$ en la base $B$, respectivamente.
 
 Las ecuaciones paramétricas de la variedad afín que pasa por $P$ con dirección $W$ son
 
@@ -542,7 +541,7 @@ Dadas dos variedades afines $\mathcal{L}_{1}=P_{1}+W_{1}$ y
 $\mathcal{L}_{2}=P_{2}+W_{2}$, se define la distancia entre ambas como
 
 $$
-\operatorname{d}(\mathcal{L}_{1},\mathcal{L}_{2}) = \inf\lbrace\operatorname{d}(Q_{1},Q_{2}) : Q_{1}\in\mathcal{L}_{1}\;\text{ y }\;Q_{2}\in\mathcal{L}_{2}\rbrace.
+\operatorname{d}(\mathcal{L}_{1},\mathcal{L}_{2}) = \inf\lbrace\operatorname{d}(Q_{1},Q_{2}) : Q_{1}\in\mathcal{L}_{1} \text{ y } Q_{2}\in\mathcal{L}_{2}\rbrace.
 $$
 
 Si dos variedades se cortan entonces la distancia entre ellas es cero.
