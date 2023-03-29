@@ -195,7 +195,7 @@ Se llama *proyección ortogonal* de $\mathbf{v}$ sobre $U$ al (único) vector $\
 
 Para obtener $\mathbf{u}=p_U(\mathbf{v})$ podemos distinguir dos situaciones posibles.
 
-- Consideramos $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_n\rbrace$ base ortogonal de $(V;\langle \cdot, \cdot \rangle)$ tal que $\lbrace\mathbf{u} _1,\ldots,\mathbf{u} _m\rbrace$ es base de $U$ y $\lbrace\mathbf{u} _{m+1},\ldots,\mathbf{u} _n\rbrace$ es base de $U^\perp$.
+Consideramos $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_n\rbrace$ base ortogonal de $(V;\langle \cdot, \cdot \rangle)$ tal que $\lbrace\mathbf{u} _1,\ldots,\mathbf{u} _m\rbrace$ es base de $U$ y $\lbrace\mathbf{u} _{m+1},\ldots,\mathbf{u} _n\rbrace$ es base de $U^\perp$.
 
  Si $\mathbf{v}\in V$, entonces 
 
@@ -212,7 +212,7 @@ Para obtener $\mathbf{u}=p_U(\mathbf{v})$ podemos distinguir dos situaciones pos
  p_U(v)=\dfrac{\langle \mathbf{v}, \mathbf{u} _1 \rangle}{\Vert \mathbf{u} _1\Vert^2}\mathbf{u} _1+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u} _m \rangle}{\Vert \mathbf{u} _m\Vert^2}\mathbf{u} _m.
  $$
 
-- Supongamos ahora que $(V;\langle \cdot, \cdot \rangle)$ es un espacio vectorial euclídeo y que $S=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ es una base (no necesariamente ortogonal) de un subespacio vectorial $U$ de $V$.
+Supongamos ahora que $(V;\langle \cdot, \cdot \rangle)$ es un espacio vectorial euclídeo y que $S=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ es una base (no necesariamente ortogonal) de un subespacio vectorial $U$ de $V$.
 
  Si $\mathbf{v}\in V$ y $\mathbf{u}=p_U(\mathbb{v})$, entonces $\langle \mathbf{v}-\mathbf{u}, \mathbf{w} \rangle=0$ para todo $\mathbf{w}\in U$. Por tanto, $\langle \mathbf{v}-\mathbf{u}, \mathbf{u}_j \rangle=0$ para  todo $j=1,\ldots,m$.
 
