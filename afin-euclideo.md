@@ -81,13 +81,13 @@ En el espacio afín usual tridimensional, consideramos el sistema de referencia 
 
 Calculemos las coordenadas del punto $P=(5,4,3)$.
 
-Como $\overrightarrow{OP}=\phi(O,P) = (5,4,3) - (1,1,-1) = (4,3,4)$, tenemos que hallar las coordenadas de este vector respecto de $B$, es decir, los valores $x_{1}, x_{2}, x_{3}$ tales que
+Como $\overrightarrow{OP}=\phi(O,P) = (5,4,3) - (1,1,-1) = (4,3,4)$, tenemos que hallar las coordenadas de este vector respecto de $B$, es decir, los valores $x _{1}, x _{2}, x _{3}$ tales que
 
 $$
 (4,3,4) = x_{1}(1,1,1) + x_{2}(1,1,0) + x_{3}(1,0,0).
 $$
 
-Resolviendo el sistema, obtenemos que $P=(4,-1,1)_\mathcal{R}$
+Resolviendo el sistema, obtenemos que $P=(4,-1,1) _\mathcal{R}$
 
 
 ##  Variedades afines 
