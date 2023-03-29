@@ -58,9 +58,9 @@ Se define la *dimensión del espacio* afín $\mathfrak{A}$ como la dimensión de
 La dimensión del espacio afín del ejemplo anterior es $n$, ya que su espacio vectorial subyacente, $\mathbb{R}^{n}$, es $n$ dimensional.
 
 
-## Sistemas de referencia 
+## Sistemas de referencia
 
-Sea $\mathfrak{A}$ un espacio afín sobre $V$ de dimensión $n$. Un *sistema de referencia afín* en $\mathfrak{A}$ es un conjunto de la forma $\mathfrak{R}=\lbrace O;B\rbrace$, donde $O\in\mathfrak{A}$ (denominado *origen del sistema de referencia*) y $B=\lbrace\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{n}\rbrace$ es una base de $V$.
+Sea $\mathfrak{A}$ un espacio afín sobre $V$ de dimensión $n$. Un *sistema de referencia afín* en $\mathfrak{A}$ es un conjunto de la forma $\mathfrak{R}=\lbrace O;B\rbrace$, donde $O\in\mathfrak{A}$ (denominado *origen del sistema de referencia*) y $B=\lbrace{\mathbf{e}_{1}},{\mathbf{e}_{2}},\ldots,{\mathbf{e}_{n}}\rbrace$ es una base de $V$.
 
 Sea $P\in\mathfrak{A}$. Como $\overrightarrow{OP}\in V$, entonces existen escalares $x_{1},x_{2},\ldots,x_{n}\in\mathbb{R}$ tales que 
 
