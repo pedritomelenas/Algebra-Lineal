@@ -53,9 +53,9 @@ Es fácil comprobar que $(\mathcal{A},V,\phi)$ es un espacio afín (el llamado *
 
 ## Dimensión de un espacio afín
 
-Se define la *dimensión del espacio afín $\mathcal{A}$* como la dimensión del espacio vectorial $V$.
+Se define la *dimensión del espacio* afín $\mathcal{A}$ como la dimensión del espacio vectorial $V$.
 
-La dimensión del espacio afín del ejemplo anterior es$n$, ya que su espacio vectorial subyacente, $\mathbb{R}^{n}$, es $n$ dimensional.
+La dimensión del espacio afín del ejemplo anterior es $n$, ya que su espacio vectorial subyacente, $\mathbb{R}^{n}$, es $n$ dimensional.
 
 
 ## Sistemas de referencia 
