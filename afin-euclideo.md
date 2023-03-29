@@ -176,7 +176,7 @@ Sea $\mathcal{L}=P+W$ la variedad afín que “pasa” por el punto $P\in\mathca
 
 Sea $\mathcal{R}=\lbrace O;B\rbrace$ un sistema de referencia para $\mathcal{A}$ con $B=\lbrace\mathbf{e}_{1},\dots,\mathbf{e}_{n}\rbrace$.
 
-Supongamos que $\dim W=r$, con $1\leq r<n$, y que  $\lbrace\mathbf{u}_{1},\dots,\mathbf{u}_{r}\rbrace$ es una base de $W$.
+Supongamos que $\dim W=r$, con $1\leq r<n$, y que  $\lbrace\mathbf{u} _{1},\dots,\mathbf{u} _{r}\rbrace$ es una base de $W$.
 
 Si $X\in\mathcal{L}$, entonces existe un único vector $\mathbf{w}\in W$ tal que $X=P+\mathbf{w}$. Para dicho vector,  $\overrightarrow{PX}$ existirán escalares $\lambda_{1},\lambda_{2},\dots,\lambda_{r}$ tales que 
 
