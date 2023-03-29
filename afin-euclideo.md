@@ -174,7 +174,7 @@ Sea $(\mathcal{A},V,\phi )$ un espacio afín de dimensión $n$.
 
 Sea $\mathcal{L}=P+W$ la variedad afín que “pasa” por el punto $P\in\mathcal{A}$ con subespacio director $W$.
 
-Sea $\mathcal{R}=\lbrace O;B\rbrace$ un sistema de referencia para $\mathcal{A}$ con $B=\lbrace\mathbf{e}_{1},\dots,\mathbf{e}_{n}\rbrace$.
+Sea $\mathcal{R}=\lbrace O;B\rbrace$ un sistema de referencia para $\mathcal{A}$ con $B=\lbrace\mathbf{e} _{1},\dots,\mathbf{e} _{n}\rbrace$.
 
 Supongamos que $\dim W=r$, con $1\leq r < n$, y que  $\lbrace \mathbf{u} _{1},\dots,\mathbf{u} _{r} \rbrace$ es una base de $W$.
 
@@ -216,7 +216,7 @@ $$
 \begin{aligned}
     x_{1} & = p_{1}+\omega_{11}\lambda_{1}+\omega_{12}\lambda_{2}+\cdots+\omega_{1r}\lambda_{r}, \\
     x_{2} & = p_{2}+\omega_{21}\lambda_{1}+\omega_{22}\lambda_{2}+\cdots+\omega_{2r}\lambda_{r}, \\
-    & \;\; \vdots \\
+    &  \vdots \\
     x_{n} & = p_{n}+\omega_{n1}\lambda_{1}+\omega_{n2}\lambda_{2}+\cdots+\omega_{nr}\lambda_{r}.
 \end{aligned} 
 \right.
