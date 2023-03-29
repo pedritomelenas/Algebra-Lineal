@@ -550,10 +550,10 @@ El siguiente resultado proporciona un procedimiento para calcular la distancia e
 
 ### Resultado
 
-Sean $\mathcal{L}_{1}=P_{1}+W_{1}$ y $\mathcal{L}_{2}=P_{2}+W_{2}$ dos variedades afines que no se cortan. Entonces se verifica que
+Sean $\mathcal{L}_{1}=P _{1}+W _{1}$ y $\mathcal{L} _{2}=P _{2}+W _{2}$ dos variedades afines que no se cortan. Entonces se verifica que
 
 $$
-\operatorname{d}(\mathcal{L}_{1},\mathcal{L}_{2}) = d(P_{1},\mathcal{L}),
+\operatorname{d}(\mathcal{L} _{1},\mathcal{L} _{2}) = \operatorname{d}(P _{1},\mathcal{L}),
 $$
 
 donde $\mathcal{L}=P_{2}+(W_{1}+W_{2})$ es la variedad que contiene a $\mathcal{L}_{2}$ y es paralela a $\mathcal{L}_{1}$.
