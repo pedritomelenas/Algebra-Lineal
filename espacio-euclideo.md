@@ -34,7 +34,7 @@ que verifica las siguientes propiedades;
 
 - En particular, $\langle p,q \rangle = \displaystyle\int_a^b p(x) q(x) dx$, para cualesquiera $p,q\in \operatorname{P}_n(\mathbb{R})$ (polinomios en una variable con coeficientes en $\mathbb{R}$ y de grado a lo sumo $n$) y $a,b\in\mathbb{R}$.
 
-- $\langle A,B \rangle = \sum_{i=1}^n \sum_{j=1}^m a_{ij}b_{ij}$, para cualesquiera $A=(a_{ij}), B=(b_{ij})\in \mathcal{M}_{n\times m}(\mathbb{R})$.
+- $\langle A,B \rangle = \sum\limits_{i=1}^n \sum\limits_{j=1}^m a_{ij}b_{ij}$, para cualesquiera $A=(a_{ij}), B=(b_{ij})\in \mathcal{M}_{n\times m}(\mathbb{R})$.
 
 Un espacio vectorial $V$ dotado de un producto escalar
 $\langle \cdot, \cdot \rangle$ se denomina *espacio vectorial euclídeo* y se denota por $(V;\langle \cdot, \cdot \rangle)$.
