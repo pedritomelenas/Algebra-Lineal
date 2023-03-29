@@ -197,40 +197,40 @@ Para obtener $\mathbf{u}=p_U(\mathbf{v})$ podemos distinguir dos situaciones pos
 
 - Consideramos $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_n\rbrace$ base ortogonal de $(V;\langle \cdot, \cdot \rangle)$ tal que $\lbrace\mathbf{u} _1,\ldots,\mathbf{u} _m\rbrace$ es base de $U$ y $\lbrace\mathbf{u} _{m+1},\ldots,\mathbf{u} _n\rbrace$ es base de $U^\perp$.
 
-Si $\mathbf{v}\in V$, entonces 
+ Si $\mathbf{v}\in V$, entonces 
 
-$$
-\begin{aligned}
+ $$
+ \begin{aligned}
     v = & \dfrac{\langle \mathbf{v}, \mathbf{u} _1 \rangle}{\Vert \mathbf{u} _1\Vert^2}\mathbf{u} _1+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u} _m \rangle}{\Vert \mathbf{u} _m\Vert^2}\mathbf{u} _m + \\
     & \dfrac{\langle \mathbf{v}, \mathbf{u} _{m+1} \rangle}{\Vert \mathbf{u} _{m+1}\Vert^2}\mathbf{u} _{m+1}+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u} _n \rangle}{\Vert \mathbf{u} _n\Vert^2}\mathbf{u} _n.
-\end{aligned}
-$$
+ \end{aligned}
+ $$
 
-Por tanto, la proyección ortogonal de $\mathbf{v}$ sobre $U$ es
+ Por tanto, la proyección ortogonal de $\mathbf{v}$ sobre $U$ es
 
-$$
-p_U(v)=\dfrac{\langle \mathbf{v}, \mathbf{u} _1 \rangle}{\Vert \mathbf{u} _1\Vert^2}\mathbf{u} _1+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u} _m \rangle}{\Vert \mathbf{u} _m\Vert^2}\mathbf{u} _m.
-$$
+ $$
+ p_U(v)=\dfrac{\langle \mathbf{v}, \mathbf{u} _1 \rangle}{\Vert \mathbf{u} _1\Vert^2}\mathbf{u} _1+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u} _m \rangle}{\Vert \mathbf{u} _m\Vert^2}\mathbf{u} _m.
+ $$
 
 - Supongamos ahora que $(V;\langle \cdot, \cdot \rangle)$ es un espacio vectorial euclídeo y que $S=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ es una base (no necesariamente ortogonal) de un subespacio vectorial $U$ de $V$.
 
-Si $\mathbf{v}\in V$ y $\mathbf{u}=p_U(\mathbb{v})$, entonces $\langle \mathbf{v}-\mathbf{u}, \mathbf{w} \rangle=0$ para todo $\mathbf{w}\in U$. Por tanto, $\langle \mathbf{v}-\mathbf{u}, \mathbf{u}_j \rangle=0$ para  todo $j=1,\ldots,m$.
+ Si $\mathbf{v}\in V$ y $\mathbf{u}=p_U(\mathbb{v})$, entonces $\langle \mathbf{v}-\mathbf{u}, \mathbf{w} \rangle=0$ para todo $\mathbf{w}\in U$. Por tanto, $\langle \mathbf{v}-\mathbf{u}, \mathbf{u}_j \rangle=0$ para  todo $j=1,\ldots,m$.
 
-Ahora, si $\mathbf{u}=a_1 \mathbf{u}_1+\cdots+a_m \mathbf{u}_m$, entonces
+ Ahora, si $\mathbf{u}=a_1 \mathbf{u}_1+\cdots+a_m \mathbf{u}_m$, entonces
 
-$$
+ $$
 \langle \mathbf{v}-a_1\mathbf{u}_1-\cdots-a_m \mathbf{u}_m,\mathbf{u}_j \rangle=0, j\in\lbrace 1,\ldots,m\rbrace,
-$$
+ $$
 
-es decir, $a_1,\dots,a_m$ es solución del sistema
+ es decir, $a_1,\dots,a_m$ es solución del sistema
 
-$$
+ $$
 \left\lbrace\begin{array}{cl}
     \langle \mathbf{u}_1,\mathbf{u}_1 \rangle x_1 + \cdots + \langle \mathbf{u}_m,\mathbf{u}_1 \rangle x_m & = \ \langle \mathbf{v},\mathbf{u}_1 \rangle, \\
     & \ \vdots \\
     \langle \mathbf{u}_1,\mathbf{u}_m \rangle x_1 + \cdots + \langle \mathbf{u}_m,\mathbf{u}_m \rangle x_m & = \ \langle \mathbf{v},\mathbf{u}_m \rangle.
-\end{array}\right.
-$$
+ \end{array}\right.
+ $$
 
 A la matriz de coeficientes de este sistema 
 
@@ -247,7 +247,12 @@ se le conoce como *matriz de Gram* de $\langle \cdot,\cdot\rangle$ asociada a la
 Si $B=\lbrace\mathbf{v}_1,\dots,\mathbf{v}_n\rbrace$ es una base de $V$, y $G$ es la matriz de Gram de $\langle \cdot,\cdot\rangle$ respecto de esa base, para cualesquiera $\mathbf{u}$ y $\mathbf{v}$ de $V$ con coordenadas $(u_1,\dots,u_n)$ y $(v_1,\dots,v_n)$, se tiene que 
 
 $$
-\langle \mathbf{u},\mathbf{v}\rangle =(u_1,\dots,u_n)\ G \begin{pmatrix} v_1\\ \vdots\\ v_n\end{pmatrix}.
+\langle \mathbf{u},\mathbf{v}\rangle =(u_1,\dots,u_n)\ G 
+\begin{pmatrix} 
+v_1\\ 
+\vdots\\ 
+v_n
+\end{pmatrix}.
 $$
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-1.html)
