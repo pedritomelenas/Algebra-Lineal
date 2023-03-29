@@ -556,7 +556,7 @@ $$
 \operatorname{d}(\mathcal{L} _{1},\mathcal{L} _{2}) = \operatorname{d}(P _{1},\mathcal{L}),
 $$
 
-donde $\mathcal{L}=P_{2}+(W_{1}+W_{2})$ es la variedad que contiene a $\mathcal{L}_{2}$ y es paralela a $\mathcal{L}_{1}$.
+donde $\mathcal{L}=P_{2}+(W_{1}+W_{2})$ es la variedad que contiene a $\mathcal{L} _{2}$ y es paralela a $\mathcal{L} _{1}$.
 
 ### Distancia de un punto a un hiperplano
 
