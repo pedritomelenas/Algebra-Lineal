@@ -68,7 +68,7 @@ $$
 \overrightarrow{OP}=x_{1}\mathbf{e}_{1}+x_{2}\mathbf{e}_{2}+\cdots+x_{n}\mathbf{e}_{n}.
 $$
 
-Diremos que $(x_{1},x_{2},\ldots,x_{n})$ son las *coordenadas de $P$ respecto de $\mathcal{R}$* y las denotaremos por $P=(x_{1},x_{2},\ldots,x_{n}) _{\mathcal{R}}$.
+Diremos que $(x_{1},x_{2},\ldots,x_{n})$ son las *coordenadas* de $P$ respecto de $\mathcal{R}$ y las denotaremos por $P=(x_{1},x_{2},\ldots,x_{n}) _{\mathcal{R}}$.
 
 
 ### Ejemplo
