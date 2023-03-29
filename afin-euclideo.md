@@ -176,12 +176,12 @@ Sea $\mathcal{L}=P+W$ la variedad afín que “pasa” por el punto $P\in\mathca
 
 Sea $\mathcal{R}=\lbrace O;B\rbrace$ un sistema de referencia para $\mathcal{A}$ con $B=\lbrace\mathbf{e}_{1},\dots,\mathbf{e}_{n}\rbrace$.
 
-Supongamos que $\dim W=r$, con $1\leq r<n$, y que  $\lbrace\mathbf{u} _{1},\dots,\mathbf{u} _{r}\rbrace$ es una base de $W$.
+Supongamos que $\dim W=r$, con $1\leq r<n$, y que  $\lbrace \mathbf{u} _{1},\dots,\mathbf{u} _{r} \rbrace$ es una base de $W$.
 
 Si $X\in\mathcal{L}$, entonces existe un único vector $\mathbf{w}\in W$ tal que $X=P+\mathbf{w}$. Para dicho vector,  $\overrightarrow{PX}$ existirán escalares $\lambda_{1},\lambda_{2},\dots,\lambda_{r}$ tales que 
 
 $$
-\mathbf{w}=\lambda_{1}\mathbf{u}_{1}+\lambda_{2}\mathbf{u}_{2}+\cdots+\lambda_{r}\mathbf{u}_{r}.
+\mathbf{w}=\lambda_{1}\mathbf{u} _{1}+\lambda _{2}\mathbf{u} _{2}+\cdots+\lambda _{r}\mathbf{u} _{r}.
 $$
 
 Como $B$ es base de $V$ y $W$ es un subespacio de $V$, cada vector $\mathbf{u}_{i}$ se puede expresar en la base $B$, por lo que existen escalares $\omega_{ij}$ tales que 
