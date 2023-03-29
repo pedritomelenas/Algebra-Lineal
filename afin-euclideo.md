@@ -75,16 +75,17 @@ Diremos que $(x_{1},x_{2},\ldots,x_{n})$ son las *coordenadas de $P$ respecto de
 
 En el espacio afín usual tridimensional, consideramos el sistema de referencia determinado por
 
--  el origen $O=(1,1,-1)$,
+- el origen $O=(1,1,-1)$,
 
--  la base $B=\lbrace(1,1,1),(1,1,0),(1,0,0)\rbrace$.
+- la base $B=\lbrace(1,1,1),(1,1,0),(1,0,0)\rbrace$.
 
 Calculemos las coordenadas del punto $P=(5,4,3)$.
 
-Como $\overrightarrow{OP}=\phi(O,P) = (5,4,3) - (1,1,-1) = (4,3,4)$, tenemos que hallar las coordenadas de este vector respecto de $B$, es decir, los valores $x _{1}, x _{2}, x _{3}$ tales que
+Como $\overrightarrow{OP}=\phi(O,P) = (5,4,3) - (1,1,-1) = (4,3,4)$, tenemos que hallar las coordenadas de este vector respecto de $B$, es decir, 
+los valores $x _{1}, x _{2}, x _{3}$ tales que
 
 $$
-(4,3,4) = x_{1}(1,1,1) + x_{2}(1,1,0) + x_{3}(1,0,0).
+(4,3,4) = x _{1}(1,1,1) + x _{2}(1,1,0) + x _{3}(1,0,0).
 $$
 
 Resolviendo el sistema, obtenemos que $P=(4,-1,1) _\mathcal{R}$
@@ -411,7 +412,7 @@ Si $P$, $Q$ y $R$ son tres puntos de un espacio afín euclídeo con distancia $\
 
 Sea $\mathcal{A}$ un espacio afín euclídeo asociado al espacio vectorial $V$. Sea $\mathcal{L}$ una variedad afín con subespacio director $W$ y sea un punto $P\in\mathcal{A}$.
 
-Llamamos *complemento ortogonal* a $\mathcal{L}$ por el punto $P$ a la variedad afín $\mathcal{L}_{P}^{\perp}=P+W^{\perp}$.
+Llamamos *complemento ortogonal* a $\mathcal{L}$ por el punto $P$ a la variedad afín $\mathcal{L} _{P}^{\perp}=P+W^{\perp}$.
 
 ## Proyección ortogonal de un punto sobre una variedad afín
 
@@ -424,7 +425,7 @@ Consideremos la variedad afín $\mathcal{L}=P+W$ que pasa por $P$ con dirección
 
 ### Resultado 
 
-Se verifica que $Q'=p_{\mathcal{L}}(Q)=\mathcal{L\cap L}_{Q}^{\perp}$.
+Se verifica que $Q'=p_{\mathcal{L}}(Q)=\mathcal{L}\cap \mathcal{L}_{Q}^{\perp}$.
 
 ### Ejemplo
 
