@@ -60,7 +60,7 @@ La dimensión del espacio afín del ejemplo anterior es$n$, ya que su espacio ve
 
 ## Sistemas de referencia 
 
-Sea $\mathcal{A}$ un espacio afín sobre $V$ de dimensión $n$. Un *sistema de referencia afín* en $\mathcal{A}$ es un conjunto de la forma $\mathcal{R}=\{O;B\}$, donde $O\in\mathcal{A}$ (denominado *origen del sistema de referencia*) y $B=\{\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{n}\}$ es una base de $V$.
+Sea $\mathcal{A}$ un espacio afín sobre $V$ de dimensión $n$. Un *sistema de referencia afín* en $\mathcal{A}$ es un conjunto de la forma $\mathcal{R}=\lbrace O;B\rbrace$, donde $O\in\mathcal{A}$ (denominado *origen del sistema de referencia*) y $B=\lbrace\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{n}\rbrace$ es una base de $V$.
 
 Sea $P\in\mathcal{A}$. Como $\overrightarrow{OP}\in V$, entonces existen escalares $x_{1},x_{2},\ldots,x_{n}\in\mathbb{R}$ tales que 
 
@@ -77,7 +77,7 @@ En el espacio afín usual tridimensional, consideramos el sistema de referencia 
 
 -  el origen $O=(1,1,-1)$,
 
--  la base $B=\{(1,1,1),(1,1,0),(1,0,0)\}$.
+-  la base $B=\lbrace(1,1,1),(1,1,0),(1,0,0)\rbrace$.
 
 Calculemos las coordenadas del punto $P=(5,4,3)$.
 
@@ -97,7 +97,7 @@ Sean $\mathcal{A}$ un espacio afín sobre el espacio vectorial $V$, $P\in\mathca
 Se denomina *variedad afín* de $\mathcal{A}$ asociada a $W$ con base en el punto $P$ al conjunto
 
 $$
-\mathcal{L}=\left\{X\in\mathcal{A} : \overrightarrow{PX}\in W\right\},
+\mathcal{L}=\left\lbrace X\in\mathcal{A} : \overrightarrow{PX}\in W\right\rbrace,
 $$
 
 que se denota por $\mathcal{L}=P+W$.
@@ -107,7 +107,7 @@ En el espacio afín tridimensional usual, calculemos la
 variedad afín $\mathcal{L}$ que pasa por el punto $P=(1,-1,1)$ con subespacio asociado
 
 $$
-W=\left\{ (w_{1},w_{2},w_{3})\in\mathbb{R}^{3}\mid w_{3}=w_{1}+w_{2} \right\}.
+W=\left\lbrace (w_{1},w_{2},w_{3})\in\mathbb{R}^{3}\mid w_{3}=w_{1}+w_{2} \right\rbrace.
 $$
 
 Recordemos que la aplicación $\phi$ asociada al espacio afín tridimensional usual está dada por $\phi((p_1,p_2,p_3),(q_1,q_2,q_3))=(q_{1}-p_{1},q_{2}-p_{2},q_{3}-p_{3})$.
@@ -116,17 +116,17 @@ Entonces tenemos que
 
 $$
 \begin{aligned}
-    \mathcal{L} & = \left\{X\in\mathcal{A} \mid \overrightarrow{PX}\in W \right\}  = \left\{(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid (x_{1},x_{2},x_{3})-(1,-1,1) \in W \right\} \\
-    & = \left\{(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid (x_{1}-1,x_{2}+1,x_{3}-1) \in W \right\} \\
-    & = \left\{(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid x_{3}-1=(x_{1}-1)+(x_{2}+1) \right\}  \\
-    & = \left\{(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid x_{3}-1=x_{1}+x_{2} \right\}\\
-    & = \left\{(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid x_{1}+x_{2}-x_{3}=-1 \right\}.
+    \mathcal{L} & = \left\lbrace X\in\mathcal{A} \mid \overrightarrow{PX}\in W \right\rbrace  = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid (x_{1},x_{2},x_{3})-(1,-1,1) \in W \right\rbrace \\
+    & = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid (x_{1}-1,x_{2}+1,x_{3}-1) \in W \right\rbrace \\
+    & = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid x_{3}-1=(x_{1}-1)+(x_{2}+1) \right\rbrace  \\
+    & = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid x_{3}-1=x_{1}+x_{2} \right\rbrace\\
+    & = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid x_{1}+x_{2}-x_{3}=-1 \right\rbrace.
 \end{aligned}
 $$
 
 ### Propiedad 
 
-Sea la variedad afín $\mathcal{L}=\left\{ X\in\mathcal{A} : \overrightarrow{PX}\in W \right\}$. Si $Q\in\mathcal{L}$, entonces se verifica que $\mathcal{L}=\left\{X\in\mathcal{A} \mid \overrightarrow{QX}\in W\right\}$.
+Sea la variedad afín $\mathcal{L}=\left\lbrace X\in\mathcal{A} : \overrightarrow{PX}\in W \right\rbrace$. Si $Q\in\mathcal{L}$, entonces se verifica que $\mathcal{L}=\left\lbrace X\in\mathcal{A} \mid \overrightarrow{QX}\in W\right\rbrace$.
 
 En otras palabras, si $\mathcal{L}=P+W$ y $Q\in\mathcal{L}$, entonces $\mathcal{L}=Q+W$.
 
@@ -139,12 +139,12 @@ En el ejemplo anterior, $\dim W=2$, por lo que $\dim\mathcal{L}=2$. Por tanto, l
 
 ## Algunas variedades afines destacables
 
-1.  Si $\mathcal{L}=P+W$ con $W=\{\mathbf{0}\}$, entonces $\mathcal{L}$ se reduce a un punto y $\dim\mathcal{L}=0$. Las variedades afines de dimensión $0$ son los puntos.
+1.  Si $\mathcal{L}=P+W$ con $W=\lbrace\mathbf{0}\rbrace$, entonces $\mathcal{L}$ se reduce a un punto y $\dim\mathcal{L}=0$. Las variedades afines de dimensión $0$ son los puntos.
 
-2.  Si $\mathcal{L}=P+W$ con $W=L(\{\mathbf{u}\})$, $\mathbf{u}\neq\mathbf{0}$,  entonces $\dim\mathcal{L}=1$. Se trata de la *recta* que “pasa” por el punto $P$ con dirección $\mathbf{u}$.
+2.  Si $\mathcal{L}=P+W$ con $W=L(\lbrace\mathbf{u}\rbrace)$, $\mathbf{u}\neq\mathbf{0}$,  entonces $\dim\mathcal{L}=1$. Se trata de la *recta* que “pasa” por el punto $P$ con dirección $\mathbf{u}$.
 
 3.  Si $\mathcal{L}=P+W$, donde una base de $W$ es
-    $B_{W}=\{\mathbf{u},\mathbf{v}\}$, entonces $\dim\mathcal{L}=2$. Se trata de un *plano* que “pasa” por el punto $P$ con vectores directores $\mathbf{u}$ y $\mathbf{v}$.
+    $B_{W}=\lbrace\mathbf{u},\mathbf{v}\rbrace$, entonces $\dim\mathcal{L}=2$. Se trata de un *plano* que “pasa” por el punto $P$ con vectores directores $\mathbf{u}$ y $\mathbf{v}$.
 
 4.  Si $\mathcal{L}=P+W$ con $\dim W=n-1$ y $\dim V=n$, entonces $\dim\mathcal{L}=n-1$. Se trata de un *hiperplano* que “pasa” por el punto $P$ con dirección dada por el subespacio vectorial definido por la base de $W$ considerada.
 
@@ -174,9 +174,9 @@ Sea $(\mathcal{A},V,\phi )$ un espacio afín de dimensión $n$.
 
 Sea $\mathcal{L}=P+W$ la variedad afín que “pasa” por el punto $P\in\mathcal{A}$ con subespacio director $W$.
 
-Sea $\mathcal{R}=\{O;B\}$ un sistema de referencia para $\mathcal{A}$ con $B=\{\mathbf{e}_{1},\dots,\mathbf{e}_{n}\}$.
+Sea $\mathcal{R}=\lbrace O;B\rbrace$ un sistema de referencia para $\mathcal{A}$ con $B=\lbrace\mathbf{e}_{1},\dots,\mathbf{e}_{n}\rbrace$.
 
-Supongamos que $\dim W=r$, con $1\leq r<n$, y que  $\{\mathbf{u}_{1},\dots,\mathbf{u}_{r}\}$ es una base de $W$.
+Supongamos que $\dim W=r$, con $1\leq r<n$, y que  $\lbrace\mathbf{u}_{1},\dots,\mathbf{u}_{r}\rbrace$ es una base de $W$.
 
 Si $X\in\mathcal{L}$, entonces existe un único vector $\mathbf{w}\in W$ tal que $X=P+\mathbf{w}$. Para dicho vector,  $\overrightarrow{PX}$ existirán escalares $\lambda_{1},\lambda_{2},\dots,\lambda_{r}$ tales que 
 
@@ -212,7 +212,7 @@ $$
 se deduce que 
 
 $$
-\left\{ 
+\left\lbrace 
 \begin{aligned}
     x_{1} & = p_{1}+\omega_{11}\lambda_{1}+\omega_{12}\lambda_{2}+\cdots+\omega_{1r}\lambda_{r}, \\
     x_{2} & = p_{2}+\omega_{21}\lambda_{1}+\omega_{22}\lambda_{2}+\cdots+\omega_{2r}\lambda_{r}, \\
@@ -285,7 +285,7 @@ lo que es equivalente a imponer que los menores de orden $r+1$ sean cero. El res
 También podemos considerar el sistema anterior considerando $\lambda_1,\dots,\lambda_r$ como incógnitas
 
 $$
-\left\{ 
+\left\lbrace 
 \begin{aligned}
     \omega_{11}\lambda_{1}+\omega_{12}\lambda_{2}+\cdots+\omega_{1r}\lambda_{r} & = x_{1} - p_{1},\\
     \omega_{21}\lambda_{1}+\omega_{22}\lambda_{2}+\cdots+\omega_{2r}\lambda_{r} & = x_{2} - p_{2}, \\
@@ -299,7 +299,7 @@ Si aplicamos eliminación por filas, obtendremos $n-r$ ecuaciones (no homogénea
 
 ### Ejemplo
 
-En el espacio afín usual tridimensional se considera un sistema de referencia $\mathcal{R}=\{O;B=\{\mathbf{e}_{1},\mathbf{e}_{2},\mathbf{e}_{3}\}\}$, el punto $P$ con coordenadas en $(1,-2,1)_\mathcal{R}$ y el susbepacio vectorial $W$ generado por los vectores $\mathbf{u}_{1}$ y $\mathbf{u}_{2}$, siendo
+En el espacio afín usual tridimensional se considera un sistema de referencia $\mathcal{R}=\lbrace O;B=\lbrace\mathbf{e}_{1},\mathbf{e}_{2},\mathbf{e}_{3}\rbrace\rbrace$, el punto $P$ con coordenadas en $(1,-2,1)_\mathcal{R}$ y el susbepacio vectorial $W$ generado por los vectores $\mathbf{u}_{1}$ y $\mathbf{u}_{2}$, siendo
 $(1,2,-1)$ y $(2,1,1)$ las coordenadas de $\mathbf{u}_{1}$ y $\mathbf{u}_{2}$ en la base $B$, respectivamente.
 
 Las ecuaciones paramétricas de la variedad afín que pasa por $P$ con dirección $W$ son
@@ -331,7 +331,7 @@ $$
 
 Es decir, 
 $$
-\left\{
+\left\lbrace
 \begin{aligned}
     x_{1} & = 1+\lambda_{1}+2\lambda_{2}, \\
     x_{2} & = -2+2\lambda_{1}+\lambda_{2}, \\
@@ -343,7 +343,7 @@ $$
 Tomando $\lambda_1$ y $\lambda_2$ como incógnitas, el sistema se transforma en el sistema 
 
 $$
-\left\{ 
+\left\lbrace 
 \begin{array}{rcl} 
     \lambda_{1}+2\lambda_{2} &= & x_1-1, \\ 
     2\lambda_{1}+\lambda_{2} &= & x_{2}+2, \\
@@ -416,7 +416,7 @@ Llamamos *complemento ortogonal* a $\mathcal{L}$ por el punto $P$ a la variedad 
 ## Proyección ortogonal de un punto sobre una variedad afín
 
 Llamamos *referencia rectangular* en un espacio euclídeo
-$\mathcal{A}$, con espacio vectorial subyacente $V$ de dimensión $n$, a todo sistema de referencia $R=\{O;B\}$ tal que $B$ es una base ortonormal de $V$.
+$\mathcal{A}$, con espacio vectorial subyacente $V$ de dimensión $n$, a todo sistema de referencia $R=\lbrace O;B\rbrace$ tal que $B$ es una base ortonormal de $V$.
 
 Un vector $\mathbf{v}$ se dice *ortogonal* a una variedad afín $\mathcal{L}$, del espacio afín euclídeo $\mathcal{A}$, si $\mathbf{v}$ es ortogonal al subespacio director de $\mathcal{L}$. Denotaremos este hecho por $\mathbf{v}\perp\mathcal{L}$.
 
@@ -431,7 +431,7 @@ Se verifica que $Q'=p_{\mathcal{L}}(Q)=\mathcal{L\cap L}_{Q}^{\perp}$.
 Hallemos la proyección ortogonal del punto $Q=(1,3,-1)$, del espacio euclídeo tridimensional usual, sobre la recta $r$ de ecuaciones paramétricas
 
 $$
-\left\{ 
+\left\lbrace 
 \begin{array}{l} 
 x=2\lambda, \\ 
 y=2-\lambda, \\ 
@@ -440,18 +440,18 @@ z=1+2\lambda.
 \right.
 $$
 
-Comenzamos tomando la variedad afín $\mathcal{L}$ correspondiente a la recta $r$, esto es, la variedad que pasa por el punto $(0,2,1)$ y  tiene como subespacio vectorial asociado el generado por el vector $(2,-1,2)$, es decir, $W=L(\{(2,-1,2)\})$.
+Comenzamos tomando la variedad afín $\mathcal{L}$ correspondiente a la recta $r$, esto es, la variedad que pasa por el punto $(0,2,1)$ y  tiene como subespacio vectorial asociado el generado por el vector $(2,-1,2)$, es decir, $W=L(\lbrace(2,-1,2)\rbrace)$.
 
 El complemento ortogonal $W^{\perp}$ de $W$ está engendrado por dos vectores linealmente independientes ortogonales a $W$. Podemos tomar, por ejemplo, $(1,2,0)$ y $(1,0,-1)$. Por tanto,
 
 $$
-W^{\perp}=\operatorname{L}\left( \{(1,2,0),(1,0,-1) \}\right).
+W^{\perp}=\operatorname{L}\left( \lbrace(1,2,0),(1,0,-1) \rbrace\right).
 $$
 
 Así, $W^{\perp}$ es un subespacio vectorial de dimensión $2$ que admite como ecuaciones paramétricas 
 
 $$
-\left\{
+\left\lbrace
 \begin{array}{l} 
 x=\alpha+\beta, \\ 
 y=2\alpha, \\ 
@@ -503,7 +503,7 @@ $$
 Definimos la *distancia* de un punto $Q$ a una variedad afín $\mathcal{L}=P+W$ como
 
 $$
-\operatorname{d}(Q,\mathcal{L}) = \inf\{d(Q,X) \mid X\in\mathcal{L}\}.
+\operatorname{d}(Q,\mathcal{L}) = \inf\lbrace \operatorname{d}(Q,X) \mid X\in\mathcal{L}\rbrace.
 $$
 
 En realidad, ese ínfimo es un mínimo, ya que 
@@ -518,7 +518,7 @@ Continuando con el ejemplo anterior, la distancia de $Q=(1,3,-1)$ a la
 recta $r$ de ecuaciones paramétricas
 
 $$
-\left\{
+\left\lbrace
 \begin{array}{l} 
     x=2\lambda, \\ 
     y=2-\lambda, \\ 
@@ -541,7 +541,7 @@ Dadas dos variedades afines $\mathcal{L}_{1}=P_{1}+W_{1}$ y
 $\mathcal{L}_{2}=P_{2}+W_{2}$, se define la distancia entre ambas como
 
 $$
-\operatorname{d}(\mathcal{L}_{1},\mathcal{L}_{2}) = \inf\{\operatorname{d}(Q_{1},Q_{2}) : Q_{1}\in\mathcal{L}_{1}\;\text{ y }\;Q_{2}\in\mathcal{L}_{2}\}.
+\operatorname{d}(\mathcal{L}_{1},\mathcal{L}_{2}) = \inf\lbrace\operatorname{d}(Q_{1},Q_{2}) : Q_{1}\in\mathcal{L}_{1}\;\text{ y }\;Q_{2}\in\mathcal{L}_{2}\rbrace.
 $$
 
 Si dos variedades se cortan entonces la distancia entre ellas es cero.
@@ -576,7 +576,7 @@ $$
 
 ## Producto vectorial
 
-Sean $\mathbf{u},\mathbf{v}\in K^3$, con $K$ un cuerpo, y sean  $(u_1,u_2,u_3)$ y $(v_1,v_2,v_3)$ sus coordenadas respecto a una base $B=\{\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_e\}$ de $K^3$. El producto vectorial de $\mathbb{u}$ y $\mathbb{v}$ se define mediante el siguiente determinante formal
+Sean $\mathbf{u},\mathbf{v}\in K^3$, con $K$ un cuerpo, y sean  $(u_1,u_2,u_3)$ y $(v_1,v_2,v_3)$ sus coordenadas respecto a una base $B=\lbrace\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_e\rbrace$ de $K^3$. El producto vectorial de $\mathbb{u}$ y $\mathbb{v}$ se define mediante el siguiente determinante formal
 
 $$
 \mathbf{u}\wedge \mathbf{v} = \begin{vmatrix}
@@ -591,8 +591,8 @@ $$
 
 ### Propiedades
 
-- $(\mathbf{u} \wedge \mathbf{v})\in\mathcal{L}(\{\mathbf{u},\mathbf{v}\})^\perp$. 
+- $(\mathbf{u} \wedge \mathbf{v})\in\mathcal{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)^\perp$. 
 
-- $\mathbf{u} \wedge \mathbf{v}=0$ si y sólo si $\dim(\mathcal{L}(\{\mathbf{u},\mathbf{v}\})\le 1$.
+- $\mathbf{u} \wedge \mathbf{v}=0$ si y sólo si $\dim(\mathcal{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1$.
 
 - $\Vert \mathbf{u} \wedge \mathbf{v}\Vert = \Vert \mathbf{u}\Vert \Vert\mathbf{v}\Vert-\langle\mathbf{u},\mathbf{v}\rangle^2=\Vert \mathbf{u}\Vert \Vert\mathbf{v}\Vert \sin(\measuredangle(\mathbf{u},\mathbf{v}))$.
