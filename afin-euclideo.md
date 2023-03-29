@@ -16,59 +16,59 @@ con $W$ el conjunto de soluciones de $Ax=0$, y para cualesquiera dos soluciones 
 
 Sea $V$ un espacio vectorial real (cuyos elementos llamaremos *vectores* o *direcciones*)
 
-Sea $\mathcal{A}$ un conjunto no vacío cuyos elementos denominaremos *puntos*
+Sea $\mathfrak{A}$ un conjunto no vacío cuyos elementos denominaremos *puntos*
 
-Decimos que $\mathcal{A}$ es un *espacio afín sobre* $V$ si existe una aplicación 
+Decimos que $\mathfrak{A}$ es un *espacio afín sobre* $V$ si existe una aplicación 
 
 $$
-\phi: \mathcal{A}\times\mathcal{A} \to V
+\phi: \mathfrak{A}\times\mathfrak{A} \to V
 $$
 
-tal que a cada par ordenado de puntos $(P,Q) \in \mathcal{A}\times\mathcal{A}$ le hace corresponder un vector $\phi(P,Q) \in V$ (denotado por $\overrightarrow{PQ}$) de forma que se satisfacen las siguientes propiedades.
+tal que a cada par ordenado de puntos $(P,Q) \in \mathfrak{A}\times\mathfrak{A}$ le hace corresponder un vector $\phi(P,Q) \in V$ (denotado por $\overrightarrow{PQ}$) de forma que se satisfacen las siguientes propiedades.
 
-1. Para cada punto $P\in\mathcal{A}$ y cada vector $\mathbf{v}\in V$, existe un único punto $Q\in\mathcal{A}$ tal que $\overrightarrow{PQ}=\mathbf{v}$.
-2. Para cualesquiera puntos $P, Q, R \in \mathcal{A}$, se verifica la igualdad $\overrightarrow{PQ}+\overrightarrow{QR}=\overrightarrow{PR}$.
+1. Para cada punto $P\in\mathfrak{A}$ y cada vector $\mathbf{v}\in V$, existe un único punto $Q\in\mathfrak{A}$ tal que $\overrightarrow{PQ}=\mathbf{v}$.
+2. Para cualesquiera puntos $P, Q, R \in \mathfrak{A}$, se verifica la igualdad $\overrightarrow{PQ}+\overrightarrow{QR}=\overrightarrow{PR}$.
 
 
-El espacio afín se denotará por $(\mathcal{A},V,\phi)$, aunque habitualmente se omitirá la referencia a la aplicación $\phi$ e, incluso, a $V$.
+El espacio afín se denotará por $(\mathfrak{A},V,\phi)$, aunque habitualmente se omitirá la referencia a la aplicación $\phi$ e, incluso, a $V$.
 
 ### Propiedades 
 
-Sea $(\mathcal{A},V,\phi)$ un espacio afín. 
+Sea $(\mathfrak{A},V,\phi)$ un espacio afín. 
 
 1.  $\overrightarrow{PQ}=\overrightarrow{O_{V}}$ si y sólo si  $P=Q$.
-3.  $\overrightarrow{PQ}=-$ $\overrightarrow{QP}$ para cualesquiera $P, Q\in\mathcal{A}$.
-4.  Si $\overrightarrow{PQ}=\overrightarrow{P'Q'}$ entonces   $\overrightarrow{PP'}=\overrightarrow{QQ'}$ para cualesquiera  $P, P', Q, Q'\in\mathcal{A}$ (regla del paralelogramo).
+3.  $\overrightarrow{PQ}=-$ $\overrightarrow{QP}$ para cualesquiera $P, Q\in\mathfrak{A}$.
+4.  Si $\overrightarrow{PQ}=\overrightarrow{P'Q'}$ entonces   $\overrightarrow{PP'}=\overrightarrow{QQ'}$ para cualesquiera  $P, P', Q, Q'\in\mathfrak{A}$ (regla del paralelogramo).
 5.  $\overrightarrow{PQ}+\overrightarrow{QR}+\overrightarrow{RP}=\overrightarrow{O_{V}}$    (relación de Chasles).
 
 ### Ejemplo 
 
-Supongamos que $\mathcal{A}=\mathbb{R}^{n}$ y que $V=\mathbb{R}^{n}$. Si $P,Q\in\mathcal{A}$ están dados por $P=(p_{1},\ldots,p_{n})$ y $Q=(q_{1},\ldots,q_{n})$, definimos la aplicación $\phi$ por 
+Supongamos que $\mathfrak{A}=\mathbb{R}^{n}$ y que $V=\mathbb{R}^{n}$. Si $P,Q\in\mathfrak{A}$ están dados por $P=(p_{1},\ldots,p_{n})$ y $Q=(q_{1},\ldots,q_{n})$, definimos la aplicación $\phi$ por 
 
 $$
 \phi(P,Q)= (q_{1}-p_{1},\ldots,q_{n}-p_{n}).
 $$
 
-Es fácil comprobar que $(\mathcal{A},V,\phi)$ es un espacio afín (el llamado *espacio afín usual*) y que se cumplen las propiedades de la transparencia anterior. 
+Es fácil comprobar que $(\mathfrak{A},V,\phi)$ es un espacio afín (el llamado *espacio afín usual*) y que se cumplen las propiedades de la transparencia anterior. 
 
 ## Dimensión de un espacio afín
 
-Se define la *dimensión del espacio* afín $\mathcal{A}$ como la dimensión del espacio vectorial $V$.
+Se define la *dimensión del espacio* afín $\mathfrak{A}$ como la dimensión del espacio vectorial $V$.
 
 La dimensión del espacio afín del ejemplo anterior es $n$, ya que su espacio vectorial subyacente, $\mathbb{R}^{n}$, es $n$ dimensional.
 
 
 ## Sistemas de referencia 
 
-Sea $\mathcal{A}$ un espacio afín sobre $V$ de dimensión $n$. Un *sistema de referencia afín* en $\mathcal{A}$ es un conjunto de la forma $\mathcal{R}=\lbrace O;B\rbrace$, donde $O\in\mathcal{A}$ (denominado *origen del sistema de referencia*) y $B=\lbrace\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{n}\rbrace$ es una base de $V$.
+Sea $\mathfrak{A}$ un espacio afín sobre $V$ de dimensión $n$. Un *sistema de referencia afín* en $\mathfrak{A}$ es un conjunto de la forma $\mathfrak{R}=\lbrace O;B\rbrace$, donde $O\in\mathfrak{A}$ (denominado *origen del sistema de referencia*) y $B=\lbrace\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{n}\rbrace$ es una base de $V$.
 
-Sea $P\in\mathcal{A}$. Como $\overrightarrow{OP}\in V$, entonces existen escalares $x_{1},x_{2},\ldots,x_{n}\in\mathbb{R}$ tales que 
+Sea $P\in\mathfrak{A}$. Como $\overrightarrow{OP}\in V$, entonces existen escalares $x_{1},x_{2},\ldots,x_{n}\in\mathbb{R}$ tales que 
 
 $$
 \overrightarrow{OP}=x_{1}\mathbf{e}_{1}+x_{2}\mathbf{e}_{2}+\cdots+x_{n}\mathbf{e}_{n}.
 $$
 
-Diremos que $(x_{1},x_{2},\ldots,x_{n})$ son las *coordenadas* de $P$ respecto de $\mathcal{R}$ y las denotaremos por $P=(x_{1},x_{2},\ldots,x_{n}) _{\mathcal{R}}$.
+Diremos que $(x_{1},x_{2},\ldots,x_{n})$ son las *coordenadas* de $P$ respecto de $\mathfrak{R}$ y las denotaremos por $P=(x_{1},x_{2},\ldots,x_{n}) _{\mathfrak{R}}$.
 
 
 ### Ejemplo
@@ -88,23 +88,23 @@ $$
 (4,3,4) = x _{1}(1,1,1) + x _{2}(1,1,0) + x _{3}(1,0,0).
 $$
 
-Resolviendo el sistema, obtenemos que $P=(4,-1,1) _\mathcal{R}$
+Resolviendo el sistema, obtenemos que $P=(4,-1,1) _\mathfrak{R}$
 
 
 ##  Variedades afines 
 
-Sean $\mathcal{A}$ un espacio afín sobre el espacio vectorial $V$, $P\in\mathcal{A}$ y $W$ un subespacio vectorial de $V$.
+Sean $\mathfrak{A}$ un espacio afín sobre el espacio vectorial $V$, $P\in\mathfrak{A}$ y $W$ un subespacio vectorial de $V$.
 
-Se denomina *variedad afín* de $\mathcal{A}$ asociada a $W$ con base en el punto $P$ al conjunto
+Se denomina *variedad afín* de $\mathfrak{A}$ asociada a $W$ con base en el punto $P$ al conjunto
 
 $$
-\mathcal{L}=\left\lbrace X\in\mathcal{A} : \overrightarrow{PX}\in W\right\rbrace,
+\mathfrak{L}=\left\lbrace X\in\mathfrak{A} : \overrightarrow{PX}\in W\right\rbrace,
 $$
 
-que se denota por $\mathcal{L}=P+W$.
+que se denota por $\mathfrak{L}=P+W$.
 
 ### Ejemplo
-En el espacio afín tridimensional usual, calculemos la variedad afín $\mathcal{L}$ que pasa por el punto $P=(1,-1,1)$ con subespacio asociado
+En el espacio afín tridimensional usual, calculemos la variedad afín $\mathfrak{L}$ que pasa por el punto $P=(1,-1,1)$ con subespacio asociado
 
 $$
 W=\left\lbrace (w_{1},w_{2},w_{3})\in\mathbb{R}^{3}\mid w_{3}=w_{1}+w_{2} \right\rbrace.
@@ -116,7 +116,7 @@ Entonces tenemos que
 
 $$
 \begin{aligned}
-    \mathcal{L} & = \left\lbrace X\in\mathcal{A} \mid \overrightarrow{PX}\in W \right\rbrace  = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid (x_{1},x_{2},x_{3})-(1,-1,1) \in W \right\rbrace \\
+    \mathfrak{L} & = \left\lbrace X\in\mathfrak{A} \mid \overrightarrow{PX}\in W \right\rbrace  = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid (x_{1},x_{2},x_{3})-(1,-1,1) \in W \right\rbrace \\
     & = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid (x_{1}-1,x_{2}+1,x_{3}-1) \in W \right\rbrace \\
     & = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid x_{3}-1=(x_{1}-1)+(x_{2}+1) \right\rbrace  \\
     & = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid x_{3}-1=x_{1}+x_{2} \right\rbrace\\
@@ -126,59 +126,59 @@ $$
 
 ### Propiedad 
 
-Sea la variedad afín $\mathcal{L}=\left\lbrace X\in\mathcal{A} : \overrightarrow{PX}\in W \right\rbrace$. Si $Q\in\mathcal{L}$, entonces se verifica que $\mathcal{L}=\left\lbrace X\in\mathcal{A} \mid \overrightarrow{QX}\in W\right\rbrace$.
+Sea la variedad afín $\mathfrak{L}=\left\lbrace X\in\mathfrak{A} : \overrightarrow{PX}\in W \right\rbrace$. Si $Q\in\mathfrak{L}$, entonces se verifica que $\mathfrak{L}=\left\lbrace X\in\mathfrak{A} \mid \overrightarrow{QX}\in W\right\rbrace$.
 
-En otras palabras, si $\mathcal{L}=P+W$ y $Q\in\mathcal{L}$, entonces $\mathcal{L}=Q+W$.
+En otras palabras, si $\mathfrak{L}=P+W$ y $Q\in\mathfrak{L}$, entonces $\mathfrak{L}=Q+W$.
 
 Deducimos que la definición de variedad afín es independiente del punto base.
 
-Se define la *dimensión de la variedad afín* $\mathcal{L}=P+W$ como la dimensión de $W$.
+Se define la *dimensión de la variedad afín* $\mathfrak{L}=P+W$ como la dimensión de $W$.
 
-En el ejemplo anterior, $\dim W=2$, por lo que $\dim\mathcal{L}=2$. Por tanto, la variedad afín $\mathcal{L}$ es un plano.
+En el ejemplo anterior, $\dim W=2$, por lo que $\dim\mathfrak{L}=2$. Por tanto, la variedad afín $\mathfrak{L}$ es un plano.
 
 
 ## Algunas variedades afines destacables
 
-1.  Si $\mathcal{L}=P+W$ con $W=\lbrace\mathbf{0}\rbrace$, entonces $\mathcal{L}$ se reduce a un punto y $\dim\mathcal{L}=0$. Las variedades afines de dimensión $0$ son los puntos.
+1.  Si $\mathfrak{L}=P+W$ con $W=\lbrace\mathbf{0}\rbrace$, entonces $\mathfrak{L}$ se reduce a un punto y $\dim\mathfrak{L}=0$. Las variedades afines de dimensión $0$ son los puntos.
 
-2.  Si $\mathcal{L}=P+W$ con $W=L(\lbrace\mathbf{u}\rbrace)$, $\mathbf{u}\neq\mathbf{0}$,  entonces $\dim\mathcal{L}=1$. Se trata de la *recta* que “pasa” por el punto $P$ con dirección $\mathbf{u}$.
+2.  Si $\mathfrak{L}=P+W$ con $W=\mathcal{L}(\lbrace\mathbf{u}\rbrace)$, $\mathbf{u}\neq\mathbf{0}$,  entonces $\dim\mathfrak{L}=1$. Se trata de la *recta* que “pasa” por el punto $P$ con dirección $\mathbf{u}$.
 
-3.  Si $\mathcal{L}=P+W$, donde una base de $W$ es
-    $B_{W}=\lbrace\mathbf{u},\mathbf{v}\rbrace$, entonces $\dim\mathcal{L}=2$. Se trata de un *plano* que “pasa” por el punto $P$ con vectores directores $\mathbf{u}$ y $\mathbf{v}$.
+3.  Si $\mathfrak{L}=P+W$, donde una base de $W$ es
+    $B_{W}=\lbrace\mathbf{u},\mathbf{v}\rbrace$, entonces $\dim\mathfrak{L}=2$. Se trata de un *plano* que “pasa” por el punto $P$ con vectores directores $\mathbf{u}$ y $\mathbf{v}$.
 
-4.  Si $\mathcal{L}=P+W$ con $\dim W=n-1$ y $\dim V=n$, entonces $\dim\mathcal{L}=n-1$. Se trata de un *hiperplano* que “pasa” por el punto $P$ con dirección dada por el subespacio vectorial definido por la base de $W$ considerada.
+4.  Si $\mathfrak{L}=P+W$ con $\dim W=n-1$ y $\dim V=n$, entonces $\dim\mathfrak{L}=n-1$. Se trata de un *hiperplano* que “pasa” por el punto $P$ con dirección dada por el subespacio vectorial definido por la base de $W$ considerada.
 
-5.  Dado un espacio afín $\mathcal{A}$ y $P_0,\dots,P_n$ puntos de $\mathcal{A}$, la variedad generada por $P_0,\dots,P_n$ es la menor variedad afín que contiene a estos puntos, que es $P_0+W$, donde $W$ es el espacio vectorial generado por $\overrightarrow {P_0P_1},\dots,\overrightarrow {P_0P_n}$. Diremos que $P_0,\dots, P_n$ son afinmente independientes si los vectores $\overrightarrow {P_0P_1},\dots,\overrightarrow {P_0P_n}$ son linealmente independientes (esta definición no depende de la elección de $P_0$).
+5.  Dado un espacio afín $\mathfrak{A}$ y $P_0,\dots,P_n$ puntos de $\mathfrak{A}$, la variedad generada por $P_0,\dots,P_n$ es la menor variedad afín que contiene a estos puntos, que es $P_0+W$, donde $W$ es el espacio vectorial generado por $\overrightarrow {P_0P_1},\dots,\overrightarrow {P_0P_n}$. Diremos que $P_0,\dots, P_n$ son afinmente independientes si los vectores $\overrightarrow {P_0P_1},\dots,\overrightarrow {P_0P_n}$ son linealmente independientes (esta definición no depende de la elección de $P_0$).
 
 ## Suma e intersección de variedades
 
-Si $\mathcal{L_1}=P_1+W_1$ y $\mathcal{L_2}=P_2+W_2$ son dos variedades afines tales que existe $P\in\mathcal{L_1}\cap \mathcal{L_2}$, entonces 
+Si $\mathfrak{L}_1=P_1+W_1$ y $\mathfrak{L}_2=P_2+W_2$ son dos variedades afines tales que existe $P\in\mathfrak{L}_1\cap \mathfrak{L}_2$, entonces 
 
 $$
-\mathcal{L_1}\cap \mathcal{L_2}= P+(W_1\cap W_2).
+\mathfrak{L}_1\cap \mathfrak{L}_2= P+(W_1\cap W_2).
 $$ 
 
-Si $\mathcal{L_1}$ y  $\mathcal{L_2}$ no se cortan, entonces su intersección es vacía.
+Si $\mathfrak{L}_1$ y  $\mathfrak{L}_2$ no se cortan, entonces su intersección es vacía.
 
-La variedad suma de $\mathcal{L_1}$ y $\mathcal{L_2}$ se define como la menor variedad que contiene a ambas (o como la variedad que genera la unión de ambas). En este caso, 
+La variedad suma de $\mathfrak{L}_1$ y $\mathfrak{L}_2$ se define como la menor variedad que contiene a ambas (o como la variedad que genera la unión de ambas). En este caso, 
 
 $$
-\mathcal{L_1}+\mathcal{L_2}=P_1+(\operatorname{L}(\overrightarrow {P_1P_2})+W_1+W_2).
+\mathfrak{L}_1+\mathfrak{L}_2=P_1+(\operatorname{L}(\overrightarrow {P_1P_2})+W_1+W_2).
 $$
 
 ## Variedades afines: ecuaciones 
 
 Es posible asociar ecuaciones paramétricas e implícitas a las variedades afines.
 
-Sea $(\mathcal{A},V,\phi )$ un espacio afín de dimensión $n$.
+Sea $(\mathfrak{A},V,\phi )$ un espacio afín de dimensión $n$.
 
-Sea $\mathcal{L}=P+W$ la variedad afín que “pasa” por el punto $P\in\mathcal{A}$ con subespacio director $W$.
+Sea $\mathfrak{L}=P+W$ la variedad afín que “pasa” por el punto $P\in\mathfrak{A}$ con subespacio director $W$.
 
-Sea $\mathcal{R}=\lbrace O;B\rbrace$ un sistema de referencia para $\mathcal{A}$ con $B=\lbrace\mathbf{e} _{1},\dots,\mathbf{e} _{n}\rbrace$.
+Sea $\mathfrak{R}=\lbrace O;B\rbrace$ un sistema de referencia para $\mathfrak{A}$ con $B=\lbrace\mathbf{e} _{1},\dots,\mathbf{e} _{n}\rbrace$.
 
 Supongamos que $\dim W=r$, con $1\leq r < n$, y que  $\lbrace \mathbf{u} _{1},\dots,\mathbf{u} _{r} \rbrace$ es una base de $W$.
 
-Si $X\in\mathcal{L}$, entonces existe un único vector $\mathbf{w}\in W$ tal que $X=P+\mathbf{w}$. Para dicho vector,  $\overrightarrow{PX}$ existirán escalares $\lambda_{1},\lambda_{2},\dots,\lambda_{r}$ tales que 
+Si $X\in\mathfrak{L}$, entonces existe un único vector $\mathbf{w}\in W$ tal que $X=P+\mathbf{w}$. Para dicho vector,  $\overrightarrow{PX}$ existirán escalares $\lambda_{1},\lambda_{2},\dots,\lambda_{r}$ tales que 
 
 $$
 \mathbf{w}=\lambda_{1}\mathbf{u} _{1}+\lambda _{2}\mathbf{u} _{2}+\cdots+\lambda _{r}\mathbf{u} _{r}.
@@ -222,7 +222,7 @@ $$
 \right.
 $$ 
 
-Estas son las ecuaciones paramétricas de la variedad afín $\mathcal{L}$. Concretamente, son las relaciones que existen entre las coordenadas de $X$ y $P$ en el sistema de referencia $\mathcal{R}$ y las coordenadas de $w$ en la base $B$.
+Estas son las ecuaciones paramétricas de la variedad afín $\mathfrak{L}$. Concretamente, son las relaciones que existen entre las coordenadas de $X$ y $P$ en el sistema de referencia $\mathfrak{R}$ y las coordenadas de $w$ en la base $B$.
 
 En forma matricial, viene dada por
 
@@ -263,10 +263,10 @@ p_{n}
 \end{pmatrix}.
 $$
 
-Cuando $X$ “recorre” la variedad $\mathcal{L}$, los coeficientes $\lambda_{i}$ “recorren” el subespacio vectorial $W$, por lo que las ecuaciones anteriores pueden verse como un sistema compatible (determinado) en las incógnitas $\lambda_{i}$.
+Cuando $X$ “recorre” la variedad $\mathfrak{L}$, los coeficientes $\lambda_{i}$ “recorren” el subespacio vectorial $W$, por lo que las ecuaciones anteriores pueden verse como un sistema compatible (determinado) en las incógnitas $\lambda_{i}$.
 
 
-Para obtener las ecuaciones implícitas o cartesianas de $\mathcal{L}$ basta con imponer que, en el sistema compatible (determinado) en las incógnitas $\lambda_{i}$, el rango de la matriz de coeficientes coincida con el rango de la matriz ampliada y con el número de incógnitas $\lambda_{i}$. Es decir, que 
+Para obtener las ecuaciones implícitas o cartesianas de $\mathfrak{L}$ basta con imponer que, en el sistema compatible (determinado) en las incógnitas $\lambda_{i}$, el rango de la matriz de coeficientes coincida con el rango de la matriz ampliada y con el número de incógnitas $\lambda_{i}$. Es decir, que 
 
 $$
 \operatorname{rg}\begin{pmatrix}
@@ -299,7 +299,7 @@ Si aplicamos eliminación por filas, obtendremos $n-r$ ecuaciones (no homogénea
 
 ### Ejemplo
 
-En el espacio afín usual tridimensional se considera un sistema de referencia $\mathcal{R}=\lbrace O;B=\lbrace \mathbf{e} _{1},\mathbf{e} _{2},\mathbf{e} _{3} \rbrace \rbrace$, el punto $P$ con coordenadas en $(1,-2,1) _\mathcal{R}$ y el susbepacio vectorial $W$ generado por los vectores $\mathbf{u} _{1}$ y $\mathbf{u} _{2}$, siendo $(1,2,-1)$ y $(2,1,1)$ las coordenadas de $\mathbf{u} _{1}$ y $\mathbf{u} _{2}$ en la base $B$, respectivamente.
+En el espacio afín usual tridimensional se considera un sistema de referencia $\mathfrak{R}=\lbrace O;B=\lbrace \mathbf{e} _{1},\mathbf{e} _{2},\mathbf{e} _{3} \rbrace \rbrace$, el punto $P$ con coordenadas en $(1,-2,1) _\mathfrak{R}$ y el susbepacio vectorial $W$ generado por los vectores $\mathbf{u} _{1}$ y $\mathbf{u} _{2}$, siendo $(1,2,-1)$ y $(2,1,1)$ las coordenadas de $\mathbf{u} _{1}$ y $\mathbf{u} _{2}$ en la base $B$, respectivamente.
 
 Las ecuaciones paramétricas de la variedad afín que pasa por $P$ con dirección $W$ son
 
@@ -366,12 +366,12 @@ $$
 
 # Espacio afín euclídeo
 
-Sea $\mathcal{A}$ un espacio afín con espacio vectorial asociado $V$. Si $V$ es un espacio vectorial euclídeo, es decir, si está dotado de un producto escalar $\langle\cdot,\cdot\rangle$, entonces decimos que $\mathcal{A}$ es un *espacio afín euclídeo*.
+Sea $\mathfrak{A}$ un espacio afín con espacio vectorial asociado $V$. Si $V$ es un espacio vectorial euclídeo, es decir, si está dotado de un producto escalar $\langle\cdot,\cdot\rangle$, entonces decimos que $\mathfrak{A}$ es un *espacio afín euclídeo*.
 
-Sea $\mathcal{A}$ un espacio afín euclídeo asociado al espacio vectorial $V$. Se define la función *distancia* en $\mathcal{A}$ como la aplicación 
+Sea $\mathfrak{A}$ un espacio afín euclídeo asociado al espacio vectorial $V$. Se define la función *distancia* en $\mathfrak{A}$ como la aplicación 
 
 $$
-\operatorname{d}:\mathcal{A}\times\mathcal{A} \to \mathbb{R}_{0}^{+},\quad \operatorname{d}(P,Q)= \Vert \overrightarrow {PQ}\Vert , 
+\operatorname{d}:\mathfrak{A}\times\mathfrak{A} \to \mathbb{R}_{0}^{+},\quad \operatorname{d}(P,Q)= \Vert \overrightarrow {PQ}\Vert , 
 $$
 
 donde $\Vert \cdot \Vert$ es la norma asociada al producto escalar de $V$.
@@ -409,22 +409,22 @@ Si $P$, $Q$ y $R$ son tres puntos de un espacio afín euclídeo con distancia $\
 
 ## Complemento ortogonal 
 
-Sea $\mathcal{A}$ un espacio afín euclídeo asociado al espacio vectorial $V$. Sea $\mathcal{L}$ una variedad afín con subespacio director $W$ y sea un punto $P\in\mathcal{A}$.
+Sea $\mathfrak{A}$ un espacio afín euclídeo asociado al espacio vectorial $V$. Sea $\mathfrak{L}$ una variedad afín con subespacio director $W$ y sea un punto $P\in\mathfrak{A}$.
 
-Llamamos *complemento ortogonal* a $\mathcal{L}$ por el punto $P$ a la variedad afín $\mathcal{L} _{P}^{\perp}=P+W^{\perp}$.
+Llamamos *complemento ortogonal* a $\mathfrak{L}$ por el punto $P$ a la variedad afín $\mathfrak{L} _{P}^{\perp}=P+W^{\perp}$.
 
 ## Proyección ortogonal de un punto sobre una variedad afín
 
 Llamamos *referencia rectangular* en un espacio euclídeo
-$\mathcal{A}$, con espacio vectorial subyacente $V$ de dimensión $n$, a todo sistema de referencia $R=\lbrace O;B\rbrace$ tal que $B$ es una base ortonormal de $V$.
+$\mathfrak{A}$, con espacio vectorial subyacente $V$ de dimensión $n$, a todo sistema de referencia $R=\lbrace O;B\rbrace$ tal que $B$ es una base ortonormal de $V$.
 
-Un vector $\mathbf{v}$ se dice *ortogonal* a una variedad afín $\mathcal{L}$, del espacio afín euclídeo $\mathcal{A}$, si $\mathbf{v}$ es ortogonal al subespacio director de $\mathcal{L}$. Denotaremos este hecho por $\mathbf{v}\perp\mathcal{L}$.
+Un vector $\mathbf{v}$ se dice *ortogonal* a una variedad afín $\mathfrak{L}$, del espacio afín euclídeo $\mathfrak{A}$, si $\mathbf{v}$ es ortogonal al subespacio director de $\mathfrak{L}$. Denotaremos este hecho por $\mathbf{v}\perp\mathfrak{L}$.
 
-Consideremos la variedad afín $\mathcal{L}=P+W$ que pasa por $P$ con dirección $W$. Sea un punto $Q\notin\mathcal{L}$. Sea $p_{W}(\overrightarrow{PQ})$ la proyección ortogonal de $\overrightarrow{PQ}$ sobre $W$. El punto $Q'=P+p_{W}(\overrightarrow{PQ})$ se llama *proyección ortogonal* del punto $Q$ sobre la variedad afín $\mathcal{L}$ y se denota por $p_{\mathcal{L}}(Q)$.
+Consideremos la variedad afín $\mathfrak{L}=P+W$ que pasa por $P$ con dirección $W$. Sea un punto $Q\notin\mathfrak{L}$. Sea $p_{W}(\overrightarrow{PQ})$ la proyección ortogonal de $\overrightarrow{PQ}$ sobre $W$. El punto $Q'=P+p_{W}(\overrightarrow{PQ})$ se llama *proyección ortogonal* del punto $Q$ sobre la variedad afín $\mathfrak{L}$ y se denota por $p_{\mathfrak{L}}(Q)$.
 
 ### Resultado 
 
-Se verifica que $Q'=p_{\mathcal{L}}(Q)=\mathcal{L}\cap \mathcal{L}_{Q}^{\perp}$.
+Se verifica que $Q'=p_{\mathfrak{L}}(Q)=\mathfrak{L}\cap \mathfrak{L}_{Q}^{\perp}$.
 
 ### Ejemplo
 
@@ -440,7 +440,7 @@ z=1+2\lambda.
 \right.
 $$
 
-Comenzamos tomando la variedad afín $\mathcal{L}$ correspondiente a la recta $r$, esto es, la variedad que pasa por el punto $(0,2,1)$ y  tiene como subespacio vectorial asociado el generado por el vector $(2,-1,2)$, es decir, $W=L(\lbrace(2,-1,2)\rbrace)$.
+Comenzamos tomando la variedad afín $\mathfrak{L}$ correspondiente a la recta $r$, esto es, la variedad que pasa por el punto $(0,2,1)$ y  tiene como subespacio vectorial asociado el generado por el vector $(2,-1,2)$, es decir, $W=\mathcal{L}(\lbrace(2,-1,2)\rbrace)$.
 
 El complemento ortogonal $W^{\perp}$ de $W$ está engendrado por dos vectores linealmente independientes ortogonales a $W$. Podemos tomar, por ejemplo, $(1,2,0)$ y $(1,0,-1)$. Por tanto,
 
@@ -474,18 +474,18 @@ $$
 2x-y+2z=0.
 $$
 
-La variedad $\mathcal{L}_{Q}^{\perp}$, que pasa por $Q=(1,3,-1)$ y con subespacio director $W^{\perp}$, está formada por los puntos $X=(x,y,z)$ tales que el vector
+La variedad $\mathfrak{L}_{Q}^{\perp}$, que pasa por $Q=(1,3,-1)$ y con subespacio director $W^{\perp}$, está formada por los puntos $X=(x,y,z)$ tales que el vector
 $ \overrightarrow{QX}=(x-1,y-3,z+1) $ pertenece a $W^{\perp}$, es decir, los puntos $X$ tales que $\overrightarrow{QX}$ satisface $2x-y+2z=0$.
 
-Por tanto, $\mathcal{L}_{Q}^{\perp}$ está formada por los puntos $X=(x,y,z)$ tales que 
+Por tanto, $\mathfrak{L}_{Q}^{\perp}$ está formada por los puntos $X=(x,y,z)$ tales que 
 
 $$
 2(x-1)-(y-3)+2(z+1)=0.
 $$
 
-Como $\mathcal{L}_{Q}^{\perp}$ es ortogonal a $r$, entonces su intersección con $r$ proporciona la proyección ortogonal de $Q=(1,3,-1)$ sobre $r$.
+Como $\mathfrak{L}_{Q}^{\perp}$ es ortogonal a $r$, entonces su intersección con $r$ proporciona la proyección ortogonal de $Q=(1,3,-1)$ sobre $r$.
 
-Ahora bien, si un punto de $r$ está en $\mathcal{L}_{Q}^{\perp}$, entonces 
+Ahora bien, si un punto de $r$ está en $\mathfrak{L}_{Q}^{\perp}$, entonces 
 
 $$
 2(2\lambda-1) - (2-\lambda-3) + 2(1+2\lambda+1) = 0 \Rightarrow 9\lambda+3=0 \Rightarrow \lambda=-\frac{1}{3}.
@@ -500,16 +500,16 @@ $$
 
 ### Distancia de un punto a una variedad afín
 
-Definimos la *distancia* de un punto $Q$ a una variedad afín $\mathcal{L}=P+W$ como
+Definimos la *distancia* de un punto $Q$ a una variedad afín $\mathfrak{L}=P+W$ como
 
 $$
-\operatorname{d}(Q,\mathcal{L}) = \inf\lbrace \operatorname{d}(Q,X) \mid X\in\mathcal{L}\rbrace.
+\operatorname{d}(Q,\mathfrak{L}) = \inf\lbrace \operatorname{d}(Q,X) \mid X\in\mathfrak{L}\rbrace.
 $$
 
 En realidad, ese ínfimo es un mínimo, ya que 
 
 $$
-\operatorname{d}(Q,\mathcal{L}) = \operatorname{d}\left(Q,p_{\mathcal{L}}(Q)\right).
+\operatorname{d}(Q,\mathfrak{L}) = \operatorname{d}\left(Q,p_{\mathfrak{L}}(Q)\right).
 $$
 
 ### Ejemplo
@@ -537,11 +537,11 @@ $$\begin{aligned}
 \end{aligned}
 $$ 
 
-Dadas dos variedades afines $\mathcal{L}_{1}=P_{1}+W_{1}$ y
-$\mathcal{L}_{2}=P_{2}+W_{2}$, se define la distancia entre ambas como
+Dadas dos variedades afines $\mathfrak{L}_{1}=P_{1}+W_{1}$ y
+$\mathfrak{L}_{2}=P_{2}+W_{2}$, se define la distancia entre ambas como
 
 $$
-\operatorname{d}(\mathcal{L}_{1},\mathcal{L}_{2}) = \inf\lbrace\operatorname{d}(Q_{1},Q_{2}) : Q_{1}\in\mathcal{L}_{1} \text{ y } Q_{2}\in\mathcal{L}_{2}\rbrace.
+\operatorname{d}(\mathfrak{L}_{1},\mathfrak{L}_{2}) = \inf\lbrace\operatorname{d}(Q_{1},Q_{2}) : Q_{1}\in\mathfrak{L}_{1} \text{ y } Q_{2}\in\mathfrak{L}_{2}\rbrace.
 $$
 
 Si dos variedades se cortan entonces la distancia entre ellas es cero.
@@ -550,20 +550,20 @@ El siguiente resultado proporciona un procedimiento para calcular la distancia e
 
 ### Resultado
 
-Sean $\mathcal{L}_{1}=P _{1}+W _{1}$ y $\mathcal{L} _{2}=P _{2}+W _{2}$ dos variedades afines que no se cortan. Entonces se verifica que
+Sean $\mathfrak{L}_{1}=P _{1}+W _{1}$ y $\mathfrak{L} _{2}=P _{2}+W _{2}$ dos variedades afines que no se cortan. Entonces se verifica que
 
 $$
-\operatorname{d}(\mathcal{L} _{1},\mathcal{L} _{2}) = \operatorname{d}(P _{1},\mathcal{L}),
+\operatorname{d}(\mathfrak{L} _{1},\mathfrak{L} _{2}) = \operatorname{d}(P _{1},\mathfrak{L}),
 $$
 
-donde $\mathcal{L}=P_{2}+(W_{1}+W_{2})$ es la variedad que contiene a $\mathcal{L} _{2}$ y es paralela a $\mathcal{L} _{1}$.
+donde $\mathfrak{L}=P_{2}+(W_{1}+W_{2})$ es la variedad que contiene a $\mathfrak{L} _{2}$ y es paralela a $\mathfrak{L} _{1}$.
 
 ### Distancia de un punto a un hiperplano
 
-Sea $P=(p_1,\dots,p_n)$ un punto y $\mathcal{H}\equiv a_1x_1+\dots+a_nx_n+b=0$ un hiperplano. Llamemos a $Q=(q_1,\dots,q_n)$ a la proyección ortogonal de $P$ en $\mathcal{H}$, y $v=(a_1,\dots,a_n)$. Entonces $v$ y $\overrightarrow{PQ}$ son ambos perpendiculares a $\mathcal{H}$, por lo que el ángulo que forman es $0$ o $\pi$. Por tanto, $|\langle \overrightarrow{PQ},v\rangle| =  \Vert \overrightarrow{PQ}\Vert \Vert v\Vert$, y por tanto,
+Sea $P=(p_1,\dots,p_n)$ un punto y $\mathfrak{H}\equiv a_1x_1+\dots+a_nx_n+b=0$ un hiperplano. Llamemos a $Q=(q_1,\dots,q_n)$ a la proyección ortogonal de $P$ en $\mathfrak{H}$, y $v=(a_1,\dots,a_n)$. Entonces $v$ y $\overrightarrow{PQ}$ son ambos perpendiculares a $\mathfrak{H}$, por lo que el ángulo que forman es $0$ o $\pi$. Por tanto, $|\langle \overrightarrow{PQ},v\rangle| =  \Vert \overrightarrow{PQ}\Vert \Vert v\Vert$, y por tanto,
 
 $$
-\operatorname{d}(P,\mathcal{H})=\Vert \overrightarrow{PQ}\Vert = \frac{|a_1(q_1-p_1)+\dots+a_n(q_n-p_n) |}{\Vert (a_1,\dots,a_n)\Vert } = \frac{|a_1p_1+\dots+a_np_n+b|}{\sqrt{a_1^2+\dots+a_n^2}}.
+\operatorname{d}(P,\mathfrak{H})=\Vert \overrightarrow{PQ}\Vert = \frac{|a_1(q_1-p_1)+\dots+a_n(q_n-p_n) |}{\Vert (a_1,\dots,a_n)\Vert } = \frac{|a_1p_1+\dots+a_np_n+b|}{\sqrt{a_1^2+\dots+a_n^2}}.
 $$
 
 ### Ejemplo
@@ -591,8 +591,8 @@ $$
 
 ### Propiedades
 
-- $(\mathbf{u} \wedge \mathbf{v})\in\mathcal{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)^\perp$. 
+- $(\mathbf{u} \wedge \mathbf{v})\in\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)^\perp$. 
 
-- $\mathbf{u} \wedge \mathbf{v}=0$ si y sólo si $\dim(\mathcal{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1$.
+- $\mathbf{u} \wedge \mathbf{v}=0$ si y sólo si $\dim(\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1$.
 
 - $\Vert \mathbf{u} \wedge \mathbf{v}\Vert = \Vert \mathbf{u}\Vert \Vert\mathbf{v}\Vert-\langle\mathbf{u},\mathbf{v}\rangle^2=\Vert \mathbf{u}\Vert \Vert\mathbf{v}\Vert \sin(\measuredangle(\mathbf{u},\mathbf{v}))$.
