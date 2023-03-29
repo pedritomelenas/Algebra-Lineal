@@ -329,6 +329,7 @@ x_{3}
 $$
 
 Es decir, 
+
 $$
 \left\lbrace
 \begin{aligned}
