@@ -36,8 +36,7 @@ que verifica las siguientes propiedades;
 
 - $\langle A,B \rangle = \sum\limits_{i=1}^n \sum\limits_{j=1}^m a_{ij}b_{ij}$, para cualesquiera $A=(a_{ij}), B=(b_{ij})\in \mathcal{M}_{n\times m}(\mathbb{R})$.
 
-Un espacio vectorial $V$ dotado de un producto escalar
-$\langle \cdot, \cdot \rangle$ se denomina *espacio vectorial euclídeo* y se denota por $(V;\langle \cdot, \cdot \rangle)$.
+Un espacio vectorial $V$ dotado de un producto escalar $\langle \cdot, \cdot \rangle$ se denomina *espacio vectorial euclídeo* y se denota por $(V;\langle \cdot, \cdot \rangle)$.
 
 
 ## Base ortogonal y ortonormal 
@@ -49,7 +48,7 @@ $$
 \Vert u\Vert=\sqrt{\langle \mathbf{u}, \mathbf{u} \rangle}
 $$
 
-y el *ángulo* que determinan $\mathbf{u}$ y $\mathbf{v}$ como el ángulo $(\measuredangle(\mathbf{u},\mathbf{v}))\in [0,\pi]$ tal que
+y el *ángulo* que determinan $\mathbf{u}$ y $\mathbf{v}$ como el ángulo $\measuredangle(\mathbf{u},\mathbf{v})\in [0,\pi]$ tal que
 
 $$
 \cos(\measuredangle(\mathbf{u},\mathbf{v}))=\frac{\langle \mathbf{u}, \mathbf{v} \rangle}{\Vert u\Vert \Vert v\Vert}.
