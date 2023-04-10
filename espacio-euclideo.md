@@ -86,7 +86,7 @@ $$
 $$
 
 
-En virtud de la desigualdad de Cauchy-Schwartz, podemos definir el *ángulo* que determinan $\mathbf{u}$ y $\mathbf{v}$ como el ángulo $\measuredangle(\mathbf{u},\mathbf{v})\in [0,\pi]$ tal que
+En virtud de la desigualdad de Cauchy-Schwartz, podemos definir el *ángulo* que determinan dos vectores no nulos $\mathbf{u}$ y $\mathbf{v}$ como el ángulo $\measuredangle(\mathbf{u},\mathbf{v})\in [0,\pi]$ tal que
 
 $$
 \cos(\measuredangle(\mathbf{u},\mathbf{v}))=\frac{\langle \mathbf{u}, \mathbf{v} \rangle}{\Vert u\Vert \Vert v\Vert}.
