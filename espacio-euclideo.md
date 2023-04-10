@@ -66,15 +66,6 @@ $$
 \vert\langle \mathbf{u},\mathbf{v}\rangle | \le \Vert \mathbf{u}\Vert \Vert \mathbf{v}\Vert.
 $$
 
-En virtud de esta desigualdad, podemos definir el *ángulo* que determinan $\mathbf{u}$ y $\mathbf{v}$ como el ángulo $\measuredangle(\mathbf{u},\mathbf{v})\in [0,\pi]$ tal que
-
-$$
-\cos(\measuredangle(\mathbf{u},\mathbf{v}))=\frac{\langle \mathbf{u}, \mathbf{v} \rangle}{\Vert u\Vert \Vert v\Vert}.
-$$
-
-Decimos que dos vectores, $\mathbf{u}$ y $\mathbf{v}$, son *vectores ortogonales* si $\langle \mathbf{u}, \mathbf{v} \rangle=0$, y lo denotamos escribiendo $\mathbf{u} \perp \mathbf{v}$.
-
-
 Como consecuencia de la desigualdad de Cauchy-Schwartz obtenemos que 
 
 $$
@@ -93,6 +84,16 @@ Dados $\mathbf{u},\mathbf{v}\in V$,
 $$
 \Vert \mathbf{u}+\mathbf{v}\Vert \le \Vert \mathbf{u}\Vert + \Vert \mathbf{v}\Vert.
 $$
+
+
+En virtud de la desigualdad de Cauchy-Schwartz, podemos definir el *ángulo* que determinan $\mathbf{u}$ y $\mathbf{v}$ como el ángulo $\measuredangle(\mathbf{u},\mathbf{v})\in [0,\pi]$ tal que
+
+$$
+\cos(\measuredangle(\mathbf{u},\mathbf{v}))=\frac{\langle \mathbf{u}, \mathbf{v} \rangle}{\Vert u\Vert \Vert v\Vert}.
+$$
+
+Decimos que dos vectores, $\mathbf{u}$ y $\mathbf{v}$, son *vectores ortogonales* si $\langle \mathbf{u}, \mathbf{v} \rangle=0$, y lo denotamos escribiendo $\mathbf{u} \perp \mathbf{v}$.
+
 
 Sean $B=\lbrace\mathbf{v}_1,\ldots, \mathbf{v}_n\rbrace$ una base de $V$. Decimos que $B$ es una *base ortogonal* de $V$ si sus vectores son ortogonales dos a dos; es decir, si $\langle \mathbf{v}_i, \mathbf{v}_j \rangle=0$ para todo $i\neq j$.
 
