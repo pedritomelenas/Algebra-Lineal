@@ -48,14 +48,6 @@ $$
 \Vert u\Vert=\sqrt{\langle \mathbf{u}, \mathbf{u} \rangle}
 $$
 
-y el *ángulo* que determinan $\mathbf{u}$ y $\mathbf{v}$ como el ángulo $\measuredangle(\mathbf{u},\mathbf{v})\in [0,\pi]$ tal que
-
-$$
-\cos(\measuredangle(\mathbf{u},\mathbf{v}))=\frac{\langle \mathbf{u}, \mathbf{v} \rangle}{\Vert u\Vert \Vert v\Vert}.
-$$
-
-Decimos que dos vectores, $\mathbf{u}$ y $\mathbf{v}$, son *vectores ortogonales* si $\langle \mathbf{u}, \mathbf{v} \rangle=0$, y lo denotamos escribiendo $\mathbf{u} \perp \mathbf{v}$.
-
 Un vector $\mathbf{u}$ se dice *unitario* si $\Vert u\Vert=1$.
 
 ### Propiedades
@@ -66,7 +58,7 @@ Para todo $\mathbf{v}\in V$ y $a\in K$,
 - $\Vert \mathbf{v}\Vert=0$ si y sólo si $\mathbf{v}=\mathbf{0}$,
 - $\Vert a\mathbf{v}\Vert=\vert a\vert \Vert \mathbf{v}\Vert$.
 
-### [Desigualdad de Schwartz](https://es.wikipedia.org/wiki/Desigualdad_de_Cauchy-Bunyakovsky-Schwarz)
+### [Desigualdad de Cauchy-Schwartz](https://es.wikipedia.org/wiki/Desigualdad_de_Cauchy-Bunyakovsky-Schwarz)
 
 Dados $\mathbf{u},\mathbf{v}\in V$,
 
@@ -74,7 +66,16 @@ $$
 \vert\langle \mathbf{u},\mathbf{v}\rangle | \le \Vert \mathbf{u}\Vert \Vert \mathbf{v}\Vert.
 $$
 
-Como consecuencia obtenemos que 
+En virtud de esta desigualdad, podemos definir el *ángulo* que determinan $\mathbf{u}$ y $\mathbf{v}$ como el ángulo $\measuredangle(\mathbf{u},\mathbf{v})\in [0,\pi]$ tal que
+
+$$
+\cos(\measuredangle(\mathbf{u},\mathbf{v}))=\frac{\langle \mathbf{u}, \mathbf{v} \rangle}{\Vert u\Vert \Vert v\Vert}.
+$$
+
+Decimos que dos vectores, $\mathbf{u}$ y $\mathbf{v}$, son *vectores ortogonales* si $\langle \mathbf{u}, \mathbf{v} \rangle=0$, y lo denotamos escribiendo $\mathbf{u} \perp \mathbf{v}$.
+
+
+Como consecuencia de la desigualdad de Cauchy-Schwartz obtenemos que 
 
 $$
 \begin{aligned}
