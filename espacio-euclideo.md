@@ -19,7 +19,7 @@ que verifica las siguientes propiedades;
 2. $\langle \mathbf{u}, \mathbf{v}+\mathbf{w} \rangle = \langle \mathbf{u}, \mathbf{v} \rangle + \langle \mathbf{u}, \mathbf{w} \rangle$ para todo $\mathbf{u}, \mathbf{v},\mathbf{w}\in V$;
 
 3. $\langle \mathbf{u}, \alpha v \rangle = \alpha \langle \mathbf{u}, \mathbf{v} \rangle$ para todo
-    $\mathbf{u}, \mathbf{v}\in V$ y todo $alpha\in\mathbb{R}$;
+    $\mathbf{u}, \mathbf{v}\in V$ y todo $\alpha\in\mathbb{R}$;
 
 4. $\langle \mathbf{u}, \mathbf{u} \rangle \geq 0$ para todo $\mathbf{u}\in V$;
 
