@@ -135,7 +135,7 @@ es una base ortonormal de $V$.
 
 ## Complemento ortogonal 
 
-Sean $(V;\langle \cdot, \cdot \rangle)$ un espacio vectorial euclídeo y $U$ un subespacio vectorial de $V$. Un vector $\mathbf{v}\in V$ se dice *ortogonal a $U$* si es ortogonal a todo vector de $U$, lo que se denota por $\mathbf{v}\perp U$.
+Sean $(V;\langle \cdot, \cdot \rangle)$ un espacio vectorial euclídeo y $U$ un subespacio vectorial de $V$. Un vector $\mathbf{v}\in V$ se dice *ortogonal* a $U$ si es ortogonal a todo vector de $U$, lo que se denota por $\mathbf{v}\perp U$.
 
 ### Resultado
 
