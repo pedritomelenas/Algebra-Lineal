@@ -45,7 +45,7 @@ Sean $(V;\langle \cdot, \cdot \rangle)$ un espacio vectorial euclídeo y
 $\mathbf{u}, \mathbf{v}\in V$. Entonces se define la *norma* del vector $\mathbf{u}$ como
 
 $$
-\Vert u\Vert=\sqrt{\langle \mathbf{u}, \mathbf{u} \rangle}
+\Vert u\Vert=\sqrt{\langle \mathbf{u}, \mathbf{u} \rangle}.
 $$
 
 Un vector $\mathbf{u}$ se dice *unitario* si $\Vert u\Vert=1$.
