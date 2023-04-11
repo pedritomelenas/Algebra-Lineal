@@ -160,7 +160,7 @@ $$
 
 ### Ejemplo
 
-Consideremos el subespacio vectorial $U \subseteq \mathbb{R}^4$ generado por los vectores $\left\lbrace (6,3,2,0),(4,1,0,-2) \right\rbrace$.Entonces las ecuaciones cartesianas de $U^\perp$ son
+Consideremos el subespacio vectorial $U \subseteq \mathbb{R}^4$ generado por los vectores $\left\lbrace (6,3,2,0),(4,1,0,-2) \right\rbrace$. Entonces las ecuaciones cartesianas de $U^\perp$ son
 
 $$
 \left\lbrace
