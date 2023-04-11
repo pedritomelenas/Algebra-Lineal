@@ -39,7 +39,7 @@ que verifica las siguientes propiedades;
 Un espacio vectorial $V$ dotado de un producto escalar $\langle \cdot, \cdot \rangle$ se denomina *espacio vectorial euclídeo* y se denota por $(V;\langle \cdot, \cdot \rangle)$.
 
 
-## Base ortogonal y ortonormal 
+## Norma
 
 Sean $(V;\langle \cdot, \cdot \rangle)$ un espacio vectorial euclídeo y
 $\mathbf{u}, \mathbf{v}\in V$. Entonces se define la *norma* del vector $\mathbf{u}$ como
@@ -70,7 +70,7 @@ Como consecuencia de la desigualdad de Cauchy-Schwartz obtenemos que
 
 $$
 \begin{aligned}
-\Vert \mathbf{u}+\mathbf{v}\Vert^2& =\langle \mathbf{u},\mathbf{u}\rangle+\langle \mathbf{u},\mathbf{v}\rangle +\langle\mathbf{v},\mathbf{u}\rangle+\langle\mathbf{v},\mathbf{v}\rangle=\langle\mathbf{u},\mathbf{u}\rangle+\langle\mathbf{v},\mathbf{v}\rangle+2\langle \mathbf{u}+\mathbf{v}\rangle \\
+\Vert \mathbf{u}+\mathbf{v}\Vert^2& =\langle \mathbf{u},\mathbf{u}\rangle+\langle \mathbf{u},\mathbf{v}\rangle +\langle\mathbf{v},\mathbf{u}\rangle+\langle\mathbf{v},\mathbf{v}\rangle=\langle\mathbf{u},\mathbf{u}\rangle+\langle\mathbf{v},\mathbf{v}\rangle+2\langle \mathbf{u}, \mathbf{v}\rangle \\
 & \le  \Vert \mathbf{u}\Vert^2+ \Vert \mathbf{v}\Vert^2+2\Vert \mathbf{u}\Vert \Vert\mathbf{v}\Vert=(\Vert \mathbf{u}\Vert +\Vert\mathbf{v}\Vert)^2,
 \end{aligned}
 $$
@@ -94,6 +94,7 @@ $$
 
 Decimos que dos vectores, $\mathbf{u}$ y $\mathbf{v}$, son *vectores ortogonales* si $\langle \mathbf{u}, \mathbf{v} \rangle=0$, y lo denotamos escribiendo $\mathbf{u} \perp \mathbf{v}$.
 
+## Base ortogonal y ortonormal 
 
 Sean $B=\lbrace\mathbf{v}_1,\ldots, \mathbf{v}_n\rbrace$ una base de $V$. Decimos que $B$ es una *base ortogonal* de $V$ si sus vectores son ortogonales dos a dos; es decir, si $\langle \mathbf{v}_i, \mathbf{v}_j \rangle=0$ para todo $i\neq j$.
 
