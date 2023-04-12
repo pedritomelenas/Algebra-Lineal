@@ -5,8 +5,7 @@
 
 ## Producto escalar
 
-Sea $V$ un $\mathbb{R}$-espacio vectorial. Un *producto escalar* en
-$V$ es una aplicación
+Sea $V$ un $\mathbb{R}$-espacio vectorial. Un *producto escalar* en $V$ es una aplicación
 
 $$
 \langle \cdot, \cdot \rangle \ : V \times V \rightarrow \mathbb{R}
@@ -40,8 +39,7 @@ Un espacio vectorial $V$ dotado de un producto escalar $\langle \cdot, \cdot \ra
 
 ## Norma
 
-Sean $(V;\langle \cdot, \cdot \rangle)$ un espacio vectorial euclídeo y
-$\mathbf{u}, \mathbf{v}\in V$. Entonces se define la *norma* del vector $\mathbf{u}$ como
+Sean $(V;\langle \cdot, \cdot \rangle)$ un espacio vectorial euclídeo y $\mathbf{u}, \mathbf{v}\in V$. Entonces se define la *norma* del vector $\mathbf{u}$ como
 
 $$
 \Vert u\Vert=\sqrt{\langle \mathbf{u}, \mathbf{u} \rangle}.
