@@ -18,8 +18,7 @@ que verifica las siguientes propiedades;
 
 2. $\langle \mathbf{u}, \mathbf{v}+\mathbf{w} \rangle = \langle \mathbf{u}, \mathbf{v} \rangle + \langle \mathbf{u}, \mathbf{w} \rangle$ para todo $\mathbf{u}, \mathbf{v},\mathbf{w}\in V$;
 
-3. $\langle \mathbf{u}, \alpha v \rangle = \alpha \langle \mathbf{u}, \mathbf{v} \rangle$ para todo
-    $\mathbf{u}, \mathbf{v}\in V$ y todo $\alpha\in\mathbb{R}$;
+3. $\langle \mathbf{u}, \alpha v \rangle = \alpha \langle \mathbf{u}, \mathbf{v} \rangle$ para todo $\mathbf{u}, \mathbf{v}\in V$ y todo $\alpha\in\mathbb{R}$;
 
 4. $\langle \mathbf{u}, \mathbf{u} \rangle \geq 0$ para todo $\mathbf{u}\in V$;
 
@@ -174,9 +173,7 @@ Además, $\left\lbrace (1,-4,3,0),(1,-2,0,1) \right\rbrace$ es una base de $U^\p
 
 ## Proyección ortogonal
 
-En un espacio vectorial euclídeo $(V;\langle \cdot, \cdot \rangle)$, consideremos un conjunto de vectores linealmente independientes 
-$S=\lbrace\mathbf{u} _1,\ldots,\mathbf{u} _m \rbrace \subset V$. Además, sean $U=\mathcal{L}(S)$ y 
-$\lbrace\mathbf{u} _{m+1},\ldots,\mathbf{u} _n \rbrace$ una base de $U^\perp$.
+En un espacio vectorial euclídeo $(V;\langle \cdot, \cdot \rangle)$, consideremos un conjunto de vectores linealmente independientes  $S=\lbrace\mathbf{u} _1,\ldots,\mathbf{u} _m \rbrace \subset V$. Además, sean $U=\mathcal{L}(S)$ y $\lbrace\mathbf{u} _{m+1},\ldots,\mathbf{u} _n \rbrace$ una base de $U^\perp$.
 
 Si $\mathbf{v}\in V$, entonces
 
@@ -216,7 +213,7 @@ Consideramos $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_n\rbrace$ base ortogonal de 
 
 Supongamos ahora que $(V;\langle \cdot, \cdot \rangle)$ es un espacio vectorial euclídeo y que $S=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ es una base (no necesariamente ortogonal) de un subespacio vectorial $U$ de $V$.
 
- Si $\mathbf{v}\in V$ y $\mathbf{u}=p_U(\mathbb{v})$, entonces $\langle \mathbf{v}-\mathbf{u}, \mathbf{w} \rangle=0$ para todo $\mathbf{w}\in U$. Por tanto, $\langle \mathbf{v}-\mathbf{u}, \mathbf{u}_j \rangle=0$ para  todo $j=1,\ldots,m$.
+ Si $\mathbf{v}\in V$ y $\mathbf{u}=p_U(\mathbf{v})$, entonces $\langle \mathbf{v}-\mathbf{u}, \mathbf{w} \rangle=0$ para todo $\mathbf{w}\in U$. Por tanto, $\langle \mathbf{v}-\mathbf{u}, \mathbf{u}_j \rangle=0$ para  todo $j=1,\ldots,m$.
 
  Ahora, si $\mathbf{u}=a_1 \mathbf{u}_1+\cdots+a_m \mathbf{u}_m$, entonces
 
