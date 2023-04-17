@@ -268,7 +268,7 @@ $$
 \Vert \mathbf{v}-\mathbf{w} \Vert = \Vert \mathbf{v}-\mathbf{u}+\mathbf{u}-\mathbf{w} \Vert, 
 $$
 
-y como $\mathbf{v}-\mathbf{u}\in U^\perp$ y $\mathbf{u}-\mathbf{w}\in W$, aplicando el Teorema de Pitágoras tenemos que 
+y como $\mathbf{v}-\mathbf{u}\in U^\perp$ y $\mathbf{u}-\mathbf{w}\in U$, aplicando el Teorema de Pitágoras tenemos que 
 
 $$
 \Vert \mathbf{v}-\mathbf{w} \Vert^2 = \Vert \mathbf{v}-\mathbf{u}\Vert^2+\Vert \mathbf{u}-\mathbf{w} \Vert^2, 
