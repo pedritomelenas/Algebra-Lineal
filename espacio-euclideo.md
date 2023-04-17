@@ -262,19 +262,19 @@ $$
 \Vert \mathbf{u}+\mathbf{v}\Vert^2=\langle \mathbf{u},\mathbf{u}\rangle+\langle \mathbf{u},\mathbf{v}\rangle +\langle\mathbf{v},\mathbf{u}\rangle+\langle\mathbf{v},\mathbf{v}\rangle=\langle\mathbf{u},\mathbf{u}\rangle+\langle\mathbf{v},\mathbf{v}\rangle=\Vert \mathbf{u}\Vert^2+ \Vert \mathbf{v}\Vert^2.
 $$
 
-Si $\mathbf{u}$ es la proyección ortogonal de $\mathbf{v}$ en el subespacio $U$ y $\mathbf{w}$ es un elemento cualquiera de $U$, entonces 
+Sea $\mathbf{v}$ un vector cualquiera de un espacio vectorial $V$ y $\mathbf{w}$ un elemento cualquiera de de un subespacio $U$. Entonces 
 
 $$
-\Vert \mathbf{v}-\mathbf{w} \Vert = \Vert \mathbf{v}-\mathbf{u}+\mathbf{u}-\mathbf{w} \Vert, 
+\Vert \mathbf{v}-\mathbf{u} \Vert = \Vert \mathbf{v}-p_U(\mathbf{v})+p_U(\mathbf{v})-\mathbf{u} \Vert, 
 $$
 
-y como $\mathbf{v}-\mathbf{u}\in U^\perp$ y $\mathbf{u}-\mathbf{w}\in U$, aplicando el Teorema de Pitágoras tenemos que 
+y como $\mathbf{v}-p_U(\mathbf{v})\in U^\perp$ y $p_U(\mathbf{v})-\mathbf{w}\in U$, aplicando el Teorema de Pitágoras tenemos que 
 
 $$
-\Vert \mathbf{v}-\mathbf{w} \Vert^2 = \Vert \mathbf{v}-\mathbf{u}\Vert^2+\Vert \mathbf{u}-\mathbf{w} \Vert^2, 
+\Vert \mathbf{v}-\mathbf{u} \Vert^2 = \Vert \mathbf{v}-p_U(\mathbf{v)}\Vert^2+\Vert p_U(\mathbf{v})-\mathbf{u} \Vert^2, 
 $$
 
-cantidad que es siempre mayor o igual que $\Vert \mathbf{v}-\mathbf{u}\Vert^2$ (se da la igualdad si y sólo si $\mathbf{u}=\mathbf{w}$). Tenemos así demostrado el Teorema de Mejor Aproximación.
+cantidad que es siempre mayor o igual que $\Vert \mathbf{v}-p_U(\mathbf{v})\Vert^2$ (se da la igualdad si y sólo si $\mathbf{u}=p_U(\mathbf{v})$). Tenemos así demostrado el Teorema de Mejor Aproximación.
 
 ### Teorema de Mejor Aproximación
 
