@@ -274,7 +274,7 @@ $$
 \Vert \mathbf{v}-\mathbf{u} \Vert^2 = \Vert \mathbf{v}-p_U(\mathbf{v)}\Vert^2+\Vert p_U(\mathbf{v})-\mathbf{u} \Vert^2, 
 $$
 
-cantidad que es siempre mayor o igual que $\Vert \mathbf{v}-p_U(\mathbf{v})\Vert^2$ (se da la igualdad si y sólo si $\mathbf{u}=p_ U(\mathbf{v})$). Tenemos así demostrado el Teorema de Mejor Aproximación.
+cantidad que es siempre mayor o igual que $\Vert \mathbf{v}-p_U(\mathbf{v})\Vert^2$; se da la igualdad si y sólo si $p_ U(\mathbf{v})=\mathbf{u}$. Tenemos así demostrado el Teorema de Mejor Aproximación.
 
 ### Teorema de Mejor Aproximación
 
