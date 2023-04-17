@@ -198,7 +198,7 @@ Consideramos $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_n\rbrace$ base ortogonal de 
 
  $$
  \begin{aligned}
-    v = & \dfrac{\langle \mathbf{v}, \mathbf{u} _1 \rangle}{\Vert \mathbf{u} _1\Vert^2}\mathbf{u} _1+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u} _m \rangle}{\Vert \mathbf{u} _m\Vert^2}\mathbf{u} _m + \\
+    \mathbf{v} = & \dfrac{\langle \mathbf{v}, \mathbf{u} _1 \rangle}{\Vert \mathbf{u} _1\Vert^2}\mathbf{u} _1+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u} _m \rangle}{\Vert \mathbf{u} _m\Vert^2}\mathbf{u} _m + \\
     & \dfrac{\langle \mathbf{v}, \mathbf{u} _{m+1} \rangle}{\Vert \mathbf{u} _{m+1}\Vert^2}\mathbf{u} _{m+1}+\cdots+\dfrac{\langle \mathbf{v}, \mathbf{u} _n \rangle}{\Vert \mathbf{u} _n\Vert^2}\mathbf{u} _n.
  \end{aligned}
  $$
