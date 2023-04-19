@@ -262,7 +262,7 @@ $$
 \Vert \mathbf{u}+\mathbf{v}\Vert^2=\langle \mathbf{u},\mathbf{u}\rangle+\langle \mathbf{u},\mathbf{v}\rangle +\langle\mathbf{v},\mathbf{u}\rangle+\langle\mathbf{v},\mathbf{v}\rangle=\langle\mathbf{u},\mathbf{u}\rangle+\langle\mathbf{v},\mathbf{v}\rangle=\Vert \mathbf{u}\Vert^2+ \Vert \mathbf{v}\Vert^2.
 $$
 
-Sea $\mathbf{v}$ un vector cualquiera de un espacio vectorial $V$ y $\mathbf{w}$ un elemento cualquiera de de un subespacio $U$. Entonces 
+Sea $\mathbf{v}$ un vector cualquiera de un espacio vectorial $V$ y $\mathbf{u}$ un elemento cualquiera de de un subespacio $U$. Entonces 
 
 $$
 \Vert \mathbf{v}-\mathbf{u} \Vert = \Vert \mathbf{v}-p_U(\mathbf{v})+p_U(\mathbf{v})-\mathbf{u} \Vert, 
