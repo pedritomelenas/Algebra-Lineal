@@ -163,7 +163,7 @@ Si $\mathfrak{L}_1$ y  $\mathfrak{L}_2$ no se cortan, entonces su intersección 
 La variedad suma de $\mathfrak{L}_1$ y $\mathfrak{L}_2$ se define como la menor variedad que contiene a ambas (o como la variedad que genera la unión de ambas). En este caso, 
 
 $$
-\mathfrak{L}_1+\mathfrak{L}_2=P_1+(\operatorname{L}(\overrightarrow {P_1P_2})+W_1+W_2).
+\mathfrak{L}_1+\mathfrak{L}_2=P_1+(\mathcal{L}(\overrightarrow {P_1P_2})+W_1+W_2).
 $$
 
 ## Variedades afines: ecuaciones 
