@@ -445,7 +445,7 @@ Comenzamos tomando la variedad afín $\mathfrak{L}$ correspondiente a la recta $
 El complemento ortogonal $W^{\perp}$ de $W$ está engendrado por dos vectores linealmente independientes ortogonales a $W$. Podemos tomar, por ejemplo, $(1,2,0)$ y $(1,0,-1)$. Por tanto,
 
 $$
-W^{\perp}=\operatorname{L}\left( \lbrace(1,2,0),(1,0,-1) \rbrace\right).
+W^{\perp}=\mathcal{L}\left( \lbrace(1,2,0),(1,0,-1) \rbrace\right).
 $$
 
 Así, $W^{\perp}$ es un subespacio vectorial de dimensión $2$ que admite como ecuaciones paramétricas 
