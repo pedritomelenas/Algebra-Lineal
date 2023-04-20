@@ -14,9 +14,9 @@ con $W$ el conjunto de soluciones de $Ax=0$, y para cualesquiera dos soluciones 
 
 ## Espacio afín
 
-Sea $V$ un espacio vectorial real (cuyos elementos llamaremos *vectores* o *direcciones*)
+Sea $V$ un espacio vectorial real (cuyos elementos llamaremos *vectores* o *direcciones*).
 
-Sea $\mathfrak{A}$ un conjunto no vacío cuyos elementos denominaremos *puntos*
+Sea $\mathfrak{A}$ un conjunto no vacío cuyos elementos denominaremos *puntos*.
 
 Decimos que $\mathfrak{A}$ es un *espacio afín sobre* $V$ si existe una aplicación 
 
