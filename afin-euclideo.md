@@ -38,7 +38,7 @@ Sea $(\mathfrak{A},V,\phi)$ un espacio afín.
 
 1.  $\overrightarrow{PQ}=\mathbf{0}_{V}$ si y sólo si  $P=Q$.
 3.  $\overrightarrow{PQ}=-$ $\overrightarrow{QP}$ para cualesquiera $P, Q\in\mathfrak{A}$.
-4.  Si $\overrightarrow{PQ}=\overrightarrow{P'Q'}$ entonces   $\overrightarrow{PP'}=\overrightarrow{QQ'}$ para cualesquiera  $P, P', Q, Q'\in\mathfrak{A}$ (regla del paralelogramo).
+4.  Si $\overrightarrow{PQ}=\overrightarrow{P'Q'}$, entonces   $\overrightarrow{PP'}=\overrightarrow{QQ'}$ para cualesquiera  $P, P', Q, Q'\in\mathfrak{A}$ (regla del paralelogramo).
 5.  $\overrightarrow{PQ}+\overrightarrow{QR}+\overrightarrow{RP}=\mathbf{0}_{V}$    (relación de Chasles).
 
 ### Ejemplo 
