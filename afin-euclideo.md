@@ -43,7 +43,7 @@ Sea $(\mathfrak{A},V,\phi)$ un espacio afín.
 
 ### Ejemplo 
 
-Supongamos que $\mathfrak{A}=\mathbb{R}^{n}$ y que $V=\mathbb{R}^{n}$. Si $P,Q\in\mathfrak{A}$ están dados por $P=(p_{1},\ldots,p_{n})$ y $Q=(q_{1},\ldots,q_{n})$. Definimos la aplicación $\phi$ por 
+Supongamos que $\mathfrak{A}=\mathbb{R}^{n}$ y que $V=\mathbb{R}^{n}$. Si $P,Q\in\mathfrak{A}$ están dados por $P=(p_{1},\ldots,p_{n})$ y $Q=(q_{1},\ldots,q_{n})$, definimos la aplicación $\phi$ por 
 
 $$
 \phi(P,Q)= (q_{1}-p_{1},\ldots,q_{n}-p_{n}).
