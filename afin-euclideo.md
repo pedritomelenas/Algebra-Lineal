@@ -201,7 +201,7 @@ $$
 \end{aligned}
 $$
 
-Por otra parte, $\overrightarrow{PX}=\overrightarrow{PO}+\overrightarrow{OX}$, por lo que $\overrightarrow{OX}=\overrightarrow{OP}+\mathbf{w}$. Supongamos que las coordenadas de $\overrightarrow{OX}$ y $\overrightarrow{OP}$, en la base $B$, son $(x_{1},x_{2},\ldots,x_{n})^{T}$ y $(p_{1},p_{2},\ldots,p_{n})^{T}$, respectivamente.
+Por otra parte, $\overrightarrow{PX}=\overrightarrow{PO}+\overrightarrow{OX}$, por lo que $\overrightarrow{OX}=\overrightarrow{OP}+\mathbf{w}$. Supongamos que las coordenadas de $\overrightarrow{OX}$ y $\overrightarrow{OP}$, en la base $B$, son $(x_{1},x_{2},\ldots,x_{n})$ y $(p_{1},p_{2},\ldots,p_{n})$, respectivamente.
 
 Entonces, 
 
