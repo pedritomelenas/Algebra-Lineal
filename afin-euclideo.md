@@ -178,7 +178,7 @@ Sea $\mathfrak{R}=\lbrace O;B\rbrace$ un sistema de referencia para $\mathfrak{A
 
 Supongamos que $\dim W=r$, con $1\leq r < n$, y que  $\lbrace \mathbf{u} _{1},\dots,\mathbf{u} _{r} \rbrace$ es una base de $W$.
 
-Si $X\in\mathfrak{L}$, entonces existe $\overrightarrow{PX}\in W$, llamémosle $\mathbf{w}$. Para dicho vector, existirán escalares $\lambda_{1},\lambda_{2},\dots,\lambda_{r}$ tales que 
+Si $X\in\mathfrak{L}$, entonces $\mathbf{w}=\overrightarrow{PX}\in W$. Para dicho vector, existirán escalares $\lambda_{1},\lambda_{2},\dots,\lambda_{r}$ tales que 
 
 $$
 \mathbf{w}=\lambda_{1}\mathbf{u} _{1}+\lambda _{2}\mathbf{u} _{2}+\cdots+\lambda _{r}\mathbf{u} _{r}.
