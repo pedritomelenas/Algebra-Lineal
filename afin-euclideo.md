@@ -178,13 +178,13 @@ Sea $\mathfrak{R}=\lbrace O;B\rbrace$ un sistema de referencia para $\mathfrak{A
 
 Supongamos que $\dim W=r$, con $1\leq r < n$, y que  $\lbrace \mathbf{u} _{1},\dots,\mathbf{u} _{r} \rbrace$ es una base de $W$.
 
-Si $X\in\mathfrak{L}$, entonces existe un único vector $\mathbf{w}\in W$ tal que $X=P+\mathbf{w}$. Para dicho vector,  $\overrightarrow{PX}$ existirán escalares $\lambda_{1},\lambda_{2},\dots,\lambda_{r}$ tales que 
+Si $X\in\mathfrak{L}$, entonces existe $\overrightarrow{PX}\in W$, llamémosle $\mathbf{w}$. Para dicho vector, existirán escalares $\lambda_{1},\lambda_{2},\dots,\lambda_{r}$ tales que 
 
 $$
 \mathbf{w}=\lambda_{1}\mathbf{u} _{1}+\lambda _{2}\mathbf{u} _{2}+\cdots+\lambda _{r}\mathbf{u} _{r}.
 $$
 
-Como $B$ es base de $V$ y $W$ es un subespacio de $V$, cada vector $\mathbf{u}_{i}$ se puede expresar en la base $B$, por lo que existen escalares $\omega_{ij}$ tales que 
+Como $B$ es base de $V$ y $W$ es un subespacio de $V$, cada vector $\mathbf{u} _{i}$ se puede expresar en la base $B$, por lo que existen escalares $\omega _{ij}$ tales que 
 
 $$
 \begin{aligned}
@@ -201,15 +201,9 @@ $$
 \end{aligned}
 $$
 
-Por otra parte, supongamos que las coordenadas de $\overrightarrow{OX}$ y $\overrightarrow{OP}$, en la base $B$, son $(x_{1},x_{2},\ldots,x_{n})^{T}$ y $(p_{1},p_{2},\ldots,p_{n})^{T}$, respectivamente.
+Por otra parte, $\overrightarrow{PX}=\overrightarrow{PO}+\overrightarrow{OX}$, por lo que $\overrightarrow{OX}=\overrightarrow{OP}+\mathbf{w}$. Supongamos que las coordenadas de $\overrightarrow{OX}$ y $\overrightarrow{OP}$, en la base $B$, son $(x_{1},x_{2},\ldots,x_{n})^{T}$ y $(p_{1},p_{2},\ldots,p_{n})^{T}$, respectivamente.
 
-Entonces, de la igualdad 
-
-$$
-\overrightarrow{OX}=\overrightarrow{OP}+\mathbf{w}
-$$ 
-
-se deduce que 
+Entonces, 
 
 $$
 \left\lbrace 
