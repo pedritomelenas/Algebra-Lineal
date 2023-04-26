@@ -570,7 +570,7 @@ $$
 
 ## Producto vectorial
 
-Sean $\mathbf{u},\mathbf{v}\in K^3$, con $K$ un cuerpo, y sean  $(u_1,u_2,u_3)$ y $(v_1,v_2,v_3)$ sus coordenadas respecto a una base $B=\lbrace\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_e\rbrace$ de $K^3$. El producto vectorial de $\mathbb{u}$ y $\mathbb{v}$ se define mediante el siguiente determinante formal
+Sean $\mathbf{u},\mathbf{v}\in K^3$, con $K$ un cuerpo, y sean  $(u_1,u_2,u_3)$ y $(v_1,v_2,v_3)$ sus coordenadas respecto a una base $B=\lbrace\mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_e\rbrace$ de $K^3$. El producto vectorial de $\mathbf{u}$ y $\mathbf{v}$ se define mediante el siguiente determinante formal
 
 $$
 \mathbf{u}\wedge \mathbf{v} = \begin{vmatrix}
