@@ -418,7 +418,7 @@ Consideremos la variedad afín $\mathfrak{L}=P+W$ que pasa por $P$ con direcció
 
 ### Resultado 
 
-Se verifica que $Q'=p_{\mathfrak{L}}(Q)=\mathfrak{L}\cap \mathfrak{L}_{Q}^{\perp}$.
+Se verifica que $\{p_{\mathfrak{L}}(Q)\}=\mathfrak{L}\cap \mathfrak{L}_{Q}^{\perp}$.
 
 ### Ejemplo
 
