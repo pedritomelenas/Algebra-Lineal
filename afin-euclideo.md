@@ -414,7 +414,7 @@ $\mathfrak{A}$, con espacio vectorial subyacente $V$ de dimensión $n$, a todo s
 
 Un vector $\mathbf{v}$ se dice *ortogonal* a una variedad afín $\mathfrak{L}$, del espacio afín euclídeo $\mathfrak{A}$, si $\mathbf{v}$ es ortogonal al subespacio director de $\mathfrak{L}$. Denotaremos este hecho por $\mathbf{v}\perp\mathfrak{L}$.
 
-Consideremos la variedad afín $\mathfrak{L}=P+W$ que pasa por $P$ con dirección $W$. Sea un punto $Q\notin\mathfrak{L}$. Sea $p_{W}(\overrightarrow{PQ})$ la proyección ortogonal de $\overrightarrow{PQ}$ sobre $W$. El único punto $Q'\in W$ tal que $\overrightarrow{PQ'}=p_{W}(\overrightarrow{PQ})$ se llama *proyección ortogonal* del punto $Q$ sobre la variedad afín $\mathfrak{L}$ y se denota por $p_{\mathfrak{L}}(Q)$.
+Consideremos la variedad afín $\mathfrak{L}=P+W$ que pasa por $P$ con dirección $W$. Sea un punto $Q\notin\mathfrak{L}$. Sea $p_{W}(\overrightarrow{PQ})$ la proyección ortogonal de $\overrightarrow{PQ}$ sobre $W$. El único punto $Q'\in \mathfrak{L}$ tal que $\overrightarrow{PQ'}=p_{W}(\overrightarrow{PQ})$ se llama *proyección ortogonal* del punto $Q$ sobre la variedad afín $\mathfrak{L}$ y se denota por $p_{\mathfrak{L}}(Q)$.
 
 ### Resultado 
 
