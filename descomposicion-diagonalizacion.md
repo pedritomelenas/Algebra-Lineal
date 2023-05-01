@@ -223,6 +223,87 @@ Sea $f: V\to V'$ una aplicación lineal con matriz asociada $A$ respecto de unas
 
 - Para que $f$ sea inyectiva, su núcleo tiene que ser trivial. Sabemos que $\dim(V)=n=\dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f))$. Así $f$ es inyectiva si y sólo si $n=\dim(\operatorname{Im}(f))=\dim(\operatorname{C}(A))$, por lo que esto equivale a que $A$ sea de rango pleno por columnas. Así, $f$ es inyectiva si y sólo si $A$ tiene una inversa por la izquierda.
 
+## Factorizaciones de rango pleno
+
+Sea $A\in \mathcal{M}_{m\times n}(K)$. Una *factorización de rango pleno* de $A$ es una expresión de $A$ como producto de dos matrices, $A=CF$, la primera de rango pleno por columnas y la segunda de rango pleno por filas.
+
+Sea $r=\operatorname{rg}(A)$, sea $H$ la matriz escalonada reducida por filas de $A$ y sea $P$ tal que $PA=H$, y por tanto $A=P^{-1}H$. Podemos escribir 
+
+$$
+H=\begin{pmatrix} 
+F \\ \hline
+0
+\end{pmatrix},\quad P^{-1}=\left( C \mid  B \right),
+$$
+con $F$ las primeras $r$ filas de $H$ (sus filas no nulas), y $C$ las primeras $r$ columnas de $P^{-1}$. De esta forma 
+
+$$
+A=P^{-1}H=\left( C \mid  B \right) \begin{pmatrix} 
+F \\ \hline
+0
+\end{pmatrix}= C F + B 0= CF. 
+$$
+
+Claramente, $C$ es de rango pleno por columnas y $F$ es de rango pleno por filas.
+
+### Ejemplo 
+
+Retomemos nuestra matriz 
+
+$$
+A=\begin{pmatrix}1 & 0\\1 & 1\\1 & 2\end{pmatrix}
+$$
+
+Entonces 
+
+$$
+PA= \begin{pmatrix} 
+1 & 0 \\
+0 & 1 \\
+0 & 0
+\end{pmatrix},
+$$
+con 
+
+$$
+P=\begin{pmatrix}0 & 2 & -1\\0 & -1 & 1\\1 & -2 & 1\end{pmatrix}.
+$$
+
+Así 
+
+$$
+A= \left(
+  \begin{array}{cc|c}
+  1 & 0 & 1\\
+  1 & 1 & 0\\
+  1 & 2 & 0
+  \end{array}
+  \right)
+\begin{pmatrix} 
+1 & 0 \\
+0 & 1 \\ \hline
+0 & 0
+\end{pmatrix},
+$$
+
+por lo que 
+
+$$
+A = \left(
+  \begin{array}{cc}
+  1 & 0 \\
+  1 & 1 \\
+  1 & 2
+  \end{array}
+  \right)
+\begin{pmatrix} 
+1 & 0 \\
+0 & 1 
+\end{pmatrix}.
+$$
+
+Lo cual era de esperar, pues $A$ es de rango pleno for columnas.
+
 ## Soluciones mínimo-cuadráticas
 
 Sea $A\in \mathcal{M}_{m\times n}(K)$ y $b\in K^m$. Consideremos el sistema lineal de ecuaciones
@@ -243,7 +324,7 @@ Este sistema siempre es compatible, pues $A^tb\in \operatorname{C}(A^t)=\operato
 
 ### Resultado
 
-Las soluciones minimo-cuadráticas de $Ax=b$ son las soluciones de $A^tAz=A^tb$ (que siempre es un sistema compatible). Además, existe una única solución mínimo-cuadrática si $A$ es de rango pleno por columnas, y en ese caso la solución es $A^Ib$.
+Las soluciones mínimo-cuadráticas de $Ax=b$ son las soluciones de $A^tAz=A^tb$ (que siempre es un sistema compatible). Además, existe una única solución mínimo-cuadrática si $A$ es de rango pleno por columnas, y en ese caso la solución es $A^Ib$.
 
 
 ### Ejemplo
@@ -288,4 +369,147 @@ $$
 
 ### Resultado
 
-Sea $A\in \mathcal{M}_{m\times n}(K)$$ una matriz de rango pleno y sea $b\in K^m$. Entonces el sistema $Ax=b$ es compatible y la solución de norma mínima es $x=A^Db$.
+Sea $A\in \mathcal{M}_{m\times n}(K)$ de rango pleno por filas y sea $b\in K^m$. Entonces el sistema $Ax=b$ es compatible y la solución de norma mínima es $x=A^Db$.
+
+
+## Inversas generalizadas de Moore-Penrose
+
+Vamos a intentar mezclar las dos definiciones que acabamos de dar en una: buscamos la solución mínimo-cuadrática de norma mínima. Para ello usaremos un concepto de inversa que generaliza los conceptos de inversa, inversa a derecha e inversa a izquierda.
+
+Decimos que $A\in \mathcal{M}_{m\times n}(K)$ tiene una inversa generalizada si existe $B\in \mathcal{M}_{n\times m}(K)$ tal que
+
+1. $ABA = A$,
+1. $BAB = B$,
+1. $AB$ y $BA$ son simétricas.
+
+Por ser $AB$ y $BA$ simétricas, se tiene que $AB=(AB)^t=B^tA^t$ y $BA=(BA)^t = A^tB^t$.
+
+Si $C$ es otra inversa generalizada de $A$, entonces 
+
+$$
+\begin{aligned}
+B &= BAB = (A^t B^t) B = (A^t C^t A^t) B^t B = (C A) A^t B^t B = C A (B A) B = C A B,  \\
+C &= CAC = C(C^tA^t) = CC^t(A^tB^tA^t) = C C^t A^t (A B) = C (A C) A B = C A B. 
+\end{aligned}
+$$
+
+Por tanto, la inversa generalizada de $A$, de existir, es única. La denotaremos por tanto $A^+$.
+
+### Ejemplos
+
+1. Si $A$ es cuadrada y tiene inversa, entonces $A^+=A^{-1}$. 
+
+1. Si $A$ es de rango pleno por filas, entonces $A^+=A^D =A^t(A A^t)^{-1}$.
+
+1. Si $A$ es de rango pleno por columnas, entonces $A^+=A^I = (A^t A)^{-1}A^t$. 
+
+
+Sea $A=CF$ una factorización de rango pleno de $A$. Sea $B=F^DC^I$ (tanto $F^D$ como $C^I$ existen por ser la $F$ de rango pleno por filas y $C$ de rango pleno por columnas).  
+
+1. $ABA = (CF)(F^DC^I)(CF)=C(FF^D)(C^IC)F=CF=A$,
+1. $BAB = (F^DC^I)(CF)(F^DC^I)=F^D(C^IC)(FF^D)C^I=F^DC^I=B$,
+1. $AB = (CF)(F^DC^I)=C C^I$, que es simétrica por ser $C^I=C^+$; $BA=(F^DC^I)(CF)=F^DF$, que también es simétrica al ser $F^D=F^+$.
+
+Por tanto, $B=A^+$.
+
+### Resultado
+
+Toda matriz tiene una inversa generalizada de Moore-Penrose.
+
+### Ejemplo
+
+Si volvemos, una vez más, a la matriz 
+
+$$
+A=\begin{pmatrix}1 & 0\\1 & 1\\1 & 2\end{pmatrix},
+$$
+
+recordemos que 
+
+$$
+A^I=(A^tA)^{-1}A^t=\begin{pmatrix}\frac{5}{6} & \frac{1}{3} & - \frac{1}{6}\\- \frac{1}{2} & 0 & \frac{1}{2}\end{pmatrix}.
+$$
+
+Y por tanto $A^+=A^I$.
+
+## Soluciones mínimo cuadráticas de norma mínima
+
+Sea $A\in \mathcal{M}_{m\times n}(K)$ y sea $b\in \mathbb{K}^m$. Podemos escribir $A= CF$ con $C$ de rango pleno por columnas y $F$ de rango pleno por filas. 
+
+El sistema de ecuaciones $Ax=b$ es equivalente a 
+
+$$
+\left\lbrace
+\begin{aligned}
+C y = b,\\
+F x = y.
+\end{aligned}
+\right.
+$$
+
+Por ser $C$ de rango pleno for columnas, la única solución mínimo-cuadrática de $Cy=b$ es $y=C^Ib$. Por otro lado $F$ es de rango pleno por filas, por lo que la solución de norma mínima de $Fx=C^Ib$ es $x=F^DC^Ib= A^+b$.
+
+Veamos que efectivamente $A^+b$ es la solución mínimo cuadrática de norma mínima del sistema $Ax=b$. Para ello escribimos $Ax-b=A(x-A^+b)+(I-AA^+)(-b)$.
+
+Comprobemos que $A(x-A^+b)$ y $(I-AA^+)(-b)$ son ortogonales (usaremos que $(A^+)^t=(A^t)^+$).
+
+$$
+\begin{aligned}
+\langle A(x-A^+b),(I-AA^+)(-b)\rangle  & = - (x- A^+b)^tA^t(I-AA^+)b \\
+& = -(x^t-b^t(A^+)^t)A^t(I-AA^+)b \\
+& = -(x^tA^t-b^t(A^+)^tA^t)(b-AA^+b)\\
+& = -x^tA^tb+b^t(A^+)^tA^tb+x^tA^tAA^+b-b^t(A^+)^tA^tAA^+b.
+\end{aligned}
+$$
+
+Ahora usamos que $A A^+=(AA^+)^t=(A^+)^tA^t$:
+$$
+\begin{aligned}
+\langle A(x-A^+b),(I-AA^+)(-b)\rangle  & =  -x^tA^tb+b^tAA^tb+x^tA^t(A^+)^tA^tb-b^tA A^+AA^+b \\
+& = -x^tA^tb+b^tAA^tb +x^tA^tb-b^tAA^+b=0.
+\end{aligned}
+$$
+
+Usando el Teorema de Pitágoras tenemos que 
+
+$$
+\begin{aligned}
+|| Ax-b ||^2 & = ||A(x-A^+b)||^2+||(I-AA^+)(-b)||^2\\
+& = ||Ax-A(A^+b)||^2+||A(A^+b)-b||^2 \ge ||A(A^+b)-b||^2. 
+\end{aligned}
+$$
+
+Por tanto, $||A(A^+b)-b||\le ||Ax-b||$ para todo $x$, con igualdad si y sólo si $||Ax-A(A^+b)||=0$ (lo que equivale a$Ax=A(A^+b)$). Esto demuestra que $A^+b$ es una solución mínimo-cuadrática del sistema $Ax=b$.
+
+Veamos ahora que la $A^+b$ también es mínima en norma entre las soluciones mínimo-cuadráticas. Sea $x$ con $||Ax-b|| = ||A(A^+b)-b||$. Por la discusión del párrafo anterior, eso implica que $Ax=A(A^+b)$, y por tanto $x-A^+b\in \operatorname{N}(A)$. Esto significa que $x=A^+b+z$ con $z\in \operatorname{N}(A)$. Así,
+
+$$
+||x||^2 = ||A^+b||^2 +||z||^2+2\langle A^+b,z\rangle.
+$$
+
+Veamos cuánto vale el último sumando de esta expresión:
+
+$$
+\begin{aligned}
+\langle z,A^+b\rangle & = z^tA^+b=z^tA^+AA^+b=z^tA^t(A^+)^t A^+b\\
+& =(Az)^t(A^+)^tA^+b=0(A^+)^tA^+b=0.
+\end{aligned}
+$$
+
+En particular, hemos probado que 
+
+$$
+A^+b\in \operatorname{N}(A)^\perp.
+$$
+
+De esta forma 
+
+$$
+||x||^2 = ||A^+b||^2 +||z||^2\ge ||A^+b||^2,
+$$
+
+con lo que queda probado que $A^+$ es la solución mínimo-cuadrática de norma mínima.
+
+## Descomposición por valores singulares
+
+Vamos a ver una forma alternativa de calcular $A^+$ usando los valores singulares de $A$.
