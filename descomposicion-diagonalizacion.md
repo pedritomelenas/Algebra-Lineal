@@ -101,7 +101,7 @@ $$
 Supongamos que queremos calcular la recta de $\mathbb{R}^2$ que pasa por $(0,1)$ y $(1,3)$. Supongamos que la recta tiene ecuación implícita $ax+by+c=0$. Si $b=0$, tendríamos que $x$ es igual a una constante, lo cual no es cierto con los datos que nos están proporcionando. Por tanto, $b\neq 0$ y nuestra ecuación se puede escribir como $y=\alpha+\beta x$. Esto es, estamos buscando un polinomio de grado uno que valga $1$ en $0$, y $3$ en $1$. Si consideramos $\alpha$ y $\beta$ como incógnitas, esto equivale a resolver el sistema
 
 $$
-\left\{
+\left\lbrace
 \begin{aligned}
 \alpha & & = 1 \\
 \alpha &+\beta & =3,
@@ -114,7 +114,7 @@ que es un sistema compatible determinado, con solución $\alpha=1$ y $\beta=2$. 
 Supongamos ahora que queremos calcular una recta que pase por los puntos $(0,1)$, $(1,3)$ y $(2,2)$. Eso nos lleva a resolver el sistema 
 
 $$
-\left\{
+\left\lbrace
 \begin{aligned}
 \alpha  & = 1 \\
 \alpha +\beta & =3,\\
@@ -512,4 +512,101 @@ con lo que queda probado que $A^+$ es la solución mínimo-cuadrática de norma 
 
 ## Descomposición por valores singulares
 
-Vamos a ver una forma alternativa de calcular $A^+$ usando los valores singulares de $A$.
+Sea $A\in \mathcal{M}_{m\times n}(\mathbb{R})$. La matriz $A^tA$ es simétrica, luego existe $U$ ortogonal de forma que $U^t(A^tA)U=D$ con $D$ una matriz diagonal. 
+
+Sea $\lambda$ un autovalor de $A^tA$, por tanto existe $x\neq 0$ de forma que $(A^tA)x=\lambda x$. Entonces 
+
+$$
+0\le ||A x||^2 = \langle Ax,Ax\rangle = (Ax)^t(Ax)=x^t(A^tAx)= \lambda x^tx = \lambda ||x||^2,
+$$
+
+por lo que $\lambda \ge 0$. De esta forma, podemos reordenar las columnas de $U$ de forma que los valores de la diagonal de $D$ sean $d_1^2\ge d_2^2\ge \dots \ge d_r^2 > 0= d_{r+1}=\dots = d_n$. Hemos visto que $\operatorname{rg}(A^tA)=\operatorname{rg}(A)$, y sabemos que $P$ no es más que un producto de matrices elementales (ya que tiene inversa), deducimos que $r=\operatorname{rg}(D)=\operatorname{rg}(A)$.
+
+Por tanto, existe una base ortonormal $\{u_1,\dots,u_n\}$ de $\mathbb{R}^n$ (las columnas de $U$) tal que  $A^tA u_i=d_i^2u_i$ para todo $i$. Para cada $j\in\{1,\dots,r\}$, definimos $v_j=\frac1{d_j}Au_j$. Para $j,k\in \{1,\dots,r\}$,
+
+$$
+\langle v_j,v_k\rangle = \frac{1}{d_jd_k} u_j^tA^tAu_k=\begin{cases}
+0, \text{ si } j\neq k,\\
+1, \text{ si } j=k,
+\end{cases}
+$$
+
+por lo que $\{v_1,\dots,v_r\}\subseteq \mathbb{R}^m$ es un conjunto de vectores ortonormales. Ampliamos esta base a una base $\{v_1,\dots,v_m\}$ ortonormal de $\mathbb{R}^m$. 
+
+
+Tomemos $j\in \{1,\dots,m\}$ e $i\in\{1,\dots,n\}$.
+
+- Si $i=j \le r$, entonces $v_i^t A u_i = v_i^td_iv_i=d_i$.
+
+- Si $i=j>r$, entonces $v_i^t Au_i=v_i^t 0=0=d_i$, ya que $u_i\in \operatorname{N}(A^tA)=\operatorname{N}(A)$.
+
+- Si $i\neq j$, si $i>r$, al igual que antes $v_j^tAu_i=v_j0=0$; si $i\le r$, entonces $v_j^tAu_i=v_j^td_iv_i=d_i0=0$.
+
+Con esto hemos demostrado que si consideramos la matriz $V$ que tiene por columnas $\{v_1,\dots,v_m\}$, entonces
+
+$$
+V^tAU=D
+$$
+
+y como $V^t=V^{-1}$ y $U^t=U^{-1}$, deducimos que 
+
+$$
+A=VDU^t,
+$$
+
+a la que llamamos *descomposición de valores singulares* de $A$. Los $d_i$ los podemos escoger no negativos, en cuyo caso se conocen como valores singulares de $A$.
+
+Para simpificar la notación, usaremos $D=\operatorname{diag}(d_1,\dots,d_n)$ a la matriz que tiene en como entradas $d_{ii}=d_i$ y $d_{ij}=0$ si $i\neq j$. 
+
+$$
+\begin{aligned}
+A & =(v_1| \dots | v_m) D (u_1|\dots | u_m)^t = (d_1v_1| \dots | d_r v_r | 0 | \dots | 0) (u_1 | \dots | u_m)^t \\
+& = (d_1v_1|\dots |d_rv_r)(u_1| \dots | u_r)^t = (v_1|\dots | v_r) \operatorname{diag}(d_1,\dots,d_r) (u_1| \dots | u_r)^t.
+\end{aligned}
+$$
+
+A la descomposición 
+
+$$
+A=(v_1|\dots | v_r) \operatorname{diag}(d_1,\dots,d_r) (u_1| \dots | u_r)^t
+$$
+
+se le conoce como *descomposición por valores singulares compacta* de $A$.
+
+### Resultado 
+
+Dada $A\in\mathcal{M}_{m\times n}(\mathbb R)$ de rango $r$. Si $A=(v_1|\dots | v_r) \operatorname{diag}(d_1,\dots,d_r) (u_1| \dots | u_r)^t$ es una descomposición por valores singulares compacta, entonces 
+
+$$
+A^+=(u_1|\dots | u_r) \operatorname{diag}\left(\frac{1}{d_1},\dots,\frac{1}{d_r}\right) (v_1| \dots | v_r)^t.
+$$
+
+### Ejemplo
+
+Veamos cómo es la descomposición por valores singulares de 
+
+$$
+A=\begin{pmatrix}1 & 0\\1 & 1\\1 & 2\end{pmatrix}
+$$
+
+Para ello vamos a utilizar `sympy` (las cuentas a mano pueden resultar muy tediosas incluso con este ejemplo tan sencillo). 
+
+Una vez definida la matriz $A$ con 
+```python
+A=Matrix([[1,0],[1,1],[1,2]])
+``` 
+podemos calcular la descomposición con 
+```
+V,D,U = A.singular_value_decomposition()
+```
+Y obtenemos $A=VDU^t$:
+
+$$
+A=\begin{pmatrix}\frac{- \sqrt{30} - \sqrt{3}}{6 \sqrt{5 - \sqrt{10}}} & \frac{- \sqrt{3} + \sqrt{30}}{6 \sqrt{\sqrt{10} + 5}}\\\frac{- \sqrt{30} + 2 \sqrt{3}}{6 \sqrt{5 - \sqrt{10}}} & \frac{2 \sqrt{3} + \sqrt{30}}{6 \sqrt{\sqrt{10} + 5}}\\\frac{\sqrt{3} \sqrt{5 - \sqrt{10}}}{6} & \frac{\sqrt{3} \sqrt{\sqrt{10} + 5}}{6}\end{pmatrix} \begin{pmatrix}\sqrt{4 - \sqrt{10}} & 0\\0 & \sqrt{\sqrt{10} + 4}\end{pmatrix} \begin{pmatrix}\frac{\sqrt{2} \left(- \sqrt{10} - 1\right)}{2 \sqrt{\sqrt{10} + 10}} & \frac{3 \sqrt{2}}{2 \sqrt{\sqrt{10} + 10}}\\\frac{\sqrt{2} \left(-1 + \sqrt{10}\right)}{2 \sqrt{10 - \sqrt{10}}} & \frac{3 \sqrt{2}}{2 \sqrt{10 - \sqrt{10}}}\end{pmatrix}.
+$$
+
+Si calculamos $UD^{-1}V^t$, obtenemos 
+
+$$
+A^+ = \begin{pmatrix}\frac{5}{6} & \frac{1}{3} & - \frac{1}{6}\\- \frac{1}{2} & 0 & \frac{1}{2}\end{pmatrix}.
+$$
