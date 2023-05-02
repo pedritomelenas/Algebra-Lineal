@@ -2,7 +2,7 @@
 title:               'Álgebra'
 tagline:             'Grado en Estadística'
 description:         'Página con guiones de la asignatura'
-url:                 ''
+url:                 'https://pedritomelenas.github.io/Algebra-Lineal/'
 baseurl:             ''
 paginate:            5
 permalink:           pretty
