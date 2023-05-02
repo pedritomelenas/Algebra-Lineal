@@ -69,7 +69,10 @@ Sea $S$ un subconjunto no vacío de un espacio vectorial $V$. El subespacio vect
 
 ### Caracterización
 Sea $V$ un espacio vectorial sobre el cuerpo $K$. Si $S=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_n\rbrace$, entonces
-$$\langle S\rangle=\lbrace a_1\mathbf{u}_1+\cdots +a_n\mathbf{u}_n  : a_1,\ldots,a_n\in K\rbrace.$$
+
+$$
+\langle S\rangle=\lbrace a_1\mathbf{u}_1+\cdots +a_n\mathbf{u}_n  : a_1,\ldots,a_n\in K\rbrace.
+$$
 
 ## Bases
 
