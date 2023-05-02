@@ -1,3 +1,8 @@
+---
+layout: page
+title: Espacio afín euclídeo
+---
+
 # Espacio afín euclídeo
 
 *Estas notas se basan en las [transparencias](https://www.ugr.es/~arobles/MatApl(CivilADE)/Tema5_beamer.pdf) de [A. M. Robles Pérez](https://www.ugr.es/~arobles/).*
@@ -554,7 +559,7 @@ donde $\mathfrak{L}=P_{2}+(W_{1}+W_{2})$ es la variedad que contiene a $\mathfra
 
 ### Distancia de un punto a un hiperplano
 
-Sea $P=(p_1,\dots,p_n)$ un punto y $\mathfrak{H}\equiv a_1x_1+\dots+a_nx_n+b=0$ un hiperplano. Llamemos a $Q=(q_1,\dots,q_n)$ a la proyección ortogonal de $P$ en $\mathfrak{H}$, y $v=(a_1,\dots,a_n)$. Entonces $v$ y $\overrightarrow{PQ}$ son ambos perpendiculares a $\mathfrak{H}$, por lo que el ángulo que forman es $0$ o $\pi$. Por tanto, $|\langle \overrightarrow{PQ},v\rangle| =  \Vert \overrightarrow{PQ}\Vert \Vert v\Vert$, y por tanto,
+Sea $P=(p_1,\dots,p_n)$ un punto y $\mathfrak{H}\equiv a_1x_1+\dots+a_nx_n+b=0$ un hiperplano. Llamemos a $Q=(q_1,\dots,q_n)$ a la proyección ortogonal de $P$ en $\mathfrak{H}$, y $v=(a_1,\dots,a_n)$. Entonces $v$ y $\overrightarrow{PQ}$ son ambos perpendiculares a $\mathfrak{H}$, por lo que el ángulo que forman es $0$ o $\pi$. Por tanto, $\vert\langle \overrightarrow{PQ},v\rangle\vert =  \Vert \overrightarrow{PQ}\Vert \Vert v\Vert$, y por tanto,
 
 $$
 \operatorname{d}(P,\mathfrak{H})=\Vert \overrightarrow{PQ}\Vert = \frac{|a_1(q_1-p_1)+\dots+a_n(q_n-p_n) |}{\Vert (a_1,\dots,a_n)\Vert } = \frac{|a_1p_1+\dots+a_np_n+b|}{\sqrt{a_1^2+\dots+a_n^2}}.

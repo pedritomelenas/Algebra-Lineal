@@ -1,3 +1,8 @@
+---
+layout: page
+title: Espacios vectoriales
+---
+
 # Espacios vectoriales
 
 *Este guión está basado en los apuntes de [ALEM](https://www.ugr.es/~pedro/alem/).*
@@ -337,7 +342,10 @@ y transformar el sistema en otro equivalente que esté en forma escalonada. El n
 La intersección de subespacios vectoriales de $V$ es de nuevo un subespacio vectorial de $V$. Si conocemos las ecuaciones cartesianas de cada uno de los subespacios, las ecuaciones cartesianas de la intersección serán la unión de todas las ecuaciones de cada uno de los subespacios.
 
 Sean $U_1,\dots,U_n$ subespacios vectoriales de $V$. El subespacio vectorial suma de $U_1,\ldots, U_n$ es
-$$U_1+\dots+ U_n=\lbrace\mathbf{u}_1+\dots +\mathbf{u}_n :\mathbf{u}_1\in U_1,\dots,\mathbf{u}_n\in U_n\rbrace.$$
+
+$$
+U_1+\dots+ U_n=\lbrace\mathbf{u}_1+\dots +\mathbf{u}_n :\mathbf{u}_1\in U_1,\dots,\mathbf{u}_n\in U_n\rbrace.
+$$
 
 ### Propiedades
 
