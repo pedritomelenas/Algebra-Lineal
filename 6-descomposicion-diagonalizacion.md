@@ -3,7 +3,12 @@ layout: page
 title: Descomposición y diagonalización de matrices
 ---
 
+# Descomposición y diagonalización de matrices
+
+Este guión se basa en los libros [L. Merino, E. Santos, [Álgebra Lineal con Métodos Elementales](https://www.amazon.es/%C3%81lgebra-lineal-m%C3%A9todos-elementales-GONZALEZ/dp/8497324811)] y [I. Ojeda, J. Gago, [Métodos matemáticos para la Estadística](https://publicauex.unex.es/libro/metodos-matematicos-para-estadistica_135467/)].
+
 # Diagonalización por semejanza ortogonal de matrices simétricas
+
 
 Sea $(V,\langle,\rangle)$ un espacio vectorial euclídeo. Un endomorfismo $f:V\to V$ se dice *simétrico* (o *autoadjunto*) si para todo $\mathbf{u},\mathbf{v}\in V$ se tiene que 
 
