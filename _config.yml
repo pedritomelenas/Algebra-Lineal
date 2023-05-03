@@ -1,7 +1,7 @@
 # Setup
 title:               'Álgebra'
 tagline:             'Grado en Estadística'
-description:         'Página con guiones de la asignatura'
+description:         'Página con guiones de la asignatura de Álgebra para Estadística'
 url:                 'https://pedritomelenas.github.io/Algebra-Lineal'
 baseurl:             ''
 paginate:            5
