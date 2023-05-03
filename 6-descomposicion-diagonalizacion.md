@@ -464,6 +464,49 @@ $$
 
 Y por tanto $A^+=A^I$.
 
+
+Sea $Ax=b$ un sistema lineal de ecuaciones. Si el sistema es compatible, entonces existe $x_0$ tal que $Ax_0=b$. Por tanto, 
+
+$$
+A(A^+b)=AA^+Ax_0=Ax_0=b.
+$$
+
+Luego compatible implica $A(A^+b)=b$. El recíproco es claramente cierto. Tenemos así el siguiente resultado.
+
+### Resultado
+
+Un sistema de ecuaciones $Ax=b$ es compatible si y sólo si $A(A^+b)=b$.
+
+Veamos ahora cómo serían, de ser el sistema $Ax=b$ compatible, todas las soluciones. Si $x$ es una solución de ese sistema, entonces $A^+Ax=A^+(Ax)=A^+b$. Luego
+
+$$
+x=x+A^+b-A^+Ax=A^+b+(I-A^+A)x.
+$$
+
+Además, para cualquier $y$,
+
+$$
+A(A^+b+(I-A^+A)y)=AA^+b+Ay-AA^+Ay=Ab+Ay-Ay=Ab.
+$$
+
+Luego todas las soluciones de $Ax=b$ son de la forma
+
+$$
+A^+b+(I-A^+A)y
+$$
+
+con $y$ arbitrario.
+
+## Resultado (parametrización de soluciones)
+
+Sea $A\in\mathcal{M}_{m\times n}(K)$. Si $Ax=b$ es compatible, entonces todas las soluciones son de la forma
+
+$$
+x=A^+b+(I-A^+A)y
+$$
+
+con $y\in K^n$.
+
 ## Soluciones mínimo cuadráticas de norma mínima
 
 Sea $A\in \mathcal{M}_{m\times n}(K)$ y sea $b\in \mathbb{K}^m$. Podemos escribir $A= CF$ con $C$ de rango pleno por columnas y $F$ de rango pleno por filas. 
