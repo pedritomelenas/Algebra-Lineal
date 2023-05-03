@@ -556,7 +556,7 @@ $$
 
 por lo que $\lambda \ge 0$. De esta forma, podemos reordenar las columnas de $U$ de forma que los valores de la diagonal de $D$ sean $d_1^2\ge d_2^2\ge \dots \ge d_r^2 > 0= d_{r+1}=\dots = d_n$. Hemos visto que $\operatorname{rg}(A^tA)=\operatorname{rg}(A)$, y sabemos que $P$ no es más que un producto de matrices elementales (ya que tiene inversa), deducimos que $r=\operatorname{rg}(D)=\operatorname{rg}(A)$.
 
-Por tanto, existe una base ortonormal $\{u_1,\dots,u_n\}$ de $\mathbb{R}^n$ (las columnas de $U$) tal que  $A^tA u_i=d_i^2u_i$ para todo $i$. Para cada $j\in\{1,\dots,r\}$, definimos $v_j=\frac1{d_j}Au_j$. Para $j,k\in \{1,\dots,r\}$,
+Por tanto, existe una base ortonormal $\lbrace u_1,\dots,u_n\rbrace$ de $\mathbb{R}^n$ (las columnas de $U$) tal que  $A^tA u_i=d_i^2u_i$ para todo $i$. Para cada $j\in\lbrace 1,\dots,r\rbrace$, definimos $v_j=\frac1{d_j}Au_j$. Para $j,k\in \lbrace 1,\dots,r\rbrace$,
 
 $$
 \langle v_j,v_k\rangle = \frac{1}{d_jd_k} u_j^tA^tAu_k=\begin{cases}
@@ -565,10 +565,10 @@ $$
 \end{cases}
 $$
 
-por lo que $\{v_1,\dots,v_r\}\subseteq \mathbb{R}^m$ es un conjunto de vectores ortonormales. Ampliamos esta base a una base $\{v_1,\dots,v_m\}$ ortonormal de $\mathbb{R}^m$. 
+por lo que $\lbrace v_1,\dots,v_r\rbrace\subseteq \mathbb{R}^m$ es un conjunto de vectores ortonormales. Ampliamos esta base a una base $\lbrace v_1,\dots,v_m\rbrace$ ortonormal de $\mathbb{R}^m$. 
 
 
-Tomemos $j\in \{1,\dots,m\}$ e $i\in\{1,\dots,n\}$.
+Tomemos $j\in \lbrace 1,\dots,m\rbrace$ e $i\in\lbrace 1,\dots,n\rbrace$.
 
 - Si $i=j \le r$, entonces $v_i^t A u_i = v_i^td_iv_i=d_i$.
 
@@ -576,7 +576,7 @@ Tomemos $j\in \{1,\dots,m\}$ e $i\in\{1,\dots,n\}$.
 
 - Si $i\neq j$, si $i>r$, al igual que antes $v_j^tAu_i=v_j0=0$; si $i\le r$, entonces $v_j^tAu_i=v_j^td_iv_i=d_i0=0$.
 
-Con esto hemos demostrado que si consideramos la matriz $V$ que tiene por columnas $\{v_1,\dots,v_m\}$, entonces
+Con esto hemos demostrado que si consideramos la matriz $V$ que tiene por columnas $\lbrace v_1,\dots,v_m\rbrace$, entonces
 
 $$
 V^tAU=D
