@@ -505,7 +505,13 @@ $$
 \operatorname{d}(Q,\mathfrak{L}) = \inf\lbrace \operatorname{d}(Q,X) \mid X\in\mathfrak{L}\rbrace.
 $$
 
-En realidad, ese ínfimo es un mínimo, ya que 
+En realidad, ese ínfimo es un mínimo como vamos a ver a continuación. Para todo $X\in\mathfrak{L}$, si llamamos $Q'=p_{\mathfrak{L}}(Q)$, tenemos que $\overrightarrow{QQ'}\in W^\perp$ y $\overrightarrow{Q'X}\in W$. Así, por el Teorema de Pitágoras
+
+$$
+\operatorname{d}(Q,X)^2=\Vert \overrightarrow{QX}\Vert^2= \Vert \overrightarrow{QQ'} + \overrightarrow{Q'X}\Vert^2 = \Vert \overrightarrow{QQ'}\Vert^2+ \Vert \overrightarrow{Q'X}\Vert^2 \ge \Vert \overrightarrow{QQ'} \Vert^2 = \operatorname{d}(Q,Q')^2,
+$$
+
+por lo que
 
 $$
 \operatorname{d}(Q,\mathfrak{L}) = \operatorname{d}\left(Q,p_{\mathfrak{L}}(Q)\right).
