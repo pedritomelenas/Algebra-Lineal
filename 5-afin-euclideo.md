@@ -374,7 +374,7 @@ $$
 \overrightarrow{PX}=\overrightarrow{PO}+\overrightarrow{OX}=\overrightarrow{OX}-\overrightarrow{OP}.
 $$
 
-Así, las coordenadas de $\overrightarrow{PX}$ son las coordenadas de $X$ menos las coordenadas de $P$ (en el sistema de referencia $\mathcal{R}$). Supongamos que $P=(p_1,\dots,p_n)_{\mathcal{R}}$ y que $X=(x_1,\dots,x_n)_{\mathcal{R}}$. Las coordenadas de $\overrightarrow{PX}$ respecto de $B$ son $(x_1-p_1,\dots,x_n-p_n)$.
+Así, las coordenadas de $\overrightarrow{PX}$ son las coordenadas de $X$ menos las coordenadas de $P$ (en el sistema de referencia $\mathcal{R}$). Supongamos que $P=(p _1,\dots,p _n) _{\mathcal{R}}$ y que $X=(x _1,\dots,x _n) _{\mathcal{R}}$. Las coordenadas de $\overrightarrow{PX}$ respecto de $B$ son $(x _1-p _1,\dots,x _n-p _n)$.
 
 Supongamos que $Ax=0$ son las ecuaciones implícitas de $W$ respecto de la base $B$. Entonces $X\in \mathfrak{L}=P+W$ si y sólo si $\overrightarrow{PX}\in W$, lo que equivale a que 
 
