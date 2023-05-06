@@ -546,8 +546,8 @@ $$\begin{aligned}
 \end{aligned}
 $$ 
 
-Dadas dos variedades afines $\mathfrak{L}_{1}=P_{1}+W_{1}$ y
-$\mathfrak{L}_{2}=P_{2}+W_{2}$, se define la distancia entre ambas como
+Dadas dos variedades afines $\mathfrak{L} _{1}=P _{1}+W _{1}$ y
+$\mathfrak{L} _{2}=P _{2}+W _{2}$, se define la distancia entre ambas como
 
 $$
 \operatorname{d}(\mathfrak{L}_{1},\mathfrak{L}_{2}) = \inf\lbrace\operatorname{d}(Q_{1},Q_{2}) : Q_{1}\in\mathfrak{L}_{1} \text{ y } Q_{2}\in\mathfrak{L}_{2}\rbrace.
@@ -641,3 +641,41 @@ $$
 - $\mathbf{u} \wedge \mathbf{v}=0$ si y sólo si $\dim(\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1$.
 
 - $\Vert \mathbf{u} \wedge \mathbf{v}\Vert = \Vert \mathbf{u}\Vert \Vert\mathbf{v}\Vert-\langle\mathbf{u},\mathbf{v}\rangle^2=\Vert \mathbf{u}\Vert \Vert\mathbf{v}\Vert \sin(\measuredangle(\mathbf{u},\mathbf{v}))$.
+
+Para ver que $(\mathbf{u}\wedge \mathbf{v})\perp \mathbf{u}$, basta observar que 
+
+$$
+\begin{aligned}
+\langle \mathbf{u}\wedge \mathbf{v},\mathbf{u}\rangle  & = \begin{vmatrix} u_2 & u_3 \\ v_2 & v_3 \end{vmatrix} u_1 +
+\begin{vmatrix} u_3 & u_1 \\ v_3 & v_1 \end{vmatrix} u_1 +
+\begin{vmatrix} u_1 & u_2 \\ v_1 & v_2 \end{vmatrix} u_3\\ 
+& = \begin{vmatrix}
+u_1 & u_2 & u_3\\
+u_1 & u_2 & u_3 \\
+v_1 & v_2 & v_ 3
+\end{vmatrix}.
+\end{aligned}
+$$
+
+De forma análoga se prueba que $(\mathbf{u}\wedge \mathbf{v})\perp \mathbf{v}$.
+
+Nótese que $\mathbf{u}\wedge \mathbf{v}$ es cero si y sólo si 
+
+$$
+\begin{vmatrix} u_2 & u_3 \\ v_2 & v_3 \end{vmatrix}= 
+\begin{vmatrix} u_3 & u_1 \\ v_3 & v_1 \end{vmatrix}=
+\begin{vmatrix} u_1 & u_2 \\ v_1 & v_2 \end{vmatrix} =0,
+$$
+
+y esto equivale a decir que el rango de la matriz 
+
+$$
+\begin{vmatrix}
+u_1 & u_2 & u_3 \\
+v_1 & v_2 & v_ 3
+\end{vmatrix}
+$$
+
+no es dos, que es lo mismo que decir que $\dim(\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1$.
+
+La última igualdad se comprueba tomando cuadrados y usando que $ \sin(\measuredangle(\mathbf{u},\mathbf{v}))^2=1- \cos(\measuredangle(\mathbf{u},\mathbf{v}))$ y que $\langle \mathbf{u},\mathbf{v}\rangle= \Vert\mathbf{u}\Vert \Vert\mathbf{v}\Vert  \cos(\measuredangle(\mathbf{u},\mathbf{v}))$.
