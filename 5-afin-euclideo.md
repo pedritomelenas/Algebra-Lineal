@@ -579,7 +579,9 @@ $$
 
 y por tanto $\operatorname{d}(Q_1,Q_2)=\operatorname{d}(P_1,C)\ge \operatorname{d}(P_1,\mathfrak{L})$. Por tanto, $\operatorname{d}(P_1,\mathfrak{L})\le \operatorname{d}(Q_1,Q_2)$ para todo $Q_1\in \mathfrak{L}_1$ y $Q_2\in \mathfrak{L}_2$, por lo que $\operatorname{d}(P_1,\mathfrak{L})\le \operatorname{d}(\mathfrak{L}_1,\mathfrak{L}_2)$.
 
-Veamos ahora que $\operatorname{d}(\mathfrak{L} _1,\mathfrak{L} _2)\le  \operatorname{d}(P_1,\mathfrak{L})$. Sabemos que $\operatorname{d}(P_1,\mathfrak{L})=\operatorname{d}(P_1,p_{\mathfrak{L}}(P_1))$. Sea $C=p_{\mathfrak{L}}(P_1)$. Si probamos que existen $Q_1\in \mathfrak{L}_1$ y $Q_2\in \mathfrak{L}_2$ de forma que $\overrightarrow{Q_1Q_2}=\overrightarrow{P_1C}$, entones habremos terminado, pues 
+Veamos ahora que $\operatorname{d}(\mathfrak{L} _1,\mathfrak{L} _2)\le  \operatorname{d}(P _1,\mathfrak{L})$. Sabemos que $\operatorname{d}(P _1,\mathfrak{L})=\operatorname{d}(P _1,p _{\mathfrak{L}}(P _1))$. 
+
+Sea $C=p_{\mathfrak{L}}(P _1)$. Si probamos que existen $Q _1\in \mathfrak{L} _1$ y $Q _2\in \mathfrak{L} _2$ de forma que $\overrightarrow{Q _1 Q _2}=\overrightarrow{P _1C}$, entones habremos terminado, pues 
 
 $$
 \operatorname{d}(\mathfrak{L}_1,\mathfrak{L}_2)\le \operatorname{d}(Q_1,Q_2)=\operatorname{d}(P_1,C)=\operatorname{d}(P_1,\mathfrak{L}).
