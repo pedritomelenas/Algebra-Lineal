@@ -551,7 +551,9 @@ $$
 
 Si dos variedades se cortan entonces la distancia entre ellas es cero.
 
-El siguiente resultado proporciona un procedimiento para calcular la distancia en caso contrario (esto es, entre dos variedades que o bien se cruzan o bien son paralelas).
+Si las dos variedades no se cortan, diremos que $\mathfrak{L}_1$ y $\mathfrak{L}_2$ son *paralelas* si $W_1\subseteq W_2$ o $W_2\subseteq W_1$, y diremos que se cruzan en caso contrario.
+
+El siguiente resultado proporciona un procedimiento para calcular la distancia entre dos variedades que no se cortan (esto es, entre dos variedades que o bien se cruzan o bien son paralelas).
 
 ### Resultado
 
@@ -562,6 +564,35 @@ $$
 $$
 
 donde $\mathfrak{L}=P_{2}+(W_{1}+W_{2})$ es la variedad que contiene a $\mathfrak{L} _{2}$ y es paralela a $\mathfrak{L} _{1}$.
+
+Para probar este hecho, vamos a demostrar primero que $\operatorname{d}(P_1,\mathfrak{L})\le \operatorname{d}(\mathfrak{L}_1,\mathfrak{L}_2)$. Sean $Q_1\in \mathfrak{L}_1$ y $Q_2\in \mathfrak{L}_2$. Vamos a buscar $C\in \mathfrak{L}=P_2+W_1+W_2$ de forma que $\overrightarrow{Q_1 Q_2}=\overrightarrow{P_1C}$. Tenemos que 
+
+$$
+\overrightarrow{Q_1 Q_2}=\overrightarrow{Q_1P_1}+\overrightarrow{P_1P_2}+\overrightarrow{P_2Q_2}.
+$$
+
+Sea $C$ el único punto del espacio afín de forma que $\overrightarrow{P_2C}=\overrightarrow{Q_1P_1}+\overrightarrow{P_2Q_2}$. Como $\overrightarrow{Q_1P_1}+\overrightarrow{P_2Q_2}\in W_1+W_2$, deducimos que $C\in \mathfrak{L}$. De esta forma 
+
+$$
+\overrightarrow{Q_1 Q_2}=\overrightarrow{P_1P_2}+\overrightarrow{P_2C}=\overrightarrow{P_1C},
+$$
+
+y por tanto $\operatorname{d}(Q_1,Q_2)=\operatorname{d}(P_1,C)\ge \operatorname{d}(P_1,\mathfrak{L})$. Por tanto, $\operatorname{d}(P_1,\mathfrak{L})\le \operatorname{d}(Q_1,Q_2)$ para todo $Q_1\in \mathfrak{L}_1$ y $Q_2\in \mathfrak{L}_2$, por lo que $\operatorname{d}(P_1,\mathfrak{L})\le \operatorname{d}(\mathfrak{L}_1,\mathfrak{L}_2)$.
+
+Veamos ahora que $\operatorname{d}(\mathfrak{L}_1,\mathfrak{L}_2)\le  \operatorname{d}(P_1,\mathfrak{L})$. Sabemos que $\operatorname{d}(P_1,\mathfrak{L})=\operatorname{d}(P_1,p_{\mathfrak{L}}(P_1))$. Sea $C=p_{\mathfrak{L}}(P_1)$. Si probamos que existen $Q_1\in \mathfrak{L}_1$ y $Q_2\in \mathfrak{L}_2$ de forma que $\overrightarrow{Q_1Q_2}=\overrightarrow{P_1C}$, entones habremos terminado, pues 
+
+$$
+\operatorname{d}(\mathfrak{L}_1,\mathfrak{L}_2)\le \operatorname{d}(Q_1,Q_2)=\operatorname{d}(P_1,C)=\operatorname{d}(P_1,\mathfrak{L}).
+$$
+
+Ahora bien, al estar $C\in \mathfrak{L}=P_2+W_1+W_2$, sabemos que $\overrightarrow{P_2C}\in W_1+W_2$. Sean $w_1\in W_1$ y $w_2\in W_2$ tales que $\overrightarrow{P_2C}=w_1+w_2$. Por ser $-w_1\in W_1$, existe $Q_1\in \mathfrak{L}_1$ tal que $-w_1=\overrightarrow{P_1Q_1}$, y en consecuencia $w_1=\overrightarrow{Q_1P_1}$; además, existe $Q_2\in \mathfrak{L}_2$ tal que $w_2=\overrightarrow{P_2Q_2}$. Tenemos así que 
+
+$$
+\begin{aligned}
+\overrightarrow{P_1C} & =\overrightarrow{P_1P_2}+\overrightarrow{P_2C}=\overrightarrow{P_1P_2}+w_1+w_2\\
+& =\overrightarrow{P_1P_2}+\overrightarrow{Q_1P_1}+\overrightarrow{P_2Q_2}= \overrightarrow{Q_1Q_2}.
+\end{aligned}
+$$
 
 ### Distancia de un punto a un hiperplano
 
