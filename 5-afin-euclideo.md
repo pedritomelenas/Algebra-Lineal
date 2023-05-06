@@ -364,6 +364,50 @@ $$
 x_{1}-x_{2}-x_{3}=2.
 $$
 
+## Ecuaciones cartesianas usando las ecuaciones cartesianas del espacio de direcciones
+
+Sea $\mathfrak{A}$ un espacio afín con espacio vectorial asociado $V$, y sea $\mathcal{R}=\{O;B\}$ un sistema de referencia de $\mathfrak{A}$. Dada una variedad afín $\mathfrak{L}=P+W$ con $P\in\mathfrak{A}$ y $W$ un subespacio vectorial de $V$, por definición $X\in \mathfrak{L}$ si y sólo si $\overrightarrow{PX}\in W$. 
+
+Las coordenadas de $\overrightarrow{PX}$ respecto de $B$ las podemos obtener de la siguiente forma: 
+
+$$
+\overrightarrow{PX}=\overrightarrow{PO}+\overrightarrow{OX}=\overrightarrow{OX}-\overrightarrow{OP}.
+$$
+
+Así, las coordenadas de $\overrightarrow{PX}$ son las coordenadas de $X$ menos las coordenadas de $P$ (en el sistema de referencia $\mathcal{R}$). Supongamos que $P=(p_1,\dots,p_n)_{\mathcal{R}}$ y que $X=(x_1,\dots,x_n)_{\mathcal{R}}$. Las coordenadas de $\overrightarrow{PX}$ respecto de $B$ son $(x_1-p_1,\dots,x_n-p_n)$.
+
+Supongamos que $Ax=0$ son las ecuaciones implícitas de $W$ respecto de la base $B$. Entonces $X\in \mathfrak{L}=P+W$ si y sólo si $\overrightarrow{PX}\in W$, lo que equivale a que 
+
+$$
+A \begin{pmatrix}
+x_1-p_1\\ 
+\vdots\\
+x_n-p_2
+\end{pmatrix}=0,
+$$
+
+que a su vez equivale a 
+
+$$
+A \begin{pmatrix}
+x_1\\ 
+\vdots\\
+x_n
+\end{pmatrix}=
+A \begin{pmatrix}
+p_1\\ 
+\vdots\\
+p_n
+\end{pmatrix}.
+$$
+
+De esta forma, las ecuaciones implícitas o cartesianas de $\mathfrak{L}$ son las mismas que las de $W$ pero ajustando el término independiente para que "pase" por $P$.
+
+
+### Ejemplo
+
+En nuestro ejemplo anterior $P=(1,-2,1)$ y $W$ tiene como generadores a $(1,2,-1)$ y $(2,1,1)$. Las ecuaciones cartesianas de $W$ son $W\equiv x_1-x_2-x_3=0$. Si evaluamos esas ecuaciones en $P$, obtenemos el término independiente de las ecuaciones cartesianas de $\mathfrak{L}$. Como $1-(-2)-1=2$. Así $\mathfrak{L}\equiv x_1-x_2-x_2=2$.
+
 # Espacio afín euclídeo
 
 Sea $\mathfrak{A}$ un espacio afín con espacio vectorial asociado $V$. Si $V$ es un espacio vectorial euclídeo, es decir, si está dotado de un producto escalar $\langle\cdot,\cdot\rangle$, entonces decimos que $\mathfrak{A}$ es un *espacio afín euclídeo*.
