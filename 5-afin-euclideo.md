@@ -121,7 +121,8 @@ Entonces tenemos que
 
 $$
 \begin{aligned}
-    \mathfrak{L} & = \left\lbrace X\in\mathfrak{A} \mid \overrightarrow{PX}\in W \right\rbrace  = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid (x_{1},x_{2},x_{3})-(1,-1,1) \in W \right\rbrace \\
+    \mathfrak{L} & = \left\lbrace X\in\mathfrak{A} \mid \overrightarrow{PX}\in W \right\rbrace \\
+    & = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid (x_{1},x_{2},x_{3})-(1,-1,1) \in W \right\rbrace \\
     & = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid (x_{1}-1,x_{2}+1,x_{3}-1) \in W \right\rbrace \\
     & = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid x_{3}-1=(x_{1}-1)+(x_{2}+1) \right\rbrace  \\
     & = \left\lbrace(x_{1},x_{2},x_{3}) \in\mathbb{R}^{3} \mid x_{3}-1=x_{1}+x_{2} \right\rbrace\\
@@ -508,7 +509,10 @@ $$
 En realidad, ese ínfimo es un mínimo como vamos a ver a continuación. Para todo $X\in\mathfrak{L}$, si llamamos $Q'=p_{\mathfrak{L}}(Q)$, tenemos que $\overrightarrow{QQ'}\in W^\perp$ y $\overrightarrow{Q'X}\in W$. Así, por el Teorema de Pitágoras
 
 $$
-\operatorname{d}(Q,X)^2=\Vert \overrightarrow{QX}\Vert^2= \Vert \overrightarrow{QQ'} + \overrightarrow{Q'X}\Vert^2 = \Vert \overrightarrow{QQ'}\Vert^2+ \Vert \overrightarrow{Q'X}\Vert^2 \ge \Vert \overrightarrow{QQ'} \Vert^2 = \operatorname{d}(Q,Q')^2,
+\begin{aligned}
+\operatorname{d}(Q,X)^2& =\Vert \overrightarrow{QX}\Vert^2= \Vert \overrightarrow{QQ'} + \overrightarrow{Q'X}\Vert^2 \\
+& = \Vert \overrightarrow{QQ'}\Vert^2+ \Vert \overrightarrow{Q'X}\Vert^2 \ge \Vert \overrightarrow{QQ'} \Vert^2 = \operatorname{d}(Q,Q')^2,
+\end{aligned}
 $$
 
 por lo que
@@ -601,7 +605,10 @@ $$
 Sea $P=(p_1,\dots,p_n)$ un punto y $\mathfrak{H}\equiv a_1x_1+\dots+a_nx_n+b=0$ un hiperplano. Llamemos a $Q=(q_1,\dots,q_n)$ a la proyección ortogonal de $P$ en $\mathfrak{H}$, y $v=(a_1,\dots,a_n)$. Entonces $v$ y $\overrightarrow{PQ}$ son ambos perpendiculares a $\mathfrak{H}$, por lo que el ángulo que forman es $0$ o $\pi$. Por tanto, $\vert\langle \overrightarrow{PQ},v\rangle\vert =  \Vert \overrightarrow{PQ}\Vert \Vert v\Vert$, y por tanto,
 
 $$
-\operatorname{d}(P,\mathfrak{H})=\Vert \overrightarrow{PQ}\Vert = \frac{|a_1(q_1-p_1)+\dots+a_n(q_n-p_n) |}{\Vert (a_1,\dots,a_n)\Vert } = \frac{|a_1p_1+\dots+a_np_n+b|}{\sqrt{a_1^2+\dots+a_n^2}}.
+\begin{aligned}
+\operatorname{d}(P,\mathfrak{H}) & =\Vert \overrightarrow{PQ}\Vert = \frac{|a_1(q_1-p_1)+\dots+a_n(q_n-p_n) |}{\Vert (a_1,\dots,a_n)\Vert } \\
+& = \frac{|a_1p_1+\dots+a_np_n+b|}{\sqrt{a_1^2+\dots+a_n^2}}.
+\end{aligned}
 $$
 
 ### Ejemplo
