@@ -60,7 +60,7 @@ Si $f$ es el endomorfismo que viene determinado por $A$, entonces $f(U)\subseteq
 Toda matriz simétrica con entradas reales es diagonalizable.
 
 
-Si $\lambda$ y $\mu$ son dos valores distintos de $A$ (simétrica con entradas reales), y $\mathbf{u}$ y $\mathbf{v}$ son vectores propios asociados a $\lambda$ y $\mu$ respectivamente, entonces 
+Veamos ahora que los subespacios propios son además ortogonales entre sí. Si $\lambda$ y $\mu$ son dos valores distintos de $A$ (simétrica con entradas reales), y $\mathbf{u}$ y $\mathbf{v}$ son vectores propios asociados a $\lambda$ y $\mu$ respectivamente, entonces 
 
 $$
 \begin{aligned}
