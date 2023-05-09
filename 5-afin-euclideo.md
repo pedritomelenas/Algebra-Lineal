@@ -646,7 +646,7 @@ $$
 
 ### Distancia de un punto a un hiperplano
 
-Sea $P=(p_1,\dots,p_n)$ un punto y $\mathfrak{H}\equiv a_1x_1+\dots+a_nx_n+b=0$ un hiperplano. Llamemos a $Q=(q_1,\dots,q_n)$ a la proyección ortogonal de $P$ en $\mathfrak{H}$, y $v=(a_1,\dots,a_n)$. Entonces $v$ y $\overrightarrow{PQ}$ son ambos perpendiculares a $\mathfrak{H}$, por lo que el ángulo que forman es $0$ o $\pi$. Por tanto, $\vert\langle \overrightarrow{PQ},v\rangle\vert =  \Vert \overrightarrow{PQ}\Vert \Vert v\Vert$, y por tanto,
+Sea $P=(p_1,\dots,p_n)$ un punto y $\mathfrak{H}\equiv a_1x_1+\dots+a_nx_n+b=0$ un hiperplano. Llamemos a $Q=(q_1,\dots,q_n)$ a la proyección ortogonal de $P$ en $\mathfrak{H}$, y $\mathbf{v}=(a_1,\dots,a_n)$. Entonces $\mathbf{v}$ y $\overrightarrow{PQ}$ son ambos perpendiculares a $\mathfrak{H}$, por lo que el ángulo que forman es $0$ o $\pi$. Por tanto, $\vert\langle \overrightarrow{PQ},\mathbf{v}\rangle\vert =  \Vert \overrightarrow{PQ}\Vert \Vert \mathbf{v}\Vert$, y 
 
 $$
 \begin{aligned}
@@ -684,7 +684,7 @@ $$
 
 - $\mathbf{u} \wedge \mathbf{v}=0$ si y sólo si $\dim(\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1$.
 
-- $\Vert \mathbf{u} \wedge \mathbf{v}\Vert = \Vert \mathbf{u}\Vert \Vert\mathbf{v}\Vert-\langle\mathbf{u},\mathbf{v}\rangle^2=\Vert \mathbf{u}\Vert \Vert\mathbf{v}\Vert \sin(\measuredangle(\mathbf{u},\mathbf{v}))$.
+- $\Vert \mathbf{u} \wedge \mathbf{v}\Vert = \Vert \mathbf{u}\Vert \Vert\mathbf{v}\Vert \sin(\measuredangle(\mathbf{u},\mathbf{v}))$.
 
 Para ver que $(\mathbf{u}\wedge \mathbf{v})\perp \mathbf{u}$, basta observar que 
 
