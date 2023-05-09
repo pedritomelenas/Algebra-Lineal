@@ -93,7 +93,7 @@ $$
 Q=\begin{pmatrix}1 - \sqrt{2} & 1 + \sqrt{2}\\1 & 1\end{pmatrix},\quad D=\begin{pmatrix}- \sqrt{2} & 0\\0 & \sqrt{2}\end{pmatrix}.
 $$
 
-Nótese que $P$ no es ortogonal. Si tomamos $\mathbf{u}=(1-\sqrt{2},1)$ y $\mathbf{v}=(1+\sqrt{2},1)$, entonces la matriz $P$ cuyas columnas son $\frac{1}{\Vert \mathbf{u}\Vert }\mathbf{u}$ y $\frac{1}{\Vert\mathbf{v}\Vert}\mathbf{v}$ verifica que $D=P^tAP$.
+Nótese que $Q$ no es ortogonal. Si tomamos $\mathbf{u}=(1-\sqrt{2},1)$ y $\mathbf{v}=(1+\sqrt{2},1)$, entonces la matriz $P$ cuyas columnas son $\frac{1}{\Vert \mathbf{u}\Vert }\mathbf{u}$ y $\frac{1}{\Vert\mathbf{v}\Vert}\mathbf{v}$ verifica que $D=P^tAP$.
 
 # Inversas generalizadas. Mínimos cuadrados
 
