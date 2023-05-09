@@ -697,7 +697,7 @@ $$
 u_1 & u_2 & u_3\\
 u_1 & u_2 & u_3 \\
 v_1 & v_2 & v_ 3
-\end{vmatrix}.
+\end{vmatrix}=0.
 \end{aligned}
 $$
 
