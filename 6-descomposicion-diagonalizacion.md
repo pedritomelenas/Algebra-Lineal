@@ -51,7 +51,9 @@ y como $\langle x,x\rangle + \langle y,y\rangle >0$, deducimos que $b=0$. Tenemo
 
 Todos los valores propios de una matriz simétrica con entradas reales son reales.
 
-Supongamos ahora que $\lambda_1,\dots,\lambda_m$ son todos los valores propios (reales) de $A$. Como $\lambda_i\neq \lambda_j$ con $i\neq j$, si $\mathbf{v}\in V_{\lambda_i}\cap V_{\lambda_j}$ y $x$ son las coordenadas de $\mathbf{v}$, tenemos que $Ax=\lambda_ix=\lambda_jx$, por lo que $x=0$ y $\mathbf{v}=0$. Esto quiere decir que $V_{\lambda_i}\cap V_{\lambda_j}=\lbrace\mathbf{0}\rbrace$. De esta forma la suma $V_{\lambda_1}+\dots+V_{\lambda_m}$ es directa. Sea $U=V_{\lambda_1}\oplus \dots \oplus V_{\lambda_m}$. Si $f$ es el endomorfismo que viene determinado por $A$, entonces $f(U)\subseteq U$. Es más, por ser $f$ autoadjunto, si $\mathbf{u}\in U$ y $\mathbf{w}\in U^\perp$, por ser $f(\mathbf{u})\in U$, se tiene que $0=\langle \mathbf{v},f(\mathbf{u})\rangle= \langle f(\mathbf{v}),\mathbf{u}\rangle$, por lo que $f(\mathbf{v})\in U^\perp$, esto es, $f(U^\perp)\subseteq U^\perp$. Si $U^\perp\neq \lbrace \mathbf{0}\rbrace$, entonces $f$ restringido a $U^\perp$ tendrá al menos una valor propio $\lambda$. Si $\mathbf{v}$ es un vector propio asociado a $\lambda$, $f(\mathbf{v})=\lambda\mathbf{v}$, por lo que $\lambda\in \lbrace\lambda_1,\dots,\lambda_m\rbrace$, lo que lleva a $\mathbf{v}\in U\cap U^\perp=\lbrace\mathbf{0}\rbrace$, lo que es absurdo. Por tanto $U^\perp=\lbrace \mathbf{0}\rbrace$ y $U=\mathbb{R}^n$. Acabamos de probar el siguiente resultado.
+Supongamos ahora que $\lambda_1,\dots,\lambda_m$ son todos los valores propios (reales) de $A$. Como $\lambda_i\neq \lambda_j$ con $i\neq j$, si $\mathbf{v}\in V_{\lambda_i}\cap V_{\lambda_j}$ y $x$ son las coordenadas de $\mathbf{v}$, tenemos que $Ax=\lambda_ix=\lambda_jx$, por lo que $x=0$ y $\mathbf{v}=0$. Esto quiere decir que $V_{\lambda_i}\cap V_{\lambda_j}=\lbrace\mathbf{0}\rbrace$. De esta forma la suma $V_{\lambda_1}+\dots+V_{\lambda_m}$ es directa. Sea $U=V_{\lambda_1}\oplus \dots \oplus V_{\lambda_m}$. 
+
+Si $f$ es el endomorfismo que viene determinado por $A$, entonces $f(U)\subseteq U$. Es más, por ser $f$ autoadjunto, si $\mathbf{u}\in U$ y $\mathbf{v}\in U^\perp$, por ser $f(\mathbf{u})\in U$, se tiene que $0=\langle \mathbf{v},f(\mathbf{u})\rangle= \langle f(\mathbf{v}),\mathbf{u}\rangle$, por lo que $f(\mathbf{v})\in U^\perp$, esto es, $f(U^\perp)\subseteq U^\perp$. Si $U^\perp\neq \lbrace \mathbf{0}\rbrace$, entonces $f$ restringido a $U^\perp$ tendrá al menos una valor propio $\lambda$. Si $\mathbf{v}$ es un vector propio asociado a $\lambda$, $f(\mathbf{v})=\lambda\mathbf{v}$, por lo que $\lambda\in \lbrace\lambda_1,\dots,\lambda_m\rbrace$, lo que lleva a $\mathbf{v}\in U\cap U^\perp=\lbrace\mathbf{0}\rbrace$, lo que es absurdo. Por tanto $U^\perp=\lbrace \mathbf{0}\rbrace$ y $U=\mathbb{R}^n$. Acabamos de probar el siguiente resultado.
 
 ### Teorema espectral para matrices simétricas reales
 
@@ -67,7 +69,7 @@ $$
 \end{aligned}
 $$
 
-con $f$ el endomorfismo determinado por $A$. Como $f$ es autoadjunto, $(\lambda-\mu)\langle \mathbf{u},\mathbf{v}\rangle=0$, y al ser $\lambda\neq \mu$, concluimos que $\langle \mathbf{u},\mathbf{v}\rangle$. 
+con $f$ el endomorfismo determinado por $A$. Como $f$ es autoadjunto, $(\lambda-\mu)\langle \mathbf{u},\mathbf{v}\rangle=0$, y al ser $\lambda\neq \mu$, concluimos que $\langle \mathbf{u},\mathbf{v}\rangle=0$. 
 
 Esto nos permite escoger dentro de cada subespacio asociado a cada valor propio de $A$ una base ortonormal. Al juntarlas todas obtenemos una base ortonormal de $V$, y tenemos que la expresión de $f$ en esa base ortonormal es diagonal. Si llamamos $P$ a la matriz de paso (sus columnas son las coordenadas de los vectores de nuestra base ortonormal), entonces $P P^t=I_n$, por lo que $P^{-1}=P^t$. Estas matrices se denominan *ortogonales*. 
 
