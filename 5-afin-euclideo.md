@@ -682,7 +682,11 @@ $$
 
 - $(\mathbf{u} \wedge \mathbf{v})\in\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)^\perp$.
 
-- $\mathbf{u} \wedge \mathbf{v}=-\mathbf{v} \wedge \mathbf{u}$.
+- $\mathbf{u} \wedge \mathbf{v}=-(\mathbf{v} \wedge \mathbf{u})$.
+
+- $\lambda(\mathbf{u}\wedge \mathbf{v})=(\lambda\mathbf{u}\wedge \mathbf{v})=(\mathbf{u}\wedge \lambda\mathbf{v})$ para todo $\lambda$ en el cuerpo base.
+
+- $(\mathbf{u}+\mathbf{v})\wedge \mathbf{w}=(\mathbf{u}\wedge \mathbf{w})+(\mathbf{v}\wedge \mathbf{w})$; $\mathbf{u}\wedge (\mathbf{v}+ \mathbf{w})=(\mathbf{u}\wedge \mathbf{v})+(\mathbf{u}\wedge \mathbf{w})$. 
 
 - $\mathbf{u} \wedge \mathbf{v}=0$ si y sólo si $\dim(\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1$.
 
@@ -705,7 +709,9 @@ $$
 
 De forma análoga se prueba que $(\mathbf{u}\wedge \mathbf{v})\perp \mathbf{v}$.
 
-El cálculo de $\mathbf{u} \wedge \mathbf{v}$ se obtiene del de $\mathbf{v} \wedge \mathbf{u}$ cambiando dos filas en un determinante formal, por lo que el signo cambia.
+El cálculo de $\mathbf{u} \wedge \mathbf{v}$ se obtiene del de $\mathbf{v} \wedge \mathbf{u}$ cambiando dos filas en un determinante formal, por lo que el signo cambia. 
+
+Usando las propiedades de los determinantes se prueban las dos propiedades de linealidad.
 
 Nótese que $\mathbf{u}\wedge \mathbf{v}$ es cero si y sólo si
 
