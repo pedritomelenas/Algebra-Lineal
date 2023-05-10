@@ -680,7 +680,9 @@ $$
 
 ### Propiedades
 
-- $(\mathbf{u} \wedge \mathbf{v})\in\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)^\perp$. 
+- $(\mathbf{u} \wedge \mathbf{v})\in\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)^\perp$.
+
+- $\mathbf{u} \wedge \mathbf{v}=-\mathbf{v} \wedge \mathbf{u}$.
 
 - $\mathbf{u} \wedge \mathbf{v}=0$ si y sólo si $\dim(\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1$.
 
@@ -703,7 +705,9 @@ $$
 
 De forma análoga se prueba que $(\mathbf{u}\wedge \mathbf{v})\perp \mathbf{v}$.
 
-Nótese que $\mathbf{u}\wedge \mathbf{v}$ es cero si y sólo si 
+El cálculo de $\mathbf{u} \wedge \mathbf{v}$ se obtiene del de $\mathbf{v} \wedge \mathbf{u}$ cambiando dos filas en un determinante formal, por lo que el signo cambia.
+
+Nótese que $\mathbf{u}\wedge \mathbf{v}$ es cero si y sólo si
 
 $$
 \begin{vmatrix} u_2 & u_3 \\ v_2 & v_3 \end{vmatrix}= 
