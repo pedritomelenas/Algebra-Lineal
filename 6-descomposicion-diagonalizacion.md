@@ -298,7 +298,12 @@ $$
 con 
 
 $$
-P=\begin{pmatrix}0 & 2 & -1\\0 & -1 & 1\\1 & -2 & 1\end{pmatrix}.
+P=\begin{pmatrix}0 & 2 & -1\\0 & -1 & 1\\1 & -2 & 1\end{pmatrix}; P^{-1}=  \begin{pmatrix}
+  1 & 0 & 1\\
+  1 & 1 & 0\\
+  1 & 2 & 0
+  \end{pmatrix}
+.
 $$
 
 Así 
