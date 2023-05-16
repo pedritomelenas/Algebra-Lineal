@@ -402,7 +402,7 @@ $$
 por lo que 
 
 $$
-\Vert x\Vert^2 = \Vert A^Db\Vert^2+\Vert z\Vert^2 \ge \Vert A^Db\Vert.
+\Vert x\Vert^2 = \Vert A^Db\Vert^2+\Vert z\Vert^2 \ge \Vert A^Db\Vert^2.
 $$
 
 ### Resultado
