@@ -503,7 +503,7 @@ $$
 
 con $y$ arbitrario.
 
-## Resultado (parametrización de soluciones)
+### Resultado (parametrización de soluciones)
 
 Sea $A\in\mathcal{M}_{m\times n}(K)$. Si $Ax=b$ es compatible, entonces todas las soluciones son de la forma
 
