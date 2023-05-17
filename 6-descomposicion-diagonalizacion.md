@@ -562,7 +562,7 @@ $$
 \end{aligned}
 $$
 
-Por tanto, $\Vert A(A^+b)-b\Vert \le \Vert Ax-b\Vert$ para todo $x$, con igualdad si y sólo si $\Vert Ax-A(A^+b)\Vert =0$ (lo que equivale a$Ax=A(A^+b)$). Esto demuestra que $A^+b$ es una solución mínimo-cuadrática del sistema $Ax=b$.
+Por tanto, $\Vert A(A^+b)-b\Vert \le \Vert Ax-b\Vert$ para todo $x$, con igualdad si y sólo si $\Vert Ax-A(A^+b)\Vert =0$ (lo que equivale a $Ax=A(A^+b)$). Esto demuestra que $A^+b$ es una solución mínimo-cuadrática del sistema $Ax=b$.
 
 Veamos ahora que la $A^+b$ también es mínima en norma entre las soluciones mínimo-cuadráticas. Sea $x$ con $\Vert Ax-b\Vert  = \Vert A(A^+b)-b\Vert$. Por la discusión del párrafo anterior, eso implica que $Ax=A(A^+b)$, y por tanto $x-A^+b\in \operatorname{N}(A)$. Esto significa que $x=A^+b+z$ con $z\in \operatorname{N}(A)$. Así,
 
