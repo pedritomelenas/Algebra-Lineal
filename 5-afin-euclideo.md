@@ -382,7 +382,7 @@ $$
 A \begin{pmatrix}
 x_1-p_1\\ 
 \vdots\\
-x_n-p_2
+x_n-p_n
 \end{pmatrix}=0,
 $$
 
