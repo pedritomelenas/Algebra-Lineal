@@ -745,6 +745,40 @@ $$
 
 por lo que $\Vert D\Vert \le d_1$. Nótese que $D\mathbf{e}_1=d_1\mathbf{e_1}$, y que $\Vert \mathbf{e}_1\Vert =1$, por lo que $\Vert D \mathbf{e_1}\Vert =d_1$, lo que lleva a $\Vert D\Vert=d_1$. De esta forma, tenemos probado el siguiente resultado.
 
+## Número de condición de una matriz
+
+Dada una matriz regular $A$, se define su *número de condición* como 
+
+$$
+\kappa(A)=\Vert A\Vert \Vert A^{-1}\Vert.
+$$
+
+Supongamos que tenemos el sistema $Ax=b$, y que se ha producido un error $e$ al leer $b$. El error en la solución que obtenemos tras esa lectura es $A^{-1}e$, pues $A(x+A^{-1}e)=Ax+e=b+e$. Si queremos medir la razón entre el error relativo de la solución obtenida respecto al error relativo cometido en la lectura de $b$ (en norma), podemos hacerlo con la cantidad
+
+$$
+\frac{\frac{\Vert A^{-1}e\Vert}{\Vert A^{-1}b\Vert}}{\frac{\Vert e\Vert}{\Vert b\Vert}}=\frac{\Vert A^{-1}e\Vert}{\Vert e\Vert}\frac{\Vert b \Vert}{\Vert A^{-1}b \Vert}.
+$$
+
+El supremo de esta razón es
+
+$$
+\begin{aligned}
+\sup\left\lbrace \frac{\Vert A^{-1}e\Vert}{\Vert e\Vert} \frac{\Vert b \Vert}{\Vert A^{-1}b \Vert}: b\neq 0, e\neq 0 \right\rbrace & =  \sup\left\lbrace \frac{\Vert A^{-1}e\Vert}{\Vert e\Vert} :  e\neq 0 \right\rbrace \sup\left\lbrace \frac{\Vert b \Vert}{\Vert A^{-1}b \Vert}: b\neq 0 \right\rbrace \\
+ & = 
+\sup\left\lbrace \frac{\Vert A^{-1}e\Vert}{\Vert e\Vert} :  e\neq 0 \right\rbrace \sup\left\lbrace \frac{\Vert A b \Vert}{\Vert b \Vert}: b\neq 0 \right\rbrace \\
+& = \Vert A^{-1}\Vert \Vert A\Vert =\kappa(A).
+\end{aligned}
+$$
+
+Por tanto, el número de condición de $A$ mide cuán mal condicionado está resolver el problema $Ax=b$ (véase una motivación con `MATLAB` en este [enlace](https://blogs.mathworks.com/cleve/2017/07/17/what-is-the-condition-number-of-a-matrix/)).
+
+Los valores singulares de $A^-1$ son los inversos de los valores singulares de $A$, por lo que si $d_1$ es el mayor valor singular de $A$ y $d_n$ es el menor valor singular, entonces usando que $\Vert A\Vert=d_1$, obtenemos
+
+$$
+\kappa(A)=\frac{d_1}{d_n}.
+$$
+
+
 
 ### Resultado
 
