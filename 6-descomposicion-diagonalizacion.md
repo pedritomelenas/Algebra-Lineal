@@ -693,3 +693,64 @@ Si calculamos $UD^{-1}V^t$, obtenemos
 $$
 A^+ = \begin{pmatrix}\frac{5}{6} & \frac{1}{3} & - \frac{1}{6}\\- \frac{1}{2} & 0 & \frac{1}{2}\end{pmatrix}.
 $$
+
+## Norma inducida de una matriz
+
+Sea $A\in \mathcal{M}_{m\times n}(K)$. Tomamos en $K^n$ y $K^m$ la norma inducida por un producto escalar. Definimos
+
+$$
+\Vert A\Vert =\sup\lbrace \Vert Ax\Vert : x\in K^n, \Vert x\Vert=1\rbrace=\sup\left\lbrace \frac{\Vert Ax\Vert}{\Vert x\Vert} : x\in K^n, \Vert x\Vert\neq 0\right\rbrace.
+$$
+
+Se tiene que 
+
+- $\Vert A\Vert \ge 0$, y $\Vert A\Vert=0$ si y sólo si $A$ es la matriz nula,
+- $\Vert a A\Vert =\vert a\vert \Vert A\Vert$ para todo $a\in K$,
+- $\Vert A+B\Vert \le \Vert A\Vert + \Vert B\Vert$, para cualquier $B\in \mathcal{M}_{m\times n}(K)$.
+
+Además, si $m=n$, entonces 
+
+- $\Vert A B\Vert \le \Vert A \Vert \Vert B\Vert$.
+
+Llamaremos a $\Vert A\Vert$ la *norma inducida* por las normas en $K^n$ y $K^m$.
+
+Supongamos que $K=\mathbb{R}$ y $n=m$. Si $A$ es invertible, entonces $\operatorname{rg}(A)=n$, y como $\operatorname{rg}(A^tA)=\operatorname{rg}(A)$, deducimos que $A^tA$ también es regular. Sabemos que los valores propios de $A^tA$ son no negativos y reales, y como es regular, son todos no nulos (positivos). Sean $d_1^2\ge \dots \ge d_n^2$ los valores propios de $A^tA$ ($d_1,\dots, d_n$ son los valores singulares de $A$). Sea $A=VDU^t$ la descomposición en valores singulares de $A$, con $D=\operatorname{diag}(d_1,\dots,d_n)$. 
+
+Al ser $U^tU=I$, se tiene que
+
+$$
+\Vert Ux\Vert^2 \langle Ux,Ux\rangle = \langle x, U^tUx\rangle = \langle x,x\rangle = \Vert x\Vert,
+$$
+
+por lo que $\Vert Ux\Vert =\Vert x\Vert$. Lo mismo ocurre con $V$, esto es, $\Vert Vx\Vert =\Vert x\Vert$. Además, todo $x\in \mathbb{R}^n$ con $\Vert x \Vert =1$ se puede escribir como $Uy$ con $\Vert y\Vert =1$ (basta tomar $y=U^tx$, pues $Uy=UU^tx=x$).
+
+Entonces,
+
+$$
+\begin{aligned}
+\Vert A \Vert  & = \sup\lbrace \Vert Ax \Vert : x\in \mathbb{R}^n, \Vert x\Vert =1\rbrace=\sup\lbrace \Vert VDU^t x \Vert : x\in \mathbb{R}^n, \Vert x\Vert =1\rbrace\\ 
+& = \sup\lbrace \Vert DU^t x \Vert : x\in \mathbb{R}^n, \Vert x\Vert =1\rbrace = \sup\lbrace \Vert DU^tUy \Vert : y\in \mathbb{R}^n, \Vert y\Vert =1\rbrace\\
+& = \sup\lbrace\Vert Dy\Vert : y\in \mathbb{R}^n, \Vert y\Vert =1 \rbrace= \Vert D\Vert.
+\end{aligned}
+$$
+
+Sea $x=(x_1,\dots,x_n)$. Consideramos $\Vert x\Vert$ la norma inducida por el producto escalar usual. Entonces 
+
+$$
+\begin{aligned}
+\Vert Dx\Vert^2 & = \langle Dx,Dx\rangle = \langle x, D^tDx\rangle= \langle x, D^2x\rangle \\ 
+& =\sum_{i=1}^n x_i^2d_i^2\le d_1^2 \sum_{i=1}^n x_i^2 = d_1^2 \Vert x\Vert,
+\end{aligned}
+$$
+
+por lo que $\Vert D\Vert \le d_1$. Nótese que $D\mathbf{e}_1=d_1\mathbf{e_1}$, y que $\Vert \mathbf{e}_1\Vert =1$, por lo que $\Vert D \mathbf{e_1}\Vert =d_1$, lo que lleva a $\Vert D\Vert=d_1$. De esta forma, tenemos probado el siguiente resultado.
+
+
+### Resultado
+
+Sea $A$ una matriz cuadrada invertible, y sea $d$ su mayor valor singular. Entonces
+
+$$
+\Vert A\Vert = d.
+$$
+
