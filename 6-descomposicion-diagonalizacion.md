@@ -745,6 +745,19 @@ $$
 
 por lo que $\Vert D\Vert \le d_1$. Nótese que $D\mathbf{e}_1=d_1\mathbf{e_1}$, y que $\Vert \mathbf{e}_1\Vert =1$, por lo que $\Vert D \mathbf{e_1}\Vert =d_1$, lo que lleva a $\Vert D\Vert=d_1$. De esta forma, tenemos probado el siguiente resultado.
 
+
+### Resultado
+
+Sea $A$ una matriz cuadrada invertible, y sea $d$ su mayor valor singular. Entonces
+
+
+$$
+\Vert A\Vert = d.
+$$
+
+
+
+
 ## Número de condición de una matriz
 
 Dada una matriz regular $A$, se define su *número de condición* como 
@@ -780,11 +793,4 @@ $$
 
 
 
-### Resultado
-
-Sea $A$ una matriz cuadrada invertible, y sea $d$ su mayor valor singular. Entonces
-
-$$
-\Vert A\Vert = d.
-$$
 
