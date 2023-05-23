@@ -603,7 +603,7 @@ $$
 0\le \Vert A x\Vert ^2 = \langle Ax,Ax\rangle = (Ax)^t(Ax)=x^t(A^tAx)= \lambda x^tx = \lambda \Vert x\Vert ^2,
 $$
 
-por lo que $\lambda \ge 0$. De esta forma, podemos reordenar las columnas de $U$ de forma que los valores de la diagonal de $D$ sean $d_1^2\ge d_2^2\ge \dots \ge d_r^2 > 0= d_{r+1}=\dots = d_n$. Hemos visto que $\operatorname{rg}(A^tA)=\operatorname{rg}(A)$, y sabemos que $P$ no es más que un producto de matrices elementales (ya que tiene inversa), deducimos que $r=\operatorname{rg}(D)=\operatorname{rg}(A)$.
+por lo que $\lambda \ge 0$. De esta forma, podemos reordenar las columnas de $U$ de forma que los valores de la diagonal de $D$ sean $d_1^2\ge d_2^2\ge \dots \ge d_r^2 > 0= d_{r+1}=\dots = d_n$. Hemos visto que $\operatorname{rg}(A^tA)=\operatorname{rg}(A)$, y sabemos que $U$ no es más que un producto de matrices elementales (ya que tiene inversa), deducimos que $r=\operatorname{rg}(D)=\operatorname{rg}(A)$.
 
 Por tanto, existe una base ortonormal $\lbrace u_1,\dots,u_n\rbrace$ de $\mathbb{R}^n$ (las columnas de $U$) tal que  $A^tA u_i=d_i^2u_i$ para todo $i$. Para cada $j\in\lbrace 1,\dots,r\rbrace$, definimos $v_j=\frac1{d_j}Au_j$. Para $j,k\in \lbrace 1,\dots,r\rbrace$,
 
