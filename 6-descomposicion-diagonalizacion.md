@@ -492,7 +492,7 @@ $$
 Además, para cualquier $y$,
 
 $$
-A(A^+b+(I-A^+A)y)=AA^+b+Ay-AA^+Ay=Ab+Ay-Ay=Ab.
+A(A^+b+(I-A^+A)y)=AA^+b+Ay-AA^+Ay=b+Ay-Ay=b.
 $$
 
 Luego todas las soluciones de $Ax=b$ son de la forma
