@@ -714,7 +714,7 @@ Además, si $m=n$, entonces
 
 Llamaremos a $\Vert A\Vert$ la *norma inducida* por las normas en $K^n$ y $K^m$.
 
-Supongamos que $K=\mathbb{R}$ y $n=m$. Si $A$ es invertible, entonces $\operatorname{rg}(A)=n$, y como $\operatorname{rg}(A^tA)=\operatorname{rg}(A)$, deducimos que $A^tA$ también es regular. Sabemos que los valores propios de $A^tA$ son no negativos y reales, y como es regular, son todos no nulos (positivos). Sean $d_1^2\ge \dots \ge d_n^2$ los valores propios de $A^tA$ ($d_1,\dots, d_n$ son los valores singulares de $A$). Sea $A=VDU^t$ la descomposición en valores singulares de $A$, con $D=\operatorname{diag}(d_1,\dots,d_n)$. 
+Supongamos que $K=\mathbb{R}$ y $n=m$. Si $A$ es invertible, entonces $\operatorname{rg}(A)=n$, y como $\operatorname{rg}(A^tA)=\operatorname{rg}(A)$, deducimos que $A^tA$ también es regular. Sabemos que los valores propios de $A^tA$ son no negativos y reales, y como es regular, son todos no nulos, y por tanto positivos. Sean $d_1^2\ge \dots \ge d_n^2$ los valores propios de $A^tA$ ($d_1,\dots, d_n$ son los valores singulares de $A$). Sea $A=VDU^t$ la descomposición en valores singulares de $A$, con $D=\operatorname{diag}(d_1,\dots,d_n)$. 
 
 Al ser $U^tU=I$, se tiene que
 
