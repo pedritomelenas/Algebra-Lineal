@@ -739,7 +739,7 @@ Sea $x=(x_1,\dots,x_n)$. Consideramos $\Vert x\Vert$ la norma inducida por el pr
 $$
 \begin{aligned}
 \Vert Dx\Vert^2 & = \langle Dx,Dx\rangle = \langle x, D^tDx\rangle= \langle x, D^2x\rangle \\ 
-& =\sum_{i=1}^n x_i^2d_i^2\le d_1^2 \sum_{i=1}^n x_i^2 = d_1^2 \Vert x\Vert,
+& =\sum_{i=1}^n x_i^2d_i^2\le d_1^2 \sum_{i=1}^n x_i^2 = d_1^2 \Vert x\Vert^2,
 \end{aligned}
 $$
 
@@ -785,7 +785,7 @@ $$
 
 Por tanto, el número de condición de $A$ mide cuán mal condicionado está resolver el problema $Ax=b$ (véase una motivación con `MATLAB` en este [enlace](https://blogs.mathworks.com/cleve/2017/07/17/what-is-the-condition-number-of-a-matrix/)).
 
-Los valores singulares de $A^-1$ son los inversos de los valores singulares de $A$, por lo que si $d_1$ es el mayor valor singular de $A$ y $d_n$ es el menor valor singular, entonces usando que $\Vert A\Vert=d_1$, obtenemos
+Los valores singulares de $A^{-1}$ son los inversos de los valores singulares de $A$, por lo que si $d_1$ es el mayor valor singular de $A$ y $d_n$ es el menor valor singular, entonces usando que $\Vert A\Vert=d_1$, obtenemos
 
 $$
 \kappa(A)=\frac{d_1}{d_n}.
