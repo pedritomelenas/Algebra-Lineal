@@ -124,7 +124,7 @@ Supongamos que queremos calcular la recta de $\mathbb{R}^2$ que pasa por $(0,1)$
 $$
 \left\lbrace
 \begin{aligned}
-\alpha & & = 1 \\
+\alpha & & = 1,\\
 \alpha &+\beta & =3,
 \end{aligned}
 \right.
@@ -137,7 +137,7 @@ Supongamos ahora que queremos calcular una recta que pase por los puntos $(0,1)$
 $$
 \left\lbrace
 \begin{aligned}
-\alpha  & = 1 \\
+\alpha  & = 1,\\
 \alpha +\beta & =3,\\
 \alpha +2\beta & = 2.
 \end{aligned}
