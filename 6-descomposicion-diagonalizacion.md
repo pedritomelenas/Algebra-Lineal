@@ -719,10 +719,10 @@ Supongamos que $K=\mathbb{R}$ y $n=m$. Si $A$ es invertible, entonces $\operator
 Al ser $U^tU=I$, se tiene que
 
 $$
-\Vert Ux\Vert^2 \langle Ux,Ux\rangle = \langle x, U^tUx\rangle = \langle x,x\rangle = \Vert x\Vert,
+\Vert Ux\Vert^2 = \langle Ux,Ux\rangle = \langle x, U^tUx\rangle = \langle x,x\rangle = \Vert x\Vert^2,
 $$
 
-por lo que $\Vert Ux\Vert =\Vert x\Vert$. Lo mismo ocurre con $V$, esto es, $\Vert Vx\Vert =\Vert x\Vert$. Además, todo $x\in \mathbb{R}^n$ con $\Vert x \Vert =1$ se puede escribir como $Uy$ con $\Vert y\Vert =1$ (basta tomar $y=U^tx$, pues $Uy=UU^tx=x$).
+por lo que $\Vert Ux\Vert =\Vert x\Vert$. Lo mismo ocurre con $V$, esto es, $\Vert Vx\Vert =\Vert x\Vert$. Además, todo $x\in \mathbb{R}^n$ con $\Vert x \Vert =1$ se puede escribir como $x=Uy$ con $\Vert y\Vert =1$ (basta tomar $y=U^tx$, pues $Uy=UU^tx=x$).
 
 Entonces,
 
