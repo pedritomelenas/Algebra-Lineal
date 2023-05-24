@@ -639,12 +639,14 @@ $$
 
 a la que llamamos *descomposición de valores singulares* de $A$. Los $d_i$ los podemos escoger no negativos, en cuyo caso se conocen como valores singulares de $A$.
 
-Para simpificar la notación, usaremos $D=\operatorname{diag}(d_1,\dots,d_n)$ a la matriz que tiene en como entradas $d_{ii}=d_i$ y $d_{ij}=0$ si $i\neq j$. 
+Para simplificar la notación, usaremos $\operatorname{diag}(d_1,\dots,d_n)$ a la matriz que tiene en como entradas $d_{ii}=d_i$ y $d_{ij}=0$ si $i\neq j$. 
 
 $$
 \begin{aligned}
-A & =(v_1\mid \dots \mid v_m) D (u_1\mid\dots \mid u_m)^t = (d_1v_1\mid \dots \mid d_r v_r \mid 0 \mid \dots \mid 0) (u_1 \mid \dots \mid u_m)^t \\
-& = (d_1v_1\mid\dots \mid d_rv_r)(u_1\mid \dots \mid u_r)^t = (v_1\mid\dots \mid v_r) \operatorname{diag}(d_1,\dots,d_r) (u_1\mid \dots \mid u_r)^t.
+A & =(v_1\mid \dots \mid v_m) \operatorname{diag}(d_1,\dots,d_n) (u_1\mid\dots \mid u_m)^t \\
+& = (d_1v_1\mid \dots \mid d_r v_r \mid 0 \mid \dots \mid 0) (u_1 \mid \dots \mid u_m)^t \\
+& = (d_1v_1\mid\dots \mid d_rv_r)(u_1\mid \dots \mid u_r)^t \\
+& = (v_1\mid\dots \mid v_r) \operatorname{diag}(d_1,\dots,d_r) (u_1\mid \dots \mid u_r)^t.
 \end{aligned}
 $$
 
