@@ -628,13 +628,13 @@ Tomemos $j\in \lbrace 1,\dots,m\rbrace$ e $i\in\lbrace 1,\dots,n\rbrace$.
 Con esto hemos demostrado que si consideramos la matriz $V$ que tiene por columnas $\lbrace v_1,\dots,v_m\rbrace$, entonces
 
 $$
-V^tAU=D
+V^tAU=\sqrt{D}
 $$
 
 y como $V^t=V^{-1}$ y $U^t=U^{-1}$, deducimos que 
 
 $$
-A=VDU^t,
+A=V\sqrt{D}U^t,
 $$
 
 a la que llamamos *descomposición de valores singulares* de $A$. Los $d_i$ los podemos escoger no negativos, en cuyo caso se conocen como valores singulares de $A$.
