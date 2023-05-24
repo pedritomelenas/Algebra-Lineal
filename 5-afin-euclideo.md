@@ -599,7 +599,7 @@ $$
 
 Si dos variedades se cortan entonces la distancia entre ellas es cero.
 
-Si las dos variedades no se cortan, diremos que $\mathfrak{L}_1$ y $\mathfrak{L}_2$ son *paralelas* si $W_1\subseteq W_2$ o $W_2\subseteq W_1$, y diremos que se cruzan en caso contrario.
+Si las dos variedades no se cortan, diremos que $\mathfrak{L}_1$ y $\mathfrak{L}_2$ son *paralelas* si $W_1\subseteq W_2$ o $W_2\subseteq W_1$, y diremos que se *cruzan* en caso contrario.
 
 El siguiente resultado proporciona un procedimiento para calcular la distancia entre dos variedades que no se cortan (esto es, entre dos variedades que o bien se cruzan o bien son paralelas).
 
