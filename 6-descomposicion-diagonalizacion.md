@@ -34,7 +34,7 @@ Igualando parte real con parte imaginaria, obtenemos $Ax=ax-yb$ y $Ay=bx+ay$. Us
 
 $$
 \begin{aligned}
-\langle Ax ,y\rangle & =\langle ax-yb,y\rangle =a\langle x,y\rangle - y \langle y,y\rangle,\\
+\langle Ax ,y\rangle & =\langle ax-yb,y\rangle =a\langle x,y\rangle - b \langle y,y\rangle,\\
 \langle x, Ay\rangle &= \langle x, bx+ay\rangle =b\langle x,x\rangle + a \langle x,y\rangle.
 \end{aligned}
 $$
