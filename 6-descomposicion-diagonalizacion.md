@@ -679,7 +679,89 @@ $$
 
 ### Ejemplo
 
-Veamos cómo es la descomposición por valores singulares de 
+Veamos paso a paso cómo calcular la descomposición por valores singulares de 
+
+$$
+A=\begin{pmatrix}
+2 & 2 & 1\\
+-2 & -2 & 1
+\end{pmatrix}.
+$$
+
+La matriz $A$ tiene rango dos, por lo que en este caso $m=r=2$ y $n=3$. Empezamos calculando $A^tA$,
+
+$$
+A^tA=\begin{pmatrix}
+8 & 8 & 0\\
+8 & 8 & 0\\
+0 & 0 & 2
+\end{pmatrix},
+$$
+
+cuyos valores propios son $16$, $2$ y $0$. Calculamos los subespacios propios asociados a cada uno de esos valores propios:
+
+$$
+V_{16}=\langle (1,1,0)\rangle, V_{2}=\langle 0,0,1\rangle, V_{0}=\langle (-1,1,0)\rangle.
+$$
+
+Por tanto, 
+
+$$
+U=\begin{pmatrix}
+\frac{\sqrt{2}}{2} & 0 & - \frac{\sqrt{2}}{2}\\
+\frac{\sqrt{2}}{2} & 0 & \frac{\sqrt{2}}{2}\\
+0 & 1 & 0
+\end{pmatrix},
+$$
+
+con $U^tU=I$ y $U^t(A^tA)U=\operatorname{diag}(16,2,0)$. Los valores singulares de $A$ son $d _1=4$, $d _2=\sqrt{2}$ y $d _3=0$. Para cada valor singular no nulo $d _i$, calculamos $v _i=\frac{1}{d _i}A u _i$, con $u _i$ la $i$-ésima columna de $U$. Así
+
+$$
+v_1=\left(\frac{\sqrt{2}}{2},- \frac{\sqrt{2}}{2}\right), v_2=\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right).
+$$
+
+Como $r=m$, no hay que ampliar $\{v_1,v_2\}$ a una base ortonormal, y tenemos que 
+
+$$
+V^tAU=\begin{pmatrix}
+4 & 0 & 0\\
+0 & \sqrt{2} & 0
+\end{pmatrix}.
+$$
+
+Así la descomposición por valores singulares de $A$ es 
+
+$$
+A=V(\Delta|0)U^t=\begin{pmatrix}
+\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\\
+- \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+\end{pmatrix}
+\begin{pmatrix}
+4 & 0 & 0\\
+0 & \sqrt{2} & 0
+\end{pmatrix}
+\begin{pmatrix}
+\frac{\sqrt{2}}{2} & 0 & - \frac{\sqrt{2}}{2}\\
+\frac{\sqrt{2}}{2} & 0 & \frac{\sqrt{2}}{2}\\
+0 & 1 & 0
+\end{pmatrix}^t.
+$$
+
+Como $r=m=2$, "nos sobra" una columna de $U$ (que no hemos usado en el cálculo de $V$). Por lo que la descomposición compacta es
+
+$$
+A=
+\begin{pmatrix}\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\\- \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\end{pmatrix}
+\begin{pmatrix} 
+4 & 0 \\
+0 & \sqrt(2) 
+\end{pmatrix}
+\begin{pmatrix}\frac{\sqrt{2}}{2} & 0\\\frac{\sqrt{2}}{2} & 0\\0 & 1\end{pmatrix}^t.
+$$
+
+### Ejemplo
+
+Veamos ahora cómo es la descomposición por valores singulares de 
 
 $$
 A=\begin{pmatrix}1 & 0\\1 & 1\\1 & 2\end{pmatrix}
