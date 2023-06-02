@@ -720,7 +720,7 @@ $$
 v_1=\left(\frac{\sqrt{2}}{2},- \frac{\sqrt{2}}{2}\right), v_2=\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right).
 $$
 
-Como $r=m$, no hay que ampliar $\{v_1,v_2\}$ a una base ortonormal, y tenemos que 
+Como $r=m$, no hay que ampliar $\lbrace v_1,v_2\rbrace$ a una base ortonormal, y tenemos que 
 
 $$
 V^tAU=\begin{pmatrix}
@@ -754,7 +754,7 @@ A=
 \begin{pmatrix}\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\\- \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\end{pmatrix}
 \begin{pmatrix} 
 4 & 0 \\
-0 & \sqrt(2) 
+0 & \sqrt{2}
 \end{pmatrix}
 \begin{pmatrix}\frac{\sqrt{2}}{2} & 0\\\frac{\sqrt{2}}{2} & 0\\0 & 1\end{pmatrix}^t.
 $$
@@ -764,7 +764,7 @@ $$
 Veamos ahora cómo es la descomposición por valores singulares de 
 
 $$
-A=\begin{pmatrix}1 & 0\\1 & 1\\1 & 2\end{pmatrix}
+A=\begin{pmatrix}1 & 0\\1 & 1\\1 & 2\end{pmatrix}.
 $$
 
 Para ello vamos a utilizar `sympy` (las cuentas a mano pueden resultar muy tediosas incluso con este ejemplo tan sencillo). 
