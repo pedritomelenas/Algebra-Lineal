@@ -9,7 +9,6 @@ Este guión se basa en los libros [L. Merino, E. Santos, [Álgebra Lineal con M�
 
 # Diagonalización por semejanza ortogonal de matrices simétricas
 
-
 Sea $(V,\langle,\rangle)$ un espacio vectorial euclídeo. Un endomorfismo $f:V\to V$ se dice *simétrico* (o *autoadjunto*) si para todo $\mathbf{u},\mathbf{v}\in V$ se tiene que 
 
 $$
@@ -409,7 +408,6 @@ $$
 
 Sea $A\in \mathcal{M}_{m\times n}(K)$ de rango pleno por filas y sea $b\in K^m$. Entonces el sistema $Ax=b$ es compatible y la solución de norma mínima es $x=A^Db$.
 
-
 ## Inversas generalizadas de Moore-Penrose
 
 Vamos a intentar mezclar las dos definiciones que acabamos de dar en una: buscamos la solución mínimo-cuadrática de norma mínima. Para ello usaremos un concepto de inversa que generaliza los conceptos de inversa, inversa a derecha e inversa a izquierda.
@@ -597,7 +595,7 @@ con lo que queda probado que $A^+$ es la solución mínimo-cuadrática de norma 
 
 Sea $A\in \mathcal{M}_{m\times n}(\mathbb{R})$. La matriz $A^tA$ es simétrica, luego existe $U$ ortogonal de forma que $U^t(A^tA)U=D$ con $D$ una matriz diagonal. 
 
-Sea $\lambda$ un autovalor de $A^tA$, por tanto existe $x\neq 0$ de forma que $(A^tA)x=\lambda x$. Entonces 
+Sea $\lambda$ un autovalor de $A^tA$, por tanto existe $x\neq 0$ de forma que $(A^tA)x=\lambda x$. Entonces
 
 $$
 0\le \Vert A x\Vert ^2 = \langle Ax,Ax\rangle = (Ax)^t(Ax)=x^t(A^tAx)= \lambda x^tx = \lambda \Vert x\Vert ^2,
@@ -616,7 +614,6 @@ $$
 
 por lo que $\lbrace v_1,\dots,v_r\rbrace\subseteq \mathbb{R}^m$ es un conjunto de vectores ortonormales. Ampliamos esta base a una base $\lbrace v_1,\dots,v_m\rbrace$ ortonormal de $\mathbb{R}^m$. 
 
-
 Tomemos $j\in \lbrace 1,\dots,m\rbrace$ e $i\in\lbrace 1,\dots,n\rbrace$.
 
 - Si $i=j \le r$, entonces $v_i^t A u_i = v_i^td_iv_i=d_i$.
@@ -625,25 +622,39 @@ Tomemos $j\in \lbrace 1,\dots,m\rbrace$ e $i\in\lbrace 1,\dots,n\rbrace$.
 
 - Si $i\neq j$, si $i>r$, al igual que antes $v_j^tAu_i=v_j0=0$; si $i\le r$, entonces $v_j^tAu_i=v_j^td_iv_i=d_i0=0$.
 
+Para simplificar la notación, usaremos $\operatorname{diag}(d_1,\dots,d_n)$ a la matriz que tiene en como entradas $d_{ii}=d_i$ y $d_{ij}=0$ si $i\neq j$. Definimos 
+
+$$
+\Delta=\operatorname{diag}(d_1,\dots,d_r).
+$$
+
 Con esto hemos demostrado que si consideramos la matriz $V$ que tiene por columnas $\lbrace v_1,\dots,v_m\rbrace$, entonces
 
 $$
-V^tAU=\sqrt{D}
+V^tAU=\left(\begin{array}{c|c} 
+\Delta & 0 \\ \hline
+0 & 0
+\end{array}\right).
 $$
 
 y como $V^t=V^{-1}$ y $U^t=U^{-1}$, deducimos que 
 
 $$
-A=V\sqrt{D}U^t,
+A=V \left(\begin{array}{c|c} 
+\Delta & 0 \\ \hline
+0 & 0
+\end{array}\right) U^t,
 $$
 
 a la que llamamos *descomposición de valores singulares* de $A$. Los $d_i$ los podemos escoger no negativos, en cuyo caso se conocen como valores singulares de $A$.
 
-Para simplificar la notación, usaremos $\operatorname{diag}(d_1,\dots,d_n)$ a la matriz que tiene en como entradas $d_{ii}=d_i$ y $d_{ij}=0$ si $i\neq j$. 
 
 $$
 \begin{aligned}
-A & =(v_1\mid \dots \mid v_m) \operatorname{diag}(d_1,\dots,d_n) (u_1\mid\dots \mid u_m)^t \\
+A & =(v_1\mid \dots \mid v_m)\left(\begin{array}{c|c} 
+\Delta & 0 \\ \hline
+0 & 0
+\end{array}\right) (u_1\mid\dots \mid u_m)^t \\
 & = (d_1v_1\mid \dots \mid d_r v_r \mid 0 \mid \dots \mid 0) (u_1 \mid \dots \mid u_m)^t \\
 & = (d_1v_1\mid\dots \mid d_rv_r)(u_1\mid \dots \mid u_r)^t \\
 & = (v_1\mid\dots \mid v_r) \operatorname{diag}(d_1,\dots,d_r) (u_1\mid \dots \mid u_r)^t.
