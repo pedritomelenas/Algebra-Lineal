@@ -733,3 +733,8 @@ $$
 no es dos, que es lo mismo que decir que $\dim(\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1$.
 
 La última igualdad se comprueba tomando cuadrados y usando que $ \sin(\measuredangle(\mathbf{u},\mathbf{v}))^2=1- \cos(\measuredangle(\mathbf{u},\mathbf{v}))$ y que $\langle \mathbf{u},\mathbf{v}\rangle= \Vert\mathbf{u}\Vert \Vert\mathbf{v}\Vert  \cos(\measuredangle(\mathbf{u},\mathbf{v}))^2$.
+
+
+## Autoevaluación
+
+<iframe src="{{ site.baseurl | absolute_url }}{% link /assets/autoevaluacion/afin-euclideo.html %}" style="border:none;" height="600" width="100%" title="autoevaluación"></iframe>

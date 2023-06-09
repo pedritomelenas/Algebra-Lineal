@@ -888,4 +888,7 @@ $$
 
 
 
+## Autoevaluación
+
+<iframe src="{{ site.baseurl | absolute_url }}{% link /assets/autoevaluacion/inv-gen.html %}" style="border:none;" height="600" width="100%" title="autoevaluación"></iframe>
 
