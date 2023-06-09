@@ -376,3 +376,8 @@ $V=U\oplus W$ si, y sólo si, $V=U+W$ y $U\cap W=\lbrace\mathbf{0}\rbrace$.
 Sean $U=\lbrace(x,y)\in \mathbb{R}^2  : x+y =0\rbrace$ y $W=\lbrace(x,y)\in \mathbb\lbrace R\rbrace^2  : x-y=0\rbrace$. Entonces $\mathbb{R}^2=U\oplus W$.
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-5.html)
+
+
+## Autoevaluacion
+
+<iframe src="{{ site.baseurl }}{% link /assets/autoevaluacion/espacios-vectoriales.html %}" style="border:none;" height="600" width="100%" title="autoevaluación"></iframe>
