@@ -292,3 +292,8 @@ $$
 dándose la igualdad para $\mathbf{u}=p_U(\mathbf{v})$.
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-3.html)
+
+
+## Autoevaluación
+
+<iframe src="{{ site.baseurl | absolute_url }}{% link /assets/autoevaluacion/euclideo.html %}" style="border:none;" height="600" width="100%" title="autoevaluación"></iframe>
