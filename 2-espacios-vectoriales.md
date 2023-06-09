@@ -380,4 +380,4 @@ Sean $U=\lbrace(x,y)\in \mathbb{R}^2  : x+y =0\rbrace$ y $W=\lbrace(x,y)\in \mat
 
 ## Autoevaluacion
 
-<iframe src="{{ site.baseurl }}{% link /assets/autoevaluacion/espacios-vectoriales.html %}" style="border:none;" height="600" width="100%" title="autoevaluación"></iframe>
+<iframe src="{{ site.baseurl | absolute_url }}{% link /assets/autoevaluacion/espacios-vectoriales.html %}" style="border:none;" height="600" width="100%" title="autoevaluación"></iframe>

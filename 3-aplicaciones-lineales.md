@@ -340,4 +340,4 @@ Así, $A=PJP^{-1}$.
 
 ## Autoevaluacion
 
-<iframe src="{{ site.baseurl }}{% link /assets/autoevaluacion/aplicaciones-lineales.html %}" style="border:none;" height="600" width="100%" title="autoevaluación"></iframe>
+<iframe src="{{ site.baseurl | absolute_url }}{% link /assets/autoevaluacion/aplicaciones-lineales.html %}" style="border:none;" height="600" width="100%" title="autoevaluación"></iframe>
