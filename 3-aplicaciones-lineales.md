@@ -338,6 +338,107 @@ $$
 
 Así, $A=PJP^{-1}$.
 
+### Ejemplo: migraciones
+
+(Adaptado de [I. Ojeda, J. Gago, [Métodos matemáticos para la Estadística](https://publicauex.unex.es/libro/metodos-matematicos-para-estadistica_135467/)].)
+
+Cada día de clase los alumnos cambian de la bancada norte a la sur (y viceversa) siguiendo las siguientes proporciones.
+- Un 50% de los alumnos de la bancada norte permanece en su sitio, mientras que la otra mitad se va a la bancada sur.
+- Un cuarto de los alumnos de la bancada sur se quedan donde estaban la clase anterior, mientras que tres cuartos deciden moverse a la bandada norte.
+
+Llamemos $p_1=(n_1,s_1)$ a la proporción de alumnos que había el primer día de clase en cada bancada. El segundo día la proporción sería $p_2=(n_2,s_2)$, con
+
+$$
+\begin{matrix}
+n_2=\frac{1}2 n_1+\frac{3}4 s_1,\\
+s_2=\frac{1}{2} n_1+ \frac{1}4 s_1. 
+\end{matrix}
+$$
+
+Y esto lo podemos expresar de forma matricial como 
+
+$$
+A p_1 = p_2, A=\begin{pmatrix}
+\frac{1}2 & \frac{1}4\\
+\frac{1}2 & \frac{3}4
+\end{pmatrix}.
+$$
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1/2,1/4],[1/2,3/4]])
+g1=DiGraph(A)
+g1.graphplot(edge_labels=True).show()</script>
+</div>  
+
+Si lo que queremos comprobar es la proporción de alumnos que habrá en cada bancada después de $n$ clases, lo que tenemos que calcular es 
+
+$$
+p_n = A
+p_{n-1} = \dots = A^n p_0.
+$$
+
+El vector $p_i$ es un vector con coordenadas no negativas y que suman uno (un **vector estocástico**). Las columnas de $A$ también son vectores estocásticos. Las matrices de esta forma se conocen como **matrices de Markov** (o estocásticas).
+
+El producto de una matriz de Markov por un vector estocástico devuelve un vector estocástico. Estas matrices siempre tienen un autovalor igual a uno, y el resto tienen valor absoluto menor o igual que uno.
+
+Veamos cómo evoluciona la proporción de alumnos en cada bancada después de 20 días de clase, suponiendo que el primer día ser repartieron la mitad en cada bancada.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1/2,1/4],[1/2,3/4]])
+p=matrix([[1/2,1/2]]).T
+for i in range(20):
+    print(1.0*p.T)
+    p=A*p</script>
+</div>  
+
+Veamos cómo sería el comportamiento general (y asintótico). Si $A$ es diagonalizable, entonces existe $P$ regular y $D$ diagonal tal que $A=PDP^{-1}$. Por tanto, $A^n=PD^nP^{-1}$.  
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1/2,1/4],[1/2,3/4]])
+show(A)
+D,P=A.diagonalization()
+show(P)
+show(D)
+show(P*D*P^(-1))
+</script>
+</div>  
+
+Claramente $D^n$ tiende a una matriz cuya diagonal es $(0,1)$.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1/2,1/4],[1/2,3/4]])
+D,P=A.diagonalization()
+show(D)
+D[1,1]=0
+show(D)
+Ainf=P*D*P^(-1)
+show(Ainf)
+p=matrix([[1/2,1/2]]).T
+show(Ainf*p)
+</script>
+</div>  
+
+De hecho para $p=(a,1-a)$ también obtendremos que el valor asintótico es el mismo, y corresponde con el vector asociado al valor propio asociado al 1 cuya suma de coordenadas es uno.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1/2,1/4],[1/2,3/4]])
+D,P=A.diagonalization()
+D[1,1]=0
+a=var("a")
+Ainf=P*D*P^(-1)
+p=matrix([[a,1-a]]).T
+show(Ainf*p)
+v1=P[:,0]
+show(v1/(Matrix([[1,1]])*v1))
+</script>
+</div>  
+
+
 ## Autoevaluacion
 
 <iframe src="{{ site.baseurl | absolute_url }}{% link /assets/autoevaluacion/aplicaciones-lineales.html %}" style="border:none;" height="600" width="100%" title="autoevaluación"></iframe>
