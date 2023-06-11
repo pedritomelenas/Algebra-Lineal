@@ -315,6 +315,50 @@ $$
 
 se le llama *matriz de cambio de base* de $B$ a $B'$. Esta matriz es siempre regular y su inversa, $A^{-1}$ es justamente la matriz de cambio de base de $B'$ a $B$.
 
+### Ejemplo
+
+Volvamos a la base del ejemplo anterior $B=\lbrace (0,1),(1,-1) \rbrace$. Los vectores de $B$ están representados por sus coordenadas respecto de la base estándar $B_C=\lbrace (1,0), (0,1)\rbrace$. Por lo que la matriz
+
+$$
+\left(\begin{array}{rr}
+0 & 1 \\
+1 & -1
+\end{array}\right)
+$$
+
+es precisamente la matriz de cambio de base de $B$ a $B_C$. La matriz de cambio de base de $B_C$ a $B$ es la matriz inversa de $A$,
+
+$$
+A^{-1}=\left(\begin{array}{rr}
+1 & 1 \\
+1 & 0
+\end{array}\right).
+$$
+
+Por tanto, las coordenadas de $(5,1)$ en la base $B$ serán
+
+$$
+\left(\begin{array}{rr}
+1 & 1 \\
+1 & 0
+\end{array}\right)
+\begin{pmatrix}
+5\\
+1
+\end{pmatrix}=
+\begin{pmatrix}
+6\\
+5
+\end{pmatrix}.
+$$
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([(0,1),(1,-1)]).T
+show(A.inverse(), Matrix([[5,1]]).T," =", A.inverse()*Matrix([[5,1]]).T)
+</script>
+</div>
+
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-2.html)
 
 ## Ecuaciones paramétricas de un subespacio vectorial
