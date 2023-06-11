@@ -396,16 +396,15 @@ pasos=10
 xy=[(a,a+randint(-3,3)) for a in range(pasos)] 
 #proponemos el sistema de ecuaciones a resolver
 A=matrix([[1]*pasos,range(pasos)]).T
-show(A)
-B=matrix(xy)[:,1]
-show(B)
+b=matrix(xy)[:,1]
+show(A,"X=",b)
 #calculamos la solución mínimo cuadrática de Ax=B
-smc=(A.T*A)^(-1)*A.T*B
+smc=(A.T*A)^(-1)*A.T*b
 show(smc.T)
-a=smc[0,0]
-b=smc[1,0]
+alpha=smc[0,0]
+beta=smc[1,0]
 #pintamos la nube y la recta que mejor se aproxima a los datos
-scatter_plot(xy)+plot(a+b*x,(x,0,pasos))
+scatter_plot(xy)+plot(alpha+beta*x,(x,0,pasos))
 </script>
 </div>
 
