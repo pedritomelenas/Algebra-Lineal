@@ -189,6 +189,16 @@ Se define el *rango* de una matriz $A\in\mathcal{M}_{m\times n}(K)$, $\operatorn
 
 Claramente, $\operatorname{rg}(A)\le \min(m,n)$. 
 
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,0,1],[0,1,-1],[1,-1,0]])
+show(A," ~ ",A.rref()," de rango ",A.rank())
+A=matrix(3,4,range(1,13))
+show(A," ~ ",A.rref()," de rango ",A.rank())
+</script>
+
+</div>
+
 Dadas $A,B\in \mathcal{M} _ {m\times n}(K)$,  
 
 $$
@@ -350,6 +360,13 @@ $$
 		  a_{31} & a_{32} & a_{33} 
 \end{matrix}\right\vert = a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{21}a_{32}a_{13}-a_{13}a_{22}a_{31}-a_{23}a_{32}a_{11}-a_{12}a_{21}a_{33}.
 $$
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,0,1],[0,1,-1],[1,-1,0]])
+show(A," tiene determinante ",A.det())
+</script>
+</div>
 
 ### Propiedades de los determinantes 
 
