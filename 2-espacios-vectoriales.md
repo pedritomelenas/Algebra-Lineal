@@ -81,7 +81,90 @@ linealmente independientes.
 
 ### Ejemplo
 
-El conjunto $\lbrace(1,1,0),(0,1,1),(1,0,1)\rbrace\subset\mathbb{R}^3$ es un conjunto de vectores linealmente independientes.
+El conjunto $\lbrace(1,1,0),(0,1,1),(1,0,1)\rbrace\subset\mathbb{R}^3$ es un conjunto de vectores linealmente independientes. Si no lo fuese, el sistema lineal de ecuaciones 
+
+$$
+\begin{pmatrix}
+1 & 0 & 1\\
+1 & 1 & 0\\
+0 & 1 & 1
+\end{pmatrix} 
+\begin{pmatrix}
+x\\
+y\\
+z
+\end{pmatrix}=
+\begin{pmatrix}
+0\\
+0\\
+0
+\end{pmatrix}
+$$
+
+tendría solución distinta de $x=y=z=0$, pero esto es imposible, pues el sistema es compatible determinado, y la única solución es por tanto $x=y=z=0$, por ser el rango de la matriz de coeficientes tres.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([(1,1,0),(0,1,1),(1,0,1)]).T
+show(A.rank())
+</script>
+</div>  
+
+Nótese que el rango de la matriz de coeficientes y el de la ampliada en el sistema de ecuaciones anterior siempre es el mismo, y el número de incógnitas es el número de vectores del que partimos. Un razonamiento análogo al visto en el ejemplo muestra que $S=\lbrace \mathbf{v}_1,\dots,\mathbf{v}_m\rbrace \subseteq K^n$ es un conjunto de vectores linealmente independiente si y sólo si la matriz cuyas columnas (o filas) son los vectores de $S$ tiene rango exactamente $m$. En particular, si son linealmente independientes, entonces $m\le n$. 
+
+De esta forma, el conjunto $\lbrace (1,2,3,4),(5,6,7,8),(9,10,11,12)\rbrace \subseteq \mathbb{Q}^4$ es un conjunto de vectores linealmente dependientes.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(3,4,range(1,13))
+show(A," tiene rango ",A.rank())
+</script>
+</div>  
+
+De hecho, haciendo operaciones elementales por filas podemos saber que relación de dependencia lineal hay entre esos vectores. La forma escalonada reducida por filas de 
+
+$$
+\left(\begin{array}{rrrr|rrr}
+1 & 2 & 3 & 4 & 1 & 0 & 0 \\
+5 & 6 & 7 & 8 & 0 & 1 & 0 \\
+9 & 10 & 11 & 12 & 0 & 0 & 1
+\end{array}\right)
+$$
+
+es 
+
+$$
+\left(\begin{array}{rrrr|rrr}
+1 & 0 & -1 & -2 & 0 & -\frac{5}{2} & \frac{3}{2} \\
+0 & 1 & 2 & 3 & 0 & \frac{9}{4} & -\frac{5}{4} \\
+0 & 0 & 0 & 0 & 1 & -2 & 1
+\end{array}\right).
+$$
+
+Por lo que el primer vector menos dos veces el segundo más el tercero es cero.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(3,4,range(1,13))
+AI=block_matrix([[A,matrix.identity(3)]])
+show(AI.rref())
+</script>
+</div>  
+
+Una forma alternativa de ver esto en `sagemath` es la siguiente.
+
+<div class="sage">
+<script type="text/x-sage">
+l=range(1,13)
+v1=vector(QQ,l[:4])
+v2=vector(QQ,l[4:8])
+v3=vector(QQ,l[8:])
+V=QQ^4
+show(V.linear_dependence([v1,v2,v3]))
+</script>
+</div>  
+
+
 
 ### Propiedades
 
@@ -137,7 +220,32 @@ Si $\dim(V)=n$, entonces cualquier conjunto de vectores de $V$ linealmente indep
 
 ### Ejemplo
 
-Los vectores $(0,1)$, $(1,-1)$ son linealmente independientes en $\mathbb{R}^2$, y por tanto $\lbrace(0,1),(1,-1)\rbrace$ es una base de $\mathbb{R}^2$.
+Los vectores $(0,1)$, $(1,-1)$ son linealmente independientes en $\mathbb{R}^2$, y por tanto $B=\lbrace(0,1),(1,-1)\rbrace$ es una base de $\mathbb{R}^2$. Calculemos las coordenadas de $(5,1)$ respecto de esa base. Para eso planteamos el sistema de ecuaciones 
+
+$$
+\begin{pmatrix}
+0 & 1 \\
+1 & -1 
+\end{pmatrix}
+\begin{pmatrix}
+x\\
+y
+\end{pmatrix}=
+\begin{pmatrix}
+5 \\
+1
+\end{pmatrix}.
+$$
+
+Nótese que el sistema es compatible por ser $B$ un sistema de generadores, y es compatible determinado por ser $B$ un conjunto de vectores linealmente independiente. La solución a este sistema es $x=6$, $y=5$, por lo que $(5,1)\equiv (6,5)_B$.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([(0,1),(1,-1)]).T
+b=matrix([[5,1]]).T
+show(A\b)
+</script>
+</div>
 
 ## Ecuaciones del cambio de base
 
