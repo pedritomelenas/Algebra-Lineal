@@ -385,6 +385,29 @@ $$
 A^I=\begin{pmatrix}\frac{5}{6} & \frac{1}{3} & - \frac{1}{6}\\- \frac{1}{2} & 0 & \frac{1}{2}\end{pmatrix}.
 $$
 
+### Ejemplo: nube de puntos cerca de la diagonal
+
+Vamos a crear una nube de puntos alrededor de la diagonal. Dibujamos la nube de puntos y la recta que "más se acerca" a la nube de puntos.
+
+<div class="sage">
+<script type="text/x-sage">
+pasos=10
+#creamos nube de puntos alrededor de la diagonal
+xy=[(a,a+randint(-3,3)) for a in range(pasos)] 
+#proponemos el sistema de ecuaciones a resolver
+A=matrix([[1]*pasos,range(pasos)]).T
+show(A)
+B=matrix(xy)[:,1]
+show(B)
+#calculamos la solución mínimo cuadrática de Ax=B
+smc=(A.T*A)^(-1)*A.T*B
+show(smc.T)
+a=smc[0,0]
+b=smc[1,0]
+#pintamos la nube y la recta que mejor se aproxima a los datos
+scatter_plot(xy)+plot(a+b*x,(x,0,pasos))
+</script>
+</div>
 
 ## Soluciones de norma mínima
 
