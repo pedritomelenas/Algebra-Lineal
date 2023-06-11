@@ -111,6 +111,15 @@ Dos matrices $A, B\in \mathcal{M} _ {m\times n}(K)$ se dice que son *equivalente
 
 Toda matriz $A$ es equivalente por filas a una matriz escalonada reducida por filas $H$, $A\sim_f H$. Esta matriz es única.
 
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(3,4,range(1,13))
+show(A,"~",A.rref())
+</script>
+</div>  
+
+
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-1.html)
 
 Llamamos $E _ {ij}\in \mathcal{M} _ n(K)$ a la matriz que se obtiene al intercambiar la fila $i$-ésima con la $j$-ésima en la matriz identidad. Cambiar la fila $i$-ésima con la $j$-ésima en $A$ se corresponde con calcular $E_{ij}A$. Claramente, $E_{ij}^{-1}=E_{ij}$.
@@ -128,6 +137,19 @@ $$(A \mid I_m)\sim_f (H \mid P).$$
 
 Nótese que $P$ es un producto de matrices elementales, y, por tanto, tiene inversa y su inversa también es un producto de matrices elementales.
 
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(3,4,range(1,13))
+AI=block_matrix([[A,matrix.identity(3)]])
+AIr=AI.rref()
+show(AI,"~",AIr)
+#comprobamos, primero extraemos P
+P=AIr[:,4:]
+show(P,A,"=",P*A)
+</script>
+</div>  
+
+
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-4.html)
 
 Si $A\sim_f B$, entonces tanto $A$ como $B$ tienen la misma forma escalonada reducida; llamémosla $H$. De esta forma, existen $P$ y $Q$ regulares tales que $H=PA=QB$, y por tanto $A=P^{-1}QB$. 
@@ -141,6 +163,22 @@ Si $A\in\mathcal{M} _ n(K)$ es una matriz cuadrada y $H$ es su forma escalonada 
 
 La matriz $A$ tiene inversa si y sólo si $H$ es la matriz identidad, y por tanto, $A$ es un producto de matrices elementales. Para calcular la inversa de $A$, podemos usar las operaciones elementales por filas que llevan de $A$ a $H=I_n$, 
 $$(A\mid I_n)\sim_f (I_n\mid A^{-1}).$$
+
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,0,1],[0,1,-1],[1,-1,0]])
+AI=block_matrix([[A,matrix.identity(3)]])
+AIr=AI.rref()
+show(AI,"~",AIr)
+#comprobamos, primero extraemos P
+P=AIr[:,3:]
+show(P,A,"=",P*A)
+#en sage podemos calcular así la inversa
+show(A.inverse())
+</script>
+</div>  
+
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-5.html)
 
