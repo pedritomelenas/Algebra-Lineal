@@ -406,7 +406,7 @@ show(P*D*P^(-1))
 </script>
 </div>  
 
-Claramente $D^n$ tiende a una matriz cuya diagonal es $(0,1)$.
+Claramente $D^n$ tiende a una matriz cuya diagonal es $(1,0)$.
 
 <div class="sage">
 <script type="text/x-sage">
