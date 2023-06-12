@@ -317,7 +317,7 @@ se le llama *matriz de cambio de base* de $B$ a $B'$. Esta matriz es siempre reg
 
 ### Ejemplo
 
-Volvamos a la base del ejemplo anterior $B=\lbrace (0,1),(1,-1) \rbrace$. Los vectores de $B$ están representados por sus coordenadas respecto de la base estándar $B_C=\lbrace (1,0), (0,1)\rbrace$. Por lo que la matriz
+Volvamos a la base del ejemplo anterior, $B=\lbrace (0,1),(1,-1) \rbrace$. Los vectores de $B$ están representados por sus coordenadas respecto de la base estándar $B_C=\lbrace (1,0), (0,1)\rbrace$. Por lo que la matriz
 
 $$
 \left(\begin{array}{rr}
@@ -358,6 +358,97 @@ A=matrix([(0,1),(1,-1)]).T
 show(A.inverse(), Matrix([[5,1]]).T," =", A.inverse()*Matrix([[5,1]]).T)
 </script>
 </div>
+
+Supongamos ahora que tomamos otra base $B'=\lbrace(1,1),(1,-1)\rbrace$ y queremos encontrar la matriz de cambio de base de $B$ a $B'$ (su inversa será la matriz de cambio de base de $B'$ a $B$). Para "ir" de $B$ a $B'$ podemos pasar por $B_C$. 
+
+La matriz de cambio de base de $B'$ a $B_C$ es 
+
+$$
+\left(
+\begin{array}{rr}
+1 & 1\\
+1 & -1
+\end{array}
+\right),
+$$
+
+por lo que la matriz de cambio de base de $B_C$ a $B'$ es 
+
+$$
+\left(
+\begin{array}{rr}
+1 & 1\\
+1 & -1
+\end{array}
+\right)^{-1}= 
+\left(
+\begin{array}{rr}
+\frac{1}{2} & \frac{1}{2}\\
+\frac{1}{2} & -\frac{1}{2}
+\end{array}
+\right).
+$$
+
+Así, la matriz de cambio de base de $B$ a $B'$ es
+
+$$
+\left(
+\begin{array}{rr}
+\frac{1}{2} & \frac{1}{2}\\
+\frac{1}{2} & -\frac{1}{2}
+\end{array}
+\right)
+\left(\begin{array}{rr}
+0 & 1 \\
+1 & -1
+\end{array}\right)=
+\left(\begin{array}{rr}
+\frac{1}{2} & 0
+\\-\frac{1}{2} & 1
+\end{array}\right)
+$$
+
+(pasamos primero de $B$ a $B_C$, y luego de $B_C$ a $B'$).
+
+Comprobemos que el resultado es correcto. El primer vector de la base de $B$ es $(0,1)\equiv(1,0)_B$, y
+
+$$
+\left(\begin{array}{rr}
+\frac{1}{2} & 0
+\\-\frac{1}{2} & 1
+\end{array}\right)
+\begin{pmatrix}
+1\\
+0
+\end{pmatrix}=
+\left(
+\begin{array}{r}
+1/2\\
+-1/2
+\end{array}
+\right),
+$$
+
+y precisamente $\frac{1}2(1,1)-\frac{1}2(1,-1)=(0,1)$. Análogamente, $(1,-1)\equiv (0,1)_B$, y 
+
+$$
+\left(\begin{array}{rr}
+\frac{1}{2} & 0
+\\-\frac{1}{2} & 1
+\end{array}\right)
+\begin{pmatrix}
+0\\
+1
+\end{pmatrix}=
+\left(
+\begin{array}{r}
+0\\
+1
+\end{array}
+\right),
+$$
+
+lo que viene a decir que $(1,-1)=1(1,-1)$.
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-2.html)
 
@@ -489,6 +580,53 @@ $$
 $$ 
 
 y transformar el sistema en otro equivalente que esté en forma escalonada. El número de ecuaciones en las que no aparecerán $\lambda_1,\dots,\lambda_r$ será la dimensión de $U$, mientras que el resto serán ecuaciones de la forma $0$ igual a una expresión lineal en $x_1,\dots,x_n$, que son las que imponen que el sistema original sea compatible, y por tanto las ecuaciones de $U$.
+
+### Ejemplo
+
+Set $U$ el subespacio de $\mathbb{R}^3$ generado por $\lbrace (1,1,0),(0,1,1)\rbrace$. Todo elemento $(x,y,z)$ de $U$ es de la forma $(x,y,z)=\lambda(1,1,0)+\mu(0,1,1)$ con $\lambda,\mu\in \mathbb{R}$. Por tanto,
+
+$$
+\left\lbrace
+\begin{array}{l}
+x=\lambda,\\ 
+y=\lambda+\mu,\\
+z=\mu,
+\end{array}
+\right.
+$$
+
+que son las ecuaciones paramétricas de $U$ (respecto de la base estándar en $\mathbb{R}^3$).
+
+Si consideramos $\lambda$ y $\mu$ variables, y para el término independiente usamos una columna (una para cada una de las coordenadas), le sistema anterior se puede escribir como 
+
+$$
+\left(\begin{array}{rr|rrr}
+1 & 0 & 1 & 0 & 0 \\
+1 & 1 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 & 1
+\end{array}\right).
+$$
+
+Si ahora calculamos la forma escalonada reducida por filas, obtenemos
+
+$$
+\left(\begin{array}{rr|rrr}
+1 & 0 & 0 & 1 & -1 \\
+0 & 1 & 0 & 0 & 1 \\
+0 & 0 & 1 & -1 & 1
+\end{array}\right).
+$$
+
+La última fila nos dice que $x-y+z=0$, que es la ecuación cartesiana o implícita de $U$ (respecto de la base usual de $\mathbb{R}^3$).
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,1,0],[0,1,1]]).T
+AI=block_matrix([[A,matrix.identity(3)]])
+show(AI," ~ ", AI.rref())
+</script>
+</div>
+
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-3.html)
 
