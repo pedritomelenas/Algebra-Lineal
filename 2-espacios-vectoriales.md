@@ -668,7 +668,7 @@ Sean $U=\lbrace(x,y)\in \mathbb{R}^2  : x+y =0\rbrace$ y $W=\lbrace(x,y)\in \mat
 Si un elemento $(x,y)$ está en la intersección de $U$ y $W$, entonces debe verificar las ecuaciones de $U$ y de $W$, esto es,
 
 $$
-\left\{
+\left\lbrace
 \begin{array}{r}
 x+y=0,\\
 x-y=0,
@@ -676,9 +676,9 @@ x-y=0,
 \right.
 $$
 
-por lo que $(x,y)=(0,0)$. Esto prueba que $U\cap W=\{(0,0)\}$, y por tanto $\dim(U\cap W)=0$. Usando que $\dim(U+W)=\dim (U)+\dim(W)-\dim(U\cap W)=\dim(U)+\dim(W)$, y que $\dim(U)=\dim(W)=1$ (ambos tienen una ecuación implícita en dimensión dos), llegamos a que $\dim(U+W)=2$, lo que fuerza $U+W=\mathbb{R}^2$.
+por lo que $(x,y)=(0,0)$. Esto prueba que $U\cap W=\lbrace(0,0)\rbrace$, y por tanto $\dim(U\cap W)=0$. Usando que $\dim(U+W)=\dim (U)+\dim(W)-\dim(U\cap W)=\dim(U)+\dim(W)$, y que $\dim(U)=\dim(W)=1$ (ambos tienen una ecuación implícita en dimensión dos), llegamos a que $\dim(U+W)=2$, lo que fuerza $U+W=\mathbb{R}^2$.
 
-Nótese que $U$ está generado por $\{(1,-1)\}$ y que $W$ lo está por $\{(1,1)\}$. Por tanto, un sistema de generadores de $U+W$ es $\{(1,-1),(1,1)\}$. Como ese conjunto genera todo $\mathbb{R}^2$, esto da otra forma de ver que $U+W$ es $\mathbb{R}^2$.
+Nótese que $U$ está generado por $\lbrace(1,-1)\rbrace$ y que $W$ lo está por $\lbrace(1,1)\rbrace$. Por tanto, un sistema de generadores de $U+W$ es $\lbrace(1,-1),(1,1)\rbrace$. Como ese conjunto genera todo $\mathbb{R}^2$, esto da otra forma de ver que $U+W$ es $\mathbb{R}^2$.
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-5.html)
 
