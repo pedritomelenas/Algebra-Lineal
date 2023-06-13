@@ -298,7 +298,7 @@ x+z=0.
 \right.
 $$
 
-Una base de $\operatorname{N}(f)$ es $\lbrace (1,-1,-1)\rbrace$, en particular $f$ no es inyectiva.
+Una base de $\operatorname{N}(f)$ es $\lbrace (1,-1,-1)\rbrace$; en particular $f$ no es inyectiva.
 
 La imagen de $f$ está generada por la imagen de los vectores de uns sistema de generadores de $\mathbb{R}^3$. Como $f(1,0,0)=(1,0)$ y $f(0,0,1)=(0,1)$, tenemos que la imagen de $f$ es todo $\mathbb{R}^2$ (y por tanto es sobreyectiva).
 
