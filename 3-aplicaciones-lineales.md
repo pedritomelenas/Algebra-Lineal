@@ -21,6 +21,19 @@ $$
 f(a\mathbf{u}+b\mathbf{v})=af(\mathbf{u})+bf(\mathbf{v}).
 $$
 
+### Ejemplo
+
+Sea $f:\mathbb{R}^3 \to \mathbb{R}^2$, $f(x,y,z)=(x+y,x+z)$. Veamos que es lineal. Si tomamos $a,a'\in \mathbb{R}$ y $(x,y,z),(x',y',z')\in \mathbb{R}^3$, entonces
+
+$$
+\begin{aligned}
+f(a(x,y,z)+a'(x',y',z'))&=f(ax+a'x',ay+a'y',az+a'z')\\
+&=(ax+a'x'+ay+a'y',ax+a'x'+az+a'z')\\
+&=a(x+y,x+z)+a'(x'+y',x'+z')\\
+&=af(x,y,z)+a'f(x',y',z').
+\end{aligned}
+$$
+
 ### Propiedades 
 
 Sea $f:V\to V'$ una aplicación lineal entre los espacios vectoriales $V$ y $V'$. 
@@ -101,6 +114,37 @@ $$
 
 es la *matriz asociada* a la aplicación lineal $f$ respecto de las bases $B$ y $B'$.
 
+### Ejemplo
+
+Volvamos al ejemplo $f:\mathbb{R}^3 \to \mathbb{R}^2$, $f(x,y,z)=(x+y,x+z)$. Tomemos en $\mathbb{R}^3$ la base $B=\lbrace (1,0,0),(0,1,0),(0,0,1)\rbrace$ y en $\mathbb{R}^2$ la base $B'=\lbrace(1,0),(0,1)\rbrace$. Como $f(1,0,0)=(1,1)$, $f(0,1,0)=(1,0)$ y $f(0,0,1)=(0,1)$, tenemos que la matriz asociada $f$ en las bases $B$ y $B'$ es 
+
+$$
+\mathcal{M}(f;B,B')=
+\begin{pmatrix}
+1 & 1 & 0\\
+1 & 0 & 1
+\end{pmatrix}.
+$$
+
+Podemos comprobar que 
+
+$$
+\begin{pmatrix}
+1 & 1 & 0\\
+1 & 0 & 1
+\end{pmatrix} 
+\begin{pmatrix}
+x\\
+y\\
+z
+\end{pmatrix}=
+\begin{pmatrix}
+x+y\\
+x+z
+\end{pmatrix}.
+$$
+
+
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/4-1.html)
 
 Sea $f:V_1\to V_2$ una aplicación lineal, y sea $A=\mathcal{M}(f;B_1,B_2)$ con $B_1$ una base de $V_1$ y $B_2$ una base del espacio vectorial $V_2$. Si $\bar{B}_1$ y $\bar{B}_2$ son bases de $V_1$ y $V_2$, respectivamente, podemos calcular $\mathcal{M}(f;\bar{B}_1,\bar{B}_2)$ usando la deficinión de matriz asociada a una aplicación lineal, esto es determinando las coordenadas de las imágenes por $f$ de los vectores de $\bar{B}_1$ respecto de $\bar{B}_2$, o bien podemos multiplicar apropiadamente $A$ con las matrices de cambio de base de $\bar{B}_1$ a $B_1$ y de $B_2$ a $\bar{B}_2$. Sea $A_1$ (respectivamente $A_2$) la matriz de cambio de base de $\bar{B}_1$ a $B_1$ (respectivamente de $\bar{B}_2$ a $B_2$). Nótese que
@@ -117,6 +161,56 @@ $$
 $$
 
 La matriz $A_1$ toma las coordenadas de un vector $v$ en $V_1$ respecto de $\bar{B}_1$ y nos devuelve sus coordenadas en la base $B_1$, posteriormente la matriz $A$ calcula las coordenadas de $f(v)$ respecto de la base $B_2$, y finalmente $A_2^{-1}$ devuelve las coordenadas de $f(v)$ respecto de $\bar{B}_2$.
+
+### Ejemplo
+
+Volvamos de nuevo al ejemplo $f:\mathbb{R}^3 \to \mathbb{R}^2$, $f(x,y,z)=(x+y,x+z)$, pero ahora vamos a calcular la matriz asociada a $f$ respecto de las bases $B_1=\lbrace (1,1,1),(1,1,0),(1,0,0)\rbrace$ y $B_1'=\lbrace (1,1),(1,-1)\rbrace$. Podemos aplicar la definición o bien multiplicar $\mathcal{M}(f;B,B')$ por las matrices de cambio de base apropiadas. 
+
+Como $f(1,1,1)=(2,2)=2(1,1)$, $f(1,1,0)=(2,1)=\frac{3}2(1,1)+\frac{1}2(1,-1)$ y $f(1,0,0)=(1,1)=1(1,1)$, tenemos que 
+
+$$
+\mathcal{M}(f;B_1,B_1')=
+\begin{pmatrix}
+2 & \frac{3}2 & 1\\
+0 & \frac{1}2 & 0
+\end{pmatrix}.
+$$
+
+Por otro lado,
+
+$$
+\begin{aligned}
+\mathcal{M}(f;B_1,B_1') &= \mathcal{M}(I_2;B',B_1') \mathcal{M}(f;B,B')\mathcal{M}(I_3;B_1,B)\\
+& = \mathcal{M}(I_2;B_1',B')^{-1} \mathcal{M}(f;B,B')\mathcal{M}(I_3;B_1,B)\\
+&= 
+\begin{pmatrix}
+1 & 1 \\
+1 & -1
+\end{pmatrix}^{-1}
+\begin{pmatrix}
+1 & 1 & 0\\
+1 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 & 1 & 1\\
+1 & 1 & 0\\
+1 & 0 & 0
+\end{pmatrix}\\
+&=
+\begin{pmatrix}
+2 & \frac{3}2 & 1\\
+0 & \frac{1}2 & 0
+\end{pmatrix}.
+\end{aligned}
+$$
+
+<div class="sage">
+<script type="text/x-sage">
+show(matrix([[1,1],[1,-1]])^(-1)*matrix([[1,1,0],[1,0,1]])\
+    *matrix([[1,1,1],[1,1,0],[1,0,0]]))
+</script>
+</div>  
+
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/4-3.html)
 
