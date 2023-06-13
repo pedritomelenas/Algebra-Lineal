@@ -455,6 +455,14 @@ $$
 
 Así, $A=PJP^{-1}$.
 
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([(1,0,0,0),(0,1,0,0),(-2,-2,0,1),(-2,0,-1,-2)])
+show(A.jordan_form())
+</script>
+</div>  
+
+
 ### Ejemplo: migraciones
 
 (Adaptado de [I. Ojeda, J. Gago, [Métodos matemáticos para la Estadística](https://publicauex.unex.es/libro/metodos-matematicos-para-estadistica_135467/)].)
