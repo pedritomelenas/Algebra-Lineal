@@ -259,21 +259,21 @@ Sea $f:V\to V'$ una aplicación lineal.
 
 - Si $A$ es la matriz asociada a $f$ respecto de unas bases $B$ y $B'$ de $V$ y $V'$, respectivamente, entonces 
 
-$$
-\dim(\operatorname{Im}(f))=\operatorname{rg}(A)
-$$ 
+    $$
+    \dim(\operatorname{Im}(f))=\operatorname{rg}(A)
+    $$ 
 
-y 
+    y 
 
-$$
-\dim(\operatorname{N}(f))=\dim(V)-\operatorname{rg}(A).
-$$ 
+    $$
+    \dim(\operatorname{N}(f))=\dim(V)-\operatorname{rg}(A).
+    $$ 
 
-En particular, 
+    En particular, 
 
-$$
-\dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f))=\dim(V).
-$$
+    $$
+    \dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f))=\dim(V).
+    $$
 
 - Si $B=\lbrace\mathbf{v}_1,\ldots, \mathbf{v}_n\rbrace$ una base de $V$, entonces, $\lbrace f(\mathbf{v}_1),\dots, f(\mathbf{v}_n)\rbrace$ es una base de $V'$ si y sólo si $f$ es un isomorfismo. Esto equivale a que $\mathcal{M}(f;B,B')$ es regular.
 
@@ -281,6 +281,29 @@ Los espacios vectoriales $V$ y $V'$ diremos que son isomorfos si existe un isomo
 
 ## Consecuencia
 Los espacios $V$ y $V'$ son isomorfos si y sólo si $\dim(V)=\dim(V')$.
+
+
+### Ejemplo
+
+Calculemos el núcleo y la imagen de $f:\mathbb{R}^3 \to \mathbb{R}^2$, $f(x,y,z)=(x+y,x+z)$. 
+
+El núcleo es el conjunto de elementos $(x,y,z)$ de $\mathbb{R}^3$ tales que $f(x,y,z)=(0,0)$, y por tanto tiene como ecuaciones cartesianas 
+
+$$
+\left\lbrace
+\begin{array}{l}
+x+y=0,\\
+x+z=0.
+\end{array}
+\right.
+$$
+
+Una base de $\operatorname{N}(f)$ es $\lbrace (1,-1,-1)\brace$, en particular $f$ no es inyectiva.
+
+La imagen de $f$ está generada por la imagen de los vectores de uns sistema de generadores de $\mathbb{R}^3$. Como $f(1,0,0)=(1,0)$ y $f(0,0,1)=(0,1)$, tenemos que la imagen de $f$ es todo $\mathbb{R}^2$ (y por tanto es sobreyectiva).
+
+Nótese que $3=\dim(\mathbb{R}^3)=\dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f))=1+2$.
+
 
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/4-2.html)
 
