@@ -663,7 +663,7 @@ Sea $V$ un espacio vectorial, y sean $U$y $W$ dos subespacios suyos. Entonces,
 $V=U\oplus W$ si, y sólo si, $V=U+W$ y $U\cap W=\lbrace\mathbf{0}\rbrace$.
 
 ### Ejemplo
-Sean $U=\lbrace(x,y)\in \mathbb{R}^2  : x+y =0\rbrace$ y $W=\lbrace(x,y)\in \mathbb\lbrace R\rbrace^2  : x-y=0\rbrace$. Entonces $\mathbb{R}^2=U\oplus W$.
+Sean $U=\lbrace(x,y)\in \mathbb{R}^2  : x+y =0\rbrace$ y $W=\lbrace(x,y)\in \mathbb{R}^2  : x-y=0\rbrace$. Entonces $\mathbb{R}^2=U\oplus W$.
 
 Si un elemento $(x,y)$ está en la intersección de $U$ y $W$, entonces debe verificar las ecuaciones de $U$ y de $W$, esto es,
 
