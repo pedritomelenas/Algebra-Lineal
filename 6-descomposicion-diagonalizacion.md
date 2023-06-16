@@ -206,7 +206,7 @@ $$
 
 por lo que $A^D=A^t(AA^t)^{-1}$ es una inversa a la derecha de $A$: $AA^D=I_m$.
 
-Por otro lado, $A^tA\in\mathcal{M}_n(K)$, y de nuevo $\operatorname{rg}(AA^t)=\operatorname{rg}(A)$. Así, $A^tA$ tendrá inversa si y sólo si $\operatorname{rg}(A)=n$, y esto sólo ocurre si $A$ es de rango pleno por columnas. En esta situación
+Por otro lado, $A^tA\in\mathcal{M}_n(K)$, y de nuevo $\operatorname{rg}(A^tA)=\operatorname{rg}(A)$. Así, $A^tA$ tendrá inversa si y sólo si $\operatorname{rg}(A)=n$, y esto sólo ocurre si $A$ es de rango pleno por columnas. En esta situación
 
 $$
 ((A^tA)^{-1}A^t)A=(A^tA)^{-1}(A^tA)=I_n,
