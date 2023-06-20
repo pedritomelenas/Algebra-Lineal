@@ -644,6 +644,33 @@ $$
 \end{aligned}
 $$
 
+### Ejemplo ilustrativo en GeoGebra
+
+<details>
+<summary>Pulsa para mostrar</summary>
+<div id="ggbApplet"></div>
+
+</details>
+
+<script>
+var parameters = {
+"id": "ggbApplet",
+"width":1000,
+"height":702,
+// use this instead of ggbBase64 to load a material from geogebra.org
+// "material_id":12345,
+// "ggbBase64":"",
+// use this instead of ggbBase64 to load a .ggb file
+"filename":"{{ site.baseurl | absolute_url }}{% link /assets/geogebra/distancia-recta-plano.ggb %}"};
+// is3D=is 3D applet using 3D view, AV=Algebra View, SV=Spreadsheet View, CV=CAS View, EV2=Graphics View 2, CP=Construction Protocol, PC=Probability Calculator, DA=Data Analysis, FI=Function Inspector, PV=Python, macro=Macro View
+var views = {'is3D': 0,'AV': 1,'SV': 1,'CV': 1,'EV2': 0,'CP': 0,'PC': 0,'DA': 0,'FI': 0,'macro': 0};
+var applet = new GGBApplet(parameters, '5.0',views); //poner views como tercer argumento si queremos habilitarlo
+window.onload = function() {
+    applet.inject('ggbApplet')  
+};
+</script>
+
+
 ### Distancia de un punto a un hiperplano
 
 Sea $P=(p_1,\dots,p_n)$ un punto y $\mathfrak{H}\equiv a_1x_1+\dots+a_nx_n+b=0$ un hiperplano. Llamemos a $Q=(q_1,\dots,q_n)$ a la proyección ortogonal de $P$ en $\mathfrak{H}$, y $\mathbf{v}=(a_1,\dots,a_n)$. Entonces $\mathbf{v}$ y $\overrightarrow{PQ}$ son ambos perpendiculares a $\mathfrak{H}$, por lo que el ángulo que forman es $0$ o $\pi$. Por tanto, $\vert\langle \overrightarrow{PQ},\mathbf{v}\rangle\vert =  \Vert \overrightarrow{PQ}\Vert \Vert \mathbf{v}\Vert$, y 
