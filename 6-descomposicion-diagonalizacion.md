@@ -244,6 +244,15 @@ $$
 
 tenemos que $A^IA=I_2$.
 
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,0],[1,1],[1,2]])
+show((A.T*A)^(-1))
+show((A.T*A)^(-1)*A.T)
+</script>
+</div>  
+
+
 ### Observación
 
 Sea $f: V\to V'$ una aplicación lineal con matriz asociada $A$ respecto de unas bases dadas en $V$ y $V'$. 
@@ -345,7 +354,8 @@ Lo cual era de esperar, pues $A$ es de rango pleno for columnas.
 from sympy import Matrix, latex
 A=Matrix(3,4,range(12))
 C,F=A.rank_decomposition()
-show(html(f"\\[{latex(C, mat_delim='(', mat_str='matrix')} {latex(F,mat_delim='(', mat_str='matrix')} = {latex(C*F,mat_delim='(', mat_str='matrix')}\\]"))</script>
+show(html(f"${latex(C, mat_delim='(', mat_str='matrix')} {latex(F,mat_delim='(', mat_str='matrix')} = {latex(C*F,mat_delim='(', mat_str='matrix')}$"))
+</script>
 </div>  
 
 
