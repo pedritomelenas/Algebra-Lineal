@@ -340,6 +340,16 @@ $$
 
 Lo cual era de esperar, pues $A$ es de rango pleno for columnas.
 
+<div class="sage">
+<script type="text/x-sage">
+from sympy import Matrix, latex
+A=Matrix(3,4,range(12))
+C,F=A.rank_decomposition()
+show(html(f"\\[{latex(C, mat_delim='(', mat_str='matrix')} {latex(F,mat_delim='(', mat_str='matrix')} = {latex(C*F,mat_delim='(', mat_str='matrix')}\\]"))</script>
+</div>  
+
+
+
 ## Soluciones mínimo-cuadráticas
 
 Sea $A\in \mathcal{M}_{m\times n}(K)$ y $b\in K^m$. Consideremos el sistema lineal de ecuaciones
