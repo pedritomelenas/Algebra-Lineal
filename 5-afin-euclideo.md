@@ -96,6 +96,16 @@ $$
 Resolviendo el sistema, obtenemos que $P=(4,-1,1) _\mathfrak{R}$
 
 
+<div class="sage">
+<script type="text/x-sage">
+O=vector([1,1,-1])
+MB=matrix([[1,1,1],[1,1,0],[1,0,0]]).T
+P=vector([5,4,3])
+MB\(P-O)
+</script>
+</div>  
+
+
 ##  Variedades afines 
 
 Sean $\mathfrak{A}$ un espacio afín sobre el espacio vectorial $V$, $P\in\mathfrak{A}$ y $W$ un subespacio vectorial de $V$.
@@ -363,6 +373,19 @@ Por tanto, la ecuación implícita de la variedad afín que pasa por $P$ con dir
 $$
 x_{1}-x_{2}-x_{3}=2.
 $$
+
+<div class="sage">
+<script type="text/x-sage">
+# ponemos los generadores de W en una matriz por columnas    
+MW=matrix([[1,2,-1],[2,1,1]]).T 
+# definimos el punto 
+P=vector([1,-2,1]) 
+# ampliamos la matriz con P y con la identidad (que representan a x,y y z)
+Meq=block_matrix([[MW,matrix(P).T,matrix.identity(3)]]) 
+show(Meq," ~ ", Meq.rref())
+</script>
+</div>  
+
 
 ## Ecuaciones cartesianas usando las ecuaciones cartesianas del espacio de direcciones
 
@@ -760,6 +783,20 @@ $$
 no es dos, que es lo mismo que decir que $\dim(\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1$.
 
 La última igualdad se comprueba tomando cuadrados y usando que $ \sin(\measuredangle(\mathbf{u},\mathbf{v}))^2=1- \cos(\measuredangle(\mathbf{u},\mathbf{v}))$ y que $\langle \mathbf{u},\mathbf{v}\rangle= \Vert\mathbf{u}\Vert \Vert\mathbf{v}\Vert  \cos(\measuredangle(\mathbf{u},\mathbf{v}))^2$.
+
+
+<div class="sage">
+<script type="text/x-sage">
+v=vector([1,2,3])
+w=vector([3,4,5])
+u=v.cross_product(w) # el producto vectorial de v y w
+show(u)
+show(u.dot_product(v)) # perpendicular a v
+show(u.dot_product(w)) # perpendicular a w
+# la matrix cuyas filas son esos vectores tiene rango tres
+show(matrix([u,v,w]).rank()) 
+</script>
+</div>  
 
 
 ## Autoevaluación
