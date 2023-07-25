@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Descomposición y diagonalización de matrices
+title: Inversas generalizadas
 ---
 
 # Inversas generalizadas. Mínimos cuadrados
