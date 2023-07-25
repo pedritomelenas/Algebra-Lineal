@@ -294,6 +294,94 @@ dándose la igualdad para $\mathbf{u}=p_U(\mathbf{v})$.
 ### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-3.html)
 
 
+@# Diagonalización por semejanza ortogonal de matrices simétricas
+
+Sea $(V,\langle,\rangle)$ un espacio vectorial euclídeo. Un endomorfismo $f:V\to V$ se dice *simétrico* (o *autoadjunto*) si para todo $\mathbf{u},\mathbf{v}\in V$ se tiene que 
+
+$$
+\langle f(\mathbf{u}),\mathbf{v}\rangle =\langle \mathbf{u},f(\mathbf{v})\rangle.
+$$
+
+Si $B=\lbrace \mathbf{e} _1,\dots,\mathbf{e} _n\rbrace$ es una base ortonormal de $V$, y $A=\mathcal{M}(f;B)$, entonces $a _{ij}=\langle f(\mathbf{e} _j),\mathbf{e}_i\rangle=\langle \mathbf{e} _j,f(\mathbf{e} _i) \rangle=a _{ji}$, y por tanto $A$ es simétrica.
+
+El recíproco también es cierto pues si $A$ es simétrica, entonces si $x$ y $y$ son las coordenadas de $\mathbf{u}$ y $\mathbf{v}$, respectivamente, tenemos que $\langle f(\mathbf{u}),\mathbf{v}\rangle = (Ax)^ty=x^tA^ty=x^t(Ay)=\langle \mathbf{u},f(\mathbf{v})\rangle$.
+
+### Resultado
+
+El endomorfismo $f$ es autoadjunto si y sólo si su matriz respecto de una base ortonormal es simétrica.
+
+Sea $A\in \mathcal{M}_n(\mathbb{R})$ simétrica. Supongamos que $\lambda=a+i b$ es un valor propio complejo de $A$. Existen $x,y\in \mathbb{R}^n$ tales que $A(x+iy)=(a+ib)(x+iy)$. Por tanto,
+
+$$
+Ax+iAy=A(x+iy)=(a+ib)(x+iy)=(ax-yb)+i(bx+ay).
+$$
+
+Igualando parte real con parte imaginaria, obtenemos $Ax=ax-yb$ y $Ay=bx+ay$. Usamos ahora que $A$ es simétrica (y por tanto su endomorfismo asociado es autoadjunto)
+
+$$
+\begin{aligned}
+\langle Ax ,y\rangle & =\langle ax-yb,y\rangle =a\langle x,y\rangle - b \langle y,y\rangle,\\
+\langle x, Ay\rangle &= \langle x, bx+ay\rangle =b\langle x,x\rangle + a \langle x,y\rangle.
+\end{aligned}
+$$
+
+Como $\langle Ax,y\rangle =\langle x,Ay\rangle$, tenemos que 
+
+$$
+0=b(\langle x,x\rangle +\langle y,y\rangle),
+$$
+
+y como $\langle x,x\rangle + \langle y,y\rangle >0$, deducimos que $b=0$. Tenemos así el siguiente resultado.
+
+### Resultado
+
+Todos los valores propios de una matriz simétrica con entradas reales son reales.
+
+Supongamos ahora que $\lambda_1,\dots,\lambda_m$ son todos los valores propios (reales) de $A$. Como $\lambda_i\neq \lambda_j$ con $i\neq j$, si $\mathbf{v}\in V_{\lambda_i}\cap V_{\lambda_j}$ y $x$ son las coordenadas de $\mathbf{v}$, tenemos que $Ax=\lambda_ix=\lambda_jx$, por lo que $x=0$ y $\mathbf{v}=0$. Esto quiere decir que $V_{\lambda_i}\cap V_{\lambda_j}=\lbrace\mathbf{0}\rbrace$. De esta forma la suma $V_{\lambda_1}+\dots+V_{\lambda_m}$ es directa. Sea $U=V_{\lambda_1}\oplus \dots \oplus V_{\lambda_m}$. 
+
+Si $f$ es el endomorfismo que viene determinado por $A$, entonces $f(U)\subseteq U$. Es más, por ser $f$ autoadjunto, si $\mathbf{u}\in U$ y $\mathbf{v}\in U^\perp$, por ser $f(\mathbf{u})\in U$, se tiene que $0=\langle \mathbf{v},f(\mathbf{u})\rangle= \langle f(\mathbf{v}),\mathbf{u}\rangle$, por lo que $f(\mathbf{v})\in U^\perp$, esto es, $f(U^\perp)\subseteq U^\perp$. Si $U^\perp\neq \lbrace \mathbf{0}\rbrace$, entonces $f$ restringido a $U^\perp$ tendrá al menos una valor propio $\lambda$. Si $\mathbf{v}$ es un vector propio asociado a $\lambda$, $f(\mathbf{v})=\lambda\mathbf{v}$, por lo que $\lambda\in \lbrace\lambda_1,\dots,\lambda_m\rbrace$, lo que lleva a $\mathbf{v}\in U\cap U^\perp=\lbrace\mathbf{0}\rbrace$, lo que es absurdo. Por tanto $U^\perp=\lbrace \mathbf{0}\rbrace$ y $U=\mathbb{R}^n$. Acabamos de probar el siguiente resultado.
+
+### Teorema espectral para matrices simétricas reales
+
+Toda matriz simétrica con entradas reales es diagonalizable.
+
+Veamos ahora que los subespacios propios son además ortogonales entre sí. Si $\lambda$ y $\mu$ son dos valores distintos de $A$ (simétrica con entradas reales), y $\mathbf{u}$ y $\mathbf{v}$ son vectores propios asociados a $\lambda$ y $\mu$ respectivamente, entonces 
+
+$$
+\begin{aligned}
+\langle f(\mathbf{u}),\mathbf{v}\rangle &=\lambda \langle \mathbf{u},\mathbf{v}\rangle,\\
+\langle \mathbf{u},f(\mathbf{v})\rangle &= \mu\langle \mathbf{u},\mathbf{v}\rangle,
+\end{aligned}
+$$
+
+con $f$ el endomorfismo determinado por $A$. Como $f$ es autoadjunto, $(\lambda-\mu)\langle \mathbf{u},\mathbf{v}\rangle=0$, y al ser $\lambda\neq \mu$, concluimos que $\langle \mathbf{u},\mathbf{v}\rangle=0$. 
+
+Esto nos permite escoger dentro de cada subespacio asociado a cada valor propio de $A$ una base ortonormal. Al juntarlas todas obtenemos una base ortonormal de $V$, y tenemos que la expresión de $f$ en esa base ortonormal es diagonal. Si llamamos $P$ a la matriz de paso (sus columnas son las coordenadas de los vectores de nuestra base ortonormal), entonces $P P^t=I_n$, por lo que $P^{-1}=P^t$. Estas matrices se denominan *ortogonales*. 
+
+### Resultado
+
+Si $A$ es una matriz simétrica con entradas reales, entonces existen $P$ ortogonal y una matriz diagonal $D$ tales que $D=P^tAP$.
+
+### Ejemplo
+
+Sea 
+
+$$
+A=\begin{pmatrix}
+1 & 1 \\
+1 & -1
+\end{pmatrix}.
+$$ 
+
+Entonces, $D=Q^{-1}AQ$, con 
+
+$$
+Q=\begin{pmatrix}1 - \sqrt{2} & 1 + \sqrt{2}\\1 & 1\end{pmatrix},\quad D=\begin{pmatrix}- \sqrt{2} & 0\\0 & \sqrt{2}\end{pmatrix}.
+$$
+
+Nótese que $Q$ no es ortogonal. Si tomamos $\mathbf{u}=(1-\sqrt{2},1)$ y $\mathbf{v}=(1+\sqrt{2},1)$, entonces la matriz $P$ cuyas columnas son $\frac{1}{\Vert \mathbf{u}\Vert }\mathbf{u}$ y $\frac{1}{\Vert\mathbf{v}\Vert}\mathbf{v}$ verifica que $D=P^tAP$.
+
+
 ## Autoevaluación
 
 <iframe src="{{ site.baseurl | absolute_url }}{% link /assets/autoevaluacion/euclideo.html %}" style="border:none;" height="600" width="100%" title="autoevaluación"></iframe>
