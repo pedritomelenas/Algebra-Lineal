@@ -3,25 +3,26 @@ layout: page
 title: null
 ---
 <style>
-h1 {
-  font-size: 1.5rem;
-}
-h2 {
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
-}
-h3 {
-  margin-top: 1.5rem;
-  font-size: 1.1rem;
-}
-h4, h5, h6 {
-  margin-top: 1rem;
-  font-size: 1rem;
+@media (min-width: 38em) {
+  html {
+    font-size: 18px;
+  }
 }
 
-body, td {
-   font-size: 0.9rem;
+.container {
+    max-width: 56rem;
+    }
+    @media (min-width: 38em) {
+    .container {
+        max-width: 38rem;
+    }
+    }
+    @media (min-width: 56em) {
+    .container {
+        max-width: 56rem;
+    }
 }
+
 </style>
 
 # Ejercicios resueltos
@@ -60,7 +61,7 @@ $$\left(\begin{array}{ccc|c}
 0 & -3 & 3 & 3
 \end{array}\right).$$
 
-Ahora procedemos de un modo similar con el pivote de la segunda ecuación, que ya está en la posición deseada, con él hacemos ceo todos los elementos que están en su columna, tanto debajo como encima:
+Ahora procedemos de un modo similar con el pivote de la segunda ecuación, que ya está en la posición deseada, con él hacemos cero todos los elementos que están en su columna, tanto debajo como encima:
 
 $$  
 \left(\begin{array}{ccc|c}
