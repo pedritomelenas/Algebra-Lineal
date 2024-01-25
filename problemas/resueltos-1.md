@@ -25,7 +25,9 @@ title: null
 
 </style>
 
-# Ejercicios resueltos
+# Matrices y sistemas de ecuaciones
+## Ejercicios resueltos 
+
 Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$ y $\mathbb{Z}_5$.
 
 $$\left\{\begin{aligned} x_{2}-2x_{3}&= -4,\\ x_{1}+x_{2}-x_{3}&=0,\\ 2x_{1}-x_{2}+x_{3}&=3. \end{aligned}\right.$$
