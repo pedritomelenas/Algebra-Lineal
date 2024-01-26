@@ -29,8 +29,16 @@
 
 
 /* latex */
-.katex { font-size: 1.09em !important; } 
-.MathJax { font-size: 1.09em !important; }
+.katex { 
+  font-size: 1.09em !important; 
+  overflow-x: auto;
+} 
+.MathJax { 
+  font-size: 1.09em !important; 
+}
+.MathJax_Display{
+  overflow-x: auto;
+}
 /*
  * Global resets
  *
