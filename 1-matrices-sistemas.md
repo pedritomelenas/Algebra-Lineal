@@ -417,7 +417,7 @@ $$
 
 donde $M_i$ es la matriz que se obtiene a partir de $A$ cambiando la columna $i$-ésima por $b$.
 
-### $\to$ [Ejercicios resueltos]({{ site.baseurl }}{% link problemas/resueltos-1.md %})
+### $\to$ [Ejercicios resueltos]({{ site.baseurl | absolute_url }}{% link problemas/resueltos-1.md %})
 
 
 ## Autoevaluacion
