@@ -30,7 +30,7 @@
 
 /* latex */
 .katex { font-size: 1.09em !important; } 
-
+.MathJax { font-size: 1.09em !important; }
 /*
  * Global resets
  *
