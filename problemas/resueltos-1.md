@@ -301,7 +301,7 @@ $$\left(\begin{array}{ccc|c}
 \boxed{1} & 0 & 0 & 1\\
 0 & \boxed{1} & 0 & 2\\
 0 & 0 & \boxed{1} & 3
-\end{array}\right)
+\end{array}\right).
 $$
 
 Comprobemos el resultado obtenido con `sage`.
