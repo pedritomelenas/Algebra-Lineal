@@ -234,7 +234,7 @@ Dadas $A,B\in \mathcal{M}_{m\times n}(K)$, decimos que $A$ y $B$ son equivalente
 Una matriz de rango $r$ es siempre equivalente a una matriz de la forma
 
 $$
-\left(\begin{array}{c\vert c}
+\left(\begin{array}{c | c}
 I_r & 0 \\ 
 \hline
 0 & 0
