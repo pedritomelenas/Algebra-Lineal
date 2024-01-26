@@ -32,12 +32,14 @@
 .katex { 
   font-size: 1.09em !important; 
   overflow-x: auto;
+  overflow-y: hidden;
 } 
 .MathJax { 
   font-size: 1.09em !important; 
 }
 .MathJax_Display{
   overflow-x: auto;
+  overflow-y: hidden;
 }
 /*
  * Global resets
