@@ -325,6 +325,7 @@ $$(1,2,3),$$
 y de esta forma es compatible determinado.
 </details>
 
+
 Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$, $\mathbb{Z}_5$ y $\mathbb{Z}_2$.
 
 $$\left\{\begin{aligned} x-y+z+t+v&=0\\ x+y+z+t-v&=0\\ -x-y+z+t-v&=0 \end{aligned}\right.$$
@@ -381,6 +382,15 @@ f_1+f_2\leftrightarrow f_1 \end{array}}\left(\begin{array}{rrrrr}
 0 & 0 & \boxed{1} & 1 & -1
 \end{array}\right)$$
 
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ,[[1,-1,1,1,1],[1,1,1,1,-1],[-1,-1,1,1,-1]])
+show(A,"~",A.rref())
+</script>
+</div>  
+
 Como ya tenemos una matriz escalonada reducida por filas, el sistema no puede simplificarse más. Solo queda escribir las soluciones: para ello observamos que las incógnitas $x,y$ y $z$ están listas para ser despejadas, son las que corresponden a los pivotes. Las que no corresponden a pivotes se utilizan como parámetros (o variables libres). La solución del sistema queda:  
 
 $$\left.\begin{aligned}
@@ -396,6 +406,23 @@ luego es un sistema Compatible Indeterminado.
 <h3>Coeficientes en $\mathbb{Z}_3$</h3>
 Este ejemplo es un caso muy especial, puesto que todos los coeficientes del sistema son $1$'s y $-1$'s (también podrían haber sido $0$'s y razonaríamos igual), y estos elementos se pueden usar en cualquier cuerpo en el que $1\not = -1$. 
 Si repasamos las operaciones utilizadas, son también válidas en $\mathbb{Z}_3$ y en $\mathbb{Z}_5$ (aunque multiplicar por $\frac{1}{2}$ correspondería a multiplicar por $2$ en $\mathbb{Z}_3$ o por $3$ en $\mathbb{Z}_5$).
+
+Comprobemos el razonamiento con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(3),[[1,-1,1,1,1],[1,1,1,1,-1],[-1,-1,1,1,-1]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[1,-1,1,1,1],[1,1,1,1,-1],[-1,-1,1,1,-1]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
 Las soluciones en $\mathbb{Z}_3$ serían
 
 $$\left.\begin{aligned}
@@ -425,8 +452,8 @@ $$\left(\begin{array}{ccccc}
 \boxed{1} & 1 & 1 & 1 & 1\\
 1 & 1 & 1 & 1 & 1\\
 1 & 1 & 1 & 1 & 1
-\end{array}\right)\sim_{\tiny \begin{array}{l} f_2+f_1\leftrightarrow f_2\\
-f_3+f_1\leftrightarrow f_3 \end{array}} 
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_2-f_1\leftrightarrow f_2\\
+f_3-f_1\leftrightarrow f_3 \end{array}} 
 \left(\begin{array}{ccccc}
 \boxed{1} & 1 & 1 & 1 & 1\\
 0 & 0 & 0 & 0 & 0\\
