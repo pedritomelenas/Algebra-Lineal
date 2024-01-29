@@ -173,11 +173,6 @@ Ahora señalamos (ya está hecho) el pivote de la segunda fila y lo usamos para 
 
 $$\left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 2 & 0\\
-0 & 1 & 1 & 2\\
-0 & 0 & 0 & 0
-\end{array}\right)
- \left(\begin{array}{ccc|c}
-\boxed{1} & 1 & 2 & 0\\
 0 & \boxed{1} & 1 & 2\\
 0 & 0 & 0 & 0
 \end{array}\right)\sim_{f_1+2f_2\rightarrow f_1}
