@@ -113,7 +113,7 @@ $$\left(\begin{array}{ccc|c}
 0 & 0 & \boxed{1} & 3
 \end{array}\right).$$
 
-Comprobemos el resultado obtenido con `sage`.
+Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
@@ -186,7 +186,7 @@ $$
 Obtenemos así la forma escalonada reducida de nuestra matriz de coeficientes ampliada. 
 
 
-Comprobemos el resultado obtenido con `sage`.
+Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
@@ -299,7 +299,7 @@ $$\left(\begin{array}{ccc|c}
 \end{array}\right).
 $$
 
-Comprobemos el resultado obtenido con `sage`.
+Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
