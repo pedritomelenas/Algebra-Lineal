@@ -462,7 +462,7 @@ v&=\lambda_2
 
 y por tanto es compatible indeterminado y tiene un total de $25$ soluciones.
 
-<h3>Coeficientes en $\mathbb{Z}_3$</h3>
+<h3>Coeficientes en $\mathbb{Z}_2$</h3>
 
 $$\left(\begin{array}{ccccc}
 \boxed{1} & 1 & 1 & 1 & 1\\
