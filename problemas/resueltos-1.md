@@ -428,6 +428,13 @@ show(A,"~",A.rref())
 </script>
 </div> 
 
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[1,-1,1,1,1],[1,1,1,1,-1],[-1,-1,1,1,-1]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
 Las soluciones en $\mathbb{Z}_3$ serían
 
 $$\left.\begin{aligned}
@@ -483,11 +490,10 @@ y&=\lambda_1\\
 z&=\lambda_2\\
 t&=\lambda_3 \\
 v&=\lambda_4 
-\end{aligned}\right\},  \lambda_i \in \mathbb{Z}_2,\ i\in\{1,2,3,4\},$$
+\end{aligned}\right\} \, con \ \lambda_i \in \mathbb{Z}_2,\ i=1,2,3,4$$
 
-luego es compatible indeterminado y tiene un total de $2^4=16$ soluciones.
+luego es Compatible Indeterminado y tiene un total de $2^4=16$ soluciones.
 </details>
-</article>
 
 <article>
 Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$, $\mathbb{Z}_5$ y $\mathbb{Z}_7$.
