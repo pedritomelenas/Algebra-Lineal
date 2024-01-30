@@ -24,11 +24,21 @@ tag: problemas
     }
 }
 
+
+body {
+  counter-reset: article;
+}
+
+article:before {
+  counter-increment: article;
+  content: counter(article) ". ";
+}
 </style>
 
 # Matrices y sistemas de ecuaciones
 ## Ejercicios resueltos 
 
+<article>
 Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$ y $\mathbb{Z}_5$.
 
 $$\left\{\begin{aligned} x_{2}-2x_{3}&= -4,\\ x_{1}+x_{2}-x_{3}&=0,\\ 2x_{1}-x_{2}+x_{3}&=3. \end{aligned}\right.$$
@@ -43,7 +53,7 @@ $$\left(\begin{array}{ccc|c}
 0 & 1 & -2 & -4\\
 1 & 1 & -1 & 0\\
 2 & -1 & 1 & 3
-\end{array}\right)\sim_{f_1\leftrightarrow f_2} 
+\end{array}\right)\sim_{f_1\rightarrow f_2} 
 \left(\begin{array}{ccc|c}
 \boxed{1} & 1 & -1 & 0\\
 0 & 1 & -2 & -4\\
@@ -151,7 +161,7 @@ $$\left(\begin{array}{ccc|c}
 0 & 1 & 1 & 2\\
 1 & 1 & 2 & 0\\
 2 & 2 & 1 & 0
-\end{array}\right)\sim_{f_1\leftrightarrow f_2}\left(\begin{array}{ccc|c}
+\end{array}\right)\sim_{f_1\rightarrow f_2}\left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 2 & 0\\
 0 & 1 & 1 & 2\\
 2 & 2 & 1 & 0
@@ -211,7 +221,7 @@ $$
 x_{1}&= 1+2\lambda\\
 x_{2}&=2+2\lambda\\
 x_3&=\lambda 
-\end{aligned}\right\},\quad \lambda \in \mathbb{Z}_3.
+\end{aligned}\right\}, \lambda \in \mathbb{Z}_3.
 $$
 
 Luego este sistema tiene el siguiente conjunto de soluciones:
@@ -237,7 +247,7 @@ $$\left(\begin{array}{ccc|c}
 1 & 1 & 4 & 0\\
 2 & 4 & 1 & 3
 \end{array}\right)
-\sim_{f_1\leftrightarrow f_2}\left(\begin{array}{ccc|c}
+\sim_{f_1\rightarrow f_2}\left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 4 & 0\\
 0 & 1 & 3 & 1\\
 2 & 4 & 1 & 3
@@ -324,11 +334,12 @@ $$(1,2,3),$$
 
 y de esta forma es compatible determinado.
 </details>
+</article>
 
-
+<article>
 Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$, $\mathbb{Z}_5$ y $\mathbb{Z}_2$.
 
-$$\left\{\begin{aligned} x-y+z+t+v&=0\\ x+y+z+t-v&=0\\ -x-y+z+t-v&=0 \end{aligned}\right.$$
+$$\left\{\begin{aligned} x-y+z+t+v&=0,\\ x+y+z+t-v&=0,\\ -x-y+z+t-v&=0. \end{aligned}\right.$$
 
 <details>
 <summary>Solución</summary>
@@ -341,15 +352,15 @@ $$\left(\begin{array}{rrrrr}
 \boxed{1} & -1 & 1 & 1 & 1\\
 1 & 1 & 1 & 1 & -1\\
 -1 & -1 & 1 & 1 & -1
-\end{array}\right)\sim_{\tiny \begin{array}{l} f_2-f_1\leftrightarrow f_2\\
-f_3+f_1\leftrightarrow f_3 \end{array}} 
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_2-f_1\rightarrow f_2\\
+f_3+f_1\rightarrow f_3 \end{array}} 
 \left(\begin{array}{rrrrr}
 \boxed{1} & -1 & 1 & 1 & 1\\
 0 & 2 & 0 & 0 & -2\\
 0 & -2 & 2 & 2 & 0
-\end{array}\right)$$
+\end{array}\right).$$
 
-Podemos tomar como pivote el segundo elemento de la segunda fila o utilizarla antes para hacer cero en la posición $32$. Estaríamos apartándonos del método de Gauss-Jordan, pero al ser la forma de Hermite por filas de la matriz única, no importa cuál sea el camino para obtenerla.
+Podemos tomar como pivote el segundo elemento de la segunda fila o utilizarla antes para hacer cero en la posición $(3,2)$. Estaríamos apartándonos del método de Gauss-Jordan, pero al ser la forma de escalonada reducida por filas de la matriz única, no importa cuál es el camino para obtenerla.
 
 $$\left(\begin{array}{rrrrr}
 \boxed{1} & -1 & 1 & 1 & 1\\
@@ -361,26 +372,26 @@ $$\left(\begin{array}{rrrrr}
 \boxed{1} & -1 & 1 & 1 & 1\\
 0 & 2 & 0 & 0 & -2\\
 0 & 0 & 2 & 2 & -2
-\end{array}\right)$$
+\end{array}\right).$$
 
-Ahora sí tomamos como pivote el segundo elemento de la segunda fila y con él hacemos 0 todos los elementos que están en su columna; después continuamos con el pivote de la tercera fila:
+Ahora sí tomamos como pivote el segundo elemento de la segunda fila y con él hacemos cero todos los elementos que están en su columna; después continuamos con el pivote de la tercera fila:
 
 $$\left(\begin{array}{rrrrr}
 \boxed{1} & -1 & 1 & 1 & 1\\
 0 & 2 & 0 & 0 & -2\\
 0 & 0 & 2 & 2 & -2
 \end{array}\right)
-\sim_{\tiny \begin{array}{l} \frac{1}{2}f_2\leftrightarrow f_2\\
-f_1+f_2\leftrightarrow f_1 \end{array}}\left(\begin{array}{rrrrr}
+\sim_{\tiny \begin{array}{l} \frac{1}{2}f_2\rightarrow f_2\\
+f_1+f_2\rightarrow f_1 \end{array}}\left(\begin{array}{rrrrr}
 \boxed{1} & 0 & 1 & 1 & 0\\
 0 & \boxed{1} & 0 & 0 & -1\\
 0 & 0 & 2 & 2 & -2
-\end{array}\right)\sim_{\tiny \begin{array}{l} \frac{1}{2}f_3\leftrightarrow f_3 \\f_1-f_3\leftrightarrow f_1 \end{array}} 
+\end{array}\right)\sim_{\tiny \begin{array}{l} \frac{1}{2}f_3\rightarrow f_3 \\f_1-f_3\rightarrow f_1 \end{array}} 
 \left(\begin{array}{rrrrr}
 \boxed{1} & 0 & 0 & 0 & 1\\
 0 & \boxed{1} & 0 & 0 & -1\\
 0 & 0 & \boxed{1} & 1 & -1
-\end{array}\right)$$
+\end{array}\right).$$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
 
@@ -399,12 +410,13 @@ y&=\lambda_2\\
 z&=-\lambda_1+\lambda_2\\
 t&=\lambda_1 \\
 v&=\lambda_2 
-\end{aligned}\right\} \, con \ \lambda_1, \lambda_2 \in \mathbb{Q}$$
+\end{aligned}\right\},   \lambda_1, \lambda_2 \in \mathbb{Q}.$$
 
-luego es un sistema Compatible Indeterminado.
+luego es un sistema compatible Indeterminado.
 
 <h3>Coeficientes en $\mathbb{Z}_3$</h3>
-Este ejemplo es un caso muy especial, puesto que todos los coeficientes del sistema son $1$'s y $-1$'s (también podrían haber sido $0$'s y razonaríamos igual), y estos elementos se pueden usar en cualquier cuerpo en el que $1\not = -1$. 
+Este ejemplo es un caso muy especial, puesto que todos los coeficientes del sistema son unos y menos unos (también podrían haber sido ceros y razonaríamos igual), y estos elementos se pueden usar en cualquier cuerpo en el que $1\not = -1$. 
+
 Si repasamos las operaciones utilizadas, son también válidas en $\mathbb{Z}_3$ y en $\mathbb{Z}_5$ (aunque multiplicar por $\frac{1}{2}$ correspondería a multiplicar por $2$ en $\mathbb{Z}_3$ o por $3$ en $\mathbb{Z}_5$).
 
 Comprobemos el razonamiento con <code>sage</code>.
@@ -412,13 +424,6 @@ Comprobemos el razonamiento con <code>sage</code>.
 <div class="sage">
 <script type="text/x-sage">
 A=matrix(GF(3),[[1,-1,1,1,1],[1,1,1,1,-1],[-1,-1,1,1,-1]])
-show(A,"~",A.rref())
-</script>
-</div> 
-
-<div class="sage">
-<script type="text/x-sage">
-A=matrix(GF(5),[[1,-1,1,1,1],[1,1,1,1,-1],[-1,-1,1,1,-1]])
 show(A,"~",A.rref())
 </script>
 </div> 
@@ -431,12 +436,20 @@ y&=\lambda_2\\
 z&=2\lambda_1+\lambda_2\\
 t&=\lambda_1 \\
 v&=\lambda_2 
-\end{aligned}\right\} \, con \ \lambda_1, \lambda_2 \in \mathbb{Z}_3$$
+\end{aligned}\right\},  \lambda_1, \lambda_2 \in \mathbb{Z}_3.$$
 
-y por tanto es Compatible Indeterminado y tiene un total de $9$ soluciones.
+y por tanto es compatible indeterminado y tiene un total de $9$ soluciones.
 
 <h3>Coeficientes en $\mathbb{Z}_5$</h3>
-Como hemos comentado la matriz escalonada reducida es la misma, luego las soluciones son:
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[1,-1,1,1,1],[1,1,1,1,-1],[-1,-1,1,1,-1]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+Como hemos comentado, la matriz escalonada reducida es la misma, luego las soluciones son:
 
 $$\left.\begin{aligned}
 x&=4\lambda_2\\
@@ -444,21 +457,23 @@ y&=\lambda_2\\
 z&=4\lambda_1+\lambda_2\\
 t&=\lambda_1 \\
 v&=\lambda_2 
-\end{aligned}\right\} \, con \ \lambda_1, \lambda_2 \in \mathbb{Z}_5$$
+\end{aligned}\right\},  \ \lambda_1, \lambda_2 \in \mathbb{Z}_5,$$
 
-y por tanto es Compatible Indeterminado y tiene un total de $25$ soluciones.
+y por tanto es compatible indeterminado y tiene un total de $25$ soluciones.
+
+<h3>Coeficientes en $\mathbb{Z}_3$</h3>
 
 $$\left(\begin{array}{ccccc}
 \boxed{1} & 1 & 1 & 1 & 1\\
 1 & 1 & 1 & 1 & 1\\
 1 & 1 & 1 & 1 & 1
-\end{array}\right)\sim_{\tiny \begin{array}{l} f_2-f_1\leftrightarrow f_2\\
-f_3-f_1\leftrightarrow f_3 \end{array}} 
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_2-f_1\rightarrow f_2\\
+f_3-f_1\rightarrow f_3 \end{array}} 
 \left(\begin{array}{ccccc}
 \boxed{1} & 1 & 1 & 1 & 1\\
 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0
-\end{array}\right)$$
+\end{array}\right),$$
 
 luego la única incógnita despejada sería $x$, y las soluciones dependerían de $4$ parámetros:
 
@@ -468,7 +483,224 @@ y&=\lambda_1\\
 z&=\lambda_2\\
 t&=\lambda_3 \\
 v&=\lambda_4 
-\end{aligned}\right\} \, con \ \lambda_i \in \mathbb{Z}_2,\ i=1,2,3,4$$
+\end{aligned}\right\},  \lambda_i \in \mathbb{Z}_2,\ i\in\{1,2,3,4\},$$
 
-luego es Compatible Indeterminado y tiene un total de $2^4=16$ soluciones.
+luego es compatible indeterminado y tiene un total de $2^4=16$ soluciones.
 </details>
+</article>
+
+<article>
+Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$, $\mathbb{Z}_5$ y $\mathbb{Z}_7$.
+
+$$\left\{\begin{aligned} x_{1}+x_{2}+x_{3}&= 2,\\ x_{1}+2x_{2}+x_{3}&=1,\\ x_{2}&=3. \end{aligned}\right.$$
+
+<details>
+<summary>Solución</summary>
+
+<h3>En $\mathbb{Z}_7$:</h3>
+
+$$\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+1 & 2 & 1 & 1\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{f_2-f_1\rightarrow f_2}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+0 & \boxed{1} & 0 & 6\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-f_2\rightarrow f_2\\
+f_3-f_1\rightarrow f_3 \end{array}} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 6\\
+0 & 0 & 0 &  4
+\end{array}\right)
+$$
+
+$$\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 6\\
+0 & 0 & 0 &  4
+\end{array}\right)
+\sim_{2f_3\rightarrow f_3} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 &  6\\
+0 & 0 & 0 & 1\\
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2-6f_3\rightarrow f_2 \end{array}}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 0\\
+0 & \boxed{1} & 0 &  0\\
+0 & 0 & 0 & \boxed{1}\\
+\end{array}\right)
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(7),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+En el último paso no hemos escrito las operaciones elementales puesto que se da una circunstancia muy especial: el único elemento no nulo es el pivote. Eso hace que operar con esta fila sea muy sencillo, solo borra los elementos de su columna sin cambiar nada más.
+
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$) entonces el sistema es incompatible.
+
+<h3>En $\mathbb{Z}_5$:</h3>
+
+$$
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+1 & 2 & 1 & 1\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{f_2-f_1\rightarrow f_2}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+0 & \boxed{1} & 0 & 4\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-f_2\rightarrow f_2\\
+f_3-f_1\rightarrow f_3 \end{array}} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 4\\
+0 & 0 & 0 &  4
+\end{array}\right)
+$$
+
+$$\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 4\\
+0 & 0 & 0 &  4
+\end{array}\right)
+\sim_{4f_3\rightarrow f_3} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 &  4\\
+0 & 0 & 0 & 1\\
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2-4f_3\rightarrow f_2 \end{array}}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 0\\
+0 & \boxed{1} & 0 &  0\\
+0 & 0 & 0 & \boxed{1}\\
+\end{array}\right)
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$) entonces el sistema es incompatible.
+
+<h3>En $\mathbb{Z}_3$:</h3>
+
+$$
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+1 & 2 & 1 & 1\\
+0 & 1 & 0 &  0
+\end{array}\right)\sim_{f_2-f_1\rightarrow f_2}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+0 & \boxed{1} & 0 & 4\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-f_2\rightarrow f_2\\
+f_3-f_1\rightarrow f_3 \end{array}} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 4\\
+0 & 0 & 0 &  4
+\end{array}\right)
+$$
+
+$$\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 4\\
+0 & 0 & 0 &  4
+\end{array}\right)
+\sim_{4f_3\rightarrow f_3} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 &  4\\
+0 & 0 & 0 & 1\\
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2-4f_3\rightarrow f_2 \end{array}}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 0\\
+0 & \boxed{1} & 0 &  0\\
+0 & 0 & 0 & \boxed{1}\\
+\end{array}\right)
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(3),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$) entonces el sistema es incompatible.
+
+<h3>En En $\mathbb{Q}$:</h3>
+
+$$
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+1 & 2 & 1 & 1\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{f_2-f_1\rightarrow f_2}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+0 & \boxed{1} & 0 & -1\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-f_2\rightarrow f_2\\
+f_3-f_1\rightarrow f_3 \end{array}} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & -1\\
+0 & 0 & 0 &  4
+\end{array}\right)
+$$
+
+$$\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & -1\\
+0 & 0 & 0 &  4
+\end{array}\right)
+\sim_{\frac{1}{4}f_3\rightarrow f_3} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 &  -1\\
+0 & 0 & 0 & 1\\
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2+f_3\rightarrow f_2 \end{array}}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 0\\
+0 & \boxed{1} & 0 &  0\\
+0 & 0 & 0 & \boxed{1}\\
+\end{array}\right)
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ,[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$) entonces el sistema es incompatible.
+</details>
+
+</article>
