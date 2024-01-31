@@ -130,8 +130,10 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(QQ,[[0,1,-2,-4],[1,1,-1,0],[2,-1,1,3]])
-show(A,"~",A.rref())
+A=matrix(QQ,[[0,1,-2],[1,1,-1],[2,-1,1]]) #matriz de coeficientes
+b=vector(QQ,[-4,0,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
 </div>  
 
