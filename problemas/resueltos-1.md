@@ -36,6 +36,9 @@ article:before {
 </style>
 
 # Matrices y sistemas de ecuaciones
+
+Los ejercicios aquí mostrados han sido amablemente proporcionados por [Evangelina Santos](https://www.ugr.es/~esantos/) y maquetados por [Juan Rivas](https://github.com/MrRiversGit).
+
 ## Ejercicios resueltos 
 
 <article>
@@ -498,6 +501,8 @@ $$\left\{\begin{aligned} x_{1}+x_{2}+x_{3}&= 2,\\ x_{1}+2x_{2}+x_{3}&=1,\\ x_{2}
 <details>
 <summary>Solución</summary>
 
+Trabajaremos directamente con la matriz de coeficientes ampliada, buscando en cada caso la forma escalonada reducida por filas.
+
 <h3>En $\mathbb{Z}_7$:</h3>
 
 $$\left(\begin{array}{ccc|c}
@@ -515,7 +520,7 @@ f_3-f_1\rightarrow f_3 \end{array}}
 \boxed{1} & 0 & 1 & 3\\
 0 & \boxed{1} & 0 & 6\\
 0 & 0 & 0 &  4
-\end{array}\right)
+\end{array}\right),
 $$
 
 $$\left(\begin{array}{ccc|c}
@@ -534,7 +539,7 @@ f_2-6f_3\rightarrow f_2 \end{array}}
 \boxed{1} & 0 & 1 & 0\\
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
-\end{array}\right)
+\end{array}\right).
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -568,7 +573,7 @@ f_3-f_1\rightarrow f_3 \end{array}}
 \boxed{1} & 0 & 1 & 3\\
 0 & \boxed{1} & 0 & 4\\
 0 & 0 & 0 &  4
-\end{array}\right)
+\end{array}\right),
 $$
 
 $$\left(\begin{array}{ccc|c}
@@ -587,7 +592,7 @@ f_2-4f_3\rightarrow f_2 \end{array}}
 \boxed{1} & 0 & 1 & 0\\
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
-\end{array}\right)
+\end{array}\right).
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -599,7 +604,7 @@ show(A,"~",A.rref())
 </script>
 </div> 
 
-Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$) entonces el sistema es incompatible.
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
 
 <h3>En $\mathbb{Z}_3$:</h3>
 
@@ -619,7 +624,7 @@ f_3-f_1\rightarrow f_3 \end{array}}
 \boxed{1} & 0 & 1 & 3\\
 0 & \boxed{1} & 0 & 4\\
 0 & 0 & 0 &  4
-\end{array}\right)
+\end{array}\right),
 $$
 
 $$\left(\begin{array}{ccc|c}
@@ -638,7 +643,7 @@ f_2-4f_3\rightarrow f_2 \end{array}}
 \boxed{1} & 0 & 1 & 0\\
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
-\end{array}\right)
+\end{array}\right).
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -650,7 +655,7 @@ show(A,"~",A.rref())
 </script>
 </div> 
 
-Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$) entonces el sistema es incompatible.
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
 
 <h3>En En $\mathbb{Q}$:</h3>
 
@@ -670,7 +675,7 @@ f_3-f_1\rightarrow f_3 \end{array}}
 \boxed{1} & 0 & 1 & 3\\
 0 & \boxed{1} & 0 & -1\\
 0 & 0 & 0 &  4
-\end{array}\right)
+\end{array}\right),
 $$
 
 $$\left(\begin{array}{ccc|c}
@@ -689,7 +694,7 @@ f_2+f_3\rightarrow f_2 \end{array}}
 \boxed{1} & 0 & 1 & 0\\
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
-\end{array}\right)
+\end{array}\right).
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -701,7 +706,7 @@ show(A,"~",A.rref())
 </script>
 </div> 
 
-Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$) entonces el sistema es incompatible.
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
 </details>
 
 </article>
