@@ -24,11 +24,21 @@ tag: problemas
     }
 }
 
+
+body {
+  counter-reset: article;
+}
+
+article:before {
+  counter-increment: article;
+  content: counter(article) ". ";
+}
 </style>
 
 # Matrices y sistemas de ecuaciones
 ## Ejercicios resueltos 
 
+<article>
 Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$ y $\mathbb{Z}_5$.
 
 $$\left\{\begin{aligned} x_{2}-2x_{3}&= -4,\\ x_{1}+x_{2}-x_{3}&=0,\\ 2x_{1}-x_{2}+x_{3}&=3. \end{aligned}\right.$$
@@ -43,14 +53,14 @@ $$\left(\begin{array}{ccc|c}
 0 & 1 & -2 & -4\\
 1 & 1 & -1 & 0\\
 2 & -1 & 1 & 3
-\end{array}\right)\sim_{f_1\leftrightarrow f_2} 
+\end{array}\right)\sim_{f_1\rightarrow f_2} 
 \left(\begin{array}{ccc|c}
 \boxed{1} & 1 & -1 & 0\\
 0 & 1 & -2 & -4\\
 2 & -1 & 1 & 3
 \end{array}\right).$$
 
-Ahora utilizamos el pivote para hacer ceros debajo de él, por medio de una operación elemental del tipo: a la fila $j$ se le resta la fila uno multiplicada por el coeficiente $a_{j1}$. En este caso solo hay que realizarlo para la fila tes:
+Ahora utilizamos el pivote para hacer ceros debajo de él, por medio de una operación elemental del tipo: a la fila $j$ se le resta la fila uno multiplicada por el coeficiente $a_{j1}$. En este caso solo hay que realizarlo para la fila tres:
 
 $$\left(\begin{array}{ccc|c}
 \boxed{1} & 1 & -1 & 0\\
@@ -151,7 +161,7 @@ $$\left(\begin{array}{ccc|c}
 0 & 1 & 1 & 2\\
 1 & 1 & 2 & 0\\
 2 & 2 & 1 & 0
-\end{array}\right)\sim_{f_1\leftrightarrow f_2}\left(\begin{array}{ccc|c}
+\end{array}\right)\sim_{f_1\rightarrow f_2}\left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 2 & 0\\
 0 & 1 & 1 & 2\\
 2 & 2 & 1 & 0
@@ -211,7 +221,7 @@ $$
 x_{1}&= 1+2\lambda\\
 x_{2}&=2+2\lambda\\
 x_3&=\lambda 
-\end{aligned}\right\},\quad \lambda \in \mathbb{Z}_3.
+\end{aligned}\right\}, \lambda \in \mathbb{Z}_3.
 $$
 
 Luego este sistema tiene el siguiente conjunto de soluciones:
@@ -237,7 +247,7 @@ $$\left(\begin{array}{ccc|c}
 1 & 1 & 4 & 0\\
 2 & 4 & 1 & 3
 \end{array}\right)
-\sim_{f_1\leftrightarrow f_2}\left(\begin{array}{ccc|c}
+\sim_{f_1\rightarrow f_2}\left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 4 & 0\\
 0 & 1 & 3 & 1\\
 2 & 4 & 1 & 3
@@ -324,3 +334,158 @@ $$(1,2,3),$$
 
 y de esta forma es compatible determinado.
 </details>
+</article>
+
+<article>
+Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$, $\mathbb{Z}_5$ y $\mathbb{Z}_2$.
+
+$$\left\{\begin{aligned} x-y+z+t+v&=0,\\ x+y+z+t-v&=0,\\ -x-y+z+t-v&=0. \end{aligned}\right.$$
+
+<details>
+<summary>Solución</summary>
+
+Este sistema es homogéneo, es decir, la columna de términos independientes es entera de ceros. Puesto que las operaciones elementales en esa columna siempre la mantienen igual, solo escribiremos la matriz de coeficientes. 
+Además, un sistema homogéneo siempre es Compatible puesto que admite la solución $(0,0,0,0,0)$.
+
+<h3>Coeficientes en $\mathbb{Q}$</h3>
+$$\left(\begin{array}{rrrrr}
+\boxed{1} & -1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & -1\\
+-1 & -1 & 1 & 1 & -1
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_2-f_1\rightarrow f_2\\
+f_3+f_1\rightarrow f_3 \end{array}} 
+\left(\begin{array}{rrrrr}
+\boxed{1} & -1 & 1 & 1 & 1\\
+0 & 2 & 0 & 0 & -2\\
+0 & -2 & 2 & 2 & 0
+\end{array}\right).$$
+
+Podemos tomar como pivote el segundo elemento de la segunda fila o utilizarla antes para hacer cero en la posición $(3,2)$. Estaríamos apartándonos del método de Gauss-Jordan, pero al ser la forma de escalonada reducida por filas de la matriz única, no importa cuál es el camino para obtenerla.
+
+$$\left(\begin{array}{rrrrr}
+\boxed{1} & -1 & 1 & 1 & 1\\
+0 & 2 & 0 & 0 & -2\\
+0 & -2 & 2 & 2 & 0
+\end{array}\right)
+\sim_{f_3+f_2\rightarrow f_3}  
+\left(\begin{array}{rrrrr}
+\boxed{1} & -1 & 1 & 1 & 1\\
+0 & 2 & 0 & 0 & -2\\
+0 & 0 & 2 & 2 & -2
+\end{array}\right).$$
+
+Ahora sí tomamos como pivote el segundo elemento de la segunda fila y con él hacemos cero todos los elementos que están en su columna; después continuamos con el pivote de la tercera fila:
+
+$$\left(\begin{array}{rrrrr}
+\boxed{1} & -1 & 1 & 1 & 1\\
+0 & 2 & 0 & 0 & -2\\
+0 & 0 & 2 & 2 & -2
+\end{array}\right)
+\sim_{\tiny \begin{array}{l} \frac{1}{2}f_2\rightarrow f_2\\
+f_1+f_2\rightarrow f_1 \end{array}}\left(\begin{array}{rrrrr}
+\boxed{1} & 0 & 1 & 1 & 0\\
+0 & \boxed{1} & 0 & 0 & -1\\
+0 & 0 & 2 & 2 & -2
+\end{array}\right)\sim_{\tiny \begin{array}{l} \frac{1}{2}f_3\rightarrow f_3 \\f_1-f_3\rightarrow f_1 \end{array}} 
+\left(\begin{array}{rrrrr}
+\boxed{1} & 0 & 0 & 0 & 1\\
+0 & \boxed{1} & 0 & 0 & -1\\
+0 & 0 & \boxed{1} & 1 & -1
+\end{array}\right).$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ,[[1,-1,1,1,1],[1,1,1,1,-1],[-1,-1,1,1,-1]])
+show(A,"~",A.rref())
+</script>
+</div>  
+
+Como ya tenemos una matriz escalonada reducida por filas, el sistema no puede simplificarse más. Solo queda escribir las soluciones: para ello observamos que las incógnitas $x,y$ y $z$ están listas para ser despejadas, son las que corresponden a los pivotes. Las que no corresponden a pivotes se utilizan como parámetros (o variables libres). La solución del sistema queda:  
+
+$$\left.\begin{aligned}
+x&=-\lambda_2\\
+y&=\lambda_2\\
+z&=-\lambda_1+\lambda_2\\
+t&=\lambda_1 \\
+v&=\lambda_2 
+\end{aligned}\right\},   \lambda_1, \lambda_2 \in \mathbb{Q}.$$
+
+luego es un sistema compatible Indeterminado.
+
+<h3>Coeficientes en $\mathbb{Z}_3$</h3>
+Este ejemplo es un caso muy especial, puesto que todos los coeficientes del sistema son unos y menos unos (también podrían haber sido ceros y razonaríamos igual), y estos elementos se pueden usar en cualquier cuerpo en el que $1\not = -1$. 
+
+Si repasamos las operaciones utilizadas, son también válidas en $\mathbb{Z}_3$ y en $\mathbb{Z}_5$ (aunque multiplicar por $\frac{1}{2}$ correspondería a multiplicar por $2$ en $\mathbb{Z}_3$ o por $3$ en $\mathbb{Z}_5$).
+
+Comprobemos el razonamiento con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(3),[[1,-1,1,1,1],[1,1,1,1,-1],[-1,-1,1,1,-1]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+
+Las soluciones en $\mathbb{Z}_3$ serían
+
+$$\left.\begin{aligned}
+x&=2\lambda_2\\
+y&=\lambda_2\\
+z&=2\lambda_1+\lambda_2\\
+t&=\lambda_1 \\
+v&=\lambda_2 
+\end{aligned}\right\},  \lambda_1, \lambda_2 \in \mathbb{Z}_3.$$
+
+y por tanto es compatible indeterminado y tiene un total de $9$ soluciones.
+
+<h3>Coeficientes en $\mathbb{Z}_5$</h3>
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[1,-1,1,1,1],[1,1,1,1,-1],[-1,-1,1,1,-1]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+Como hemos comentado, la matriz escalonada reducida es la misma, luego las soluciones son:
+
+$$\left.\begin{aligned}
+x&=4\lambda_2\\
+y&=\lambda_2\\
+z&=4\lambda_1+\lambda_2\\
+t&=\lambda_1 \\
+v&=\lambda_2 
+\end{aligned}\right\},  \ \lambda_1, \lambda_2 \in \mathbb{Z}_5,$$
+
+y por tanto es compatible indeterminado y tiene un total de $25$ soluciones.
+
+<h3>Coeficientes en $\mathbb{Z}_2$</h3>
+
+$$\left(\begin{array}{ccccc}
+\boxed{1} & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 1
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_2-f_1\rightarrow f_2\\
+f_3-f_1\rightarrow f_3 \end{array}} 
+\left(\begin{array}{ccccc}
+\boxed{1} & 1 & 1 & 1 & 1\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right),$$
+
+luego la única incógnita despejada sería $x$, y las soluciones dependerían de $4$ parámetros:
+
+$$\left.\begin{aligned}
+x&=\lambda_1+\lambda_2+\lambda_3+\lambda_4\\
+y&=\lambda_1\\
+z&=\lambda_2\\
+t&=\lambda_3 \\
+v&=\lambda_4 
+\end{aligned}\right\},  \lambda_i \in \mathbb{Z}_2,\ i\in\{1,2,3,4\},$$
+
+luego es compatible indeterminado y tiene un total de $2^4=16$ soluciones.
+</details>
+</article>
