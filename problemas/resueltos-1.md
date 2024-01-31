@@ -708,5 +708,176 @@ show(A,"~",A.rref())
 
 Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
 </details>
+</article>
 
+<article>
+En el cuerpo $\mathbb{Z}_5$ se considera la matriz
+$$C = \begin{pmatrix} 1&1&1&1 \\ 0&2&1&2 \\ 0&4&1&1 \\ \end{pmatrix}$$.
+
+<ol type="a">
+  <li>Calcula la forma de Hermite por filas de $C$.</li>
+  <li>Calcula la forma de Hermite por columnas de $C$.</li>
+  <li>Elige una submatriz cuadrada de $C$ de orden tres que sea regular y calcula su inversa.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+<ol type="a">
+<li>Forma de Hermite por filas</li>
+Realizamos operaciones elemntales por filas hasta obtener una matriz escalonada reducida por filas:
+
+$$\left( 
+\begin{array}{rrrr}
+\boxed{1} & 1 & 1 & 1\\
+0 & 2 & 1 & 2\\
+0 & 4 & 1 & 1\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} 3f_2\rightarrow f_2\end{array}}
+\left(
+\begin{array}{rrrr}
+\boxed{1} & 1 & 1 & 1\\
+0 & 1 & 3 & 1\\
+0 & 4 & 1 & 1\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} f_3-4f_2\rightarrow f_3\end{array}}
+\left( 
+\begin{array}{rrrr}
+\boxed{1} & 0 & 3 & 0\\
+0 & \boxed{1} & 3 & 1\\
+0 & 0 & 4 & 2\\
+\end{array}
+\right),$$
+
+$$\left( 
+\begin{array}{rrrr}
+\boxed{1} & 0 & 3 & 0\\
+0 & \boxed{1} & 3 & 1\\
+0 & 0 & 4 & 2\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} 4f_3\rightarrow f_3\end{array}}
+\left( 
+\begin{array}{rrrr}
+\boxed{1} & 0 & 3 & 0\\
+0 & \boxed{1} & 3 & 1\\
+0 & 0 &\boxed{1} & 3\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2-3f_3\rightarrow f_2 \end{array}}
+\left(
+\begin{array}{rrrr}
+\boxed{1} & 0 & 0 & 1\\
+0 &\boxed{1} & 0 & 2\\
+0 & 0 & \boxed{1} & 3\\
+\end{array}
+\right).$$
+
+Por tanto la forma de Hermite por filas es 
+
+$$\left( 
+\begin{array}{rrrr}
+1 & 0 & 0 & 1\\
+0 & 1 & 0 & 2\\
+0 & 0 & 1 & 3\\
+\end{array}
+\right).$$
+
+<li>Forma de Hermite por columnas</li>
+Como el número de pivotes en la forma de Hermite por columnas coincide con el que hay en la de filas, entonces la única posibilidad es que sea 
+$$\left( 
+\begin{array}{rrrr}
+\boxed{1} & 0 & 0 & 0\\
+0 & \boxed{1} & 0 & 0\\
+0 & 0 & \boxed{1} & 0\\
+\end{array}
+\right).$$
+
+<li>Una submatriz cuadrada de orden tres regular y su inversa.</li>
+Hay cuatro elecciones posibles, como puede comprobarse la solución solo damos un ejemplo de cómo calcularlo.
+Elegimos por ejemplo las tres primeras columnas (como el determinante vale $2-4=-2=3$ en  $\mathbb{Z}_5$, es regular) y unimos una matriz identidad. Para calcular la inversa realizamos operaciones elementales por filas en las filas largas:
+$$[A|I]=\left( 
+\begin{array}{rrr|rrr}
+\boxed{1} & 1 & 1 & 1 & 0 & 0\\
+0 & 2 & 1 & 0 & 1 & 0\\
+0 & 4 & 1 & 0 & 0 & 1\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} 3f_2\rightarrow f_2\end{array}}
+\left( 
+\begin{array}{rrr|rrr}
+\boxed{1} & 1 & 1 & 1 & 0 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 4 & 1 & 0 & 0 & 1\\
+\end{array}
+\right),$$
+
+$$
+\left( 
+\begin{array}{rrr|rrr}
+\boxed{1} & 1 & 1 & 1 & 0 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 4 & 1 & 0 & 0 & 1\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} f_3-4f_2\rightarrow f_3\end{array}}
+\left(
+\begin{array}{rrr|rrr}
+\boxed{1} & 0 & 3 & 1 & 2 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 0 & 4 & 0 & 3 & 1\\
+\end{array}
+\right),$$
+
+$$
+\left(
+\begin{array}{rrr|rrr}
+\boxed{1} & 0 & 3 & 1 & 2 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 0 & 4 & 0 & 3 & 1\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} 4f_3\rightarrow f_3\end{array}}
+\left(
+\begin{array}{rrr|rrr}
+\boxed{1} & 0 & 3 & 1 & 2 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 0 & \boxed{1} & 0 & 2 & 4\\
+\end{array}
+\right),$$
+
+$$
+\left(
+\begin{array}{rrr|rrr}
+\boxed{1} & 0 & 3 & 1 & 2 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 0 & \boxed{1} & 0 & 2 & 4\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2-3f_3\rightarrow f_2 \end{array}}
+\left( 
+\begin{array}{rrr|rrr}
+\boxed{1} & 0 & 0 & 1 & 1 & 3\\
+0 & \boxed{1} & 0 & 0 & 2 & 3\\
+0 & 0 & \boxed{1} & 0 & 2 & 4\\
+\end{array}
+\right)=[I|A^{-1}].$$
+que comprobamos que es inversa:
+$$\left( 
+\begin{array}{rrr}
+1 & 1 & 1 \\
+0 & 2 & 1 \\
+0 & 4 & 1 \\
+\end{array}
+\right)\left( 
+\begin{array}{rrr}
+1 & 1 & 3 \\
+0 & 2 & 3 \\
+0 & 2 & 4 \\
+\end{array}
+\right)=\left( 
+\begin{array}{rrr}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{array}
+\right).$$
+
+</ol>
+</details>
 </article>
