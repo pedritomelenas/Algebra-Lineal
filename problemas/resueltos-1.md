@@ -489,3 +489,219 @@ v&=\lambda_4
 luego es compatible indeterminado y tiene un total de $2^4=16$ soluciones.
 </details>
 </article>
+
+<article>
+Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$, $\mathbb{Z}_5$ y $\mathbb{Z}_7$.
+
+$$\left\{\begin{aligned} x_{1}+x_{2}+x_{3}&= 2,\\ x_{1}+2x_{2}+x_{3}&=1,\\ x_{2}&=3. \end{aligned}\right.$$
+
+<details>
+<summary>Solución</summary>
+
+<h3>En $\mathbb{Z}_7$:</h3>
+
+$$\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+1 & 2 & 1 & 1\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{f_2-f_1\rightarrow f_2}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+0 & \boxed{1} & 0 & 6\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-f_2\rightarrow f_2\\
+f_3-f_1\rightarrow f_3 \end{array}} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 6\\
+0 & 0 & 0 &  4
+\end{array}\right)
+$$
+
+$$\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 6\\
+0 & 0 & 0 &  4
+\end{array}\right)
+\sim_{2f_3\rightarrow f_3} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 &  6\\
+0 & 0 & 0 & 1\\
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2-6f_3\rightarrow f_2 \end{array}}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 0\\
+0 & \boxed{1} & 0 &  0\\
+0 & 0 & 0 & \boxed{1}\\
+\end{array}\right)
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(7),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+En el último paso no hemos escrito las operaciones elementales puesto que se da una circunstancia muy especial: el único elemento no nulo es el pivote. Eso hace que operar con esta fila sea muy sencillo, solo borra los elementos de su columna sin cambiar nada más.
+
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$) entonces el sistema es incompatible.
+
+<h3>En $\mathbb{Z}_5$:</h3>
+
+$$
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+1 & 2 & 1 & 1\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{f_2-f_1\rightarrow f_2}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+0 & \boxed{1} & 0 & 4\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-f_2\rightarrow f_2\\
+f_3-f_1\rightarrow f_3 \end{array}} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 4\\
+0 & 0 & 0 &  4
+\end{array}\right)
+$$
+
+$$\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 4\\
+0 & 0 & 0 &  4
+\end{array}\right)
+\sim_{4f_3\rightarrow f_3} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 &  4\\
+0 & 0 & 0 & 1\\
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2-4f_3\rightarrow f_2 \end{array}}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 0\\
+0 & \boxed{1} & 0 &  0\\
+0 & 0 & 0 & \boxed{1}\\
+\end{array}\right)
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$) entonces el sistema es incompatible.
+
+<h3>En $\mathbb{Z}_3$:</h3>
+
+$$
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+1 & 2 & 1 & 1\\
+0 & 1 & 0 &  0
+\end{array}\right)\sim_{f_2-f_1\rightarrow f_2}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+0 & \boxed{1} & 0 & 4\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-f_2\rightarrow f_2\\
+f_3-f_1\rightarrow f_3 \end{array}} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 4\\
+0 & 0 & 0 &  4
+\end{array}\right)
+$$
+
+$$\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & 4\\
+0 & 0 & 0 &  4
+\end{array}\right)
+\sim_{4f_3\rightarrow f_3} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 &  4\\
+0 & 0 & 0 & 1\\
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2-4f_3\rightarrow f_2 \end{array}}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 0\\
+0 & \boxed{1} & 0 &  0\\
+0 & 0 & 0 & \boxed{1}\\
+\end{array}\right)
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(3),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$) entonces el sistema es incompatible.
+
+<h3>En En $\mathbb{Q}$:</h3>
+
+$$
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+1 & 2 & 1 & 1\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{f_2-f_1\rightarrow f_2}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 1 & 1 & 2\\
+0 & \boxed{1} & 0 & -1\\
+0 & 1 & 0 &  3
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-f_2\rightarrow f_2\\
+f_3-f_1\rightarrow f_3 \end{array}} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & -1\\
+0 & 0 & 0 &  4
+\end{array}\right)
+$$
+
+$$\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 & -1\\
+0 & 0 & 0 &  4
+\end{array}\right)
+\sim_{\frac{1}{4}f_3\rightarrow f_3} 
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 3\\
+0 & \boxed{1} & 0 &  -1\\
+0 & 0 & 0 & 1\\
+\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2+f_3\rightarrow f_2 \end{array}}
+\left(\begin{array}{ccc|c}
+\boxed{1} & 0 & 1 & 0\\
+0 & \boxed{1} & 0 &  0\\
+0 & 0 & 0 & \boxed{1}\\
+\end{array}\right)
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ,[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
+show(A,"~",A.rref())
+</script>
+</div> 
+
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$) entonces el sistema es incompatible.
+</details>
+
+</article>
