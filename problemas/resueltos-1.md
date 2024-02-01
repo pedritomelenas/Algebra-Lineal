@@ -205,8 +205,10 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(3),[[0,1,-2,-4],[1,1,-1,0],[2,-1,1,3]])
-show(A,"~",A.rref())
+A=matrix(GF(3),[[0,1,-2],[1,1,-1],[2,-1,1]]) #matriz de coeficientes
+b=vector(GF(3),[-4,0,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
 </div>  
 
@@ -318,8 +320,10 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(5),[[0,1,-2,-4],[1,1,-1,0],[2,-1,1,3]])
-show(A,"~",A.rref())
+A=matrix(GF(5),[[0,1,-2],[1,1,-1],[2,-1,1]]) #matriz de coeficientes
+b=vector(GF(5),[-4,0,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
 </div>  
 
@@ -548,10 +552,12 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(7),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
-show(A,"~",A.rref())
+A=matrix(GF(7),[[1,1,1],[1,2,1],[0,1,0]]) #matriz de coeficientes
+b=vector(GF(7),[2,1,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
-</div> 
+</div>  
 
 En el último paso no hemos escrito las operaciones elementales puesto que se da una circunstancia muy especial: el único elemento no nulo es el pivote. Eso hace que operar con esta fila sea muy sencillo, solo borra los elementos de su columna sin cambiar nada más.
 
@@ -601,10 +607,12 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(5),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
-show(A,"~",A.rref())
+A=matrix(GF(5),[[1,1,1],[1,2,1],[0,1,0]]) #matriz de coeficientes
+b=vector(GF(5),[2,1,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
-</div> 
+</div>   
 
 Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
 
@@ -652,10 +660,12 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(3),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
-show(A,"~",A.rref())
+A=matrix(GF(3),[[1,1,1],[1,2,1],[0,1,0]]) #matriz de coeficientes
+b=vector(GF(3),[2,1,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
-</div> 
+</div>  
 
 Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
 
@@ -703,10 +713,12 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(QQ,[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
-show(A,"~",A.rref())
+A=matrix(QQ,[[1,1,1],[1,2,1],[0,1,0]]) #matriz de coeficientes
+b=vector(QQ,[2,1,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
-</div> 
+</div>  
 
 Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
 </details>
@@ -782,6 +794,15 @@ $$\left(
 0 & 0 & 1 & 3\\
 \end{array}
 \right).$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[1,1,1,1],[0,2,1,2],[0,4,1,1]])
+show(A,"~",A.rref())
+</script>
+</div> 
 
 <li>Forma de Hermite por columnas</li>
 Como el número de pivotes en la forma de Hermite por columnas coincide con el que hay en la de filas, entonces la única posibilidad es que sea 
@@ -859,7 +880,19 @@ f_2-3f_3\rightarrow f_2 \end{array}}
 0 & 0 & \boxed{1} & 0 & 2 & 4\\
 \end{array}
 \right)=[I|A^{-1}].$$
-que comprobamos que es inversa:
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[1,1,1],[0,2,1],[0,4,1]]) #matriz de coeficientes
+I=matrix(GF(5),[[1,0,0],[0,1,0],[0,0,1]]) #matriz identidad
+AI=A.augment(I,subdivide=True) #matriz aumentada
+show(AI,"~",AI.rref())
+</script>
+</div>  
+
+Finalmente comprobamos que es inversa:
 $$\left( 
 \begin{array}{rrr}
 1 & 1 & 1 \\
