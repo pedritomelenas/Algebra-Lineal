@@ -205,8 +205,10 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(3),[[0,1,-2,-4],[1,1,-1,0],[2,-1,1,3]])
-show(A,"~",A.rref())
+A=matrix(GF(3),[[0,1,-2],[1,1,-1],[2,-1,1]]) #matriz de coeficientes
+b=vector(GF(3),[-4,0,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
 </div>  
 
@@ -318,8 +320,10 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(5),[[0,1,-2,-4],[1,1,-1,0],[2,-1,1,3]])
-show(A,"~",A.rref())
+A=matrix(GF(5),[[0,1,-2],[1,1,-1],[2,-1,1]]) #matriz de coeficientes
+b=vector(GF(5),[-4,0,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
 </div>  
 
@@ -548,10 +552,12 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(7),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
-show(A,"~",A.rref())
+A=matrix(GF(7),[[1,1,1],[1,2,1],[0,1,0]]) #matriz de coeficientes
+b=vector(GF(7),[2,1,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
-</div> 
+</div>  
 
 En el último paso no hemos escrito las operaciones elementales puesto que se da una circunstancia muy especial: el único elemento no nulo es el pivote. Eso hace que operar con esta fila sea muy sencillo, solo borra los elementos de su columna sin cambiar nada más.
 
@@ -601,10 +607,12 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(5),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
-show(A,"~",A.rref())
+A=matrix(GF(5),[[1,1,1],[1,2,1],[0,1,0]]) #matriz de coeficientes
+b=vector(GF(5),[2,1,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
-</div> 
+</div>   
 
 Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
 
@@ -652,10 +660,12 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(3),[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
-show(A,"~",A.rref())
+A=matrix(GF(3),[[1,1,1],[1,2,1],[0,1,0]]) #matriz de coeficientes
+b=vector(GF(3),[2,1,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
 </script>
-</div> 
+</div>  
 
 Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
 
@@ -703,12 +713,206 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(QQ,[[1,1,1,2],[1,2,1,1],[0,1,0,3]])
+A=matrix(QQ,[[1,1,1],[1,2,1],[0,1,0]]) #matriz de coeficientes
+b=vector(QQ,[2,1,3]) #término independiente
+Ab=A.augment(b,subdivide=True) #matriz aumentada
+show(Ab,"~",Ab.rref())
+</script>
+</div>  
+
+Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
+</details>
+</article>
+
+<article>
+En el cuerpo $\mathbb{Z}_5$ se considera la matriz
+$$C = \begin{pmatrix} 1&1&1&1 \\ 0&2&1&2 \\ 0&4&1&1 \\ \end{pmatrix}$$.
+
+<ol type="a">
+  <li>Calcula la forma de Hermite por filas de $C$.</li>
+  <li>Calcula la forma de Hermite por columnas de $C$.</li>
+  <li>Elige una submatriz cuadrada de $C$ de orden tres que sea regular y calcula su inversa.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+<ol type="a">
+<li>Forma de Hermite por filas</li>
+Realizamos operaciones elemntales por filas hasta obtener una matriz escalonada reducida por filas:
+
+$$\left( 
+\begin{array}{rrrr}
+\boxed{1} & 1 & 1 & 1\\
+0 & 2 & 1 & 2\\
+0 & 4 & 1 & 1\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} 3f_2\rightarrow f_2\end{array}}
+\left(
+\begin{array}{rrrr}
+\boxed{1} & 1 & 1 & 1\\
+0 & 1 & 3 & 1\\
+0 & 4 & 1 & 1\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} f_3-4f_2\rightarrow f_3\end{array}}
+\left( 
+\begin{array}{rrrr}
+\boxed{1} & 0 & 3 & 0\\
+0 & \boxed{1} & 3 & 1\\
+0 & 0 & 4 & 2\\
+\end{array}
+\right),$$
+
+$$\left( 
+\begin{array}{rrrr}
+\boxed{1} & 0 & 3 & 0\\
+0 & \boxed{1} & 3 & 1\\
+0 & 0 & 4 & 2\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} 4f_3\rightarrow f_3\end{array}}
+\left( 
+\begin{array}{rrrr}
+\boxed{1} & 0 & 3 & 0\\
+0 & \boxed{1} & 3 & 1\\
+0 & 0 &\boxed{1} & 3\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2-3f_3\rightarrow f_2 \end{array}}
+\left(
+\begin{array}{rrrr}
+\boxed{1} & 0 & 0 & 1\\
+0 &\boxed{1} & 0 & 2\\
+0 & 0 & \boxed{1} & 3\\
+\end{array}
+\right).$$
+
+Por tanto la forma de Hermite por filas es 
+
+$$\left( 
+\begin{array}{rrrr}
+1 & 0 & 0 & 1\\
+0 & 1 & 0 & 2\\
+0 & 0 & 1 & 3\\
+\end{array}
+\right).$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[1,1,1,1],[0,2,1,2],[0,4,1,1]])
 show(A,"~",A.rref())
 </script>
 </div> 
 
-Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
-</details>
+<li>Forma de Hermite por columnas</li>
+Como el número de pivotes en la forma de Hermite por columnas coincide con el que hay en la de filas, entonces la única posibilidad es que sea 
+$$\left( 
+\begin{array}{rrrr}
+\boxed{1} & 0 & 0 & 0\\
+0 & \boxed{1} & 0 & 0\\
+0 & 0 & \boxed{1} & 0\\
+\end{array}
+\right).$$
 
+<li>Una submatriz cuadrada de orden tres regular y su inversa.</li>
+Hay cuatro elecciones posibles, como puede comprobarse la solución solo damos un ejemplo de cómo calcularlo.
+Elegimos por ejemplo las tres primeras columnas (como el determinante vale $2-4=-2=3$ en  $\mathbb{Z}_5$, es regular) y unimos una matriz identidad. Para calcular la inversa realizamos operaciones elementales por filas en las filas largas:
+$$[A|I]=\left( 
+\begin{array}{rrr|rrr}
+\boxed{1} & 1 & 1 & 1 & 0 & 0\\
+0 & 2 & 1 & 0 & 1 & 0\\
+0 & 4 & 1 & 0 & 0 & 1\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} 3f_2\rightarrow f_2\end{array}}
+\left( 
+\begin{array}{rrr|rrr}
+\boxed{1} & 1 & 1 & 1 & 0 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 4 & 1 & 0 & 0 & 1\\
+\end{array}
+\right),$$
+
+$$
+\left( 
+\begin{array}{rrr|rrr}
+\boxed{1} & 1 & 1 & 1 & 0 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 4 & 1 & 0 & 0 & 1\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} f_3-4f_2\rightarrow f_3\end{array}}
+\left(
+\begin{array}{rrr|rrr}
+\boxed{1} & 0 & 3 & 1 & 2 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 0 & 4 & 0 & 3 & 1\\
+\end{array}
+\right),$$
+
+$$
+\left(
+\begin{array}{rrr|rrr}
+\boxed{1} & 0 & 3 & 1 & 2 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 0 & 4 & 0 & 3 & 1\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} 4f_3\rightarrow f_3\end{array}}
+\left(
+\begin{array}{rrr|rrr}
+\boxed{1} & 0 & 3 & 1 & 2 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 0 & \boxed{1} & 0 & 2 & 4\\
+\end{array}
+\right),$$
+
+$$
+\left(
+\begin{array}{rrr|rrr}
+\boxed{1} & 0 & 3 & 1 & 2 & 0\\
+0 & \boxed{1} & 3 & 0 & 3 & 0\\
+0 & 0 & \boxed{1} & 0 & 2 & 4\\
+\end{array}
+\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+f_2-3f_3\rightarrow f_2 \end{array}}
+\left( 
+\begin{array}{rrr|rrr}
+\boxed{1} & 0 & 0 & 1 & 1 & 3\\
+0 & \boxed{1} & 0 & 0 & 2 & 3\\
+0 & 0 & \boxed{1} & 0 & 2 & 4\\
+\end{array}
+\right)=[I|A^{-1}].$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[1,1,1],[0,2,1],[0,4,1]]) #matriz de coeficientes
+I=matrix(GF(5),[[1,0,0],[0,1,0],[0,0,1]]) #matriz identidad
+AI=A.augment(I,subdivide=True) #matriz aumentada
+show(AI,"~",AI.rref())
+</script>
+</div>  
+
+Finalmente comprobamos que es inversa:
+$$\left( 
+\begin{array}{rrr}
+1 & 1 & 1 \\
+0 & 2 & 1 \\
+0 & 4 & 1 \\
+\end{array}
+\right)\left( 
+\begin{array}{rrr}
+1 & 1 & 3 \\
+0 & 2 & 3 \\
+0 & 2 & 4 \\
+\end{array}
+\right)=\left( 
+\begin{array}{rrr}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{array}
+\right).$$
+
+</ol>
+</details>
 </article>
