@@ -737,7 +737,7 @@ $$C = \begin{pmatrix} 1&1&1&1 \\ 0&2&1&2 \\ 0&4&1&1 \\ \end{pmatrix}$$.
 <details>
 <summary>Solución</summary>
 <ol type="a">
-<li>Forma de Hermite por filas</li>
+<li>Forma de Hermite por filas.</li>
 Realizamos operaciones elemntales por filas hasta obtener una matriz escalonada reducida por filas:
 
 $$\left( 
@@ -804,7 +804,7 @@ show(A,"~",A.rref())
 </script>
 </div> 
 
-<li>Forma de Hermite por columnas</li>
+<li>Forma de Hermite por columnas.</li>
 Como el número de pivotes en la forma de Hermite por columnas coincide con el que hay en la de filas, entonces la única posibilidad es que sea 
 $$\left( 
 \begin{array}{rrrr}
@@ -814,64 +814,51 @@ $$\left(
 \end{array}
 \right).$$
 
+Comprobemos el resultado obtenido con <code>sage</code> (para eso transponemos la matriz, calculamos su forma escalonada reducida por filas, y volvemos a transponer).
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[1,1,1,1],[0,2,1,2],[0,4,1,1]])
+show(A,"~",(A.T).rref().T)
+</script>
+</div> 
+
+
 <li>Una submatriz cuadrada de orden tres regular y su inversa.</li>
-Hay cuatro elecciones posibles, como puede comprobarse la solución solo damos un ejemplo de cómo calcularlo.
-Elegimos por ejemplo las tres primeras columnas (como el determinante vale $2-4=-2=3$ en  $\mathbb{Z}_5$, es regular) y unimos una matriz identidad. Para calcular la inversa realizamos operaciones elementales por filas en las filas largas:
-$$[A|I]=\left( 
+Hay cuatro elecciones posibles. Solo damos un ejemplo de cómo calcularlo.
+Elegimos por ejemplo las tres primeras columnas (como el determinante vale $2-4=-2=3$ en  $\mathbb{Z}_5$, es regular) y unimos una matriz identidad a la derecha. Para calcular la inversa realizamos operaciones elementales por filas en las filas de $(A\mid I)$:
+
+$$
+\begin{align*}
+(A \mid I)& =\left( 
 \begin{array}{rrr|rrr}
 \boxed{1} & 1 & 1 & 1 & 0 & 0\\
 0 & 2 & 1 & 0 & 1 & 0\\
 0 & 4 & 1 & 0 & 0 & 1\\
 \end{array}
-\right)\sim_{\tiny \begin{array}{l} 3f_2\rightarrow f_2\end{array}}
+\right)\sim_{ \begin{array}{l} 3f_2\rightarrow f_2\end{array}}
 \left( 
 \begin{array}{rrr|rrr}
 \boxed{1} & 1 & 1 & 1 & 0 & 0\\
 0 & \boxed{1} & 3 & 0 & 3 & 0\\
 0 & 4 & 1 & 0 & 0 & 1\\
 \end{array}
-\right),$$
-
-$$
-\left( 
-\begin{array}{rrr|rrr}
-\boxed{1} & 1 & 1 & 1 & 0 & 0\\
-0 & \boxed{1} & 3 & 0 & 3 & 0\\
-0 & 4 & 1 & 0 & 0 & 1\\
-\end{array}
-\right)\sim_{\tiny \begin{array}{l} f_3-4f_2\rightarrow f_3\end{array}}
+\right) \sim_{ \begin{array}{l} f_3-4f_2\rightarrow f_3\end{array}} 
 \left(
 \begin{array}{rrr|rrr}
 \boxed{1} & 0 & 3 & 1 & 2 & 0\\
 0 & \boxed{1} & 3 & 0 & 3 & 0\\
 0 & 0 & 4 & 0 & 3 & 1\\
 \end{array}
-\right),$$
-
-$$
-\left(
-\begin{array}{rrr|rrr}
-\boxed{1} & 0 & 3 & 1 & 2 & 0\\
-0 & \boxed{1} & 3 & 0 & 3 & 0\\
-0 & 0 & 4 & 0 & 3 & 1\\
-\end{array}
-\right)\sim_{\tiny \begin{array}{l} 4f_3\rightarrow f_3\end{array}}
+\right)  \\
+& \sim_{ \begin{array}{l} 4f_3\rightarrow f_3\end{array}}
 \left(
 \begin{array}{rrr|rrr}
 \boxed{1} & 0 & 3 & 1 & 2 & 0\\
 0 & \boxed{1} & 3 & 0 & 3 & 0\\
 0 & 0 & \boxed{1} & 0 & 2 & 4\\
 \end{array}
-\right),$$
-
-$$
-\left(
-\begin{array}{rrr|rrr}
-\boxed{1} & 0 & 3 & 1 & 2 & 0\\
-0 & \boxed{1} & 3 & 0 & 3 & 0\\
-0 & 0 & \boxed{1} & 0 & 2 & 4\\
-\end{array}
-\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+\right) \sim_{ \begin{array}{l} f_1-3f_3\rightarrow f_1\\
 f_2-3f_3\rightarrow f_2 \end{array}}
 \left( 
 \begin{array}{rrr|rrr}
@@ -879,7 +866,9 @@ f_2-3f_3\rightarrow f_2 \end{array}}
 0 & \boxed{1} & 0 & 0 & 2 & 3\\
 0 & 0 & \boxed{1} & 0 & 2 & 4\\
 \end{array}
-\right)=[I|A^{-1}].$$
+\right)=(I\mid A^{-1}).
+\end{align*}
+$$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
 
