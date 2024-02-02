@@ -740,42 +740,37 @@ $$C = \begin{pmatrix} 1&1&1&1 \\ 0&2&1&2 \\ 0&4&1&1 \\ \end{pmatrix}.$$
 <li>Forma de Hermite por filas.</li>
 Realizamos operaciones elemntales por filas hasta obtener una matriz escalonada reducida por filas:
 
-$$\left( 
+$$
+\begin{align*}
+\left( 
 \begin{array}{rrrr}
 \boxed{1} & 1 & 1 & 1\\
 0 & 2 & 1 & 2\\
 0 & 4 & 1 & 1\\
 \end{array}
-\right)\sim_{\tiny \begin{array}{l} 3f_2\rightarrow f_2\end{array}}
+\right) & \sim_{\begin{array}{l} 3f_2\rightarrow f_2\end{array}}
 \left(
 \begin{array}{rrrr}
 \boxed{1} & 1 & 1 & 1\\
 0 & 1 & 3 & 1\\
 0 & 4 & 1 & 1\\
 \end{array}
-\right)\sim_{\tiny \begin{array}{l} f_3-4f_2\rightarrow f_3\end{array}}
+\right)\sim_{ \begin{array}{l} f_3-4f_2\rightarrow f_3\end{array}}
 \left( 
 \begin{array}{rrrr}
 \boxed{1} & 0 & 3 & 0\\
 0 & \boxed{1} & 3 & 1\\
 0 & 0 & 4 & 2\\
 \end{array}
-\right),$$
-
-$$\left( 
-\begin{array}{rrrr}
-\boxed{1} & 0 & 3 & 0\\
-0 & \boxed{1} & 3 & 1\\
-0 & 0 & 4 & 2\\
-\end{array}
-\right)\sim_{\tiny \begin{array}{l} 4f_3\rightarrow f_3\end{array}}
+\right) \\
+& \sim_{ \begin{array}{l} 4f_3\rightarrow f_3\end{array}}
 \left( 
 \begin{array}{rrrr}
 \boxed{1} & 0 & 3 & 0\\
 0 & \boxed{1} & 3 & 1\\
 0 & 0 &\boxed{1} & 3\\
 \end{array}
-\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+\right)\sim_{ \begin{array}{l} f_1-3f_3\rightarrow f_1\\
 f_2-3f_3\rightarrow f_2 \end{array}}
 \left(
 \begin{array}{rrrr}
@@ -783,7 +778,9 @@ f_2-3f_3\rightarrow f_2 \end{array}}
 0 &\boxed{1} & 0 & 2\\
 0 & 0 & \boxed{1} & 3\\
 \end{array}
-\right).$$
+\right).
+\end{align*}
+$$
 
 Por tanto la forma de Hermite por filas es 
 
@@ -913,14 +910,14 @@ $$A = \begin{pmatrix} 1&1&0&2&1 \\ 2&1&1&2&0 \\ 0&2&1&0&2 \\ 0&1&2&1&0 \end{pmat
 <details>
 <summary>Solución</summary>
 
-Para resolver este problema aplicaremos el Teorema que se ha visto en clase de teoría:
-
-$$A\sim_f B \Leftrightarrow \exists P \text{ regular tal que } PA=B.$$
+Sabemos que $A\sim_f B$ si y sólo si existe  $P$ regular tal que $PA=B$. Por tanto, primero comprobaremos que $A$ y $B$ tienen la misma forma escalonada reducida por filas, calculando además las matrices de paso. Si coinciden, entonces usando las matrices de paso que hemos calculado, podremos encontrar $P$.
 
 <ol type="a">
 <li> En primer lugar calculamos las formas de Hermite por filas para comprobar que ambas, la de $A$ y la de $B$ son iguales. Al mismo tiempo calcularemos matrices de paso correspondientes a cada una de ellas.</li>
 
-$$[A|I] = \left(\begin{array}{ccccc|cccc}
+$$
+\begin{align*}
+(A \mid I) & = \left(\begin{array}{ccccc|cccc}
 \boxed{1} & 1 & 0 & 2 & 1 & 1 & 0 & 0 & 0  \\
 2 & 1 & 1 & 2 & 0 & 0 & 1 & 0 & 0  \\ 
 0 & 2 & 1 & 0 & 2 & 0 & 0 & 1 & 0 \\ 
@@ -930,22 +927,8 @@ $$[A|I] = \left(\begin{array}{ccccc|cccc}
 0 & 2 & 1 & 1 & 1 & 1 & 1 & 0 & 0  \\ 
 0 & 2 & 1 & 0 & 2 & 0 & 0 & 1 & 0 \\ 
 0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 1 \\
-\end{array}\right),$$
-
-$$\left(\begin{array}{ccccc|cccc}
-\boxed{1} & 1 & 0 & 2 & 1 & 1 & 0 & 0 & 0  \\
-0 & 2 & 1 & 1 & 1 & 1 & 1 & 0 & 0  \\ 
-0 & 2 & 1 & 0 & 2 & 0 & 0 & 1 & 0 \\ 
-0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 1 \\
-\end{array}\right)
-\sim_f  \left(\begin{array}{ccccc|cccc}
-\boxed{1} & 1 & 0 & 2 & 1 & 1 & 0 & 0 & 0  \\
-0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
-0 & 2 & 1 & 0 & 2 & 0 & 0 & 1 & 0 \\ 
-0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 1 \\
-\end{array}\right),$$
-
-$$\left(\begin{array}{ccccc|cccc}
+\end{array}\right) \\
+& \sim_f  \left(\begin{array}{ccccc|cccc}
 \boxed{1} & 1 & 0 & 2 & 1 & 1 & 0 & 0 & 0  \\
 0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
 0 & 2 & 1 & 0 & 2 & 0 & 0 & 1 & 0 \\ 
@@ -956,22 +939,8 @@ $$\left(\begin{array}{ccccc|cccc}
 0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
 0 & 0 & 0 & 2 & 1 & 2 & 2 & 1 & 0 \\ 
 0 & 0 & 0 & 2 & 1 & 1 & 1 & 0 & 1 \\
-\end{array}\right),$$
-
-$$\left(\begin{array}{ccccc|cccc}
-\boxed{1} & 0 & 1 & 0 & 2 & 2 & 1 & 0 & 0  \\
-0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
-0 & 0 & 0 & 2 & 1 & 2 & 2 & 1 & 0 \\ 
-0 & 0 & 0 & 2 & 1 & 1 & 1 & 0 & 1 \\
-\end{array}\right)
-\sim_f  \left(\begin{array}{ccccc|cccc}
-\boxed{1} & 0 & 1 & 0 & 2 & 2 & 1 & 0 & 0  \\
-0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
-0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 2 & 0 \\ 
-0 & 0 & 0 & 0 & 0 & 2 & 2 & 2 & 1 \\
-\end{array}\right),$$
-
-$$\left(\begin{array}{ccccc|cccc}
+\end{array}\right) \\ 
+& \sim_f  \left(\begin{array}{ccccc|cccc}
 \boxed{1} & 0 & 1 & 0 & 2 & 2 & 1 & 0 & 0  \\
 0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
 0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 2 & 0 \\ 
@@ -982,20 +951,23 @@ $$\left(\begin{array}{ccccc|cccc}
 0 & \boxed{1} & 2 & 0 & 1 & 0 & 0 & 2 & 0  \\ 
 0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 2 & 0 \\ 
 0 & 0 & 0 & 0 & 0 & 2 & 2 & 2 & 1 \\
-\end{array}\right)=[H_A|P_1].$$
+\end{array}\right)=(H_A|P_A).
+\end{align*}$$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(3),[[1,1,0,2,1],[2,1,1,2,0],[0,2,1,0,2],[0,1,2,1,0]]) #matriz de coeficientes
+A=matrix(GF(3),[[1,1,0,2,1],[2,1,1,2,0],[0,2,1,0,2],[0,1,2,1,0]]) 
 I=matrix(GF(3),[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]) #matriz identidad
 AI=A.augment(I,subdivide=True) #matriz aumentada
 show(AI,"~",AI.rref())
 </script>
 </div> 
 
-$$[B|I] = \left(\begin{array}{ccccc|cccc}
+$$
+\begin{align*}
+(B \mid I) & = \left(\begin{array}{ccccc|cccc}
 \boxed{1} & 1 & 0 & 1 & 2 & 1 & 0 & 0 & 0  \\
 1 & 2 & 2 & 1 & 0 & 0 & 1 & 0 & 0  \\ 
 1 & 0 & 1 & 2 & 0 & 0 & 0 & 1 & 0 \\ 
@@ -1005,32 +977,20 @@ $$[B|I] = \left(\begin{array}{ccccc|cccc}
 0 & 1 & 2 & 0 & 1 & 2 & 1 & 0 & 0  \\ 
 0 & 2 & 1 & 1 & 1 & 2 & 0 & 1 & 0 \\ 
 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 1 \\
-\end{array}\right),$$
-
-$$\left(\begin{array}{ccccc|cccc}
-\boxed{1} & 1 & 0 & 1 & 2 & 1 & 0 & 0 & 0  \\
-0 & 1 & 2 & 0 & 1 & 2 & 1 & 0 & 0  \\ 
-0 & 2 & 1 & 1 & 1 & 2 & 0 & 1 & 0 \\ 
-0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 1 \\
-\end{array}\right)
-\sim_f \left(\begin{array}{ccccc|cccc}
+\end{array}\right) \\
+& \sim_f \left(\begin{array}{ccccc|cccc}
 \boxed{1} & 0 & 1 & 1 & 1 & 2 & 2 & 0 & 0  \\
 0 & \boxed{1} & 2 & 0 & 1 & 2 & 1 & 0 & 0  \\ 
 0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 1 & 0 \\ 
 0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 1 \\
-\end{array}\right),$$
-
-$$\left(\begin{array}{ccccc|cccc}
-\boxed{1} & 0 & 1 & 1 & 1 & 2 & 2 & 0 & 0  \\
-0 & \boxed{1} & 2 & 0 & 1 & 2 & 1 & 0 & 0  \\ 
-0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 1 & 0 \\ 
-0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 1 \\
-\end{array}\right)\sim_f \left(\begin{array}{ccccc|cccc}
+\end{array}\right) \sim_f \left(\begin{array}{ccccc|cccc}
 \boxed{1} & 0 & 1 & 0 & 2 & 1 & 1 & 2 & 0  \\
 0 & \boxed{1} & 2 & 0 & 1 & 2 & 1 & 0 & 0  \\ 
 0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 1 & 0 \\ 
 0 & 0 & 0 & 0 & 0 & 0 & 2 & 2 & 1 \\
-\end{array}\right)=[H_B|P_2].$$
+\end{array}\right)=(H_B \mid P_B).
+\end{align*}
+$$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
 
@@ -1043,119 +1003,14 @@ show(BI,"~",BI.rref())
 </script>
 </div> 
 
-<li> Hemos comprobado que $H_A=H_B$ y por tanto $A\sim_f B$ y existe una tal $P$.</li>
-<li> Para calcular $P$ podemos ayudarnos de las matrices de paso $P_1$ y $P_2$ calculadas:</li>
-$$P_1A=H_A=H_B=P_2B,$$
+<li> Hemos comprobado que $H_A=H_B$ y por tanto $A\sim_f B$ y existe una matriz $P$ tal que $PA=B$.</li>
+<li> Para calcular $P$ podemos ayudarnos de las matrices de paso $P_A$ y $P_B$ calculadas:</li>
+$$P_A A=H_A=H_B=P_B B,$$
 y por tanto
-$$P_1A=P_2B.$$
-Como $P_1$ es regular, entonces podemos despejar $A$:
-$$A=(P_1)^{-1}P_2B,$$
-luego una matriz que verifica la condición pedida sería el producto $(P_1)^{-1}P_2$.
-Para calcularla necesitamos en primer lugar calcular la inversa de $P_1$, también usando Gauss-Jordan:
-
-$$ \left(\begin{array}{cccc|cccc}
- 2 & 1 & 0 & 0  & 1 & 0 & 0 & 0\\
- 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
- 1 & 1 & 2 & 0  & 0 & 0 & 1 & 0\\ 
- 2 & 2 & 2 & 1  & 0 & 0 & 0 & 1\\
-\end{array}\right)\sim_f \left(\begin{array}{cccc|cccc}
- \boxed{1} & 1 & 2 & 0  & 0 & 0 & 1 & 0\\ 
- 2 & 1 & 0 & 0  & 1 & 0 & 0 & 0\\
- 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
- 2 & 2 & 2 & 1  & 0 & 0 & 0 & 1\\
-\end{array}\right),$$
-
-$$\left(\begin{array}{cccc|cccc}
- \boxed{1} & 1 & 2 & 0  & 0 & 0 & 1 & 0\\ 
- 2 & 1 & 0 & 0  & 1 & 0 & 0 & 0\\
- 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
- 2 & 2 & 2 & 1  & 0 & 0 & 0 & 1\\
-\end{array}\right)
-\sim_f \left(\begin{array}{cccc|cccc}
- \boxed{1} & 1 & 2 & 0  & 0 & 0 & 1 & 0\\ 
- 0 & 2 & 2 & 0  & 1 & 0 & 1 & 0\\
- 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
- 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
-\end{array}\right),$$
-
-$$\left(\begin{array}{cccc|cccc}
- \boxed{1} & 1 & 2 & 0  & 0 & 0 & 1 & 0\\ 
- 0 & 2 & 2 & 0  & 1 & 0 & 1 & 0\\
- 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
- 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
-\end{array}\right)
-\sim_f \left(\begin{array}{cccc|cccc}
- \boxed{1} & 0 & 1 & 0  & 1 & 0 & 2 & 0\\ 
- 0 & \boxed{1} & 1 & 0  & 2 & 0 & 2 & 0\\
- 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
- 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
-\end{array}\right),$$
-
-$$\left(\begin{array}{cccc|cccc}
- \boxed{1} & 0 & 1 & 0  & 1 & 0 & 2 & 0\\ 
- 0 & \boxed{1} & 1 & 0  & 2 & 0 & 2 & 0\\
- 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
- 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
-\end{array}\right)
-\sim_f \left(\begin{array}{cccc|cccc}
- \boxed{1} & 0 & 1 & 0  & 1 & 0 & 2 & 0\\ 
- 0 & \boxed{1} & 1 & 0  & 2 & 0 & 2 & 0\\
- 0 & 0 & \boxed{1} & 0  & 0 & 2 & 0 & 0\\ 
- 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
-\end{array}\right),$$
-
-$$\left(\begin{array}{cccc|cccc}
- \boxed{1} & 0 & 1 & 0  & 1 & 0 & 2 & 0\\ 
- 0 & \boxed{1} & 1 & 0  & 2 & 0 & 2 & 0\\
- 0 & 0 & \boxed{1} & 0  & 0 & 2 & 0 & 0\\ 
- 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
-\end{array}\right)
-\sim_f \left(\begin{array}{cccc|cccc}
- \boxed{1} & 0 & 0 & 0  & 1 & 1 & 2 & 0\\ 
- 0 & \boxed{1} & 0 & 0  & 2 & 1 & 2 & 0\\
- 0 & 0 & \boxed{1} & 0  & 0 & 2 & 0 & 0\\ 
- 0 & 0 & 0 & \boxed{1}  & 0 & 1 & 1 & 1\\
-\end{array}\right).$$
-
-Comprobemos el resultado obtenido con <code>sage</code>.
-
-<div class="sage">
-<script type="text/x-sage">
-A=matrix(GF(3),[[2,1,0,0],[0,0,2,0],[1,1,2,0],[2,2,2,1]]) #matriz de coeficientes
-I=matrix(GF(3),[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]) #matriz identidad
-AI=A.augment(I,subdivide=True) #matriz aumentada
-show(AI,"~",AI.rref())
-</script>
-</div> 
-
-Luego una posible $Q$ es
-$$Q=(P_1)^{-1}P_2=\left(\begin{array}{cccc}
- 1 & 1 & 2 & 0\\ 
-2 & 1 & 2 & 0\\
- 0 & 2 & 0 & 0\\ 
- 0 & 1 & 1 & 1\\
-\end{array}\right) \left(\begin{array}{cccc}
- 1 & 1 & 2 & 0  \\
- 2 & 1 & 0 & 0  \\ 
- 1 & 1 & 1 & 0 \\ 
-0 & 2 & 2 & 1 \\
-\end{array}\right)= \left(\begin{array}{cccc}
- 2 & 1 & 1 & 0  \\
- 0 & 2 & 0 & 0  \\ 
- 1 & 2 & 0 & 0 \\ 
-0 & 1 & 0 & 1 \\
-\end{array}\right).$$
-
-Comprobemos el resultado obtenido con <code>sage</code>.
-
-<div class="sage">
-<script type="text/x-sage">
-A=matrix(GF(3),[[1,1,2,0],[2,1,2,0],[0,2,0,0],[0,1,1,1]]) #matriz de coeficientes
-B=matrix(GF(3),[[1,1,2,0],[2,1,0,0],[1,1,1,0],[0,2,2,1]])
-show(A,B,"=",A*B)
-</script>
-</div> 
-
+$$P_A A=P_B B.$$
+Como $P_B$ es regular, 
+$$(P_B)^{-1}P_A A=B.$$
+Luego una matriz que verifica la condición pedida sería el producto $(P_B)^{-1}P_A$.
 </ol>
 </details>
 </article>
