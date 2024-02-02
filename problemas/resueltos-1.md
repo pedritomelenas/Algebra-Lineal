@@ -726,7 +726,7 @@ Como hay un pivote en la columna de términos independientes (es decir, aparece 
 
 <article>
 En el cuerpo $\mathbb{Z}_5$ se considera la matriz
-$$C = \begin{pmatrix} 1&1&1&1 \\ 0&2&1&2 \\ 0&4&1&1 \\ \end{pmatrix}$$.
+$$C = \begin{pmatrix} 1&1&1&1 \\ 0&2&1&2 \\ 0&4&1&1 \\ \end{pmatrix}.$$
 
 <ol type="a">
   <li>Calcula la forma de Hermite por filas de $C$.</li>
@@ -901,6 +901,260 @@ $$\left(
 0 & 0 & 1 \\
 \end{array}
 \right).$$
+
+</ol>
+</details>
+</article>
+
+<article>
+Encuentra, si es posible, $P \in \mathcal{M}_{4}(\mathbb{Z}_3)$, regular, tal que $PA=B$, donde
+$$A = \begin{pmatrix} 1&1&0&2&1 \\ 2&1&1&2&0 \\ 0&2&1&0&2 \\ 0&1&2&1&0 \end{pmatrix}, \qquad B = \begin{pmatrix} 1&1&0&1&2 \\ 1&2&2&1&0 \\ 1&0&1&2&0 \\ 2&2&0&0&0 \end{pmatrix}.$$
+
+<details>
+<summary>Solución</summary>
+
+Para resolver este problema aplicaremos el Teorema que se ha visto en clase de teoría:
+
+$$A\sim_f B \Leftrightarrow \exists P \text{ regular tal que } PA=B.$$
+
+<ol type="a">
+<li> En primer lugar calculamos las formas de Hermite por filas para comprobar que ambas, la de $A$ y la de $B$ son iguales. Al mismo tiempo calcularemos matrices de paso correspondientes a cada una de ellas.</li>
+
+$$[A|I] = \left(\begin{array}{ccccc|cccc}
+\boxed{1} & 1 & 0 & 2 & 1 & 1 & 0 & 0 & 0  \\
+2 & 1 & 1 & 2 & 0 & 0 & 1 & 0 & 0  \\ 
+0 & 2 & 1 & 0 & 2 & 0 & 0 & 1 & 0 \\ 
+0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 1 \\
+\end{array}\right)\sim_f  \left(\begin{array}{ccccc|cccc}
+\boxed{1} & 1 & 0 & 2 & 1 & 1 & 0 & 0 & 0  \\
+0 & 2 & 1 & 1 & 1 & 1 & 1 & 0 & 0  \\ 
+0 & 2 & 1 & 0 & 2 & 0 & 0 & 1 & 0 \\ 
+0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 1 \\
+\end{array}\right),$$
+
+$$\left(\begin{array}{ccccc|cccc}
+\boxed{1} & 1 & 0 & 2 & 1 & 1 & 0 & 0 & 0  \\
+0 & 2 & 1 & 1 & 1 & 1 & 1 & 0 & 0  \\ 
+0 & 2 & 1 & 0 & 2 & 0 & 0 & 1 & 0 \\ 
+0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 1 \\
+\end{array}\right)
+\sim_f  \left(\begin{array}{ccccc|cccc}
+\boxed{1} & 1 & 0 & 2 & 1 & 1 & 0 & 0 & 0  \\
+0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
+0 & 2 & 1 & 0 & 2 & 0 & 0 & 1 & 0 \\ 
+0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 1 \\
+\end{array}\right),$$
+
+$$\left(\begin{array}{ccccc|cccc}
+\boxed{1} & 1 & 0 & 2 & 1 & 1 & 0 & 0 & 0  \\
+0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
+0 & 2 & 1 & 0 & 2 & 0 & 0 & 1 & 0 \\ 
+0 & 1 & 2 & 1 & 0 & 0 & 0 & 0 & 1 \\
+\end{array}\right)
+\sim_f  \left(\begin{array}{ccccc|cccc}
+\boxed{1} & 0 & 1 & 0 & 2 & 2 & 1 & 0 & 0  \\
+0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
+0 & 0 & 0 & 2 & 1 & 2 & 2 & 1 & 0 \\ 
+0 & 0 & 0 & 2 & 1 & 1 & 1 & 0 & 1 \\
+\end{array}\right),$$
+
+$$\left(\begin{array}{ccccc|cccc}
+\boxed{1} & 0 & 1 & 0 & 2 & 2 & 1 & 0 & 0  \\
+0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
+0 & 0 & 0 & 2 & 1 & 2 & 2 & 1 & 0 \\ 
+0 & 0 & 0 & 2 & 1 & 1 & 1 & 0 & 1 \\
+\end{array}\right)
+\sim_f  \left(\begin{array}{ccccc|cccc}
+\boxed{1} & 0 & 1 & 0 & 2 & 2 & 1 & 0 & 0  \\
+0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
+0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 2 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 2 & 2 & 2 & 1 \\
+\end{array}\right),$$
+
+$$\left(\begin{array}{ccccc|cccc}
+\boxed{1} & 0 & 1 & 0 & 2 & 2 & 1 & 0 & 0  \\
+0 & \boxed{1} & 2 & 2 & 2 & 2 & 2 & 0 & 0  \\ 
+0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 2 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 2 & 2 & 2 & 1 \\
+\end{array}\right)
+\sim_f  \left(\begin{array}{ccccc|cccc}
+\boxed{1} & 0 & 1 & 0 & 2 & 2 & 1 & 0 & 0  \\
+0 & \boxed{1} & 2 & 0 & 1 & 0 & 0 & 2 & 0  \\ 
+0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 2 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 2 & 2 & 2 & 1 \\
+\end{array}\right)=[H_A|P_1].$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(3),[[1,1,0,2,1],[2,1,1,2,0],[0,2,1,0,2],[0,1,2,1,0]]) #matriz de coeficientes
+I=matrix(GF(3),[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]) #matriz identidad
+AI=A.augment(I,subdivide=True) #matriz aumentada
+show(AI,"~",AI.rref())
+</script>
+</div> 
+
+$$[B|I] = \left(\begin{array}{ccccc|cccc}
+\boxed{1} & 1 & 0 & 1 & 2 & 1 & 0 & 0 & 0  \\
+1 & 2 & 2 & 1 & 0 & 0 & 1 & 0 & 0  \\ 
+1 & 0 & 1 & 2 & 0 & 0 & 0 & 1 & 0 \\ 
+2 & 2 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+\end{array}\right)\sim_f \left(\begin{array}{ccccc|cccc}
+\boxed{1} & 1 & 0 & 1 & 2 & 1 & 0 & 0 & 0  \\
+0 & 1 & 2 & 0 & 1 & 2 & 1 & 0 & 0  \\ 
+0 & 2 & 1 & 1 & 1 & 2 & 0 & 1 & 0 \\ 
+0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 1 \\
+\end{array}\right),$$
+
+$$\left(\begin{array}{ccccc|cccc}
+\boxed{1} & 1 & 0 & 1 & 2 & 1 & 0 & 0 & 0  \\
+0 & 1 & 2 & 0 & 1 & 2 & 1 & 0 & 0  \\ 
+0 & 2 & 1 & 1 & 1 & 2 & 0 & 1 & 0 \\ 
+0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 1 \\
+\end{array}\right)
+\sim_f \left(\begin{array}{ccccc|cccc}
+\boxed{1} & 0 & 1 & 1 & 1 & 2 & 2 & 0 & 0  \\
+0 & \boxed{1} & 2 & 0 & 1 & 2 & 1 & 0 & 0  \\ 
+0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 1 & 0 \\ 
+0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 1 \\
+\end{array}\right),$$
+
+$$\left(\begin{array}{ccccc|cccc}
+\boxed{1} & 0 & 1 & 1 & 1 & 2 & 2 & 0 & 0  \\
+0 & \boxed{1} & 2 & 0 & 1 & 2 & 1 & 0 & 0  \\ 
+0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 1 & 0 \\ 
+0 & 0 & 0 & 1 & 2 & 1 & 0 & 0 & 1 \\
+\end{array}\right)\sim_f \left(\begin{array}{ccccc|cccc}
+\boxed{1} & 0 & 1 & 0 & 2 & 1 & 1 & 2 & 0  \\
+0 & \boxed{1} & 2 & 0 & 1 & 2 & 1 & 0 & 0  \\ 
+0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 1 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 0 & 2 & 2 & 1 \\
+\end{array}\right)=[H_B|P_2].$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+B=matrix(GF(3),[[1,1,0,1,2],[1,2,2,1,0],[1,0,1,2,0],[2,2,0,0,0]]) #matriz de coeficientes
+I=matrix(GF(3),[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]) #matriz identidad
+BI=B.augment(I,subdivide=True) #matriz aumentada
+show(BI,"~",BI.rref())
+</script>
+</div> 
+
+<li> Hemos comprobado que $H_A=H_B$ y por tanto $A\sim_f B$ y existe una tal $P$.</li>
+<li> Para calcular $P$ podemos ayudarnos de las matrices de paso $P_1$ y $P_2$ calculadas:</li>
+$$P_1A=H_A=H_B=P_2B,$$
+y por tanto
+$$P_1A=P_2B.$$
+Como $P_1$ es regular, entonces podemos despejar $A$:
+$$A=(P_1)^{-1}P_2B,$$
+luego una matriz que verifica la condición pedida sería el producto $(P_1)^{-1}P_2$.
+Para calcularla necesitamos en primer lugar calcular la inversa de $P_1$, también usando Gauss-Jordan:
+
+$$ \left(\begin{array}{cccc|cccc}
+ 2 & 1 & 0 & 0  & 1 & 0 & 0 & 0\\
+ 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
+ 1 & 1 & 2 & 0  & 0 & 0 & 1 & 0\\ 
+ 2 & 2 & 2 & 1  & 0 & 0 & 0 & 1\\
+\end{array}\right)\sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 1 & 2 & 0  & 0 & 0 & 1 & 0\\ 
+ 2 & 1 & 0 & 0  & 1 & 0 & 0 & 0\\
+ 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
+ 2 & 2 & 2 & 1  & 0 & 0 & 0 & 1\\
+\end{array}\right),$$
+
+$$\left(\begin{array}{cccc|cccc}
+ \boxed{1} & 1 & 2 & 0  & 0 & 0 & 1 & 0\\ 
+ 2 & 1 & 0 & 0  & 1 & 0 & 0 & 0\\
+ 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
+ 2 & 2 & 2 & 1  & 0 & 0 & 0 & 1\\
+\end{array}\right)
+\sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 1 & 2 & 0  & 0 & 0 & 1 & 0\\ 
+ 0 & 2 & 2 & 0  & 1 & 0 & 1 & 0\\
+ 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
+ 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
+\end{array}\right),$$
+
+$$\left(\begin{array}{cccc|cccc}
+ \boxed{1} & 1 & 2 & 0  & 0 & 0 & 1 & 0\\ 
+ 0 & 2 & 2 & 0  & 1 & 0 & 1 & 0\\
+ 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
+ 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
+\end{array}\right)
+\sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 0 & 1 & 0  & 1 & 0 & 2 & 0\\ 
+ 0 & \boxed{1} & 1 & 0  & 2 & 0 & 2 & 0\\
+ 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
+ 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
+\end{array}\right),$$
+
+$$\left(\begin{array}{cccc|cccc}
+ \boxed{1} & 0 & 1 & 0  & 1 & 0 & 2 & 0\\ 
+ 0 & \boxed{1} & 1 & 0  & 2 & 0 & 2 & 0\\
+ 0 & 0 & 2 & 0  & 0 & 1 & 0 & 0\\ 
+ 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
+\end{array}\right)
+\sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 0 & 1 & 0  & 1 & 0 & 2 & 0\\ 
+ 0 & \boxed{1} & 1 & 0  & 2 & 0 & 2 & 0\\
+ 0 & 0 & \boxed{1} & 0  & 0 & 2 & 0 & 0\\ 
+ 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
+\end{array}\right),$$
+
+$$\left(\begin{array}{cccc|cccc}
+ \boxed{1} & 0 & 1 & 0  & 1 & 0 & 2 & 0\\ 
+ 0 & \boxed{1} & 1 & 0  & 2 & 0 & 2 & 0\\
+ 0 & 0 & \boxed{1} & 0  & 0 & 2 & 0 & 0\\ 
+ 0 & 0 & 1 & 1  & 0 & 0 & 1 & 1\\
+\end{array}\right)
+\sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 0 & 0 & 0  & 1 & 1 & 2 & 0\\ 
+ 0 & \boxed{1} & 0 & 0  & 2 & 1 & 2 & 0\\
+ 0 & 0 & \boxed{1} & 0  & 0 & 2 & 0 & 0\\ 
+ 0 & 0 & 0 & \boxed{1}  & 0 & 1 & 1 & 1\\
+\end{array}\right).$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(3),[[2,1,0,0],[0,0,2,0],[1,1,2,0],[2,2,2,1]]) #matriz de coeficientes
+I=matrix(GF(3),[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]) #matriz identidad
+AI=A.augment(I,subdivide=True) #matriz aumentada
+show(AI,"~",AI.rref())
+</script>
+</div> 
+
+Luego una posible $Q$ es
+$$Q=(P_1)^{-1}P_2=\left(\begin{array}{cccc}
+ 1 & 1 & 2 & 0\\ 
+2 & 1 & 2 & 0\\
+ 0 & 2 & 0 & 0\\ 
+ 0 & 1 & 1 & 1\\
+\end{array}\right) \left(\begin{array}{cccc}
+ 1 & 1 & 2 & 0  \\
+ 2 & 1 & 0 & 0  \\ 
+ 1 & 1 & 1 & 0 \\ 
+0 & 2 & 2 & 1 \\
+\end{array}\right)= \left(\begin{array}{cccc}
+ 2 & 1 & 1 & 0  \\
+ 0 & 2 & 0 & 0  \\ 
+ 1 & 2 & 0 & 0 \\ 
+0 & 1 & 0 & 1 \\
+\end{array}\right).$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(3),[[1,1,2,0],[2,1,2,0],[0,2,0,0],[0,1,1,1]]) #matriz de coeficientes
+B=matrix(GF(3),[[1,1,2,0],[2,1,0,0],[1,1,1,0],[0,2,2,1]])
+show(A,B,"=",A*B)
+</script>
+</div> 
 
 </ol>
 </details>
