@@ -511,7 +511,7 @@ Trabajaremos directamente con la matriz de coeficientes ampliada, buscando en ca
 
 <h3>En $\mathbb{Z}_7$:</h3>
 
-$$\left(\begin{array}{ccc|c}
+$$\begin{align*}\left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 1 & 2\\
 1 & 2 & 1 & 1\\
 0 & 1 & 0 &  3
@@ -526,14 +526,7 @@ f_3-f_1\rightarrow f_3 \end{array}}
 \boxed{1} & 0 & 1 & 3\\
 0 & \boxed{1} & 0 & 6\\
 0 & 0 & 0 &  4
-\end{array}\right),
-$$
-
-$$\left(\begin{array}{ccc|c}
-\boxed{1} & 0 & 1 & 3\\
-0 & \boxed{1} & 0 & 6\\
-0 & 0 & 0 &  4
-\end{array}\right)
+\end{array}\right)\\
 \sim_{2f_3\rightarrow f_3} 
 \left(\begin{array}{ccc|c}
 \boxed{1} & 0 & 1 & 3\\
@@ -546,6 +539,7 @@ f_2-6f_3\rightarrow f_2 \end{array}}
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
 \end{array}\right).
+\end{align*}
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -565,7 +559,7 @@ Como hay un pivote en la columna de términos independientes (es decir, aparece 
 
 <h3>En $\mathbb{Z}_5$:</h3>
 
-$$
+$$\begin{align*}
 \left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 1 & 2\\
 1 & 2 & 1 & 1\\
@@ -581,14 +575,7 @@ f_3-f_1\rightarrow f_3 \end{array}}
 \boxed{1} & 0 & 1 & 3\\
 0 & \boxed{1} & 0 & 4\\
 0 & 0 & 0 &  4
-\end{array}\right),
-$$
-
-$$\left(\begin{array}{ccc|c}
-\boxed{1} & 0 & 1 & 3\\
-0 & \boxed{1} & 0 & 4\\
-0 & 0 & 0 &  4
-\end{array}\right)
+\end{array}\right)\\
 \sim_{4f_3\rightarrow f_3} 
 \left(\begin{array}{ccc|c}
 \boxed{1} & 0 & 1 & 3\\
@@ -601,6 +588,7 @@ f_2-4f_3\rightarrow f_2 \end{array}}
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
 \end{array}\right).
+\end{align*}
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -618,7 +606,7 @@ Como hay un pivote en la columna de términos independientes (es decir, aparece 
 
 <h3>En $\mathbb{Z}_3$:</h3>
 
-$$
+$$\begin{align*}
 \left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 1 & 2\\
 1 & 2 & 1 & 1\\
@@ -634,14 +622,7 @@ f_3-f_1\rightarrow f_3 \end{array}}
 \boxed{1} & 0 & 1 & 3\\
 0 & \boxed{1} & 0 & 4\\
 0 & 0 & 0 &  4
-\end{array}\right),
-$$
-
-$$\left(\begin{array}{ccc|c}
-\boxed{1} & 0 & 1 & 3\\
-0 & \boxed{1} & 0 & 4\\
-0 & 0 & 0 &  4
-\end{array}\right)
+\end{array}\right)\\
 \sim_{4f_3\rightarrow f_3} 
 \left(\begin{array}{ccc|c}
 \boxed{1} & 0 & 1 & 3\\
@@ -654,6 +635,7 @@ f_2-4f_3\rightarrow f_2 \end{array}}
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
 \end{array}\right).
+\end{align*}
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -671,7 +653,7 @@ Como hay un pivote en la columna de términos independientes (es decir, aparece 
 
 <h3>En En $\mathbb{Q}$:</h3>
 
-$$
+$$\begin{align*}
 \left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 1 & 2\\
 1 & 2 & 1 & 1\\
@@ -687,26 +669,21 @@ f_3-f_1\rightarrow f_3 \end{array}}
 \boxed{1} & 0 & 1 & 3\\
 0 & \boxed{1} & 0 & -1\\
 0 & 0 & 0 &  4
-\end{array}\right),
-$$
-
-$$\left(\begin{array}{ccc|c}
-\boxed{1} & 0 & 1 & 3\\
-0 & \boxed{1} & 0 & -1\\
-0 & 0 & 0 &  4
-\end{array}\right)
+\end{array}\right)\\
 \sim_{\frac{1}{4}f_3\rightarrow f_3} 
 \left(\begin{array}{ccc|c}
 \boxed{1} & 0 & 1 & 3\\
 0 & \boxed{1} & 0 &  -1\\
 0 & 0 & 0 & 1\\
-\end{array}\right)\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
+\end{array}\right)
+\sim_{\tiny \begin{array}{l} f_1-3f_3\rightarrow f_1\\
 f_2+f_3\rightarrow f_2 \end{array}}
 \left(\begin{array}{ccc|c}
 \boxed{1} & 0 & 1 & 0\\
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
 \end{array}\right).
+\end{align*}
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -871,7 +848,7 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(5),[[1,1,1],[0,2,1],[0,4,1]]) #matriz de coeficientes
+A=matrix(GF(5),[[1,1,1],[0,2,1],[0,4,1]])
 I=matrix(GF(5),[[1,0,0],[0,1,0],[0,0,1]]) #matriz identidad
 AI=A.augment(I,subdivide=True) #matriz aumentada
 show(AI,"~",AI.rref())
@@ -996,7 +973,7 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-B=matrix(GF(3),[[1,1,0,1,2],[1,2,2,1,0],[1,0,1,2,0],[2,2,0,0,0]]) #matriz de coeficientes
+B=matrix(GF(3),[[1,1,0,1,2],[1,2,2,1,0],[1,0,1,2,0],[2,2,0,0,0]]) 
 I=matrix(GF(3),[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]) #matriz identidad
 BI=B.augment(I,subdivide=True) #matriz aumentada
 show(BI,"~",BI.rref())
@@ -1011,6 +988,106 @@ $$P_A A=P_B B.$$
 Como $P_B$ es regular, 
 $$(P_B)^{-1}P_A A=B.$$
 Luego una matriz que verifica la condición pedida sería el producto $(P_B)^{-1}P_A$.
+
+Para calcularla necesitamos en primer lugar calcular la inversa de $P_B$, también usando Gauss-Jordan:
+
+$$\begin{align*}
+(P_B \mid I) & = \left(\begin{array}{cccc|cccc}
+ 1 & 1 & 2 & 0  & 1 & 0 & 0 & 0\\
+ 2 & 1 & 0 & 0  & 0 & 1 & 0 & 0\\ 
+ 1 & 1 & 1 & 0  & 0 & 0 & 1 & 0\\ 
+ 0 & 2 & 2 & 1  & 0 & 0 & 0 & 1\\
+\end{array}\right)\sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 1 & 2 & 0  & 1 & 0 & 0 & 0\\ 
+ 2 & 1 & 0 & 0  & 0 & 1 & 0 & 0\\ 
+ 1 & 1 & 1 & 0  & 0 & 0 & 1 & 0\\ 
+ 0 & 2 & 2 & 1  & 0 & 0 & 0 & 1\\
+\end{array}\right) \\
+& \sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 1 & 2 & 0  & 1 & 0 & 0 & 0\\ 
+ 0 & 2 & 2 & 0  & 1 & 1 & 0 & 0\\
+ 0 & 0 & 2 & 0  & 2 & 0 & 1 & 0\\ 
+ 0 & 2 & 2 & 1  & 0 & 0 & 0 & 1\\
+\end{array}\right)\sim_f
+\left(\begin{array}{cccc|cccc}
+ \boxed{1} & 1 & 2 & 0  & 1 & 0 & 0 & 0\\ 
+ 0 & 2 & 2 & 0  & 1 & 1 & 0 & 0\\
+ 0 & 0 & 2 & 0  & 2 & 0 & 1 & 0\\ 
+ 0 & 2 & 2 & 1  & 0 & 0 & 0 & 1\\
+\end{array}\right) \\
+& \sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 1 & 2 & 0  & 1 & 0 & 0 & 0\\ 
+ 0 & \boxed{1} & 1 & 0  & 2 & 2 & 0 & 0\\
+ 0 & 0 & 2 & 0  & 2 & 0 & 1 & 0\\ 
+ 0 & 2 & 2 & 1  & 0 & 0 & 0 & 1\\
+\end{array}\right)
+\sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 1 & 2 & 0  & 1 & 0 & 0 & 0\\ 
+ 0 & \boxed{1} & 1 & 0  & 2 & 2 & 0 & 0\\
+ 0 & 0 & 2 & 0  & 2 & 0 & 1 & 0\\ 
+ 0 & 0 & 0 & 1  & 2 & 2 & 0 & 1\\
+\end{array}\right) \\
+& \sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 1 & 2 & 0  & 1 & 0 & 0 & 0\\ 
+ 0 & \boxed{1} & 1 & 0  & 2 & 2 & 0 & 0\\
+ 0 & 0 & \boxed{1} & 0  & 1 & 0 & 2 & 0\\ 
+ 0 & 0 & 0 & \boxed{1}  & 2 & 2 & 0 & 1\\
+\end{array}\right)
+\sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 1 & 0 & 0  & 2 & 0 & 2 & 0\\ 
+ 0 & \boxed{1} & 0 & 0  & 1 & 2 & 1 & 0\\
+ 0 & 0 & \boxed{1} & 0  & 1 & 0 & 2 & 0\\ 
+ 0 & 0 & 0 & \boxed{1}  & 2 & 2 & 0 & 1\\
+\end{array}\right) \\
+& \sim_f \left(\begin{array}{cccc|cccc}
+ \boxed{1} & 0 & 0 & 0  & 1 & 1 & 1 & 0\\ 
+ 0 & \boxed{1} & 0 & 0  & 1 & 2 & 1 & 0\\
+ 0 & 0 & \boxed{1} & 0  & 1 & 0 & 2 & 0\\ 
+ 0 & 0 & 0 & \boxed{1}  & 2 & 2 & 0 & 1\\
+\end{array}\right).
+\end{align*}$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(3),[[1,1,2,0],[2,1,0,0],[1,1,1,0],[0,2,2,1]]) #matriz de coeficientes
+I=matrix(GF(3),[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]) #matriz identidad
+AI=A.augment(I,subdivide=True) #matriz aumentada
+show(AI,"~",AI.rref())
+</script>
+</div> 
+
+Luego una posible $Q$ es
+$$Q=(P_B)^{-1}P_A=\left(\begin{array}{cccc}
+ 1 & 1 & 1 & 0\\ 
+ 1 & 2 & 1 & 0\\
+ 1 & 0 & 2 & 0\\ 
+ 2 & 2 & 0 & 1\\
+\end{array}\right) \left(\begin{array}{cccc}
+ 2 & 1 & 0 & 0  \\
+ 0 & 0 & 2 & 0  \\ 
+ 1 & 1 & 2 & 0 \\ 
+ 2 & 2 & 2 & 1 \\
+\end{array}\right)= \left(\begin{array}{cccc}
+ 0 & 2 & 1 & 0  \\
+ 0 & 2 & 0 & 0  \\ 
+ 1 & 0 & 1 & 0 \\ 
+ 0 & 1 & 0 & 1 \\
+\end{array}\right).$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(3),[[1,1,1,0],[1,2,1,0],[1,0,2,0],[2,2,0,1]]) 
+B=matrix(GF(3),[[2,1,0,0],[0,0,2,0],[1,1,2,0],[2,2,2,1]])
+show(A,B,"=",A*B)
+</script>
+</div> 
+
+
+
 </ol>
 </details>
 </article>
