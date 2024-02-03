@@ -989,7 +989,7 @@ Como $P_B$ es regular,
 $$(P_B)^{-1}P_A A=B.$$
 Luego una matriz que verifica la condición pedida sería el producto $(P_B)^{-1}P_A$.
 
-Para calcularla necesitamos en primer lugar calcular la inversa de $P_B$, también usando Gauss-Jordan:
+Para calcularla necesitamos en primer lugar calcular la inversa de $P_B$, también usando operaciones elementales por filas.
 
 $$\begin{align*}
 (P_B \mid I) & = \left(\begin{array}{cccc|cccc}
@@ -1051,15 +1051,15 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(3),[[1,1,2,0],[2,1,0,0],[1,1,1,0],[0,2,2,1]]) #matriz de coeficientes
+PB=matrix(GF(3),[[1,1,2,0],[2,1,0,0],[1,1,1,0],[0,2,2,1]]) 
 I=matrix(GF(3),[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]) #matriz identidad
-AI=A.augment(I,subdivide=True) #matriz aumentada
-show(AI,"~",AI.rref())
+PBI=PB.augment(I,subdivide=True) #matriz aumentada
+show(PBI,"~",PBI.rref())
 </script>
 </div> 
 
-Luego una posible $Q$ es
-$$Q=(P_B)^{-1}P_A=\left(\begin{array}{cccc}
+Luego una posible $P$ es
+$$P=(P_B)^{-1}P_A=\left(\begin{array}{cccc}
  1 & 1 & 1 & 0\\ 
  1 & 2 & 1 & 0\\
  1 & 0 & 2 & 0\\ 
@@ -1080,9 +1080,12 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 
 <div class="sage">
 <script type="text/x-sage">
-A=matrix(GF(3),[[1,1,1,0],[1,2,1,0],[1,0,2,0],[2,2,0,1]]) 
-B=matrix(GF(3),[[2,1,0,0],[0,0,2,0],[1,1,2,0],[2,2,2,1]])
-show(A,B,"=",A*B)
+PBI=matrix(GF(3),[[1,1,1,0],[1,2,1,0],[1,0,2,0],[2,2,0,1]]) 
+PA=matrix(GF(3),[[2,1,0,0],[0,0,2,0],[1,1,2,0],[2,2,2,1]])
+P=PBI*PA
+A=matrix(GF(3),[[1,1,0,2,1],[2,1,1,2,0],[0,2,1,0,2],[0,1,2,1,0]]) 
+B=matrix(GF(3),[[1,1,0,1,2],[1,2,2,1,0],[1,0,1,2,0],[2,2,0,0,0]]) 
+P*A==B
 </script>
 </div> 
 
