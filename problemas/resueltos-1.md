@@ -33,6 +33,15 @@ article:before {
   counter-increment: article;
   content: counter(article) ". ";
 }
+
+article {
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
 </style>
 
 # Matrices y sistemas de ecuaciones
