@@ -31,16 +31,17 @@ body {
 
 article:before {
   counter-increment: article;
-  content: counter(article) ". ";
+  content: "Ejercicio " counter(article) ". ";
+  font-weight: bold;
 }
 
 article {
   border-style: solid;
-  border-width: 1px;
-  border-color: gray;
+  border-width: 1px 1px 1px 5px;
+  border-color: gray gray gray gray;
   border-radius: 5px;
-  padding: 0.5em;
-  margin-bottom: 1em;
+  padding: 0.5em 0.5em 0em 0.5em;
+  margin-bottom: 0.5em;
 }
 </style>
 
@@ -660,7 +661,7 @@ show(Ab,"~",Ab.rref())
 
 Como hay un pivote en la columna de términos independientes (es decir, aparece la ecuación $0=1$), el sistema es incompatible.
 
-<h3>En En $\mathbb{Q}$:</h3>
+<h3>En $\mathbb{Q}$:</h3>
 
 $$\begin{align*}
 \left(\begin{array}{ccc|c}
