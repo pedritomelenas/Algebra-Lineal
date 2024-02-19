@@ -941,17 +941,6 @@ $$
 \end{array}\right)=(H_A|P_A).
 \end{align*}$$
 
-Comprobemos el resultado obtenido con <code>sage</code>.
-
-<div class="sage">
-<script type="text/x-sage">
-A=matrix(GF(3),[[1,1,0,2,1],[2,1,1,2,0],[0,2,1,0,2],[0,1,2,1,0]]) 
-I=matrix(GF(3),[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]) #matriz identidad
-AI=A.augment(I,subdivide=True) #matriz aumentada
-show(AI,"~",AI.rref())
-</script>
-</div> 
-
 $$
 \begin{align*}
 (B \mid I) & = \left(\begin{array}{ccccc|cccc}
@@ -978,17 +967,6 @@ $$
 \end{array}\right)=(H_B \mid P_B).
 \end{align*}
 $$
-
-Comprobemos el resultado obtenido con <code>sage</code>.
-
-<div class="sage">
-<script type="text/x-sage">
-B=matrix(GF(3),[[1,1,0,1,2],[1,2,2,1,0],[1,0,1,2,0],[2,2,0,0,0]]) 
-I=matrix(GF(3),[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]) #matriz identidad
-BI=B.augment(I,subdivide=True) #matriz aumentada
-show(BI,"~",BI.rref())
-</script>
-</div> 
 
 <li> Hemos comprobado que $H_A=H_B$ y por tanto $A\sim_f B$ y existe una matriz $P$ tal que $PA=B$.</li>
 <li> Para calcular $P$ podemos ayudarnos de las matrices de paso $P_A$ y $P_B$ calculadas:</li>
@@ -1099,8 +1077,225 @@ P*A==B
 </script>
 </div> 
 
-
-
 </ol>
 </details>
 </article>
+
+<article>
+Sea $$A=\left (\begin{array}{cccc} 2 & 1 & 3 & 0 \\ 1 & 2 & 1 & 1 \\ 3 & 4 & 2 & 1 \end{array}\right ) \in \mathcal{M}_{3\times 4}({\mathbb{Z}}_5)$$
+
+<ol type="a">
+  <li>Encuentra una matriz $B$ tal que $A\cdot B = Id$.</li>
+  <li>Encuentra todas las matrices $B$ que cumplan la propiedad anterior.</li>
+  <li>¿Existe una matriz $C$ tal que $C\cdot A = Id$?</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>$B$ tal que $A\cdot B = Id$.</li>
+
+¿Qué orden debe tener $B$?<br>
+
+Como la identidad es una matriz cuadrada, podemos calcular el orden de la matriz $B$ que nos piden:
+
+<table class="default">
+  <tr>
+    <td>$A$</td>
+    <td>$\cdot B$</td>
+    <td>$=I$</td>
+  </tr>
+  <tr>
+    <td>$3\times 4$</td>
+    <td>$4\times$ ?</td>
+    <td>$3\times 3$</td>
+  </tr>
+</table>
+Una idea posible<br>
+Si calculamos la forma de Hermite por columnas de $A$ y la matriz de paso, a la que llamaremos $Q$, entonces $A\cdot Q=H$. $H$ no es la matriz identidad, por supuesto, porque tiene orden $3\times 4$, pero puede parecerse bastante. Calculémosla:
+
+$$\left[ \begin{array}{c}
+A\\
+\hline
+I_4
+\end{array}\right]=\left (\begin{array}{cccc}
+2 & \boxed{1} & 3 & 0 \\ 1 & 2 & 1 & 1 \\ 3 & 4 & 2 & 1\\
+\hline
+1 & 0 & 0 &0\\
+0 & 1 & 0 &0\\
+0 & 0 & 1 &0\\
+0 & 0 & 0 &1\\
+ \end{array}\right)\sim_c 
+\left (\begin{array}{cccc}
+\boxed{1} & 0 & 0 & 0 \\ 2 & 2 & 1 & 0 \\ 
+4 & 0 & 1 & 0\\
+\hline
+0 & 1 & 0 &0\\
+1 & 3 & 0 & 2\\
+0 & 0 & 0 &1\\
+0 & 0 & 1 &0\\
+\end{array}\right) \sim_c 
+\left (\begin{array}{cccc}
+\boxed{1} & 0 & 0 & 0 \\ 
+2 & \boxed{1} & 1 & 0 \\ 
+4 & 0 & 1 & 0\\
+\hline
+0 & 3 & 0 &0\\
+1 & 4 & 0 & 2\\
+0 & 0 & 0 &1\\
+0 & 0 & 1 &0\\
+\end{array}\right) \sim_c
+$$ 
+
+$$
+\sim_c 
+\left (\begin{array}{cccc}
+\boxed{1} & 0 & 0 & 0 \\ 
+0 & \boxed{1} & 0 & 0 \\ 
+4 & 0 & \boxed{1} & 0\\
+\hline
+4 & 3 & 2 &0\\
+3 & 4 & 1 & 2\\
+0 & 0 & 0 &1\\
+0 & 0 & 1 &0\\
+\end{array}\right) \sim_c
+\left (\begin{array}{cccc}
+\boxed{1} & 0 & 0 & 0 \\ 
+0 & \boxed{1} & 0 & 0 \\ 
+0 & 0 & \boxed{1} & 0\\
+\hline
+1 & 3 & 2 &0\\
+4 & 4 & 1 & 2\\
+0 & 0 & 0 &1\\
+1 & 0 & 1 &0\\
+\end{array}\right)=\left[ \begin{array}{c}
+H\\
+\hline
+Q
+\end{array}\right].
+$$ 
+
+Así que 
+$$\left(\begin{array}{cccc}
+2 & 1 & 3 & 0 \\ 1 & 2 & 1 & 1 \\ 3 & 4 & 2 & 1\\
+\end{array}\right)
+\left (\begin{array}{ccc|c}
+1 & 3 & 2 &0\\
+4 & 4 & 1 & 2\\
+0 & 0 & 0 &1\\
+1 & 0 & 1 &0\\
+\end{array}\right)=\left (\begin{array}{ccc|c}
+\boxed{1} & 0 & 0 & 0 \\ 
+0 & \boxed{1} & 0 & 0 \\ 
+0 & 0 & \boxed{1} & 0\\
+\end{array}\right) 
+$$
+
+Una solución:<br>
+
+Observando el producto anterior nos damos cuenta de que si tomamos solo las 3 primeras columnas de $Q$ tenemos una matriz que verifica la condición.
+Así que una posible matriz $B$ es 
+$$
+B=\left (\begin{array}{ccc}
+1 & 3 & 2 \\
+4 & 4 & 1 \\
+0 & 0 & 0 \\
+1 & 0 & 1 \\
+\end{array}\right).$$
+
+<li>Todas las matrices $B$ que cumplen la propiedad anterior.</li>
+En realidad el planteamiento es sencillo, sería resolver:
+$$\left(\begin{array}{cccc}
+2 & 1 & 3 & 0 \\ 1 & 2 & 1 & 1 \\ 3 & 4 & 2 & 1\\
+\end{array}\right)
+\left (\begin{array}{ccc}
+x_1 & y_1 & z_1 \\
+x_2 & y_2 & z_2\\
+x_3 & y_3 & z_3\\
+x_4 & y_4 & z_4\\
+\end{array}\right)=\left (\begin{array}{ccc}
+1 & 0 & 0 \\ 
+0 & 1 & 0  \\ 
+0 & 0 & 1 \\
+\end{array}\right) 
+$$
+que puede parecer complicado, son $12$ incógnitas, pero realmente no se mezclan (por eso las  he designado con letras distintas).
+El primer sistema será el que corresponde a las $x$'s:
+$$\left(\begin{array}{cccc}
+2 & 1 & 3 & 0 \\ 1 & 2 & 1 & 1 \\ 3 & 4 & 2 & 1\\
+\end{array}\right)
+\left (\begin{array}{c}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4\\
+\end{array}\right)=\left (\begin{array}{c}
+1 \\ 
+0   \\ 
+0  \\
+\end{array}\right) 
+$$
+con matriz ampliada
+$$\left(\begin{array}{cccc|c}
+2 & 1 & 3 & 0 & 1\\ 1 & 2 & 1 & 1 & 0 \\ 3 & 4 & 2 & 1 & 0\\
+\end{array}\right)$$
+y las correspondientes a los sistemas para las $y$'s y las $z$'s:
+ $$\left(\begin{array}{cccc|c}
+2 & 1 & 3 & 0 & 0\\ 1 & 2 & 1 & 1 & 1 \\ 3 & 4 & 2 & 1 & 0\\
+\end{array}\right) \hspace{1cm} \left(\begin{array}{cccc|c}
+2 & 1 & 3 & 0 & 0\\ 1 & 2 & 1 & 1 & 0 \\ 3 & 4 & 2 & 1 & 1\\
+\end{array}\right)$$
+Como se resuelven haciendo o.e. por filas sobre la matriz de coeficientes, los tres pueden resolverse simultáneamente utilizando la matriz:
+$$\left(\begin{array}{cccc|ccc}
+2 & 1 & 3 & 0 & 1 & 0 & 0\\ 1 & 2 & 1 & 1 & 0 & 1 & 0 \\ 3 & 4 & 2 & 1 & 0 & 0 & 1\\
+\end{array}\right)$$
+que incluye las tres columnas de términos independientes.
+Utilizamos el método de Gauss-Jordan:
+$$\left(\begin{array}{cccc|ccc}
+2 & 1 & 3 & 0 & 1 & 0 & 0\\ \boxed{1} & 2 & 1 & 1 & 0 & 1 & 0 \\ 3 & 4 & 2 & 1 & 0 & 0 & 1\\
+\end{array}\right)\sim_f 
+\left(\begin{array}{cccc|ccc}
+\boxed{1} & 2 & 1 & 1 & 0 & 1 & 0 \\ 
+0 & 2 & 1 & 3 & 1 & 3 & 0\\ 
+0 & 0 & 0 & 1 & 1 & 0 & 1\\
+\end{array}\right)\sim_f
+$$
+$$
+\sim_f 
+\left(\begin{array}{cccc|ccc}
+\boxed{1} & 2 & 1 & 1 & 0 & 1 & 0 \\ 
+0 & \boxed{1} & 3 & 4 & 3 & 4 & 0\\ 
+0 & 0 & 0 & 1 & 1 & 0 & 1\\
+\end{array}\right)\sim_f
+\left(\begin{array}{cccc|ccc}
+\boxed{1} & 0 & 0 & 3 & 4 & 3 & 0 \\ 
+0 & \boxed{1} & 3 & 4 & 3 & 4 & 0\\ 
+0 & 0 & 0 & \boxed{1} & 1 & 0 & 1\\
+\end{array}\right)\sim_f
+$$
+$$
+\sim_f
+\left(\begin{array}{cccc|ccc}
+\boxed{1} & 0 & 0 & 0 & 1 & 3 & 2 \\ 
+0 & \boxed{1} & 3 & 0 & 4 & 4 & 1\\ 
+0 & 0 & 0 & \boxed{1} & 1 & 0 & 1\\
+\end{array}\right)
+$$
+Eligiendo en cada caso la columna de términos independientes que corresponde tendremos la solución de los tres sistemas.
+Por tanto la solución de cada uno de los sistemas es
+$$
+\begin{array}{|l|l|l}
+x_1=1 & y_1= 3 & z_1=2\\ 
+x_2=4+2\lambda_1 & y_2=4+2\lambda_2 & z_2=1+2\lambda_3\\
+x_3=\lambda_1 & y_3=\lambda_2 &z_3=\lambda_3\\
+x_4=1 & y_4=0 & z_4=1\\
+\end{array} \hspace{.5cm} \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5$$
+
+Es decir, todas las matrices son de la forma:
+$$\left(\begin{array}{ccc}
+1 &  3 & 2\\ 
+4+2\lambda_1 & 4+2\lambda_2 & 1+2\lambda_3\\
+\lambda_1 & \lambda_2 &\lambda_3\\
+1 & 0 & 1\\
+\end{array}\right)\hspace{.5cm} \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5$$
