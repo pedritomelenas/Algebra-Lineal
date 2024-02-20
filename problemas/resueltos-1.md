@@ -1189,7 +1189,7 @@ $$\left(\begin{array}{cccc}
 \boxed{1} & 0 & 0 & 0 \\ 
 0 & \boxed{1} & 0 & 0 \\ 
 0 & 0 & \boxed{1} & 0\\
-\end{array}\right) 
+\end{array}\right). 
 $$
 
 Una solución:<br>
@@ -1250,24 +1250,31 @@ x_4\\
 0  \\
 \end{array}\right) 
 $$
+
 con matriz ampliada
+
 $$\left(\begin{array}{cccc|c}
 2 & 1 & 3 & 0 & 1\\ 1 & 2 & 1 & 1 & 0 \\ 3 & 4 & 2 & 1 & 0\\
 \end{array}\right)$$
+
 y las correspondientes a los sistemas para las $y$'s y las $z$'s:
- $$\left(\begin{array}{cccc|c}
+
+$$\left(\begin{array}{cccc|c}
 2 & 1 & 3 & 0 & 0\\ 1 & 2 & 1 & 1 & 1 \\ 3 & 4 & 2 & 1 & 0\\
 \end{array}\right) \hspace{1cm} \left(\begin{array}{cccc|c}
 2 & 1 & 3 & 0 & 0\\ 1 & 2 & 1 & 1 & 0 \\ 3 & 4 & 2 & 1 & 1\\
-\end{array}\right)$$
+\end{array}\right).$$
 
 Como se resuelven haciendo o.e. por filas sobre la matriz de coeficientes, los tres pueden resolverse simultáneamente utilizando la matriz:
 
 $$\left(\begin{array}{cccc|ccc}
 2 & 1 & 3 & 0 & 1 & 0 & 0\\ 1 & 2 & 1 & 1 & 0 & 1 & 0 \\ 3 & 4 & 2 & 1 & 0 & 0 & 1\\
 \end{array}\right)$$
+
 que incluye las tres columnas de términos independientes.
+
 Utilizamos el método de Gauss-Jordan:
+
 $$\left(\begin{array}{cccc|ccc}
 2 & 1 & 3 & 0 & 1 & 0 & 0\\ \boxed{1} & 2 & 1 & 1 & 0 & 1 & 0 \\ 3 & 4 & 2 & 1 & 0 & 0 & 1\\
 \end{array}\right)\sim_f 
@@ -1298,7 +1305,7 @@ $$
 \boxed{1} & 0 & 0 & 0 & 1 & 3 & 2 \\ 
 0 & \boxed{1} & 3 & 0 & 4 & 4 & 1\\ 
 0 & 0 & 0 & \boxed{1} & 1 & 0 & 1\\
-\end{array}\right)
+\end{array}\right).
 $$
 
 Eligiendo en cada caso la columna de términos independientes que corresponde tendremos la solución de los tres sistemas.
@@ -1310,7 +1317,7 @@ x_1=1 & y_1= 3 & z_1=2\\
 x_2=4+2\lambda_1 & y_2=4+2\lambda_2 & z_2=1+2\lambda_3\\
 x_3=\lambda_1 & y_3=\lambda_2 &z_3=\lambda_3\\
 x_4=1 & y_4=0 & z_4=1\\
-\end{array} \hspace{.5cm} \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5$$
+\end{array} \hspace{.5cm} \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5.$$
 
 Es decir, todas las matrices son de la forma:
 
@@ -1319,7 +1326,7 @@ $$\left(\begin{array}{ccc}
 4+2\lambda_1 & 4+2\lambda_2 & 1+2\lambda_3\\
 \lambda_1 & \lambda_2 &\lambda_3\\
 1 & 0 & 1\\
-\end{array}\right)\hspace{.5cm} \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5$$
+\end{array}\right)\hspace{.5cm} \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5.$$
 </ol>
 
 </details>
@@ -1327,7 +1334,7 @@ $$\left(\begin{array}{ccc}
 
 <article>
 Dado el sistema de ecuaciones con coeficientes en $\mathbb{Q}$
-$$\left\{\begin{aligned} x - ay + (a+1)z & = 4 \\ ax + 2y + z & = -1 \end{aligned}\right.$$
+$$\left\{\begin{aligned} x - ay + (a+1)z & = 4, \\ ax + 2y + z & = -1. \end{aligned}\right.$$
 Discútelo según los valores del parámetro $a$, y resuélvelo para $a=-1$.
 
 <details>
@@ -1340,7 +1347,7 @@ En primer lugar escribimos la matriz ampliada del sistema
 $$(A|b)=\left( \begin{array}{rcc|r}
 1 & -a & a+1 & 4\\
 a & 2 & 1 & -1
-\end{array}\right)$$
+\end{array}\right).$$
 
 Puesto que el orden de matriz de coeficientes es $2\times3$ y el de la ampliada $2\times4$, en el caso de que $rg(A)=2$, entonces $rg(A|b)=2$ (puesto que no puede haber más de dos pivotes, uno por fila) y usando TRF el sistema será C.I.. 
 Puesto que el rango no cambia si realizamos cualquier o.e. por columnas, para calcular $rg(A)$ realizamos algunas, por ejemplo:
@@ -1353,7 +1360,7 @@ a & 2 & 3
 \end{array}\right) \sim_c \left( \begin{array}{rcc}
 1 & -a & 0 \\
 a & 2 & 3-a 
-\end{array}\right) }$$ 
+\end{array}\right) }.$$ 
 Para el rango de esta matriz es muy fácil utilizar el cálculo de determinantes:
 Si
 $\begin{vmatrix}
@@ -1372,13 +1379,14 @@ $$(A|b)=\left( \begin{array}{rrr|r}
 \end{array}\right)\sim_f  \left( \begin{array}{rrr|r}
 \boxed{1} & 0 & 1 & 5/11\\
 0 & 1 & -1 & -13/11
-\end{array}\right)$$
+\end{array}\right).$$
+
 O bien, podemos volver a aplicar el TRF, en este caso observamos que tomando las dos primeras columnas de $A$ se tiene
+
 $\begin{vmatrix}
 1 & 3 \\
 -3 & 2
-\end{vmatrix}=2+9=11$ luego $rg(A)=2$ y el mismo razonamiento nos lleva a que también en este caso es C.I..<br>
-
+\end{vmatrix}=2+9=11$ luego $rg(A)=2$ y el mismo razonamiento nos lleva a que también en este caso es C.I.. <br>
 
 Solución: siempre es C.I. dependiendo de un parámetro.<br>
 
@@ -1395,7 +1403,7 @@ $$(A|b)=\left( \begin{array}{rrr|r}
 \end{array}\right)\sim_f \left( \begin{array}{rrr|r}
 \boxed{1} & 0 & -1/3 & 3\\
 0 & \boxed{1} & 1/3 & 1
-\end{array}\right)
+\end{array}\right).
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -1414,7 +1422,7 @@ show(Ab,"~",Ab.rref())
 
 <article>
 Calcula el rango de la siguiente matriz, con coeficientes en $\mathbb{Z}_3$, según los valores de los parámetros $a$ y $b$.
-$$\begin{pmatrix} 1 & a & 0 & 1 \\ 2 & 1 & 1 & b \\ 0 & a & b & a+b \end{pmatrix}$$.
+$$\begin{pmatrix} 1 & a & 0 & 1 \\ 2 & 1 & 1 & b \\ 0 & a & b & a+b \end{pmatrix}$$
 
 <details>
 <summary>Solución</summary>
@@ -1428,13 +1436,13 @@ $$
 \end{vmatrix}=_{
 (C_2-aC_1 \rightarrow C_2)}= \begin{vmatrix}
 1 & 0 & 0  \\ 2 & 1-2a & 1  \\ 0 & a & b 
-\end{vmatrix}=(1-2a)b-a=(1+a)b+2a=2a+b+ab
+\end{vmatrix}=(1-2a)b-a=(1+a)b+2a=2a+b+ab.
 $$
 ¿Es fácil decidir cuándo es $0$ y cuándo no?
- $\mathbb{Z}_3$ tiene una ventaja, $a$ y $b$ pueden tomar solo 3 valores posibles.
+$\mathbb{Z}_3$ tiene una ventaja, $a$ y $b$ pueden tomar solo 3 valores posibles.
 
 Podemos examinar todos los casos en una tabla de doble entrada, donde en cada casillero escribiremos el valor del determinante:
- $$det(A)=b(1-2a)-a=2a+b+ab$$
+$$det(A)=b(1-2a)-a=2a+b+ab$$
 con el paso previo:<br>
 
 $a=0, det(A)= b$<br>
@@ -1495,7 +1503,7 @@ que también tiene rango 2 ¿porqué? Recordemos que estamos en $\mathbb{Z}_3$.
 <article>
 <ol type="a">
 <li>Calcula el determinante de la matriz con coeficientes en $\mathbb{Q}$:</li>
-$$A=\left( \begin{array}{cccc} 3-\lambda & 1 & 1 & 0\\ 5 &-\lambda & 0 & 0\\ 0 & -\lambda & -\lambda & 1\\ 0 & -1 & -1 & 2-\lambda \end{array}\right)$$
+$$A=\left( \begin{array}{cccc} 3-\lambda & 1 & 1 & 0\\ 5 &-\lambda & 0 & 0\\ 0 & -\lambda & -\lambda & 1\\ 0 & -1 & -1 & 2-\lambda \end{array}\right).$$
 <li>Calcula el rango de la matriz $A$ según los valores de $\lambda$ considerando sus coeficientes en $\mathbb{Z}_3$.</li>
 <li>Discute el sistema de ecuaciones con matriz ampliada $A$ considerando sus coeficientes en $\mathbb{Q}$.</li>
 </ol>
@@ -1504,7 +1512,7 @@ $$A=\left( \begin{array}{cccc} 3-\lambda & 1 & 1 & 0\\ 5 &-\lambda & 0 & 0\\ 0 &
 <summary>Solución</summary>
 
 <ol type="a">
-<li>Determinante</li>
+<li>Determinante.</li>
 Para calcular el determinante más fácilmente realizamos una operación elemental de tipo 3: a la segunda columna le restamos la tercera
 
 $$|A|=\left| \begin{array}{cccc}
@@ -1527,7 +1535,7 @@ donde hemos desarrollado por la segunda columna, y desarrollando ahora por la pr
 $$|A|=(-\lambda)(3-\lambda)[(-\lambda)(2-\lambda)+1]=(-\lambda)(3-\lambda)(\lambda -1)^2$$ 
 y este resultado es válido en cualquier cuerpo.
 
-<li>Rango</li>
+<li>Rango.</li>
 Puesto que el cálculo del determinante es válido en $\mathbb{Z}_3$, cuando $\lambda=2$ la matriz tiene rango 4 (observamos que $2$ no es raíz del polinomio que tenemos descompuesto en factores lineales, y por tanto el determinante es distinto de $0$); en cambio, para los casos $\lambda=0,1$ (que son raíces del polinomio obtenido) es menor o igual que 3. Para estos casos calculamos el rango mediante operaciones elementales:<br>
 
 $\boxed{\lambda=0}$<br>
@@ -1562,7 +1570,7 @@ $$A=\left( \begin{array}{cccc}
 \end{array}\right)$$
 que tiene rango 3.<br>
 
-<li>Sistema de ecuaciones</li>
+<li>Sistema de ecuaciones.</li>
 
 Como la matriz ampliada tiene rango 4 para $\lambda\not = 0,1,3$, y la de coeficientes solo tiene tres columnas y por tanto el rango máximo es 3, en estos casos el sistema es incompatible. Nos queda estudiar los casos particulares $\lambda=0,1,3$:<br>
 
@@ -1572,8 +1580,10 @@ $$\left( \begin{array}{ccc|c}
 5 & 0 & 0 & 0\\
 0 & 0 & 0 & 1\\
 0 & -1 & -1 & 2 
-\end{array}\right)$$
+\end{array}\right).$$
+
 Como aparece la ecuación $0=1$ entonces también es incompatible.<br>
+
 $\boxed{\lambda=1}$
 $$\left( \begin{array}{ccc|c}
 2 & 1 & 1 & 0\\
@@ -1586,7 +1596,9 @@ $$\left( \begin{array}{ccc|c}
 0 & -1 & -1 & 1\\
 0 & 0 & 0 & 0 
 \end{array}\right)$$
+
 en este caso la matriz de coeficientes tiene rango 3, y por tanto el sistema es compatible determinado.<br>
+
 $\boxed{\lambda=3}$
 $$\left( \begin{array}{ccc|c}
 0 & 1 & 1 & 0\\
@@ -1599,4 +1611,97 @@ $$\left( \begin{array}{ccc|c}
 0 & -3 & -3 & 1\\
 0 & 0 & 0 & -1 
 \end{array}\right)$$
+
 y de nuevo aparece la ecuación $0=1$ con lo que en este caso es incompatible.
+</ol>
+
+</details>
+</article>
+
+<article>
+<ol type="a">
+<li>Calcula el determinante de la matriz $A\in \mathcal{M}_4(\mathbb{R})$:
+$$A=\left(\begin{array}{rccc} 1 & 1 & 1 & 0\\ a & a-1 & a & 1\\ 1 & 1 & 1 & a-1\\ 1 & a & 0 & 0  \end{array}\right).$$</li>
+<li>Calcula el rango de $A$ según los valores de $a$.</li>
+<li>Calcula la forma de Hermite por filas $A$ según los valores de $a$.</li>
+<li>Discute el sistema de ecuaciones.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+
+<li>Determinante</li>
+$$|A|=\left|\begin{array}{rccc}
+1 & 1 & 1 & 0\\
+a & a-1 & a & 1\\
+1 & 1 & 1 & a-1\\
+1 & a & 0 & 0 
+\end{array}\right|= \left|\begin{array}{rccc}
+0 & 0 & 1 & 0\\
+0 & -1 & a & 1\\
+0 & 0 & 1 & a-1\\
+1 & a & 0 & 0 
+\end{array}\right|
+$$
+donde a la primera y a la segunda columnas le hemos restado la tercera. Ahora, desarrollando el determinante por la primera columna (y el de orden 3 que aparece de nuevo por su primera columna):
+$$
+|A|= (-1) \left|\begin{array}{ccc}
+0 & 1 & 0\\
+-1 & a & 1\\
+0 & 1 & a-1\\
+\end{array}\right|= (-1)^3 \left|\begin{array}{cc}
+1 & 0\\
+1 & a-1\\
+\end{array}\right|=1-a.
+$$
+
+<li>Rango.</li>
+Como $|A|=a-1$, si $a\not = 1$ el rango de $A$ es 4. Solo queda calcular el rango si $a=1$. Como después se pide calcular la forma de Hermite por filas, lo realizamos ahora:
+
+$$A=\left(\begin{array}{rccc}
+1 & 1 & 1 & 0\\
+1 & 0 & 1 & 1\\
+1 & 1 & 1 & 0\\
+\mathbf{1} & 1 & 0 & 0 
+\end{array}\right)\sim_f \left(\begin{array}{rccc}
+0 & 0 & 1 & 0\\
+0 & -1 & 1 & 1\\
+0 & 0 & 1 & 0\\
+\mathbf{1} & 1 & 0 & 0 
+\end{array}\right)\sim_f \left(\begin{array}{rccc}
+\mathbf{1} & 1 & 0 & 0 \\
+0 & 0 & \mathbf{1} & 0\\
+0 & -1 & 1 & 1\\
+0 & 0 & 1 & 0\\
+\end{array}\right)\sim_f
+$$
+
+$$\sim_f  \left(\begin{array}{rccc}
+\mathbf{1} & 1 & 0 & 0 \\
+0 & 0 & \mathbf{1} & 0\\
+0 & -1 & 0 & 1\\
+0 & 0 & 0 & 0\\
+\end{array}\right)\sim_f \left(\begin{array}{rccc}
+\mathbf{1} & 0 & 0 & 1 \\
+0 & \mathbf{1} & 0 & -1\\
+0 & 0 & \mathbf{1} & 0\\
+0 & 0 & 0 & 0\\
+\end{array}\right).$$
+Así, si $a=1$ el rango es $3$.
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ,[[1,1,1,0],[1,0,1,1],[1,1,1,0],[1,1,0,0]]) #matriz de coeficientes
+show(A,"~",A.rref())
+</script>
+</div>  
+
+<li>Forma de Hermite por filas.</li>
+Cuando $a\not = 1$ como el rango es $4$, la forma de Hermite por filas es $I_4$, para $a=1$ es la calculada en el apartado anterior.
+
+<li>Discusión del sistema.</li>
+Como la matriz ampliada del sistema es $A$, entonces cuando $a\not = 1$ la matriz ampliada tiene rango 4 mientras que la de coeficientes como máximo podría tener rango 3, así que el sistema es incompatible; en el caso $a=1$, usando la forma de Hermite por filas de $A$ que hemos calculado observamos que el sistema es compatible determinado.
