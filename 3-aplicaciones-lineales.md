@@ -145,7 +145,7 @@ x+z
 $$
 
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/4-1.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/4-1.html) 
 
 Sea $f:V_1\to V_2$ una aplicación lineal, y sea $A=\mathcal{M}(f;B_1,B_2)$ con $B_1$ una base de $V_1$ y $B_2$ una base del espacio vectorial $V_2$. Si $\bar{B}_1$ y $\bar{B}_2$ son bases de $V_1$ y $V_2$, respectivamente, podemos calcular $\mathcal{M}(f;\bar{B}_1,\bar{B}_2)$ usando la deficinión de matriz asociada a una aplicación lineal, esto es determinando las coordenadas de las imágenes por $f$ de los vectores de $\bar{B}_1$ respecto de $\bar{B}_2$, o bien podemos multiplicar apropiadamente $A$ con las matrices de cambio de base de $\bar{B}_1$ a $B_1$ y de $B_2$ a $\bar{B}_2$. Sea $A_1$ (respectivamente $A_2$) la matriz de cambio de base de $\bar{B}_1$ a $B_1$ (respectivamente de $\bar{B}_2$ a $B_2$). Nótese que
 
@@ -212,7 +212,7 @@ show(matrix([[1,1],[1,-1]])^(-1)*matrix([[1,1,0],[1,0,1]])\
 </div>  
 
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/4-3.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/4-3.html) 
 
 ## Núcleo e imagen de una aplicación lineal
 
@@ -305,7 +305,7 @@ La imagen de $f$ está generada por la imagen de los vectores de uns sistema de 
 Nótese que $3=\dim(\mathbb{R}^3)=\dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f))=1+2$.
 
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/4-2.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/4-2.html) 
 
 ## Espacio vectorial cociente
 
@@ -406,7 +406,7 @@ La multiplicidad geométrica de un valor propio es menor o igual que su multipli
 
 La matriz $A\in \mathcal{M}_n(K)$ es diagonalizable si, y sólo si, la suma de las multiplicidades algebraicas de los valores propios de $A$ es $n$ y además para todo valor propio las multiplicidades algebraica y geométrica coinciden.
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/5-1.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/5-1.html) 
 
 ### Método para diagonalizar una matriz
 
@@ -420,7 +420,7 @@ Sea $A\in \mathcal{M}_n(K)$.
 
 4. Llegado este paso, la matriz $A$ es diagonalizable y $D$ es la matriz que tiene en la diagonal $m_1$ entradas $\lambda_1$, $m_2$ entradas $\lambda_2$, y así hasta $m_k$ entradas $\lambda_k$. La  matriz de paso $P$ se construye colocando en las primeras $m_1$    columnas una base de $V(\lambda_1)$, a continuación en las siguientes $m_2$ columnas una base de $V(\lambda_2)$, y así hasta que colocamos en las últimas $m_k$ columnas una base de $V(\lambda_k)$.
 
-### $\to$ [Ejemplo Merino-Santos 1](https://www.ugr.es/~lmerino/5-2.html) y [2](https://www.ugr.es/~lmerino/5-3.html)
+###### $\to$ [Ejemplo Merino-Santos 1](https://www.ugr.es/~lmerino/5-2.html) y [2](https://www.ugr.es/~lmerino/5-3.html) 
 
 ### Ejemplo no diagonalizable (Forma de Jordan)
 
