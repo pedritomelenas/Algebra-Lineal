@@ -1471,9 +1471,9 @@ que también tiene rango 2 (recordemos que estamos en $\mathbb{Z}_3$).
 </article>
 
 <article>
+Sea $$A=\left( \begin{array}{cccc} 3-\lambda & 1 & 1 & 0\\ 5 &-\lambda & 0 & 0\\ 0 & -\lambda & -\lambda & 1\\ 0 & -1 & -1 & 2-\lambda \end{array}\right).$$
 <ol type="a">
-<li>Calcula el determinante de la matriz con coeficientes en $\mathbb{Q}$:</li>
-$$A=\left( \begin{array}{cccc} 3-\lambda & 1 & 1 & 0\\ 5 &-\lambda & 0 & 0\\ 0 & -\lambda & -\lambda & 1\\ 0 & -1 & -1 & 2-\lambda \end{array}\right).$$
+<li>Calcula el determinante de la matriz $A$ considerando sus coeficientes en $\mathbb{Q}$.</li>
 <li>Calcula el rango de la matriz $A$ según los valores de $\lambda$ considerando sus coeficientes en $\mathbb{Z}_3$.</li>
 <li>Discute el sistema de ecuaciones con matriz ampliada $A$ considerando sus coeficientes en $\mathbb{Q}$.</li>
 </ol>
@@ -1483,7 +1483,7 @@ $$A=\left( \begin{array}{cccc} 3-\lambda & 1 & 1 & 0\\ 5 &-\lambda & 0 & 0\\ 0 &
 
 <ol type="a">
 <li>Determinante.</li>
-Para calcular el determinante más fácilmente realizamos una operación elemental de tipo 3: a la segunda columna le restamos la tercera
+Para calcular el determinante más fácilmente, a la segunda columna le restamos la tercera, luego desarrollamos por la segunda columna:
 
 $$|A|=\left| \begin{array}{cccc}
 3-\lambda & 1 & 1 & 0\\
@@ -1501,14 +1501,14 @@ $$|A|=\left| \begin{array}{cccc}
 0 &  -1 & 2-\lambda 
 \end{array}\right|$$
 
-donde hemos desarrollado por la segunda columna, y desarrollando ahora por la primera columna
+Desarrollando ahora por la primera columna
 $$|A|=(-\lambda)(3-\lambda)[(-\lambda)(2-\lambda)+1]=(-\lambda)(3-\lambda)(\lambda -1)^2$$ 
 y este resultado es válido en cualquier cuerpo.
 
 <li>Rango.</li>
-Puesto que el cálculo del determinante es válido en $\mathbb{Z}_3$, cuando $\lambda=2$ la matriz tiene rango 4 (observamos que $2$ no es raíz del polinomio que tenemos descompuesto en factores lineales, y por tanto el determinante es distinto de $0$); en cambio, para los casos $\lambda=0,1$ (que son raíces del polinomio obtenido) es menor o igual que 3. Para estos casos calculamos el rango mediante operaciones elementales:<br>
+Puesto que el cálculo del determinante es válido en $\mathbb{Z}_3$, cuando $\lambda=2$ la matriz tiene rango 4 (observamos que $2$ no es raíz del polinomio que tenemos descompuesto en factores lineales, y por tanto el determinante es distinto de $0$); en cambio, para los casos $\lambda\in \{0,1\}$ (que son raíces del polinomio obtenido) es menor o igual que 3. Para estos casos calculamos el rango mediante operaciones elementales.<br>
 
-$\boxed{\lambda=0}$<br>
+Para $\lambda=0$:<br>
 $$A=\left( \begin{array}{cccc}
 0 & 1 & 1 & 0\\
 2 &0 & 0 & 0\\
@@ -1526,7 +1526,7 @@ $$A=\left( \begin{array}{cccc}
 0 & 0 & 0 & 0 
 \end{array}\right)$$ luego el rango es 3. <br>
 
-$\boxed{\lambda=1}$<br>
+Para $\lambda=1$:<br>
 $$A=\left( \begin{array}{cccc}
 2 & 1 & 1 & 0\\
 2 &2 & 0 & 0\\
@@ -1542,9 +1542,9 @@ que tiene rango 3.<br>
 
 <li>Sistema de ecuaciones.</li>
 
-Como la matriz ampliada tiene rango 4 para $\lambda\not = 0,1,3$, y la de coeficientes solo tiene tres columnas y por tanto el rango máximo es 3, en estos casos el sistema es incompatible. Nos queda estudiar los casos particulares $\lambda=0,1,3$:<br>
+Como la matriz ampliada tiene rango 4 para $\lambda\not\in \{0,1,3\}$, y la de coeficientes solo tiene tres columnas y por tanto el rango máximo es 3, en estos casos el sistema es incompatible. Nos queda estudiar los casos particulares $\lambda\in\{0,1,3\}$:<br>
 
-$\boxed{\lambda=0}$
+Para $\lambda=0$:
 $$\left( \begin{array}{ccc|c}
 3 & 1 & 1 & 0\\
 5 & 0 & 0 & 0\\
@@ -1554,7 +1554,7 @@ $$\left( \begin{array}{ccc|c}
 
 Como aparece la ecuación $0=1$ entonces también es incompatible.<br>
 
-$\boxed{\lambda=1}$
+Para $\lambda=1$:
 $$\left( \begin{array}{ccc|c}
 2 & 1 & 1 & 0\\
 5 & -1 & 0 & 0\\
@@ -1569,7 +1569,7 @@ $$\left( \begin{array}{ccc|c}
 
 en este caso la matriz de coeficientes tiene rango 3, y por tanto el sistema es compatible determinado.<br>
 
-$\boxed{\lambda=3}$
+Para $\lambda=3$:
 $$\left( \begin{array}{ccc|c}
 0 & 1 & 1 & 0\\
 5 & -3 & 0 & 0\\
@@ -1589,9 +1589,10 @@ y de nuevo aparece la ecuación $0=1$ con lo que en este caso es incompatible.
 </article>
 
 <article>
+Sea 
+$$A=\left(\begin{array}{rccc} 1 & 1 & 1 & 0\\ a & a-1 & a & 1\\ 1 & 1 & 1 & a-1\\ 1 & a & 0 & 0  \end{array}\right)\in \mathcal{M}_4(\mathbb{R}).$$
 <ol type="a">
-<li>Calcula el determinante de la matriz $A\in \mathcal{M}_4(\mathbb{R})$:
-$$A=\left(\begin{array}{rccc} 1 & 1 & 1 & 0\\ a & a-1 & a & 1\\ 1 & 1 & 1 & a-1\\ 1 & a & 0 & 0  \end{array}\right).$$</li>
+<li>Calcula el determinante de la matriz $A$.</li>
 <li>Calcula el rango de $A$ según los valores de $a$.</li>
 <li>Calcula la forma de Hermite por filas $A$ según los valores de $a$.</li>
 <li>Discute el sistema de ecuaciones.</li>
@@ -1602,7 +1603,7 @@ $$A=\left(\begin{array}{rccc} 1 & 1 & 1 & 0\\ a & a-1 & a & 1\\ 1 & 1 & 1 & a-1\
 
 <ol type="a">
 
-<li>Determinante</li>
+<li>Determinante:</li>
 $$|A|=\left|\begin{array}{rccc}
 1 & 1 & 1 & 0\\
 a & a-1 & a & 1\\
@@ -1630,7 +1631,9 @@ $$
 <li>Rango.</li>
 Como $|A|=a-1$, si $a\not = 1$ el rango de $A$ es 4. Solo queda calcular el rango si $a=1$. Como después se pide calcular la forma de Hermite por filas, lo realizamos ahora:
 
-$$A=\left(\begin{array}{rccc}
+$$
+\begin{aligned}
+A= & \left(\begin{array}{rccc}
 1 & 1 & 1 & 0\\
 1 & 0 & 1 & 1\\
 1 & 1 & 1 & 0\\
@@ -1645,10 +1648,8 @@ $$A=\left(\begin{array}{rccc}
 0 & 0 & \mathbf{1} & 0\\
 0 & -1 & 1 & 1\\
 0 & 0 & 1 & 0\\
-\end{array}\right)\sim_f
-$$
-
-$$\sim_f  \left(\begin{array}{rccc}
+\end{array}\right)\\
+& \sim_f  \left(\begin{array}{rccc}
 \mathbf{1} & 1 & 0 & 0 \\
 0 & 0 & \mathbf{1} & 0\\
 0 & -1 & 0 & 1\\
@@ -1658,7 +1659,8 @@ $$\sim_f  \left(\begin{array}{rccc}
 0 & \mathbf{1} & 0 & -1\\
 0 & 0 & \mathbf{1} & 0\\
 0 & 0 & 0 & 0\\
-\end{array}\right).$$
+\end{array}\right).
+\end{aligned}$$
 Así, si $a=1$ el rango es $3$.
 
 Comprobemos el resultado obtenido con <code>sage</code>.
