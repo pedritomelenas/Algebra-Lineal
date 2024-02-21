@@ -1327,6 +1327,33 @@ $$\left(\begin{array}{ccc}
 \lambda_1 & \lambda_2 &\lambda_3\\
 1 & 0 & 1\\
 \end{array}\right)\hspace{.5cm} \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5.$$
+
+<li>$C$ tal que $C\cdot A = Id$.</li>
+Si pensamos primero en el orden de $C$, debería ser
+
+
+<table class="default">
+  <tr>
+    <td>$C$</td>
+    <td>$\cdot A$</td>
+    <td>$=I$</td>
+  </tr>
+  <tr>
+    <td>$?\times 3$</td>
+    <td>$3\times$ 4</td>
+    <td>$3\times 3$</td>
+  </tr>
+</table>
+
+
+entonces ?$=4$. 
+
+
+El argumento más fácil de utilizar es posterior al momento en que nos encontramos en el desarrollo del tema. Se usa:
+$$rg(A\cdot B)\leq mín\{rg(A),rg(B)\}$$
+en este caso, por los órdenes de $A$ y $C$ su rango máximo posible es $3$, luego $rg(C\cdot A)\leq 3$ mientra que $rg(I_4)=4.$
+
+También es posible plantearlo de una forma similar al apartado 2, al resolver los sistemas encontraremos que son incompatibles.
 </ol>
 
 </details>
@@ -1624,7 +1651,14 @@ y de nuevo aparece la ecuación $0=1$ con lo que en este caso es incompatible.
 $$A=\left(\begin{array}{rccc} 1 & 1 & 1 & 0\\ a & a-1 & a & 1\\ 1 & 1 & 1 & a-1\\ 1 & a & 0 & 0  \end{array}\right).$$</li>
 <li>Calcula el rango de $A$ según los valores de $a$.</li>
 <li>Calcula la forma de Hermite por filas $A$ según los valores de $a$.</li>
-<li>Discute el sistema de ecuaciones.</li>
+<li>Discute el sistema de ecuaciones 
+$$\left\{\begin{aligned} 
+x+y+z&=0,\\
+ax+(a-1)y+az&=1,\\
+x+y+z&=a-1\\ 
+x+ay&=0. 
+\end{aligned}\right.$$
+según los valores de $a$.</li>
 </ol>
 
 <details>
@@ -1688,7 +1722,9 @@ $$\sim_f  \left(\begin{array}{rccc}
 0 & \mathbf{1} & 0 & -1\\
 0 & 0 & \mathbf{1} & 0\\
 0 & 0 & 0 & 0\\
-\end{array}\right).$$
+\end{array}\right).
+$$
+
 Así, si $a=1$ el rango es $3$.
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -1705,3 +1741,7 @@ Cuando $a\not = 1$ como el rango es $4$, la forma de Hermite por filas es $I_4$,
 
 <li>Discusión del sistema.</li>
 Como la matriz ampliada del sistema es $A$, entonces cuando $a\not = 1$ la matriz ampliada tiene rango 4 mientras que la de coeficientes como máximo podría tener rango 3, así que el sistema es incompatible; en el caso $a=1$, usando la forma de Hermite por filas de $A$ que hemos calculado observamos que el sistema es compatible determinado.
+</ol>
+
+</details>
+</article>
