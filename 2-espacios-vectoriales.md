@@ -194,7 +194,7 @@ $$
 
 es decir, las coordenadas de una combinación lineal de un par de vectores son la combinación lineal de las coordenadas de esos vectores. Por tanto, una vez fijamos una base $B$, trabajar en $V$ es equivalente a trabajar con las coordenadas de los vectores de $V$ y por tanto en $K^n$.
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-1.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-1.html) 
 
 ### Teorema de la base
 
@@ -450,7 +450,7 @@ $$
 
 lo que viene a decir que $(1,-1)=1(1,-1)$.
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-2.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-2.html) 
 
 ## Ecuaciones paramétricas de un subespacio vectorial
 
@@ -628,7 +628,7 @@ show(AI," ~ ", AI.rref())
 </div>
 
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-3.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-3.html) 
 
 ## Suma e intersección de subespacios
 
@@ -654,7 +654,7 @@ $$
 \dim(U\cap W)+\dim(U+W)=\dim(U)+\dim(W).
 $$
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-4.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-4.html) 
 
 Sean $U$ y $W$ subespacios vectoriales del espacio vectorial $V$. Decimos que $V$ es *suma directa* de $U$ y $W$, y lo denotamos por $V=U\oplus W$, si todo vector $\mathbf{v}\in V$ se puede expresar de forma única como $\mathbf{v}=\mathbf{u}+\mathbf{w}$, con $\mathbf{u}\in U$ and $\mathbf{w}\in W$. En dicho caso, diremos que los subespacios vectoriales $U$ y $W$ son *complementarios*.
 
@@ -680,7 +680,7 @@ por lo que $(x,y)=(0,0)$. Esto prueba que $U\cap W=\lbrace(0,0)\rbrace$, y por t
 
 Nótese que $U$ está generado por $\lbrace(1,-1)\rbrace$ y que $W$ lo está por $\lbrace(1,1)\rbrace$. Por tanto, un sistema de generadores de $U+W$ es $\lbrace(1,-1),(1,1)\rbrace$. Como ese conjunto genera todo $\mathbb{R}^2$, esto da otra forma de ver que $U+W$ es $\mathbb{R}^2$.
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-5.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-5.html) 
 
 
 ## Autoevaluacion

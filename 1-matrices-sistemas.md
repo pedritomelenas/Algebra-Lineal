@@ -109,6 +109,8 @@ Dos matrices $A, B\in \mathcal{M} _ {m\times n}(K)$ se dice que son *equivalente
 - multiplicar una fila por un elemento no nulo del cuerpo $K$,
 - sumarle a una fila un múltiplo de otra fila.
 
+### Resultado
+
 Toda matriz $A$ es equivalente por filas a una matriz escalonada reducida por filas $H$, $A\sim_f H$. Esta matriz es única.
 
 
@@ -120,7 +122,7 @@ show(A,"~",A.rref())
 </div>  
 
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-1.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-1.html) 
 
 Llamamos $E _ {ij}\in \mathcal{M} _ n(K)$ a la matriz que se obtiene al intercambiar la fila $i$-ésima con la $j$-ésima en la matriz identidad. Cambiar la fila $i$-ésima con la $j$-ésima en $A$ se corresponde con calcular $E_{ij}A$. Claramente, $E_{ij}^{-1}=E_{ij}$.
 
@@ -150,11 +152,11 @@ show(P,A,"=",P*A)
 </div>  
 
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-4.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-4.html) 
 
 Si $A\sim_f B$, entonces tanto $A$ como $B$ tienen la misma forma escalonada reducida; llamémosla $H$. De esta forma, existen $P$ y $Q$ regulares tales que $H=PA=QB$, y por tanto $A=P^{-1}QB$. 
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-6.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-6.html) 
 
 
 ## Cálculo de inversas usando operaciones elementales
@@ -180,7 +182,7 @@ show(A.inverse())
 </div>  
 
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-5.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-5.html) 
 
 
 ## Rango de una matriz
@@ -312,7 +314,7 @@ Dos sistemas de ecuaciones lineales sobre un cuerpo y con igual número de incó
 
 - Si a una ecuación le sumamos otra multiplicada por un escalar, también obtenemos un sistema equivalente al original.
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-2.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-2.html) 
 
 
 ### Teorema de Rouché-Frobenius
@@ -323,7 +325,7 @@ Sea $AX=b$ la expresión matricial de un sistema de ecuaciones lineales con $n$ 
 
 - El sistema es compatible determinado si y sólo si $\operatorname{rg}(A)=\operatorname{rg}(A \mid b)=n$.
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-8.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-8.html) 
 
 
 ## Determinantes
@@ -381,7 +383,7 @@ Sea $A\in \mathcal M_{n\times n}(K)$.
 
 Para calcular determinantes a veces es más eficiente usar las operaciones que hemos visto anteriormente. Así efectuando operaciones elementales por filas o columnas (intercambio o suma por un factor de otra) podemos llegar a una matriz triangular superior. El determinante de una matriz de esta forma es trivial, pues sólo se multiplican los valores de la diagonal.
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-7.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-7.html) 
 
 
 La *matriz adjunta* de $A$ es la matriz formada por los adjuntos de las entradas de $A$, a saber, 
@@ -417,7 +419,7 @@ $$
 
 donde $M_i$ es la matriz que se obtiene a partir de $A$ cambiando la columna $i$-ésima por $b$.
 
-### $\to$ [Ejercicios resueltos]({{ site.baseurl | absolute_url }}{% link problemas/resueltos-1.md %})
+###### $\to$ [Ejercicios resueltos]({{ site.baseurl | absolute_url }}{% link problemas/resueltos-1.md %}) 
 
 
 ## Autoevaluacion

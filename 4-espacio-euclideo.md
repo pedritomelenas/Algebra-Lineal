@@ -134,7 +134,7 @@ $$
 
 es una base ortonormal de $V$.
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-2.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-2.html) 
 
 ## Complemento ortogonal 
 
@@ -257,7 +257,7 @@ v_n
 \end{pmatrix}.
 $$
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-1.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-1.html) 
 
 ### Teorema de Pitágoras
 
@@ -291,7 +291,7 @@ $$
 
 dándose la igualdad para $\mathbf{u}=p_U(\mathbf{v})$.
 
-### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-3.html)
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-3.html) 
 
 
 @# Diagonalización por semejanza ortogonal de matrices simétricas
