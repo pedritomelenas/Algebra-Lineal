@@ -40,7 +40,7 @@ article {
   border-width: 1px 1px 1px 5px;
   border-color: gray gray gray gray;
   border-radius: 5px;
-  padding: 0.5em 0.5em 0em 0.5em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
   margin-bottom: 0.5em;
 }
 </style>
@@ -1094,26 +1094,11 @@ Sea $$A=\left (\begin{array}{cccc} 2 & 1 & 3 & 0 \\ 1 & 2 & 1 & 1 \\ 3 & 4 & 2 &
 <summary>Solución</summary>
 
 <ol type="a">
-<li>$B$ tal que $A\cdot B = Id$.</li>
+<li>Encontrar $B$ tal que $A\cdot B = Id$.</li>
 
-¿Qué orden debe tener $B$?<br>
+¿Qué orden debe tener $B$? Como la identidad es una matriz cuadrada, y $A$ tiene tres filas, deducimos que $I$ es la identidad $3\times 3$. De aquí también deducimos que $B$ tiene que tener cuatro filas y tres columnas.<br>
 
-Como la identidad es una matriz cuadrada, podemos calcular el orden de la matriz $B$ que nos piden:
-
-<table class="default">
-  <tr>
-    <td>$A$</td>
-    <td>$\cdot B$</td>
-    <td>$=I$</td>
-  </tr>
-  <tr>
-    <td>$3\times 4$</td>
-    <td>$4\times$ ?</td>
-    <td>$3\times 3$</td>
-  </tr>
-</table>
-Una idea posible<br>
-Si calculamos la forma de Hermite por columnas de $A$ y la matriz de paso, a la que llamaremos $Q$, entonces $A\cdot Q=H$. $H$ no es la matriz identidad, por supuesto, porque tiene orden $3\times 4$, pero puede parecerse bastante. Calculémosla:
+Si calculamos la forma de Hermite por columnas de $A$ y la matriz de paso, a la que llamaremos $Q$, entonces $A Q=H$. La matriz $H$ no es la matriz identidad, por supuesto, porque tiene orden $3\times 4$, pero puede parecerse bastante. Calculémosla:
 
 $$\left[ \begin{array}{c}
 A\\
@@ -1192,7 +1177,6 @@ $$\left(\begin{array}{cccc}
 \end{array}\right). 
 $$
 
-Una solución:<br>
 
 Observando el producto anterior nos damos cuenta de que si tomamos solo las 3 primeras columnas de $Q$ tenemos una matriz que verifica la condición.
 Así que una posible matriz $B$ es 
@@ -1230,11 +1214,11 @@ x_4 & y_4 & z_4\\
 1 & 0 & 0 \\ 
 0 & 1 & 0  \\ 
 0 & 0 & 1 \\
-\end{array}\right) 
+\end{array}\right),
 $$
 
 que puede parecer complicado, son $12$ incógnitas, pero realmente no se mezclan (por eso las  he designado con letras distintas).
-El primer sistema será el que corresponde a las $x$'s:
+El primer sistema será el que corresponde a las $x$:
 
 $$\left(\begin{array}{cccc}
 2 & 1 & 3 & 0 \\ 1 & 2 & 1 & 1 \\ 3 & 4 & 2 & 1\\
@@ -1257,15 +1241,15 @@ $$\left(\begin{array}{cccc|c}
 2 & 1 & 3 & 0 & 1\\ 1 & 2 & 1 & 1 & 0 \\ 3 & 4 & 2 & 1 & 0\\
 \end{array}\right)$$
 
-y las correspondientes a los sistemas para las $y$'s y las $z$'s:
+y las correspondientes a los sistemas para las $y$ y las $z$:
 
 $$\left(\begin{array}{cccc|c}
 2 & 1 & 3 & 0 & 0\\ 1 & 2 & 1 & 1 & 1 \\ 3 & 4 & 2 & 1 & 0\\
-\end{array}\right) \hspace{1cm} \left(\begin{array}{cccc|c}
+\end{array}\right), \quad \left(\begin{array}{cccc|c}
 2 & 1 & 3 & 0 & 0\\ 1 & 2 & 1 & 1 & 0 \\ 3 & 4 & 2 & 1 & 1\\
 \end{array}\right).$$
 
-Como se resuelven haciendo o.e. por filas sobre la matriz de coeficientes, los tres pueden resolverse simultáneamente utilizando la matriz:
+Como se resuelven haciendo operaciones elementales por filas sobre la matriz de coeficientes, los tres pueden resolverse simultáneamente utilizando la matriz:
 
 $$\left(\begin{array}{cccc|ccc}
 2 & 1 & 3 & 0 & 1 & 0 & 0\\ 1 & 2 & 1 & 1 & 0 & 1 & 0 \\ 3 & 4 & 2 & 1 & 0 & 0 & 1\\
@@ -1275,49 +1259,44 @@ que incluye las tres columnas de términos independientes.
 
 Utilizamos el método de Gauss-Jordan:
 
-$$\left(\begin{array}{cccc|ccc}
+$$
+\begin{aligned}
+\left(\begin{array}{cccc|ccc}
 2 & 1 & 3 & 0 & 1 & 0 & 0\\ \boxed{1} & 2 & 1 & 1 & 0 & 1 & 0 \\ 3 & 4 & 2 & 1 & 0 & 0 & 1\\
-\end{array}\right)\sim_f 
+\end{array}\right) & \sim_f 
 \left(\begin{array}{cccc|ccc}
 \boxed{1} & 2 & 1 & 1 & 0 & 1 & 0 \\ 
 0 & 2 & 1 & 3 & 1 & 3 & 0\\ 
 0 & 0 & 0 & 1 & 1 & 0 & 1\\
-\end{array}\right)\sim_f
-$$
-
-$$
-\sim_f 
+\end{array}\right)  \sim_f 
 \left(\begin{array}{cccc|ccc}
 \boxed{1} & 2 & 1 & 1 & 0 & 1 & 0 \\ 
 0 & \boxed{1} & 3 & 4 & 3 & 4 & 0\\ 
 0 & 0 & 0 & 1 & 1 & 0 & 1\\
-\end{array}\right)\sim_f
+\end{array}\right)\\
+& \sim_f
 \left(\begin{array}{cccc|ccc}
 \boxed{1} & 0 & 0 & 3 & 4 & 3 & 0 \\ 
 0 & \boxed{1} & 3 & 4 & 3 & 4 & 0\\ 
 0 & 0 & 0 & \boxed{1} & 1 & 0 & 1\\
-\end{array}\right)\sim_f
-$$
-
-$$
-\sim_f
-\left(\begin{array}{cccc|ccc}
+\end{array}\right)\sim_f \left(\begin{array}{cccc|ccc}
 \boxed{1} & 0 & 0 & 0 & 1 & 3 & 2 \\ 
 0 & \boxed{1} & 3 & 0 & 4 & 4 & 1\\ 
 0 & 0 & 0 & \boxed{1} & 1 & 0 & 1\\
 \end{array}\right).
+\end{aligned}
 $$
 
 Eligiendo en cada caso la columna de términos independientes que corresponde tendremos la solución de los tres sistemas.
 Por tanto la solución de cada uno de los sistemas es
 
 $$
-\begin{array}{|l|l|l}
-x_1=1 & y_1= 3 & z_1=2\\ 
-x_2=4+2\lambda_1 & y_2=4+2\lambda_2 & z_2=1+2\lambda_3\\
-x_3=\lambda_1 & y_3=\lambda_2 &z_3=\lambda_3\\
-x_4=1 & y_4=0 & z_4=1\\
-\end{array} \hspace{.5cm} \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5.$$
+\begin{array}{lll}
+x_1=1, & y_1= 3, & z_1=2,\\ 
+x_2=4+2\lambda_1, & y_2=4+2\lambda_2, & z_2=1+2\lambda_3,\\
+x_3=\lambda_1, & y_3=\lambda_2, &z_3=\lambda_3,\\
+x_4=1, & y_4=0, & z_4=1,\\
+\end{array} \quad \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5.$$
 
 Es decir, todas las matrices son de la forma:
 
@@ -1326,7 +1305,7 @@ $$\left(\begin{array}{ccc}
 4+2\lambda_1 & 4+2\lambda_2 & 1+2\lambda_3\\
 \lambda_1 & \lambda_2 &\lambda_3\\
 1 & 0 & 1\\
-\end{array}\right)\hspace{.5cm} \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5.$$
+\end{array}\right), \quad \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5.$$
 
 <li>$C$ tal que $C\cdot A = Id$.</li>
 Si pensamos primero en el orden de $C$, debería ser
@@ -1367,7 +1346,7 @@ Discútelo según los valores del parámetro $a$, y resuélvelo para $a=-1$.
 <details>
 <summary>Solución</summary>
 
-En este tipo de ejercicio utilizaremos el Teorema de Rouché-Frobenius (TRF) junto a los distintos métodos para calcular el rango de una matriz.
+En este tipo de ejercicio utilizaremos el Teorema de Rouché-Frobenius  junto a los distintos métodos para calcular el rango de una matriz.
 
 En primer lugar escribimos la matriz ampliada del sistema
 
@@ -1376,8 +1355,8 @@ $$(A|b)=\left( \begin{array}{rcc|r}
 a & 2 & 1 & -1
 \end{array}\right).$$
 
-Puesto que el orden de matriz de coeficientes es $2\times3$ y el de la ampliada $2\times4$, en el caso de que $rg(A)=2$, entonces $rg(A|b)=2$ (puesto que no puede haber más de dos pivotes, uno por fila) y usando TRF el sistema será C.I.. 
-Puesto que el rango no cambia si realizamos cualquier o.e. por columnas, para calcular $rg(A)$ realizamos algunas, por ejemplo:
+Puesto que el orden de matriz de coeficientes es $2\times3$ y el de la ampliada $2\times4$, en el caso de que $\operatorname{rg}(A)=2$, entonces $\operatorname{rg}(A|b)=2$ (puesto que no puede haber más de dos pivotes, uno por fila) y usando Teorema de Rouché-Frobenius el sistema será compatible indeterminado. 
+Puesto que el rango no cambia si realizamos cualquier operaciones elementales por columnas, para calcular $\operatorname{rg}(A)$ realizamos algunas, por ejemplo:
 $${\small A=\left( \begin{array}{rcc}
 1 & -a & a+1 \\
 a & 2 & 1  
@@ -1388,16 +1367,15 @@ a & 2 & 3
 1 & -a & 0 \\
 a & 2 & 3-a 
 \end{array}\right) }.$$ 
-Para el rango de esta matriz es muy fácil utilizar el cálculo de determinantes:
-Si
+Para el rango de esta matriz es muy fácil utilizar el cálculo de determinantes: si
 $\begin{vmatrix}
 1 & 0 \\
 a & 3-a
 \end{vmatrix}= 3-a \not = 0$ 
 el rango de $A$ es dos.
-(También se podría haber hecho en la matriz $A$ directamente, pero este determinante es muy sencillo de calcular y de determinar cuándo es distinto de $0$).<br>
+(También se podría haber hecho en la matriz $A$ directamente, pero este determinante es muy sencillo de calcular y de determinar cuándo es distinto de $0$.)<br>
 
-Entonces tenemos que en todos los casos en los que $a\not = 3$ tendremos  $rg(A)=rg(A|b)=2< \text{ nº incóg.}$ y el sistema es C.I..<br>
+Entonces tenemos que en todos los casos en los que $a\not = 3$ tendremos  $\operatorname{rg}(A)=\operatorname{rg}(A|b)=2$ es menor que el  número de incógnitas y el sistema es compatible indeterminado.<br>
 Solo nos queda estudiar el caso $a=3$, para el que podemos proceder como en los ejercicios del comienzo del tema: 
 
 $$(A|b)=\left( \begin{array}{rrr|r}
@@ -1408,16 +1386,16 @@ $$(A|b)=\left( \begin{array}{rrr|r}
 0 & 1 & -1 & -13/11
 \end{array}\right).$$
 
-O bien, podemos volver a aplicar el TRF, en este caso observamos que tomando las dos primeras columnas de $A$ se tiene
+O bien, podemos volver a aplicar el Teorema de Rouché-Frobenius, en este caso observamos que tomando las dos primeras columnas de $A$ se tiene
 
 $\begin{vmatrix}
 1 & 3 \\
 -3 & 2
-\end{vmatrix}=2+9=11$ luego $rg(A)=2$ y el mismo razonamiento nos lleva a que también en este caso es C.I.. <br>
+\end{vmatrix}=2+9=11$ luego $\operatorname{rg}(A)=2$ y el mismo razonamiento nos lleva a que también en este caso es compatible indeterminado. <br>
 
-Solución: siempre es C.I. dependiendo de un parámetro.<br>
+Por tanto, siempre es compatible indeterminado dependiendo de un parámetro.<br>
 
-Para el caso $a=-1$ utilizamos G-J:
+Para el caso $a=-1$:
 $$(A|b)=\left( \begin{array}{rrr|r}
 \boxed{1} & 1 & 0 & 4\\
 -1 & 2 & 1 & -1
@@ -1454,8 +1432,7 @@ $$\begin{pmatrix} 1 & a & 0 & 1 \\ 2 & 1 & 1 & b \\ 0 & a & b & a+b \end{pmatrix
 <details>
 <summary>Solución</summary>
 
-El rango máximo posible de esta matriz es 3. Elegimos una submatriz cuadrada de orden 3 y calculamos su determinante. ¿Cuál?
-Dos condiciones: que no se vea a ojo que vale 0 y que sea fácil de calcular.
+El rango máximo posible de esta matriz es 3. Elegimos una submatriz cuadrada de orden 3 y calculamos su determinante. Escogemos una que a priori sepamos que su determinante no sea nulo y que sea fácil de calcular.
 Por ejemplo
 $$
 \begin{vmatrix}
@@ -1465,16 +1442,10 @@ $$
 1 & 0 & 0  \\ 2 & 1-2a & 1  \\ 0 & a & b 
 \end{vmatrix}=(1-2a)b-a=(1+a)b+2a=2a+b+ab.
 $$
-¿Es fácil decidir cuándo es $0$ y cuándo no?
-$\mathbb{Z}_3$ tiene una ventaja, $a$ y $b$ pueden tomar solo 3 valores posibles.
+Al estar trabajando en $\mathbb{Z}_3$, $a$ y $b$ pueden tomar solo 3 valores posibles.
 
-Podemos examinar todos los casos en una tabla de doble entrada, donde en cada casillero escribiremos el valor del determinante:
-$$det(A)=b(1-2a)-a=2a+b+ab$$
-con el paso previo:<br>
-
-$a=0, det(A)= b$<br>
-$a=1, det(A)= 2b+2$<br>
-$a=2, det(A)= 1$<br>
+Podemos examinar todos los casos en una tabla de doble entrada, donde en cada casillero escribiremos el valor del determinante. Por ejemplo,
+si $a=0$, entonces $|A|= b$; si $a=1$, $|A|= 2b+2$; si $a=2$, $|A|= 1$.<br>
 
 <table class="default">
   <tr>
@@ -1503,10 +1474,10 @@ $a=2, det(A)= 1$<br>
   </tr>
 </table>
 
-De la observación de la tabla anterior deducimos que $rg(A)=3$ para 7 de los 9 casos, siempre que el determinante es distinto de $0$.
-Ahora, estudiamos los dos casos particulares que nos faltan:<br>
+De la observación de la tabla anterior deducimos que $\operatorname{rg}(A)=3$ para 7 de los 9 casos, siempre que el determinante es distinto de $0$.
+Ahora, estudiamos los dos casos particulares que nos faltan.<br>
 
-$a=0=b$<br>
+Para $a=0=b$:<br>
 $$
 \begin{pmatrix}
 1 & 0 & 0 & 1 \\ 2 & 1 & 1 & 0 \\ 0 & 0 & 0 & 0
@@ -1514,7 +1485,7 @@ $$
 $$
 que tiene rango 2 puesto que hay una fila entera de ceros y en las otras dos se pueden hacer pivotes.<br>
 
-$a=1, b=2$<br>
+Para $a=1$, $b=2$:<br>
 $$
 \begin{pmatrix}
 1 & 1 & 0 & 1 \\ 2 & 1 & 1 & 2 \\ 0 & 1 & 2 & 0
@@ -1522,15 +1493,14 @@ $$
 1 & 1 & 0 & 1 \\ 0 & 2 & 1 & 0 \\ 0 & 1 & 2 & 0
 \end{pmatrix}
 $$
-que también tiene rango 2 ¿porqué? Recordemos que estamos en $\mathbb{Z}_3$.
-
+que también tiene rango 2 (recordemos que estamos en $\mathbb{Z}_3$).
 </details>
 </article>
 
 <article>
+Sea $$A=\left( \begin{array}{cccc} 3-\lambda & 1 & 1 & 0\\ 5 &-\lambda & 0 & 0\\ 0 & -\lambda & -\lambda & 1\\ 0 & -1 & -1 & 2-\lambda \end{array}\right).$$
 <ol type="a">
-<li>Calcula el determinante de la matriz con coeficientes en $\mathbb{Q}$:</li>
-$$A=\left( \begin{array}{cccc} 3-\lambda & 1 & 1 & 0\\ 5 &-\lambda & 0 & 0\\ 0 & -\lambda & -\lambda & 1\\ 0 & -1 & -1 & 2-\lambda \end{array}\right).$$
+<li>Calcula el determinante de la matriz $A$ considerando sus coeficientes en $\mathbb{Q}$.</li>
 <li>Calcula el rango de la matriz $A$ según los valores de $\lambda$ considerando sus coeficientes en $\mathbb{Z}_3$.</li>
 <li>Discute el sistema de ecuaciones con matriz ampliada $A$ considerando sus coeficientes en $\mathbb{Q}$.</li>
 </ol>
@@ -1540,7 +1510,7 @@ $$A=\left( \begin{array}{cccc} 3-\lambda & 1 & 1 & 0\\ 5 &-\lambda & 0 & 0\\ 0 &
 
 <ol type="a">
 <li>Determinante.</li>
-Para calcular el determinante más fácilmente realizamos una operación elemental de tipo 3: a la segunda columna le restamos la tercera
+Para calcular el determinante más fácilmente, a la segunda columna le restamos la tercera, luego desarrollamos por la segunda columna:
 
 $$|A|=\left| \begin{array}{cccc}
 3-\lambda & 1 & 1 & 0\\
@@ -1558,14 +1528,14 @@ $$|A|=\left| \begin{array}{cccc}
 0 &  -1 & 2-\lambda 
 \end{array}\right|$$
 
-donde hemos desarrollado por la segunda columna, y desarrollando ahora por la primera columna
+Desarrollando ahora por la primera columna
 $$|A|=(-\lambda)(3-\lambda)[(-\lambda)(2-\lambda)+1]=(-\lambda)(3-\lambda)(\lambda -1)^2$$ 
 y este resultado es válido en cualquier cuerpo.
 
 <li>Rango.</li>
-Puesto que el cálculo del determinante es válido en $\mathbb{Z}_3$, cuando $\lambda=2$ la matriz tiene rango 4 (observamos que $2$ no es raíz del polinomio que tenemos descompuesto en factores lineales, y por tanto el determinante es distinto de $0$); en cambio, para los casos $\lambda=0,1$ (que son raíces del polinomio obtenido) es menor o igual que 3. Para estos casos calculamos el rango mediante operaciones elementales:<br>
+Puesto que el cálculo del determinante es válido en $\mathbb{Z}_3$, cuando $\lambda=2$ la matriz tiene rango 4 (observamos que $2$ no es raíz del polinomio que tenemos descompuesto en factores lineales, y por tanto el determinante es distinto de $0$); en cambio, para los casos $\lambda\in \{0,1\}$ (que son raíces del polinomio obtenido) es menor o igual que 3. Para estos casos calculamos el rango mediante operaciones elementales.<br>
 
-$\boxed{\lambda=0}$<br>
+Para $\lambda=0$:<br>
 $$A=\left( \begin{array}{cccc}
 0 & 1 & 1 & 0\\
 2 &0 & 0 & 0\\
@@ -1583,7 +1553,7 @@ $$A=\left( \begin{array}{cccc}
 0 & 0 & 0 & 0 
 \end{array}\right)$$ luego el rango es 3. <br>
 
-$\boxed{\lambda=1}$<br>
+Para $\lambda=1$:<br>
 $$A=\left( \begin{array}{cccc}
 2 & 1 & 1 & 0\\
 2 &2 & 0 & 0\\
@@ -1599,9 +1569,9 @@ que tiene rango 3.<br>
 
 <li>Sistema de ecuaciones.</li>
 
-Como la matriz ampliada tiene rango 4 para $\lambda\not = 0,1,3$, y la de coeficientes solo tiene tres columnas y por tanto el rango máximo es 3, en estos casos el sistema es incompatible. Nos queda estudiar los casos particulares $\lambda=0,1,3$:<br>
+Como la matriz ampliada tiene rango 4 para $\lambda\not\in \{0,1,3\}$, y la de coeficientes solo tiene tres columnas y por tanto el rango máximo es 3, en estos casos el sistema es incompatible. Nos queda estudiar los casos particulares $\lambda\in\{0,1,3\}$:<br>
 
-$\boxed{\lambda=0}$
+Para $\lambda=0$:
 $$\left( \begin{array}{ccc|c}
 3 & 1 & 1 & 0\\
 5 & 0 & 0 & 0\\
@@ -1611,7 +1581,7 @@ $$\left( \begin{array}{ccc|c}
 
 Como aparece la ecuación $0=1$ entonces también es incompatible.<br>
 
-$\boxed{\lambda=1}$
+Para $\lambda=1$:
 $$\left( \begin{array}{ccc|c}
 2 & 1 & 1 & 0\\
 5 & -1 & 0 & 0\\
@@ -1626,7 +1596,7 @@ $$\left( \begin{array}{ccc|c}
 
 en este caso la matriz de coeficientes tiene rango 3, y por tanto el sistema es compatible determinado.<br>
 
-$\boxed{\lambda=3}$
+Para $\lambda=3$:
 $$\left( \begin{array}{ccc|c}
 0 & 1 & 1 & 0\\
 5 & -3 & 0 & 0\\
@@ -1646,9 +1616,10 @@ y de nuevo aparece la ecuación $0=1$ con lo que en este caso es incompatible.
 </article>
 
 <article>
+Sea 
+$$A=\left(\begin{array}{rccc} 1 & 1 & 1 & 0\\ a & a-1 & a & 1\\ 1 & 1 & 1 & a-1\\ 1 & a & 0 & 0  \end{array}\right)\in \mathcal{M}_4(\mathbb{R}).$$
 <ol type="a">
-<li>Calcula el determinante de la matriz $A\in \mathcal{M}_4(\mathbb{R})$:
-$$A=\left(\begin{array}{rccc} 1 & 1 & 1 & 0\\ a & a-1 & a & 1\\ 1 & 1 & 1 & a-1\\ 1 & a & 0 & 0  \end{array}\right).$$</li>
+<li>Calcula el determinante de la matriz $A$.</li>
 <li>Calcula el rango de $A$ según los valores de $a$.</li>
 <li>Calcula la forma de Hermite por filas $A$ según los valores de $a$.</li>
 <li>Discute el sistema de ecuaciones 
@@ -1666,7 +1637,7 @@ según los valores de $a$.</li>
 
 <ol type="a">
 
-<li>Determinante</li>
+<li>Determinante:</li>
 $$|A|=\left|\begin{array}{rccc}
 1 & 1 & 1 & 0\\
 a & a-1 & a & 1\\
@@ -1694,7 +1665,9 @@ $$
 <li>Rango.</li>
 Como $|A|=a-1$, si $a\not = 1$ el rango de $A$ es 4. Solo queda calcular el rango si $a=1$. Como después se pide calcular la forma de Hermite por filas, lo realizamos ahora:
 
-$$A=\left(\begin{array}{rccc}
+$$
+\begin{aligned}
+A= & \left(\begin{array}{rccc}
 1 & 1 & 1 & 0\\
 1 & 0 & 1 & 1\\
 1 & 1 & 1 & 0\\
@@ -1709,10 +1682,8 @@ $$A=\left(\begin{array}{rccc}
 0 & 0 & \mathbf{1} & 0\\
 0 & -1 & 1 & 1\\
 0 & 0 & 1 & 0\\
-\end{array}\right)\sim_f
-$$
-
-$$\sim_f  \left(\begin{array}{rccc}
+\end{array}\right)\\
+& \sim_f  \left(\begin{array}{rccc}
 \mathbf{1} & 1 & 0 & 0 \\
 0 & 0 & \mathbf{1} & 0\\
 0 & -1 & 0 & 1\\
@@ -1723,8 +1694,7 @@ $$\sim_f  \left(\begin{array}{rccc}
 0 & 0 & \mathbf{1} & 0\\
 0 & 0 & 0 & 0\\
 \end{array}\right).
-$$
-
+\end{aligned}$$
 Así, si $a=1$ el rango es $3$.
 
 Comprobemos el resultado obtenido con <code>sage</code>.
