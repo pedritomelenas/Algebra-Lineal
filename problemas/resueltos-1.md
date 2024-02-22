@@ -1600,18 +1600,19 @@ y de nuevo aparece la ecuación $0=1$ con lo que en este caso es incompatible.
 <article>
 Sea 
 $$A=\left(\begin{array}{rccc} 1 & 1 & 1 & 0\\ a & a-1 & a & 1\\ 1 & 1 & 1 & a-1\\ 1 & a & 0 & 0  \end{array}\right)\in \mathcal{M}_4(\mathbb{R}).$$
-<ol type="a">
-<li>Calcula el determinante de la matriz $A$.</li>
-<li>Calcula el rango de $A$ según los valores de $a$.</li>
-<li>Calcula la forma de Hermite por filas $A$ según los valores de $a$.</li>
-<li>Discute el sistema de ecuaciones 
+y el sistema de ecuaciones
 $$\left\{\begin{aligned} 
 x+y+z&=0,\\
 ax+(a-1)y+az&=1,\\
-x+y+z&=a-1\\ 
+x+y+z&=a-1,\\ 
 x+ay&=0. 
 \end{aligned}\right.$$
-según los valores de $a$.</li>
+
+<ol type="a">
+<li>Calcula el determinante de la matriz $A$.</li>
+<li>Calcula el rango de $A$ según los valores de $a$.</li>
+<li>Calcula la forma de Hermite por filas de $A$ según los valores de $a$.</li>
+<li>Discute el sistema de ecuaciones según los valores de $a$.</li>
 </ol>
 
 <details>
