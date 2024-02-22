@@ -1130,7 +1130,7 @@ I_4
 1 & 4 & 0 & 2\\
 0 & 0 & 0 &1\\
 0 & 0 & 1 &0\\
-\end{array}\right) \sim_c
+\end{array}\right)
 $$ 
 
 $$
@@ -1329,8 +1329,8 @@ entonces ?$=4$.
 
 
 El argumento más fácil de utilizar es posterior al momento en que nos encontramos en el desarrollo del tema. Se usa:
-$$rg(A\cdot B)\leq mín\{rg(A),rg(B)\}$$
-en este caso, por los órdenes de $A$ y $C$ su rango máximo posible es $3$, luego $rg(C\cdot A)\leq 3$ mientra que $rg(I_4)=4.$
+$$\operatorname{rg}(A\cdot B)\leq mín\{\operatorname{rg}(A),\operatorname{rg}(B)\}$$
+en este caso, por los órdenes de $A$ y $C$ su rango máximo posible es $3$, luego $\operatorname{rg}(C\cdot A)\leq 3$ mientras que $\operatorname{rg}(I_4)=4.$
 
 También es posible plantearlo de una forma similar al apartado 2, al resolver los sistemas encontraremos que son incompatibles.
 </ol>
