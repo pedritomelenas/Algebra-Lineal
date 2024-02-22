@@ -1307,26 +1307,8 @@ $$\left(\begin{array}{ccc}
 1 & 0 & 1\\
 \end{array}\right), \quad \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5.$$
 
-<li>$C$ tal que $C\cdot A = Id$.</li>
-Si pensamos primero en el orden de $C$, debería ser
-
-
-<table class="default">
-  <tr>
-    <td>$C$</td>
-    <td>$\cdot A$</td>
-    <td>$=I$</td>
-  </tr>
-  <tr>
-    <td>$?\times 3$</td>
-    <td>$3\times$ 4</td>
-    <td>$3\times 3$</td>
-  </tr>
-</table>
-
-
-entonces ?$=4$. 
-
+<li>Encontrar $C$ tal que $C\cdot A = Id$.</li>
+Si pensamos primero en el orden de $C$, como $A$ tiene tres filas y cuatro columnas, necesariamente $C$ debe tener tres columnas. Por otro lado, como la matriz identidad es cuadrada, en este caso será una matriz $4\times4$, por lo que $C$ debe tener cuatro filas.<br>
 
 El argumento más fácil de utilizar es posterior al momento en que nos encontramos en el desarrollo del tema. Se usa:
 $$\operatorname{rg}(A\cdot B)\leq mín\{\operatorname{rg}(A),\operatorname{rg}(B)\}$$
