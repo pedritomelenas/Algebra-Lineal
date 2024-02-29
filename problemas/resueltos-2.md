@@ -55,7 +55,7 @@ Los ejercicios aquí mostrados han sido amablemente proporcionados por [Evangeli
 
 En $\mathbb{R}^4$ se considera el conjunto 
 $$
-\{(b,0,a,b),(0,a,1+a,0),(0,1,1+a,0),(0,1+a,2+2a,1-a)\}
+\{(b,0,a,b),(0,a,1+a,0),(0,1,1+a,0),(0,1+a,2+2a,1-a)\}.
 $$
 ¿Cuál es el número máximo de vectores linealmente independientes que puede contener dicho conjunto, según los valores de a y b?
 
@@ -87,7 +87,7 @@ b & 0 & 0 & 0\\
 0 & a-1 & 1 & 1+a\\
 a & 0 & 1+a & 2+2a\\
 b & 0 & 0 & 1-a
-\end{array}\right|= b(a-1)(1+a)(1-a)$$
+\end{array}\right|= b(a-1)(1+a)(1-a).$$
 
 Luego si $b\not = 0, a\not = \pm 1$ el rango es 4 y los vectores son linealmente independientes.
 Para estudiar todos los casos podemos representarlos en una tabla de doble entrada e iremos calculando cada uno de ellos.
@@ -371,7 +371,7 @@ e_{1}=(1,0,1)\\
 e_{2}=(1,2,2)\\
 e_{3}=(0,1,1)
 \end{array}
-\right\} x=(1,0,2)
+\right\} x=(1,0,2).
 $$
 </li>
 <li>
@@ -383,7 +383,7 @@ e_{2}=(0,1,1,1)\\
 e_{3}=(0,0,1,1)\\
 e_{4}=(0,0,0,1)
 \end{array}
-\right\} x=(1,0,1,0)
+\right\} x=(1,0,1,0).
 $$
 </li>
 </ol>
@@ -447,7 +447,7 @@ $$\left( \begin{array}{rrr|r}
 0 & 0 & 1 & 2
 \end{array} \right).$$
 
-Luego $x=(2,-1,2)_B$.
+Luego $x=(2,-1,2)_B$.<br>
 
 Comprobemos el resultado obtenido con <code>sage</code>.
 
@@ -473,7 +473,7 @@ $$\left( \begin{array}{rrrr|r}
 0 & 0 & 1 & 0 & 1\\
 0 & 0 & 0 & 1 & 0
 \end{array} \right)$$
-luego son base (la matriz de coeficientes tiene rango 4) y $x=(1,-1,1,0)_B$.
+luego son base (la matriz de coeficientes tiene rango 4) y $x=(1,-1,1,0)_B$.<br>
 
 Comprobemos el resultado obtenido con <code>sage</code>.
 
@@ -497,7 +497,7 @@ Completa $\{(1,1,0),(2,1,1)\}$ a una base de $\mathbb{Q}^3$.
 <details>
 <summary>Solución</summary>
 
-Comenzamos observando que los dos vectores son linealmente independientes (no son múltiplo uno del otro). Se trata de añadir vectores a los dados hasta obtener una base de $\mathbb{Q}^3$, como $\operatorname{dim}(\mathbb{Q})^3=3$ en cualquier base debe haber 3 vectores, con lo que en este caso habrá que añadir 1 vector. Se puede realizar de infinitas formas, la única condición es que los 3 vectores sean linealmente independientes; se aconseja hacerlo de modo que esta condición sea fácil de comprobar.
+Comenzamos observando que los dos vectores son linealmente independientes (no son múltiplo uno del otro). Se trata de añadir vectores a los dados hasta obtener una base de $\mathbb{Q}^3$, como $\operatorname{dim}(\mathbb{Q}^3)=3$ en cualquier base debe haber tres vectores, con lo que en este caso habrá que añadir un vector. Se puede realizar de infinitas formas, la única condición es que los tres vectores sean linealmente independientes; se aconseja hacerlo de modo que esta condición sea fácil de comprobar.
 Partimos de la matriz
 
 $$\begin{pmatrix}
@@ -514,7 +514,7 @@ $$\begin{pmatrix}
 0 & 1 & 0
 \end{pmatrix}$$
 
-comprobar que el determinante es distinto de ceero es muy fácil. Entonces hemos completado con el vector $(1,0,0)$. También valdría añadir $(0,0,1)$ 
+comprobar que el determinante es distinto de cero es muy fácil. Entonces hemos completado con el vector $(1,0,0)$. También valdría añadir $(0,0,1)$ 
 
 $$\begin{pmatrix}
 1 & 2 & 0\\
@@ -542,7 +542,7 @@ espacio vectorial dado:
 <summary>Solución</summary>
 
 <ol type="a">
-<li>Como $\operatorname{dim}(\mathbb{Z}_5)^2[x]=3$ cualquier conjunto de generadores tiene que tener al menos tres vectores. Así que en este caso la respuesta es negativa.</li>
+<li>Como $\operatorname{dim}((\mathbb{Z}_5)^2[x])=3$ cualquier conjunto de generadores tiene que tener al menos tres vectores. Así que en este caso la respuesta es negativa.</li>
 <li>Estamos en el mismo espacio vectorial y ahora sí tenemos tres vectores. Serán sistema de generadores si y solo si son base, si y solo si son linealmente independientes. Escribimos sus coordenadas en $B_s=\{1,x,x^2\}$ y calculamos el rango de la matriz que forman:</li>
 
 $$1+4x=(1,4,0)_{B_s},$$
@@ -557,7 +557,7 @@ $$\begin{pmatrix}
 
 Esta matriz tiene determinante $(-1)(4)=1$ y por tanto son sistema de generadores.
 
-<li>En este caso tenemos cuatro vectores y $\operatorname{dim}\mathcal{M}_{2}(\mathbb{Z}_7)=4$, así que razonamos como antes, esta vez usando coordenadas en la base estándar</li>
+<li>En este caso tenemos cuatro vectores y $\operatorname{dim}(\mathcal{M}_{2}(\mathbb{Z}_7))=4$, así que razonamos como antes, esta vez usando coordenadas en la base estándar</li>
 
 $$B_s=\left\{ \begin{pmatrix}
 1 & 0 \\ 0 & 0 \\
