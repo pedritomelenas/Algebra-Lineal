@@ -682,6 +682,8 @@ Nótese que $U$ está generado por $\lbrace(1,-1)\rbrace$ y que $W$ lo está por
 
 ###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/2-5.html) 
 
+###### $\to$ [Ejercicios resueltos]({{ site.baseurl | absolute_url }}{% link problemas/resueltos-2.md %}) 
+
 
 ## Autoevaluacion
 
