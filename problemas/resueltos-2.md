@@ -137,34 +137,6 @@ Estudia si los siguientes conjuntos de vectores son
 linealmente independientes o linealmente dependientes usando coordenadas en las bases más adecuadas:
 
 <ol type="a">
-<li>En $\mathcal{M}_{2}({\mathbb {R}})$:</li>
-
-$$\left\{\left(
-\begin{array}{rr}
-1 & 1\\
-1 & 1
-\end{array}
-\right),
-\left(
-\begin{array}{rr}
-0 & 1\\
-1 & 1
-\end{array}
-\right),
-\left(
-\begin{array}{rr}
-0 & 0\\
-1 & 1
-\end{array}
-\right),
-\left(
-\begin{array}{rr}
-0 & 0\\
-0 & 1
-\end{array}
-\right)\right\}.
-$$ 
-
 <li>En $\mathbb{R}^2[x]$:</li>
 
 $$\{ 1+2x+3x^{2},\; 1-x+x^{2},\; 1+x-x^{2},\; x+2x^{2} \}.$$
@@ -323,7 +295,7 @@ $$\left( \begin{array}{rrr|r}
 2 & 5 & 3 & 1
 \end{array} \right).$$
 
-Observamos que ambos sistemas tienen la misma matriz de coeficientes, y tambien el tercer sistema que debemos resolver, solo cambian las columnas de términos independientes. Podemos resolver los 3 sistemas simultáneamente escribiendo
+Observamos que ambos sistemas tienen la misma matriz de coeficientes, y tambien el tercer sistema que debemos resolver, solo cambian las columnas de términos independientes. Podemos resolver los tres sistemas simultáneamente escribiendo
 
 $$\left( \begin{array}{rrr|rrr}
 1 & 4 & 1 & 4 & 2 & 3\\
@@ -334,6 +306,17 @@ $$\left( \begin{array}{rrr|rrr}
 0 & 1 & 0 & 0 & 1 & 1\\
 0 & 0 & 1 & -1 & 0 & 0
 \end{array} \right).$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,4,1],[0,1,0],[2,5,3]])
+B=matrix([[4,2,3],[0,1,1],[7,1,3]]) 
+AB=A.augment(B,subdivide=True) #matriz aumentada
+show(AB,"~",AB.rref())
+</script>
+</div>  
 
 La matriz de cambio de base de $B$ a $B'$ es entonces 
 
@@ -466,6 +449,17 @@ $$\left( \begin{array}{rrr|r}
 
 Luego $x=(2,-1,2)_B$.
 
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,1,0],[0,2,1],[1,2,1]])
+b=vector([1,0,2]) 
+Ab=A.augment(b,subdivide=True) 
+show(Ab,"~",Ab.rref())
+</script>
+</div>  
+
 <li>Procedemos del mismo modo sin repetir los razonamientos, puesto que son idénticos al apartado anterior.</li>
 
 $$\left( \begin{array}{rrrr|r}
@@ -480,6 +474,17 @@ $$\left( \begin{array}{rrrr|r}
 0 & 0 & 0 & 1 & 0
 \end{array} \right)$$
 luego son base (la matriz de coeficientes tiene rango 4) y $x=(1,-1,1,0)_B$.
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,1,1,1],[0,1,1,1],[0,0,1,1],[0,0,0,1]])
+b=vector([1,0,1,0]) 
+Ab=A.augment(b,subdivide=True) 
+show(Ab,"~",Ab.rref())
+</script>
+</div>  
 
 </ol>
 </details>
@@ -526,7 +531,6 @@ espacio vectorial dado:
 
 <ol type="a">
 <li>En $(\mathbb{Z}_5)^2[x]$: $\{1+4x, 3+4x^2\}$.</li>
-<li>En $(\mathbb{Z}_5)^2[x]$: $\{1+4x, 3+4x^2, x\}$.</li>
 <li>En $(\mathbb{Z}_5)^2[x]$: $\{1+4x, 3+4x^2, x\}$.</li>
 <li>En $\mathcal{M}_{2}(\mathbb{Z}_7)$: $\left\{ \begin{pmatrix} 1 & 0 \\ 1 & 0
 \end{pmatrix}, \begin{pmatrix} 1 & 2 \\ 0 & 0 \end{pmatrix},
