@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Problemas matrices y sistemas de ecuaciones
+title: Problemas espacios vectoriales
 tag: problemas
 ---
 <style>
