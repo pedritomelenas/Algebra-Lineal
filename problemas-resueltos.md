@@ -2,15 +2,6 @@
 layout: page
 title: Problemas resueltos
 ---
-<style>
-body {
-  background-image: url('/public/logo_mda-net.svg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 15% 15%;
-  background-position: 100% 20%;
-}
-</style>
 
 # Problemas resueltos
 
