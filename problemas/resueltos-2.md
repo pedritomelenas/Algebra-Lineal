@@ -135,20 +135,20 @@ Estudia si los siguientes conjuntos de vectores son
 linealmente independientes o linealmente dependientes (se recomienda usar coordenadas en las bases más adecuadas).
 
 <ol type="a">
-<li>En el conjunto de polinomios de $\mathbb{R}[x]$ con grado menor o igual que dos:</li>
+<li>En el conjunto de polinomios de $\mathbb{R}[x]$ con grado menor o igual que dos:
 
-$$\{ 1+2x+3x^{2},\; 1-x+x^{2},\; 1+x-x^{2},\; x+2x^{2} \}.$$
+$$\{ 1+2x+3x^{2},\; 1-x+x^{2},\; 1+x-x^{2},\; x+2x^{2} \}.$$</li>
 
-<li>En el conjunto de polinomios de $\mathbb{Z}_3[x]$ con grado menor o igual que tres:</li>
+<li>En el conjunto de polinomios de $\mathbb{Z}_3[x]$ con grado menor o igual que tres:
 
-$$\{2x, x^3-3, 1+x -4x^3, x^3 + 18x -9\}.$$
+$$\{2x, x^3-3, 1+x -4x^3, x^3 + 18x -9\}.$$ </li>
 
-<li>En $\mathcal{M}_{2}(\mathbb{Z}_7)$: </li>
+<li>En $\mathcal{M}_{2}(\mathbb{Z}_7)$: 
 
 $$\left\{ \begin{pmatrix} 1 & -1 \\ 0 & 6
 \end{pmatrix}, \begin{pmatrix} -1 & 0 \\ 3 & 1 \end{pmatrix},
 \begin{pmatrix} 1 & 1 \\ -1 & 2 \end{pmatrix}, \begin{pmatrix}
-0 & 1 \\ 1 & 0 \end{pmatrix}\right\}.$$
+0 & 1 \\ 1 & 0 \end{pmatrix}\right\}.$$</li>
 </ol>
 
 <details>
@@ -158,7 +158,7 @@ En cada caso utilizaremos la base más sencilla que conozcamos del espacio vecto
 
 <ol type="a">
 
-<li>Podemos utilizar la base $B=\{1,x,x^2\}$ en la que resulta muy sencillo escribir las coordenadas de los vectores:</li>
+<li>Podemos utilizar la base $B=\{1,x,x^2\}$ en la que resulta muy sencillo escribir las coordenadas de los vectores:
 
 $$\begin{array}{rl}
 1+2x+3x^{2}&=(1,2,3)_B,\\
@@ -187,7 +187,7 @@ que tiene rango tres (las tres primeras columnas forman una submatriz con determ
 
 Realmente no era necesario el cálculo del rango, puesto que no podía ser en ningún caso mayor que tres. Podíamos haber utilizado que como la dimensión del espacio es tres, el máximo número de vectores linealmente independientes en este espacio vectorial es también tres.
 
-Comprobemos el resultado obtenido con <code>sage</code>.
+Comprobemos el resultado obtenido con <code>sage</code>.</li>
 
 <div class="sage">
 <script type="text/x-sage">
@@ -196,7 +196,7 @@ show(html(f"${latex(A.T)}$ tiene rango ${A.rank()}$"))
 </script>
 </div>  
 
-<li>En este caso, utilizamos la base $B=\{1,x,x^2,x^3\}$ y de nuevo escribimos los vectores por sus coordenadas:</li>
+<li>En este caso, utilizamos la base $B=\{1,x,x^2,x^3\}$ y de nuevo escribimos los vectores por sus coordenadas:
 
 $$\begin{array}{rl}
 2x&=(0,2,0,0)_B,\\
@@ -219,9 +219,9 @@ $$\left(\begin{array}{rrr}
 0 & 1 & 0
 \end{array}\right)$$
 
-que tiene rango tres y los tres vectores son linealmente independientes.
+que tiene rango tres y los tres vectores son linealmente independientes.</li>
 
-<li>En $\mathcal{M}_{2}(\mathbb{Z}_7)$ una base sencilla es</li>
+<li>En $\mathcal{M}_{2}(\mathbb{Z}_7)$ una base sencilla es
 
 $$\left\{ \begin{pmatrix}
 1 & 0 \\ 0 & 0 \\
@@ -265,7 +265,7 @@ $$\left(\begin{array}{rrrr}
 
 que tiene determinante distinto de cero y por tanto rango cuatro, así que los vectores son linealmente independientes.
 
-Comprobemos el resultado obtenido con <code>sage</code>.
+Comprobemos el resultado obtenido con <code>sage</code>.</li>
 
 <div class="sage">
 <script type="text/x-sage">
@@ -406,7 +406,7 @@ $
 <summary>Solución</summary>
 
 <ol type="a">
-<li>Para comprobar que los vectores $\{e_1,e_2,e_3\}$ forman base es suficiente probar que son linealmente independientes, puesto que son tres que es la dimensión del espacio vectorial. Calculamos el rango de la matriz que forman:</li>
+<li>Para comprobar que los vectores $\{e_1,e_2,e_3\}$ forman base es suficiente probar que son linealmente independientes, puesto que son tres que es la dimensión del espacio vectorial. Calculamos el rango de la matriz que forman:
 
 $$\begin{pmatrix}
 1 & 1 & 0\\
@@ -482,9 +482,9 @@ b=vector([1,0,2])
 Ab=A.augment(b,subdivide=True) 
 show(Ab,"~",Ab.rref())
 </script>
-</div>  
+</div>  </li>
 
-<li>Procedemos del mismo modo sin repetir los razonamientos, puesto que son idénticos al apartado anterior.</li>
+<li>Procedemos del mismo modo sin repetir los razonamientos, puesto que son idénticos al apartado anterior.
 
 $$\left( \begin{array}{rrrr|r}
 1 & 1 & 1 & 1 & 1\\
@@ -508,7 +508,7 @@ b=vector([1,0,1,0])
 Ab=A.augment(b,subdivide=True) 
 show(Ab,"~",Ab.rref())
 </script>
-</div>  
+</div>  </li>
 
 </ol>
 </details>
@@ -567,7 +567,7 @@ espacio vectorial dado.
 
 <ol type="a">
 <li>Como la dimensión de este espacio es tres, cualquier conjunto de generadores tiene que tener al menos tres vectores. Así que en este caso la respuesta es negativa.</li>
-<li>Estamos en el mismo espacio vectorial y ahora sí tenemos tres vectores. Serán sistema de generadores si y solo si son base, lo que equivale a que sean linealmente independientes. Escribimos sus coordenadas en $B_s=\{1,x,x^2\}$ y calculamos el rango de la matriz que forman:</li>
+<li>Estamos en el mismo espacio vectorial y ahora sí tenemos tres vectores. Serán sistema de generadores si y solo si son base, lo que equivale a que sean linealmente independientes. Escribimos sus coordenadas en $B_s=\{1,x,x^2\}$ y calculamos el rango de la matriz que forman:
 
 $$1+4x=(1,4,0)_{B_s},$$
 $$3+4x^2=(2,0,4)_{B_s},$$
@@ -579,9 +579,9 @@ $$\begin{pmatrix}
 0 & 4 & 0
 \end{pmatrix}.$$
 
-Esta matriz tiene determinante $(-1)(4)=-4$ y por tanto son sistema de generadores.
+Esta matriz tiene determinante $(-1)(4)=-4$ y por tanto son sistema de generadores.</li>
 
-<li>En este caso tenemos cuatro vectores y $\operatorname{dim}(\mathcal{M}_{2}(\mathbb{Z}_7))=4$, así que razonamos como antes, esta vez usando coordenadas en la base estándar</li>
+<li>En este caso tenemos cuatro vectores y $\operatorname{dim}(\mathcal{M}_{2}(\mathbb{Z}_7))=4$, así que razonamos como antes, esta vez usando coordenadas en la base estándar
 
 $$B_s=\left\{ \begin{pmatrix}
 1 & 0 \\ 0 & 0 \\
@@ -608,7 +608,7 @@ $$\begin{pmatrix}
 0 & 0 & 0 & 0
 \end{pmatrix}$$
 
-que como tiene una fila entera de ceros tiene rango menor que cuatro, luego no son sistema de generadores.
+que como tiene una fila entera de ceros tiene rango menor que cuatro, luego no son sistema de generadores.</li>
 
 </ol>
 </details>
@@ -616,15 +616,15 @@ que como tiene una fila entera de ceros tiene rango menor que cuatro, luego no s
 
 <article>
 
-Sea $V = (\mathbb{Z}_3)^4$ y sean los subespacios vectoriales
+Sea $V = \mathbb{Z}_3^4$ y sean los subespacios vectoriales
 
 $$
 U = \left\{(x,y,z,t) \in V ~\left|~
 \begin{aligned}
-x-y-z &= 0, \\
-t &= 0.
-\end{aligned} \right. \right\} \qquad W = \langle
-(1,1,1,1), (0,1,0,1) \rangle 
+x-y-z &= 0 \\
+t &= 0
+\end{aligned} \right. \right\}, \qquad W = \langle
+(1,1,1,1), (0,1,0,1) \rangle.
 $$
 
 <ol type="a">
@@ -636,7 +636,7 @@ $$
 <summary>Solución</summary>
 
 <ol type="a">
-<li>$W = \langle (1,1,1,1), (0,1,0,1) \rangle$.</li>
+<li>$W = \langle (1,1,1,1), (0,1,0,1) \rangle$.
 En primer lugar calculamos la base más sencilla y con ella escribimos las paramétricas:
 $$\begin{pmatrix}
 1 & 0\\
@@ -661,9 +661,9 @@ t=0\cdot \lambda_1 + 1\cdot \lambda_2,\\
 $$
 Como aparecen 2 parámetros que pueden tomar valores en $\mathbb{Z}_3$, en total hay $3\cdot 3=9$ vectores distintos en $W$.
 
-También se puede razonar sin necesidad de calcular las paramétricas, comprobando que la dimensión de $W$ es dos, simplemente probando que los dos generadores son linealmente independientes.
+También se puede razonar sin necesidad de calcular las paramétricas, comprobando que la dimensión de $W$ es dos, simplemente probando que los dos generadores son linealmente independientes.</li>
 
-<li>Paramétricas de $U$.</li>
+<li>Paramétricas de $U$.
 Para ello resolvemos el sistema que forman las ecuaciones cartesianas, que en este caso ya es escalonado reducido; depende de dos parámetros (las incógnitas $y$ y $z$ son libres):
 
 $$ U\equiv  \left\{ \begin{array}{l}
@@ -681,9 +681,9 @@ z=0\cdot \lambda_1 + 1\cdot \lambda_2,\\
 t=0\cdot \lambda_1 + 0\cdot \lambda_2.\\
 \end{array}\right. $$
 Además obtenemos que  una base es:
-$$\{ (1,1,0,0), (1,0,1,0) \}$$
+$$\{ (1,1,0,0), (1,0,1,0) \}.$$</li>
 
-<li>Cartesianas de $W$.</li>
+<li>Cartesianas de $W$.
 Puesto que ya tenemos las ecuaciones paramétricas de $W$ podemos calcular unas ecuaciones cartesianas eliminando parámetros:
 despejamos los dos parámetros $\lambda_1=x$ (en la primera ecuación), $\lambda_2= y$ (en la segunda ecuación), uno en una ecuación paramétrica en la que aparece y sustituimos en las otras dos ecuaciones:
 $$W\equiv \left\{ \begin{array}{r}
@@ -697,28 +697,7 @@ x & 1 & 0\\
 y & 0 & 1\\
 z & 1 & 0\\
 t & 0 & 1
-\end{pmatrix}$$ e imponiendo que su rango debe ser dos, con lo que hay que elegir dos menores de orden tres que al igualarlos a cero nos den dos ecuaciones que no sean múltiplo una de la otra. Este procedimiento es en general mucho más laborioso.
-
-
-Para ello resolvemos el sistema, que en este caso ya es escalonado reducido; depende de dos parámetros (las incógnitas $y$ y $z$ son libres):
-
-$$ U\equiv  \left\{ \begin{array}{l}
-x=\lambda_1 + \lambda_2,\\
-y=\lambda_1,\\
-z=\lambda_2,\\
-t=0.\\
-\end{array}\right.$$
-O también 
-$$
-\left\{ \begin{array}{l}
-x=1\cdot \lambda_1 +1\cdot \lambda_2,\\
-y=1\cdot \lambda_1 + 0\cdot \lambda_2,\\
-z=0\cdot \lambda_1 + 1\cdot \lambda_2,\\
-t=0\cdot \lambda_1 + 0\cdot \lambda_2.\\
-\end{array}\right. $$
-
-Luego una base es:
-$$\{ (1,1,0,0), (1,0,1,0) \}.$$
+\end{pmatrix}$$ e imponiendo que su rango debe ser dos, con lo que hay que elegir dos menores de orden tres que al igualarlos a cero nos den dos ecuaciones que no sean múltiplo una de la otra. Este procedimiento es en general mucho más laborioso.</li>
 
 </ol>
 </details>
@@ -730,39 +709,33 @@ Para cada uno de los siguientes subespacios de $\mathbb{R}^{4}$ calcula unas ecu
 
 <ol type="a">
 
-<li>$$U=\{(a,b,-b,a)/ \; a,b\in \mathbb{R}\; \},
-\quad
-W=\{(a,b,0,c)/ \; a,b,c\in \mathbb{R}\; \}.$$</li>
+<li>$U=\{(a,b,-b,a) : a,b\in \mathbb{R} \}$, $W=\{(a,b,0,c) : a,b,c\in \mathbb{R}\}$.</li>
 
-<li>$$U\equiv \left\{
+<li>$U\equiv \left\{
 \begin{array}{lcrrr}
 x_{1} &=& \lambda,\\
 x_{2} &=& 0,\\
 x_{3} &=& \lambda & +\mu,\\
-x_{4} &=& \lambda & +\mu & +\gamma.\\
+x_{4} &=& \lambda & +\mu & +\gamma,\\
 \end{array}
-\right.
-\quad
-W\equiv \left\{
+\right.$
+$W\equiv \left\{
 \begin{array}{lcrrr}
 x_{1} &=& \lambda & +\mu &+\gamma,\\
 x_{2} &=& \lambda & +\mu,\\
 x_{3} &=& 0,\\
 x_{4} &=& \lambda.\\
 \end{array}
-\right.
-$$</li>
+\right.$</li>
 
-<li>$$U=\langle(1,1,0,0), (0,1,1,0), (0,0,1,1)\rangle,
-\quad
-W\equiv \left\{
+<li>$U=\langle(1,1,0,0), (0,1,1,0), (0,0,1,1)\rangle$, $W\equiv \left\{
 \begin{array}{lcrrr}
 x_{1} &+x_{2}& & -x_{4} &=0,\\
       & x_{2}&+x_{3}&   &=0,\\
 x_{1}&-x_{2}&-x_{3}&-x_{4}&=0.\\
 \end{array}
 \right.
-$$</li>
+$</li>
 
 </ol>
 <details>
@@ -770,7 +743,7 @@ $$</li>
 
 <ol type="a">
 
-<li>Observemos la información que tenemos sobre los vectores que están en $U$: llamamos $(x_1,x_2,x_3,x_4)$ a las coordenadas de un vector de $\mathbb{R}^4$ y para que pertenezca a $U$ se tiene que cumplir:</li>
+<li>Observemos la información que tenemos sobre los vectores que están en $U$: llamamos $(x_1,x_2,x_3,x_4)$ a las coordenadas de un vector de $\mathbb{R}^4$ y para que pertenezca a $U$ se tiene que cumplir:
 $$U\equiv \left\{
 \begin{array}{lcrr}
 x_{1} &=& a,\\
@@ -785,7 +758,7 @@ $$ U\equiv  \left\{ \begin{array}{l}
 x_1-x_4=0,\\
 x_2+x_3=0.
 \end{array}\right. $$
-También estas ecuaciones podían deducirse de la descripción del conjunto $U$.
+También estas ecuaciones podían deducirse de la descripción del conjunto $U$.<br>
 
 De la misma forma, en el caso de $W$ podemos escribir unas paramétricas directamente:
 $$W\equiv \left\{
@@ -799,15 +772,15 @@ x_{4} &=& c.\\
 $$
 Donde $a$, $b$ son parámetros. Como los vectores que acompañan a cada parámetro son linealmente independientes (esos vectores son  $\{(1,0,0,0),(0,1,0,0),(0,0,0,1)\}$) 
 entonces la dimensión de $W$ es tres y debe tener una ecuación cartesiana (puesto que la dimensión de $W$ es la dimensión del total menos el número de ecuaciones cartesianas), así que con encontrar una hemos terminado. Observando las paramétricas descubrimos que la tercera ecuación ($x_3=0$) ya es una cartesiana puesto que en ella no aparece ningún parámetro, así que 
-$$W\equiv x_3=0.$$ 
+$$W\equiv x_3=0.$$ </li>
 
-<li>Para el caso de $U$, puesto que nos dan unas ecuaciones paramétricas,  podemos usar un argumento idéntico al anterior: los vectores del sistema de generadores que aparecen en las paramétricas que nos dan son linealmente independientes(hay que comprobarlo, claro, en este caso esos vectores son $\{(1,0,1,1),(0,0,1,1),(0,0,0,1)\}$.</li>
+<li>Para el caso de $U$, puesto que nos dan unas ecuaciones paramétricas,  podemos usar un argumento idéntico al anterior: los vectores del sistema de generadores que aparecen en las paramétricas que nos dan son linealmente independientes (hay que comprobarlo, claro). En este caso esos vectores son $\{(1,0,1,1),(0,0,1,1),(0,0,0,1)\}$.
 Utilizando de nuevo el argumento de antes, necesitamos solo una ecuación cartesiana y la segunda, $x_2=0$, ya lo es, luego 
 $$U\equiv x_2=0.$$
  
-Para $W$ el mismo razonamiento nos da que $$W\equiv x_3=0.$$ 
+Para $W$ el mismo razonamiento nos da que $$W\equiv x_3=0.$$ </li>
 
-<li>Para $U$ en primer lugar calculamos la base más sencilla:</li>
+<li>Para $U$ en primer lugar calculamos la base más sencilla:
 $$\begin{pmatrix}
 1 & 0 & 0 \\
 1 & 1 & 0\\
@@ -853,7 +826,7 @@ x_{4} &=& 0.\\
 \end{array}
 \right.
 $$
-son unas ecuaciones paramétricas de $W$.
+son unas ecuaciones paramétricas de $W$.</li>
 
 </ol>
 </details>
@@ -863,15 +836,15 @@ son unas ecuaciones paramétricas de $W$.
 <ol type="a">
 
 <li>Calcula las coordenadas del vector $v=(1,1)_B$ respecto de $B'$ siendo
-$B=\{(1,1),(1,2)\}$ y $B'=\{(2,1),(0,1)\}$, en el espacio vectorial $(\mathbb{Z}_3)^2$.</li>
-<li>En el espacio vectorial $(\mathbb{Z}_3)^3$ se considera el plano generado por los vectores $u=(1,2,1)$ y $v=(1,1,2)$. Calcula una ecuación cartesiana de dicho plano.</li>
+$B=\{(1,1),(1,2)\}$ y $B'=\{(2,1),(0,1)\}$, en el espacio vectorial $\mathbb{Z}_3^2$.</li>
+<li>En el espacio vectorial $\mathbb{Z}_3^3$ se considera el plano generado por los vectores $u=(1,2,1)$ y $v=(1,1,2)$. Calcula una ecuación cartesiana de dicho plano.</li>
 
 </ol>
 <details>
 <summary>Solución</summary>
 
 <ol type="a">
-<li>Debemos calcular en primer lugar las coordenadas de $v$ en la base canónica:</li>
+<li>Debemos calcular en primer lugar las coordenadas de $v$ en la base canónica:
 $$v=(1,1)_B=1\cdot (1,1)+1\cdot (1,2)=(2,0)$$
 y ahora planteamos el sistema:
 $$v=(2,0)=\alpha (2,1)+\beta (0,1)=(\alpha,\beta)_{B'}$$
@@ -883,9 +856,9 @@ $$\left(\begin{array}{cc|c}
 1 & 0 & 1\\
 0 & 1 & 2
 \end{array}\right),$$
-luego $v=(1,2)_{B'}$.
+luego $v=(1,2)_{B'}$.</li>
 
-<li>Como nos dan un sistema de generadores del subespacio podemos buscar la base más sencilla</li>
+<li>Como nos dan un sistema de generadores del subespacio podemos buscar la base más sencilla
 $$\begin{pmatrix}
  1 & 1 \\
  2 & 1 \\
@@ -907,7 +880,7 @@ z &=& 2\lambda_2.\\
 \right.
 $$
 Eliminando los dos parámetros nos queda 
-$$\pi \equiv 2y-z=0.$$
+$$\pi \equiv 2y-z=0.$$</li>
 
 </ol>
 </details>
