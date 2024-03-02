@@ -724,7 +724,7 @@ $$C = \begin{pmatrix} 1&1&1&1 \\ 0&2&1&2 \\ 0&4&1&1 \\ \end{pmatrix}.$$
 <details>
 <summary>Solución</summary>
 <ol type="a">
-<li>Forma de Hermite por filas.</li>
+<li>Forma de Hermite por filas.
 Realizamos operaciones elemntales por filas hasta obtener una matriz escalonada reducida por filas:
 
 $$
@@ -786,9 +786,9 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 A=matrix(GF(5),[[1,1,1,1],[0,2,1,2],[0,4,1,1]])
 show(A,"~",A.rref())
 </script>
-</div> 
+</div> </li>
 
-<li>Forma de Hermite por columnas.</li>
+<li>Forma de Hermite por columnas.
 Como el número de pivotes en la forma de Hermite por columnas coincide con el que hay en la de filas, entonces la única posibilidad es que sea 
 $$\left( 
 \begin{array}{rrrr}
@@ -805,10 +805,10 @@ Comprobemos el resultado obtenido con <code>sage</code> (para eso transponemos l
 A=matrix(GF(5),[[1,1,1,1],[0,2,1,2],[0,4,1,1]])
 show(A,"~",(A.T).rref().T)
 </script>
-</div> 
+</div> </li>
 
 
-<li>Una submatriz cuadrada de orden tres regular y su inversa.</li>
+<li>Una submatriz cuadrada de orden tres regular y su inversa.
 Hay cuatro elecciones posibles. Solo damos un ejemplo de cómo calcularlo.
 Elegimos por ejemplo las tres primeras columnas (como el determinante vale $2-4=-2=3$ en  $\mathbb{Z}_5$, es regular) y unimos una matriz identidad a la derecha. Para calcular la inversa realizamos operaciones elementales por filas en las filas de $(A\mid I)$:
 
@@ -884,7 +884,7 @@ $$\left(
 0 & 1 & 0 \\
 0 & 0 & 1 \\
 \end{array}
-\right).$$
+\right).$$</li>
 
 </ol>
 </details>
@@ -900,7 +900,7 @@ $$A = \begin{pmatrix} 1&1&0&2&1 \\ 2&1&1&2&0 \\ 0&2&1&0&2 \\ 0&1&2&1&0 \end{pmat
 Sabemos que $A\sim_f B$ si y sólo si existe  $P$ regular tal que $PA=B$. Por tanto, primero comprobaremos que $A$ y $B$ tienen la misma forma escalonada reducida por filas, calculando además las matrices de paso. Si coinciden, entonces usando las matrices de paso que hemos calculado, podremos encontrar $P$.
 
 <ol type="a">
-<li> En primer lugar calculamos las formas de Hermite por filas para comprobar que ambas, la de $A$ y la de $B$ son iguales. Al mismo tiempo calcularemos matrices de paso correspondientes a cada una de ellas.</li>
+<li> En primer lugar calculamos las formas de Hermite por filas para comprobar que ambas, la de $A$ y la de $B$ son iguales. Al mismo tiempo calcularemos matrices de paso correspondientes a cada una de ellas.
 
 $$
 \begin{align*}
@@ -966,10 +966,10 @@ $$
 0 & 0 & 0 & 0 & 0 & 0 & 2 & 2 & 1 \\
 \end{array}\right)=(H_B \mid P_B).
 \end{align*}
-$$
+$$</li>
 
 <li> Hemos comprobado que $H_A=H_B$ y por tanto $A\sim_f B$ y existe una matriz $P$ tal que $PA=B$.</li>
-<li> Para calcular $P$ podemos ayudarnos de las matrices de paso $P_A$ y $P_B$ calculadas:</li>
+<li> Para calcular $P$ podemos ayudarnos de las matrices de paso $P_A$ y $P_B$ calculadas:
 $$P_A A=H_A=H_B=P_B B,$$
 y por tanto
 $$P_A A=P_B B.$$
@@ -1075,7 +1075,7 @@ A=matrix(GF(3),[[1,1,0,2,1],[2,1,1,2,0],[0,2,1,0,2],[0,1,2,1,0]])
 B=matrix(GF(3),[[1,1,0,1,2],[1,2,2,1,0],[1,0,1,2,0],[2,2,0,0,0]]) 
 P*A==B
 </script>
-</div> 
+</div> </li>
 
 </ol>
 </details>
@@ -1094,7 +1094,7 @@ Sea $$A=\left (\begin{array}{cccc} 2 & 1 & 3 & 0 \\ 1 & 2 & 1 & 1 \\ 3 & 4 & 2 &
 <summary>Solución</summary>
 
 <ol type="a">
-<li>Encontrar $B$ tal que $A\cdot B = Id$.</li>
+<li>Encontrar $B$ tal que $A\cdot B = Id$.
 
 ¿Qué orden debe tener $B$? Como la identidad es una matriz cuadrada, y $A$ tiene tres filas, deducimos que $I$ es la identidad $3\times 3$. De aquí también deducimos que $B$ tiene que tener cuatro filas y tres columnas.<br>
 
@@ -1198,9 +1198,9 @@ B=matrix(GF(5),[[1,3,2],[4,4,1],[0,0,0],[1,0,1]])
 I=matrix(GF(5),[[1,0,0],[0,1,0],[0,0,1]])
 A*B==I
 </script>
-</div> 
+</div> </li>
 
-<li>Todas las matrices $B$ que cumplen la propiedad anterior.</li>
+<li>Todas las matrices $B$ que cumplen la propiedad anterior.
 En realidad el planteamiento es sencillo, sería resolver:
 $$\left(\begin{array}{cccc}
 2 & 1 & 3 & 0 \\ 1 & 2 & 1 & 1 \\ 3 & 4 & 2 & 1\\
@@ -1305,16 +1305,16 @@ $$\left(\begin{array}{ccc}
 4+2\lambda_1 & 4+2\lambda_2 & 1+2\lambda_3\\
 \lambda_1 & \lambda_2 &\lambda_3\\
 1 & 0 & 1\\
-\end{array}\right), \quad \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5.$$
+\end{array}\right), \quad \lambda_1,\lambda_2,\lambda_3\in \mathbb{Z}_5.$$</li>
 
-<li>Encontrar $C$ tal que $C\cdot A = Id$.</li>
+<li>Encontrar $C$ tal que $C\cdot A = Id$.
 Si pensamos primero en el orden de $C$, como $A$ tiene tres filas y cuatro columnas, necesariamente $C$ debe tener tres columnas. Por otro lado, como la matriz identidad es cuadrada, en este caso será una matriz $4\times4$, por lo que $C$ debe tener cuatro filas.<br>
 
 El argumento más fácil de utilizar es posterior al momento en que nos encontramos en el desarrollo del tema. Se usa:
 $$\operatorname{rg}(A\cdot B)\leq mín\{\operatorname{rg}(A),\operatorname{rg}(B)\}$$
-en este caso, por los órdenes de $A$ y $C$ su rango máximo posible es $3$, luego $\operatorname{rg}(C\cdot A)\leq 3$ mientras que $\operatorname{rg}(I_4)=4.$
+en este caso, por los órdenes de $A$ y $C$ su rango máximo posible es $3$, luego $\operatorname{rg}(C\cdot A)\leq 3$ mientras que $\operatorname{rg}(I_4)=4.$<br>
 
-También es posible plantearlo de una forma similar al apartado 2, al resolver los sistemas encontraremos que son incompatibles.
+También es posible plantearlo de una forma similar al apartado 2, al resolver los sistemas encontraremos que son incompatibles.</li>
 </ol>
 
 </details>
@@ -1491,7 +1491,7 @@ Sea $$A=\left( \begin{array}{cccc} 3-\lambda & 1 & 1 & 0\\ 5 &-\lambda & 0 & 0\\
 <summary>Solución</summary>
 
 <ol type="a">
-<li>Determinante.</li>
+<li>Determinante.
 Para calcular el determinante más fácilmente, a la segunda columna le restamos la tercera, luego desarrollamos por la segunda columna:
 
 $$|A|=\left| \begin{array}{cccc}
@@ -1512,9 +1512,9 @@ $$|A|=\left| \begin{array}{cccc}
 
 Desarrollando ahora por la primera columna
 $$|A|=(-\lambda)(3-\lambda)[(-\lambda)(2-\lambda)+1]=(-\lambda)(3-\lambda)(\lambda -1)^2$$ 
-y este resultado es válido en cualquier cuerpo.
+y este resultado es válido en cualquier cuerpo.</li>
 
-<li>Rango.</li>
+<li>Rango.
 Puesto que el cálculo del determinante es válido en $\mathbb{Z}_3$, cuando $\lambda=2$ la matriz tiene rango 4 (observamos que $2$ no es raíz del polinomio que tenemos descompuesto en factores lineales, y por tanto el determinante es distinto de $0$); en cambio, para los casos $\lambda\in \{0,1\}$ (que son raíces del polinomio obtenido) es menor o igual que 3. Para estos casos calculamos el rango mediante operaciones elementales.<br>
 
 Para $\lambda=0$:<br>
@@ -1547,9 +1547,9 @@ $$A=\left( \begin{array}{cccc}
 0 & 2 & 2 & 1\\
 0 & 0 & 0 & 0 
 \end{array}\right)$$
-que tiene rango 3.<br>
+que tiene rango 3.</li>
 
-<li>Sistema de ecuaciones.</li>
+<li>Sistema de ecuaciones.
 
 Como la matriz ampliada tiene rango 4 para $\lambda\not\in \{0,1,3\}$, y la de coeficientes solo tiene tres columnas y por tanto el rango máximo es 3, en estos casos el sistema es incompatible. Nos queda estudiar los casos particulares $\lambda\in\{0,1,3\}$:<br>
 
@@ -1591,7 +1591,7 @@ $$\left( \begin{array}{ccc|c}
 0 & 0 & 0 & -1 
 \end{array}\right)$$
 
-y de nuevo aparece la ecuación $0=1$ con lo que en este caso es incompatible.
+y de nuevo aparece la ecuación $0=1$ con lo que en este caso es incompatible.</li>
 </ol>
 
 </details>
@@ -1620,7 +1620,7 @@ x+ay&=0.
 
 <ol type="a">
 
-<li>Determinante:</li>
+<li>Determinante:
 $$|A|=\left|\begin{array}{rccc}
 1 & 1 & 1 & 0\\
 a & a-1 & a & 1\\
@@ -1643,9 +1643,9 @@ $$
 1 & 0\\
 1 & a-1\\
 \end{array}\right|=1-a.
-$$
+$$</li>
 
-<li>Rango.</li>
+<li>Rango.
 Como $|A|=a-1$, si $a\not = 1$ el rango de $A$ es 4. Solo queda calcular el rango si $a=1$. Como después se pide calcular la forma de Hermite por filas, lo realizamos ahora:
 
 $$
@@ -1687,13 +1687,13 @@ Comprobemos el resultado obtenido con <code>sage</code>.
 A=matrix(QQ,[[1,1,1,0],[1,0,1,1],[1,1,1,0],[1,1,0,0]]) #matriz de coeficientes
 show(A,"~",A.rref())
 </script>
-</div>  
+</div>  </li>
 
-<li>Forma de Hermite por filas.</li>
-Cuando $a\not = 1$ como el rango es $4$, la forma de Hermite por filas es $I_4$, para $a=1$ es la calculada en el apartado anterior.
+<li>Forma de Hermite por filas.
+Cuando $a\not = 1$ como el rango es $4$, la forma de Hermite por filas es $I_4$, para $a=1$ es la calculada en el apartado anterior.</li>
 
-<li>Discusión del sistema.</li>
-Como la matriz ampliada del sistema es $A$, entonces cuando $a\not = 1$ la matriz ampliada tiene rango 4 mientras que la de coeficientes como máximo podría tener rango 3, así que el sistema es incompatible; en el caso $a=1$, usando la forma de Hermite por filas de $A$ que hemos calculado observamos que el sistema es compatible determinado.
+<li>Discusión del sistema.
+Como la matriz ampliada del sistema es $A$, entonces cuando $a\not = 1$ la matriz ampliada tiene rango 4 mientras que la de coeficientes como máximo podría tener rango 3, así que el sistema es incompatible; en el caso $a=1$, usando la forma de Hermite por filas de $A$ que hemos calculado observamos que el sistema es compatible determinado.</li>
 </ol>
 
 </details>
