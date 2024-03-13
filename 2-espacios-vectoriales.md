@@ -579,7 +579,7 @@ $$
 \right.
 $$ 
 
-y transformar el sistema en otro equivalente que esté en forma escalonada. El número de ecuaciones en las que no aparecerán $\lambda_1,\dots,\lambda_r$ será la dimensión de $U$, mientras que el resto serán ecuaciones de la forma $0$ igual a una expresión lineal en $x_1,\dots,x_n$, que son las que imponen que el sistema original sea compatible, y por tanto las ecuaciones de $U$.
+y transformar el sistema en otro equivalente que esté en forma escalonada. El número de ecuaciones en las que aparecerán $\lambda_1,\dots,\lambda_r$ será la dimensión de $U$, mientras que el resto serán ecuaciones de la forma $0$ igual a una expresión lineal en $x_1,\dots,x_n$, que son las que imponen que el sistema original sea compatible, y por tanto las ecuaciones de $U$.
 
 ### Ejemplo
 
