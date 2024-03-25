@@ -10,20 +10,6 @@ tag: problemas
   }
 }
 
-.container {
-    max-width: 56rem;
-    }
-    @media (min-width: 38em) {
-    .container {
-        max-width: 38rem;
-    }
-    }
-    @media (min-width: 56em) {
-    .container {
-        max-width: 56rem;
-    }
-}
-
 
 body {
   counter-reset: article;
