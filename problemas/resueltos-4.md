@@ -170,7 +170,7 @@ $$D=\begin{pmatrix}
 <li>Calcular la matriz $A^{123}$.<br>
 
 Para calcular $A^{123}$ utilizamos la diagonalización que acabamos de realizar para la que se cumple $D=P^{-1}AP$.
-Despejando $A$ tendremos $$A=PDP^{1},$$ y podemos observar que en el producto
+Despejando $A$ tendremos $$A=PDP^{-1},$$ y podemos observar que en el producto
 $$A^{123}= (PDP^{-1})(PDP^{-1})\cdots (PDP^{-1})$$
 los productos $P^{-1}P=I$, y por tanto queda
 $$A^{123}=PD^{123}P^{-1}.$$
@@ -304,7 +304,7 @@ A-2I=\left(\begin{array}{cccc}
 $$
 Para que tenga rango dos (y por tanto la dimensión de $V_{\lambda=2}$ sea también dos) debe ser $b=0$.<br>
 
-Conculimos que solo es diagonalizable en el caso $a=b=0$.
+Concluimos que solo es diagonalizable en el caso $a=b=0$.
 
 </details>
 </article>
