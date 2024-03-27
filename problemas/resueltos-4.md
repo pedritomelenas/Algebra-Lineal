@@ -10,19 +10,6 @@ tag: problemas
   }
 }
 
-.container {
-    max-width: 56rem;
-    }
-    @media (min-width: 38em) {
-    .container {
-        max-width: 38rem;
-    }
-    }
-    @media (min-width: 56em) {
-    .container {
-        max-width: 56rem;
-    }
-}
 
 
 body {
@@ -140,19 +127,6 @@ $$\begin{array}{r}
 \end{array}$$
 y resulta $\alpha= 0, \beta=-1, \gamma = 1, \delta= 0$, así que:
 $$p_U(1,-1,1,1)=(0,-1,1,0); \, \, p_{U^{\perp}}(1,-1,1,1)=(1,0,0,1).$$ 
-
-
-
-
-
-</li>
-
-
-
-
-
-</li>
-
 </ol>
 </details>
 </article>

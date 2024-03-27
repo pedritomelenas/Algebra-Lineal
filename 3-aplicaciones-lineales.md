@@ -563,6 +563,8 @@ show(v1/(Matrix([[1,1]])*v1))
 </script>
 </div>  
 
+###### $\to$ [Ejercicios resueltos]({{ site.baseurl | absolute_url }}{% link problemas/resueltos-3.md %}) 
+
 
 ## Autoevaluacion
 

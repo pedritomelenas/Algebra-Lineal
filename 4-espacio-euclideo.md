@@ -381,6 +381,8 @@ $$
 
 Nótese que $Q$ no es ortogonal. Si tomamos $\mathbf{u}=(1-\sqrt{2},1)$ y $\mathbf{v}=(1+\sqrt{2},1)$, entonces la matriz $P$ cuyas columnas son $\frac{1}{\Vert \mathbf{u}\Vert }\mathbf{u}$ y $\frac{1}{\Vert\mathbf{v}\Vert}\mathbf{v}$ verifica que $D=P^tAP$.
 
+###### $\to$ [Ejercicios resueltos]({{ site.baseurl | absolute_url }}{% link problemas/resueltos-4.md %}) 
+
 
 ## Autoevaluación
 
