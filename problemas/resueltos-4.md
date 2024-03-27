@@ -109,7 +109,7 @@ $$\begin{pmatrix}
 y obtenemos que $U+W=\mathbb{R}^4$ puesto que obtenemos la base canónica. Ahora usando la fórmula de las dimensiones 
 $$\operatorname{dim}(U) + \operatorname{dim}(W) = \operatorname{dim}(U+W)+ \operatorname{dim}(U\cap W)$$
 obtenemos que $\operatorname{dim}(U\cap W)=0$ y por tanto $U\cap W=\{ 0 \}$.
-Sin embargo, como $<(1,0,0,-1),(0,0,1,-1)>=1$ y $(1,0,0,-1)\in U$ y $(0,0,1,-1)\in W$, entonces $W\not = U^{\perp}$.
+Sin embargo, como $<(1,0,0,-1),(0,0,1,-1)>=1$ y $(1,0,0,-1)\in U$ y $(0,0,1,-1)\in W$, entonces $W\not = U^{\perp}$.</li>
 
 <li>Calcular $p_{U}(v)$ y $p_{U^{\perp}}(v)$.<br>
 De la base de $U$ obtenemos las cartesianas de $U^{\perp}$ que son:
@@ -126,7 +126,8 @@ $$\begin{array}{r}
 -1-\beta -1+ \gamma = 0,
 \end{array}$$
 y resulta $\alpha= 0, \beta=-1, \gamma = 1, \delta= 0$, así que:
-$$p_U(1,-1,1,1)=(0,-1,1,0); \, \, p_{U^{\perp}}(1,-1,1,1)=(1,0,0,1).$$ 
+$$p_U(1,-1,1,1)=(0,-1,1,0); \, \, p_{U^{\perp}}(1,-1,1,1)=(1,0,0,1).$$ </li>
+
 </ol>
 </details>
 </article>
