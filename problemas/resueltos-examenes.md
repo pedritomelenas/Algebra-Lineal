@@ -10,20 +10,6 @@ tag: problemas
   }
 }
 
-.container {
-    max-width: 56rem;
-    }
-    @media (min-width: 38em) {
-    .container {
-        max-width: 38rem;
-    }
-    }
-    @media (min-width: 56em) {
-    .container {
-        max-width: 56rem;
-    }
-}
-
 
 body {
   counter-reset: article;
@@ -134,7 +120,7 @@ $$D=\begin{pmatrix}
 
 <ol type="a">
 <li>Calcula la matriz de Gram del producto escalar en el espacio de las matrices simétricas de orden dos dado por la fórmula:
-$$<A,B>=traza(AB)$$
+$$\langle A,B\rangle=\operatorname{traza}(AB)$$
 respecto de la base $B= \left\{ \begin{pmatrix}
 1 & 0 \\
 0 & 0
@@ -165,35 +151,35 @@ respecto de la base $B= \left\{ \begin{pmatrix}
 <ol type="a">
 <li>Calcula la matriz de Gram.<br>
 Para obtener la matriz de Gram calculamos el producto de cada dos matrices de la base:
-$$< \begin{pmatrix}
+$$\langle \begin{pmatrix}
 1 & 0 \\
 0 & 0
 \end{pmatrix} ,\begin{pmatrix}
 1 & 0 \\
 0 & 0
-\end{pmatrix}>=traza\left(  \begin{pmatrix}
+\end{pmatrix}\rangle=\operatorname{traza}\left(  \begin{pmatrix}
 1 & 0 \\
 0 & 0
 \end{pmatrix}\begin{pmatrix}
 1 & 0 \\
 0 & 0
-\end{pmatrix}\right)=traza\left(  \begin{pmatrix}
+\end{pmatrix}\right)=\operatorname{traza}\left(  \begin{pmatrix}
 1 & 0 \\
 0 & 0
 \end{pmatrix} \right)=1,$$
-$$< \begin{pmatrix}
+$$\langle \begin{pmatrix}
 1 & 0 \\
 0 & 0
 \end{pmatrix} ,\begin{pmatrix}
 0 & 1 \\
 1 & 0
-\end{pmatrix}>=traza\left(  \begin{pmatrix}
+\end{pmatrix}\rangle=\operatorname{traza}\left(  \begin{pmatrix}
 1 & 0 \\
 0 & 0
 \end{pmatrix}\begin{pmatrix}
 0 & 1 \\
 1 & 0
-\end{pmatrix}\right)=traza\left(  \begin{pmatrix}
+\end{pmatrix}\right)=\operatorname{traza}\left(  \begin{pmatrix}
 0 & 1 \\
 0 & 0
 \end{pmatrix} \right)=0,$$
