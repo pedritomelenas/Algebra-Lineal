@@ -1807,3 +1807,154 @@ P=\begin{pmatrix}
 
 </details>
 </article>
+
+<article>
+
+Dada la matriz
+$$A=\begin{pmatrix}
+1 & a-1 & a & 1\\
+-1 & a-1 & a & 1\\
+0 &2a-2 & 2a & 1\\
+1 & 0 & 2a & 3 
+\end{pmatrix}
+$$
+
+<ol type="a">
+<li>Calcula el determinante.</li>
+<li>Calcula la forma de Hermite por filas según los valores de $a$.</li>
+<li>Discute el sistema cuya matriz ampliada es $A$ en función de los valores de $a$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular el determinante.<br>
+$$\begin{align*}
+|A|= &\left|\begin{array}{cccc}
+1 & a-1 & a & 1\\
+-1 & a-1 & a & 1\\
+0 &2a-2 & 2a & 1\\
+1 & 0 & 2a & 3 
+\end{array}\right|=\left|\begin{array}{cccc}
+1 & a-1 & a & 1\\
+0 & 2a-2 & 2a & 2\\
+0 &2a-2 & 2a & 1\\
+0 & 1-a & a & 2 
+\end{array}\right|= \left|\begin{array}{ccc}
+2a-2 & 2a & 2\\
+2a-2 & 2a & 1\\
+1-a & a & 2 
+\end{array}\right|\\
+= & \left|\begin{array}{ccc}
+0 & 0 & 1\\
+2a-2 & 2a & 1\\
+1-a & a & 2 
+\end{array}\right|= \left|\begin{array}{cc}
+2a-2 & 2a \\
+1-a & a  
+\end{array}\right|=4a^2-4a=4a(a-1).
+\end{align*}$$</li>
+
+<li>Calcular la forma de Hermite por filas según los valores de $a$.<br>
+Por el Teorema de las matrices regulares, si $|A|\not = 0$ la forma de Hermite por filas de $A$ es $I_4$, por tanto si $a\not = 0,1$ entonces $H=I_4$.
+Estudiamos los casos particulares $a=0$ y $a=1$.<br>
+Si $a=0$ 
+$$A=\begin{pmatrix}
+1 & -1 & 0 & 1\\
+-1 & -1 & 0 & 1\\
+0 & -2 & 0 & 1\\
+1 & 0 & 0 & 3 
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & -1 & 0 & 1\\
+0 & -2 & 0 & 2\\
+0 & -2 & 0 & 1\\
+0 & 1 & 0 & 2 
+\end{pmatrix} \sim_f \begin{pmatrix}
+1 & 0 & 0 & -1\\
+0 & 1 & 0 & 2\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 5 
+\end{pmatrix} \sim_f \begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 
+\end{pmatrix}=H. 
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ,[[1,-1,0,1],[-1,-1,0,1],[0,-2,0,1],[1,0,0,3]])
+show(A,"~",A.rref())
+</script>
+</div>  
+
+Si $a=1$
+$$A=\begin{pmatrix}
+1 & 0 & 1 & 1\\
+-1 & 0 & 1 & 1\\
+0 & 0 & 2 & 1\\
+1 & 0 & 2 & 3 
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 0 & 1 & 1\\
+0 & 0 & 2 & 2\\
+0 & 0 & 2 & 1\\
+0 & 0 & 1 & 2 
+\end{pmatrix} \sim_f \begin{pmatrix}
+1 & 0 & 0 & -1\\
+0 & 0 & 1 & 2\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & -1 
+\end{pmatrix} \sim_f \begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 
+\end{pmatrix} =H.
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ,[[1,0,1,1],[-1,0,1,1],[0,0,2,1],[1,0,2,3]])
+show(A,"~",A.rref())
+</script>
+</div>  
+</li>
+
+<li>Discutir el sistema cuya matriz ampliada es $A$ en función de los valores de $a$.<br>
+Como tenemos la forma de Hermite por filas en todos los casos, entonces el sistema es equivalente al que tiene matriz ampliada $H$.<br>
+Si $a\not = 0,1$ entonces 
+$$H= \left(\begin{array}{ccc|c}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{array}\right)
+$$
+y como aparece la ecuación $0=1$ es incompatible.<br>
+Si $a=0$
+$$H=\left( \begin{array}{ccc|c}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{array}\right)
+$$ y también es incompatible.<br>
+Por último para $a=1$
+$$H= \left( \begin{array}{ccc|c}
+1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{array}\right)
+$$
+también es incompatible.</li>
+</ol>
+
+</details>
+</article>
