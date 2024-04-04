@@ -131,3 +131,112 @@ $$p_U(1,-1,1,1)=(0,-1,1,0); \, \, p_{U^{\perp}}(1,-1,1,1)=(1,0,0,1).$$ </li>
 </ol>
 </details>
 </article>
+
+<article>
+<ol type="a">
+<li>En $\mathbb{R}^{3}$, dado el subespacio $U\equiv \left\{ \begin{array}{l}
+x+y=0,\\
+x+z=0.
+\end{array}\right.$ y considerando el producto escalar usual, calcula $p_{U^{\perp}}(0,1,2)$. </li>
+<li>En el espacio vectorial $V$, $B=\{ e_1,e_2\}$ es una base. Calcula las coordenadas respecto de la base  $B'=\{e_1+e_2, 2e_1-e_2\}$ del vector $v=(1,-1)_{B}$.</li>
+<li>Consideramos en $\mathbb{R}^{2}$ el producto escalar que tiene, respecto de la base canónica, matriz de Gram (o matriz métrica)
+$\begin{pmatrix}
+1 & 1 \\
+1 & 2
+\end{pmatrix}$. Calcula una base de $\mathbb{R}^{2}$ respecto de la cual la matriz de Gram de este producto escalar sea $I_2$.</li>
+<li>Determina, en función de  $b$, la signatura de la forma cuadrática $\phi:\mathbb{R}^{2} \to \mathbb{R}$ dada por 
+$$\phi(x,y)= bxy.$$</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular $p_{U^{\perp}}(0,1,2)$.<br>
+Una base de $U$ es $\{(1,-1,-1)\}$ y por tanto $U^{\perp}\equiv x-y-z=0$, descomponemos
+$$(0,1,2)=(a,b,c)+(-a,1-b,2-c),$$
+e imponemos al primer vector que esté en $U$ y al segundo que esté en $W$:
+$$\left\{ \begin{array}{l}
+a+b=0,\\
+a+c=0,\\
+-a-1+b-2+c=0.
+\end{array}\right. \sim_f \left\{ \begin{array}{l}
+b=-a,\\
+c=-a,\\
+-3a-3=0.
+\end{array}\right. \sim_f \left\{ \begin{array}{l}
+a=-1,\\
+b=1,\\
+c=1.
+\end{array}\right. $$
+Así $p_{U^{\perp}}(0,1,2)=(1,0,1)$.
+</li>
+
+<li>Calcular las coordenadas respecto de la base  $B'$ del vector $v$.<br>
+Como $B'=\{(1,1)_B, (2,-1)_B\}$, planteamos 
+$$(1,-1)_B=a(1,1)_B+b(2,-1)_B$$
+y resolvemos 
+$$\left\{ \begin{array}{l}
+a+2b=1,\\
+a-b=-1.
+\end{array}\right.\sim_f  \left\{ \begin{array}{l}
+a=-1/3,\\
+b=2/3.
+\end{array}\right.$$
+Luego $v=(-1/3,2/3)_{B'}$.
+</li>
+
+<li>Calcular una base de $\mathbb{R}^{2}$ respecto de la cual la matriz de Gram sea $I_2$.<br>
+Que la matriz de Gram sea la identidad significa que la base sea ortonormal. En primer lugar, aplicamos Gram-Schmidt para calcular una base ortogonal. Partimos por ejemplo de la base canónica:
+$$u_1=(1,0), u_2=(0,1).$$
+Entonces $e_1=(1,0)$ y $e_2=(0,1)+\lambda_{21}(1,0)$ donde 
+$$\lambda_{21}=-\frac{\langle u_2,e_1\rangle }{\langle e_1,e_1\rangle }=-\frac{1}{1}=-1,$$
+donde los datos se han recogido de la matriz de Gram respecto de $B_c$. 
+Por tanto una base ortogonal es $\{(1,0),(-1,1)\}$, el primero tiene norma 1, calculamos la del segundo:
+$$\begin{pmatrix}
+1 & 1
+\end{pmatrix}\begin{pmatrix}
+1 & 1 \\
+1 & 2
+\end{pmatrix}\begin{pmatrix}
+-1\\
+1
+\end{pmatrix}=\begin{pmatrix}
+0 & 1
+\end{pmatrix} \begin{pmatrix}
+-1\\
+1
+\end{pmatrix}=1$$
+Así que esta base es ortonormal. 
+</li>
+
+<li>Determinar, en función de  $b$, la signatura de la forma cuadrática $\phi$.<br>
+La matriz asociada a la forma cuadrática es 
+$$\begin{pmatrix}
+0 & b/2\\
+b/2 & 0
+\end{pmatrix}$$
+que podemos diagonalizar por congruencia
+$$\begin{pmatrix}
+0 & b/2\\
+b/2 & 0
+\end{pmatrix}\sim_f \begin{pmatrix}
+b/2 & b/2\\
+b/2 & 0
+\end{pmatrix}\sim_c\begin{pmatrix}
+b & b/2\\
+b/2 & 0
+\end{pmatrix}\sim_f \begin{pmatrix}
+b & b/2\\
+0 & -b/4
+\end{pmatrix}\sim_c\begin{pmatrix}
+b & 0\\
+0 & -b/4
+\end{pmatrix}$$
+Si $b=0$ la signatura es $(0,0)$; si $b\not = 0$ la signatura es $(1,1)$.<br>
+También pueden calcularse los valores propios que son 
+$$\lambda= \pm (b/4)$$ y queda el mismo resultado, por supuesto.</li>
+</ol>
+
+</details>
+</article>

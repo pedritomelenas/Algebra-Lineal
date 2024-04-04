@@ -142,7 +142,6 @@ respecto de la base $B= \left\{ \begin{pmatrix}
 \end{pmatrix}$ según los valores de $b$.</li>
 <li>De una aplicación lineal $f:\mathbb{R}^{n} \longrightarrow \mathbb{R}^{m}$ se conoce que es sobreyectiva. ¿Puedes deducir algo sobre los valores de $n$ y $m$? 
 </li>
-
 </ol>
 
 <details>
@@ -234,5 +233,124 @@ $$\operatorname{dim}(\operatorname{ker}(f))+ \operatorname{dim}(\operatorname{Im
 Así que $n=a+m$ siendo $a=\operatorname{dim}(\operatorname{ker}(f))$. Por tanto $$n\geq m.$$
 </li>
 
+</ol>
+</details>
+</article> 
 
+<article> 
+Dada la matriz
+$$A=\left(
+\begin{array}{cccc}
+-1 & -2 & 3 & 2\\
+0 & 1 & 0 & 1\\
+-2 & -2 & 4 & 2\\
+0 & 0 & 0 & 2
+\end{array}\right)
+$$
 
+<ol type="a">
+<li>Calcula los valores propios y sus multiplicidades algebraicas.</li>
+<li>Estudia si es diagonalizable y en caso afirmativo determinar su forma diagonal, $D$, y una matriz de paso, $P$, verificando que $D=P^{-1}AP$.</li>
+<li>Razona si $A$ es o no diagonalizable por semejanza ortogonal.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular los valores propios y sus multiplicidades algebraicas.<br>
+Calculamos el polinomio característico:
+$$\begin{align*}
+|A-\lambda I|=& 
+\left|
+\begin{array}{cccc}
+-1-\lambda & -2 & 3 & 2\\
+0 & 1-\lambda  & 0 & 1\\
+-2 & -2 & 4-\lambda & 2\\
+0 & 0 & 0 & 2-\lambda
+\end{array}\right|= (2-\lambda)\left|
+\begin{array}{ccc}
+-1-\lambda & -2 & 3 \\
+0 & 1-\lambda  & 0 \\
+-2 & -2 & 4-\lambda \\
+\end{array}\right|=(2-\lambda)(1-\lambda)\left|
+\begin{array}{cc}
+-1-\lambda  & 3 \\
+-2 &  4-\lambda \\
+\end{array}\right| \\
+=&(2-\lambda)(1-\lambda)(\lambda^2-3\lambda +2)=(2-\lambda)^2(1-\lambda)^2
+\end{align*}$$
+Así que hay dos valores propios $\lambda=1$ y $\lambda=2$, ambos con multiplicidad algebraica dos.
+</li>
+
+<li>Estudiar si es diagonalizable y en caso afirmativo determinar su forma diagonal, $D$, y una matriz de paso, $P$.<br>
+Para comprobar que es diagonalizable debemos calcular las multiplicidades geométricas, es decir, las dimensiones de los correspondientes subespacios propios:<br>
+$V_{\lambda=1}$ tiene cartesianas dadas por las filas de 
+$$A-1\cdot I=\left(
+\begin{array}{cccc}
+-2 & -2 & 3 & 2\\
+0 & 0 & 0 & 1\\
+-2 & -2 & 3 & 2\\
+0 & 0 & 0 & 1
+\end{array}\right)\sim_f \left(
+\begin{array}{cccc}
+-2 & -2 & 3 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right).
+$$
+Como hay dos ecuaciones, $\operatorname{dim}(V_{\lambda=1})=4-2=2$, unas cartesianas son
+$$V_{\lambda=1}\equiv \left\{ \begin{array}{l}
+2x+2y-3z=0,\\
+t=0.
+\end{array}\right.$$
+Y una base es por ejemplo $\{ (1,-1,0,0),(3,0,2,0)\}$.<br>
+$V_{\lambda=2}$ tiene cartesianas dadas por las filas de 
+$$A-2\cdot I=\left(
+\begin{array}{cccc}
+-3 & -2 & 3 & 2\\
+0 & -1 & 0 & 1\\
+-2 & -2 & 2 & 2\\
+0 & 0 & 0 & 0
+\end{array}\right)\sim_f \left(
+\begin{array}{cccc}
+1 & 1 & -1 & -1\\
+0 & -1 & 0 & 1\\
+0 & 1 & 0 & -1\\
+0 & 0 & 0 & 0
+\end{array}\right)\sim_f \left(
+\begin{array}{cccc}
+1 & 0 & -1 & 0\\
+0 & 1 & 0 & -1\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right).
+$$
+Como hay dos ecuaciones, $\operatorname{dim}(V_{\lambda=2})=4-2=2$, unas cartesianas son
+$$V_{\lambda=2}\equiv \left\{ \begin{array}{l}
+x-z=0,\\
+y-t=0.
+\end{array}\right.$$
+Y una base es por ejemplo $\{ (1,0,1,0),(0,1,0,1)\}$.<br>
+Así concluimos que ambos valores propios tienen multiplicidad geométrica dos, y como coincide con sus multiplicidades algebraicas respectivas la matriz sí es diagonalizable.
+ $$D=\begin{pmatrix}
+ 1 & 0 & 0 & 0\\
+ 0 & 1 & 0 & 0\\
+ 0 & 0 & 2 & 0 \\
+ 0 & 0 & 0 & 2
+ \end{pmatrix}, \hspace{1cm} P=\begin{pmatrix}
+ 1 & 3 & 1 & 0\\
+ -1 & 0 & 0 & 1\\
+ 0 & 2 & 1 & 0 \\
+ 0 & 0 & 0 & 1
+ \end{pmatrix}.$$
+</li>
+
+<li>Razonar si $A$ es o no diagonalizable por semejanza ortogonal.<br>
+La matriz no es diagonalizable por semejanza ortogonal porque no es simétrica.
+</li>
+</ol>
+
+</details>
+</article>

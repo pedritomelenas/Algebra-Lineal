@@ -786,3 +786,81 @@ $$M(f,\overline{B}, B_c)=\begin{pmatrix}
 </details>
 </article>
 
+<article>
+Sea $f:\mathbb{R}^{4} \to \mathbb{R}^{3}$ la aplicación lineal que, respecto de las bases canónicas, viene dada por la matriz
+$$A=\begin{pmatrix}
+1 & 1 & 0 & 1\\
+-1 & 2 & 1 & 1\\
+-1 & 2 & 1 & 1
+\end{pmatrix}
+$$
+
+<ol type="a">
+<li>Calcula una base de la imagen de $f$ y determina para qué valores de $a$ el vector $(a,1-a,a)$ pertenece a dicha imagen.</li>
+<li>Decide de qué tipo es $f$ (inyectiva, sobreyectiva, biyectiva o ninguna de las anteriores).</li>
+<li>Calcula la matriz asociada a $f$ respecto de las bases $B_c$ de $\mathbb{R}^{4}$ y $\overline{B}$ de $\mathbb{R}^{3}$ siendo
+$$\overline{B}=\{ (1,-1,-1),(0,1,1),(0,0,1)\}.$$</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular una base de la imagen de $f$ y determinar para qué valores de $a$ el vector $(a,1-a,a)$ pertenece a dicha imagen.<br>
+$$A=\begin{pmatrix}
+1 & 1 & 0 & 1\\
+-1 & 2 & 1 & 1\\
+-1 & 2 & 1 & 1
+\end{pmatrix}\sim_c \begin{pmatrix}
+1 & 0 & 0 & 0\\
+-1 & 3 & 1 & 2\\
+-1 & 3 & 1 & 2
+\end{pmatrix}\sim_c \begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0
+\end{pmatrix}
+$$
+Así que la base de $Im(f)$ que obtenemos es $\{ (1,0,0),(0,1,1)\}$.<br>
+Para que $(a,1-a,a)\in Im(f)$ debe ser combinación lineal de estos vectores y por tanto el determinante de la matriz 
+$$\begin{pmatrix}
+1 & 0 & a\\
+0 & 1 & 1-a\\
+0 & 1 & a
+\end{pmatrix}$$
+debe ser $0$, así que debe ser $a-(1-a)=0$. Por tanto este vector está en la imagen para $a=1/2$ y no está en el resto de casos.
+</li>
+
+<li>Decidir de qué tipo es $f$.<br>
+Como $\operatorname{dim}(\operatorname{Im}(f))=2\not = \operatorname{dim}(\mathbb{R}^{3})$, entonces no es sobreyectiva.
+Usando la fórmula de las dimensiones:
+$$\operatorname{dim}(\mathbb{R}^{4})= \operatorname{dim}(\operatorname{ker}(f)) + \operatorname{dim}(\operatorname{Im}(f))$$
+obtenemos que $\operatorname{dim}(\operatorname{ker}(f))=2$ y por tanto como $\operatorname{ker}(f)\not = \{0\}$, entonces tampoco es inyectiva.
+</li>
+
+<li>Calcular la matriz asociada a $f$ respecto de las bases $B_c$ de $\mathbb{R}^{4}$ y $\overline{B}$ de $\mathbb{R}^{3}$.<br>
+Como de los datos del problema obtenemos
+$$\begin{array}{rl}
+f(1,0,0,0)=&(1,-1,-1),\\
+f(0,1,0,0)=&(1,2,2),\\
+f(0,0,1,0)=&(0,1,1),\\
+f(0,0,0,1)=&(1,1,1).
+\end{array}$$
+Solo hay que calcular las coordenadas de estos vectores respecto de $\overline{B}$
+$$\begin{array}{rl}
+f(1,0,0,0)=&(1,0,0)_{\overline{B}},\\
+f(0,1,0,0)=&(1,3,0)_{\overline{B}},\\
+f(0,0,1,0)=&(0,1,0)_{\overline{B}},\\
+f(0,0,0,1)=&(1,2,0)_{\overline{B}},
+\end{array}$$
+y por tanto, 
+$$\mathcal{M}(f,B_c,\overline{B})= \begin{pmatrix}
+1 & 1 & 0 & 1\\
+0 & 3 & 1 & 2\\
+0 & 0 & 0 & 0
+\end{pmatrix}.$$
+</li>
+</ol>
+
+</details>
+</article>
