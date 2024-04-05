@@ -10,19 +10,6 @@ tag: problemas
   }
 }
 
-.container {
-    max-width: 56rem;
-    }
-    @media (min-width: 38em) {
-    .container {
-        max-width: 38rem;
-    }
-    }
-    @media (min-width: 56em) {
-    .container {
-        max-width: 56rem;
-    }
-}
 
 
 body {
@@ -953,3 +940,119 @@ $$
 
 Eliminando los tres parámetros y reordenando la ecuación restante nos queda
 $$W\equiv x+2y-2t=0.$$ 
+
+</details>
+</article>
+
+
+<article>
+
+Para los subespacios de $\mathcal{M}_2(\mathbb{R})$ siguientes:
+$$U=\left\{ A\in  \mathcal{M}_2(\mathbb{R}) \mbox{ tal que } A=A^t\right\},$$
+$$W=\left\{ A\in  \mathcal{M}_2(\mathbb{R})\mbox{ tal que } A=-A^t\right\}.$$
+
+<ol type="a">
+<li>Calcula la dimensión y una base de cada uno de ellos.</li>
+<li>Calcula, respecto de la base estándar
+$$B_s=\left\{ \begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}; \begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix};\begin{pmatrix}
+0 & 0 \\
+1 & 0
+\end{pmatrix};\begin{pmatrix}
+0 & 0 \\
+0 & 1
+\end{pmatrix}\right\},$$
+unas ecuaciones cartesianas de $U$ y $W$.</li>
+<li>Prueba que $\mathcal{M}_2(\mathbb{R})=U\oplus W$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+
+<li>Calcular la dimensión y una base de cada uno de ellos.<br>
+$U$ está formado por las matrices simétricas de orden 2, que tienen la forma
+$$\begin{pmatrix}
+a & b \\
+b & c
+\end{pmatrix}.$$
+Una base de este subespacio es
+$$\left\{ \begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}, \begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}, \begin{pmatrix}
+0 & 0 \\
+0 & 1
+\end{pmatrix} \right\} $$
+y por tanto $\operatorname{dim}(U)=3$.<br>
+$W$ está formado por las matrices antisimétricas de orden dos que tienen la forma 
+$$\begin{pmatrix}
+0 & b \\
+-b & 0
+\end{pmatrix}.$$
+Una base de este subespacio es
+$$\left\{ \begin{pmatrix}
+0 & 1 \\
+-1 & 0
+\end{pmatrix}\right\}$$ y por tanto $\operatorname{dim}(W)=1$.
+</li>
+
+<li>Calcular unas ecuaciones cartesianas de $U$ y $W$.<br>
+Dada una matriz de orden $2$
+$$\begin{pmatrix}
+x & y \\
+z & t
+\end{pmatrix}=(x,y,z,t)_{B_s}.$$
+Entonces 
+$$U\equiv \left\{ \begin{array}{l}
+x=a,\\
+y=b,\\
+z=b,\\
+t=c.
+\end{array} \right.$$ y la cartesiana es $U\equiv y-z=0$.<br>
+Por otro lado,
+$$W\equiv  \left\{ \begin{array}{l}
+x=0,\\
+y=b,\\
+z=-b,\\
+t=0.
+\end{array} \right.$$ 
+y por tanto unas cartesianas son 
+$$W\equiv  \left\{ \begin{array}{l}
+x=0,\\
+y+z=0,\\
+t=0.
+\end{array} \right.$$ 
+</li>
+
+<li>Probar que $\mathcal{M}_2(\mathbb{R})=U\oplus W$.<br>
+Calculamos $U\cap W$ reuniendo cartesianas:
+$$U\cap W\equiv  \left\{ \begin{array}{l}
+x=0,\\
+y+z=0,\\
+y-z=0,\\
+t=0.
+\end{array} \right. \sim_f  \left\{ \begin{array}{l}
+x=0,\\
+y=0,\\
+z=0,\\
+t=0.
+\end{array} \right.$$ 
+Por tanto $U\cap W=\{0 \}$.<br>
+Por la fórmula de las dimensiones,
+$$\operatorname{dim}(U) +  \operatorname{dim}(W)= \operatorname{dim}(U\cap W) + \operatorname{dim}(U+W),$$
+deducimos que $\operatorname{dim}(U+W)=4=\operatorname{dim}(\mathcal{M}_2(\mathbb{R}))$ y por tanto $U+W=\mathcal{M}_2(\mathbb{R})$.
+</li>
+</ol>
+
+</details>
+</article>

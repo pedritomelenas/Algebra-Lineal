@@ -10,19 +10,6 @@ tag: problemas
   }
 }
 
-.container {
-    max-width: 56rem;
-    }
-    @media (min-width: 38em) {
-    .container {
-        max-width: 38rem;
-    }
-    }
-    @media (min-width: 56em) {
-    .container {
-        max-width: 56rem;
-    }
-}
 
 
 body {
@@ -1694,6 +1681,279 @@ Cuando $a\not = 1$ como el rango es $4$, la forma de Hermite por filas es $I_4$,
 
 <li>Discusión del sistema.
 Como la matriz ampliada del sistema es $A$, entonces cuando $a\not = 1$ la matriz ampliada tiene rango 4 mientras que la de coeficientes como máximo podría tener rango 3, así que el sistema es incompatible; en el caso $a=1$, usando la forma de Hermite por filas de $A$ que hemos calculado observamos que el sistema es compatible determinado.</li>
+</ol>
+
+</details>
+</article>
+
+<article>
+
+Dadas las matrices 
+$$A=\begin{pmatrix}
+1 & 0 & 1 & a\\
+1 & 1 & 0 & 1\\
+1 & 1 & a-2 & 1
+\end{pmatrix} \hspace{1cm}
+B=\begin{pmatrix}
+1 & a-1& 1 & 1\\
+1 & 0 & 1 & 1\\
+1 & a & 1 & 1\\
+\end{pmatrix}
+$$
+
+<ol type="a">
+<li>Calcula los valores de $a$ para los que $A$ y $B$ son equivalentes.</li>
+<li>Calcula para qué valores de $a$ son equivalentes por filas.</li>
+<li>Para $a=1$ calcula la forma de Hermite por columnas de $B$, que llamaremos $H$, y $P$ regular tal que $H=BP$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular los valores de $a$ para los que $A$ y $B$ son equivalentes.<br>
+Dos matrices son equivalentes $\Leftrightarrow$ tienen el mismo rango.<br>
+Calculamos el rango de ambas matrices. Como son de orden $3\times 4$ su rango máximo es tres. <br>
+Para $A$ calculamos un menor de orden tres
+$$\left|\begin{array}{ccc}
+1 & 0 & 1 \\
+1 & 1 & 0 \\
+1 & 1 & a-2 \\
+\end{array}\right|= \left|\begin{array}{ccc}
+1 & 0 & 1 \\
+0 & 1 & 0 \\
+0 & 1 & a-2 \\
+\end{array}\right|=a-2.$$
+Si $a\not = 2$ este menor es distinto de cero y por tanto $\operatorname{rg}(A)=2$. Veamos qué ocurre para $a=2$, para lo que sustituimos y calculamos la forma de Hermite por filas:
+ $$A=\begin{pmatrix}
+1 & 0 & 1 & 2\\
+1 & 1 & 0 & 1\\
+1 & 1 & 0 & 1
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 1 & 0 & 1\\
+0 & -1 & 1 & 1\\
+0 & 0 & 0 & 0
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 0 & 1 & 2\\
+0 & 1 & -1 & -1\\
+0 & 0 & 0 & 0
+\end{pmatrix},$$<br>
+así que para $a=2$ tiene rango 2.
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ,[[1,0,1,2],[1,1,0,1],[1,1,0,1]]) #matriz de coeficientes
+show(A,"~",A.rref())
+</script>
+</div>
+
+Para $B$ observamos que tiene tres columnas idénticas, por lo que el rango máximo puede ser dos. También podemos calcular su forma de Hermite por filas 
+$$B=\begin{pmatrix}
+1 & a-1& 1 & 1\\
+1 & 0 & 1 & 1\\
+1 & a & 1 & 1\\
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 0 & 1 & 1\\
+0 & a-1 & 0 & 0\\
+0 & a & 0 & 0\\
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 0 & 1 & 1\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0\\
+\end{pmatrix},$$
+con lo que $\operatorname{rg}(B)=2$ para todo valor de $a$.Así que $A$ y $B$ son equivalentes para $a=2$.</li>
+
+<li>Calcular para qué valores de $a$ son equivalentes por filas.<br>
+Para que sean equivalentes por filas deben tener la misma forma de Hermite por filas, y en particular el mismo rango, así que en cualquier caso solo hay que investigar el caso $a=2$. Como en el apartado anterior hemos calculado la forma de Hermite por filas en este caso, concluimos que nunca son equivalentes por filas. </li>
+
+<li>Calcular $H$, y $P$ regular tal que $H=BP$.<br>
+Sustituimos $a=1$ en $B$ y realizamos operaciones elementales por columnas apuntándolas en una matriz regular:
+$$B=\begin{pmatrix}
+1 & 0 & 1 & 1\\
+1 & 0 & 1 & 1\\
+1 & 1 & 1 & 1\\
+\hline
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{pmatrix}\sim_c
+\begin{pmatrix}
+1 & 0 & 0 & 0\\
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+\hline
+1 & 0 & -1 & -1\\
+-1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{pmatrix},
+$$
+
+luego $$H= \begin{pmatrix}
+1 & 0 & 0 & 0\\
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+\end{pmatrix} \hspace{2cm}
+P=\begin{pmatrix}
+1 & 0 & -1 & -1\\
+-1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{pmatrix}.$$</li>
+</ol>
+
+</details>
+</article>
+
+<article>
+
+Dada la matriz
+$$A=\begin{pmatrix}
+1 & a-1 & a & 1\\
+-1 & a-1 & a & 1\\
+0 &2a-2 & 2a & 1\\
+1 & 0 & 2a & 3 
+\end{pmatrix}
+$$
+
+<ol type="a">
+<li>Calcula el determinante.</li>
+<li>Calcula la forma de Hermite por filas según los valores de $a$.</li>
+<li>Discute el sistema cuya matriz ampliada es $A$ en función de los valores de $a$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular el determinante.<br>
+$$\begin{align*}
+|A|= &\left|\begin{array}{cccc}
+1 & a-1 & a & 1\\
+-1 & a-1 & a & 1\\
+0 &2a-2 & 2a & 1\\
+1 & 0 & 2a & 3 
+\end{array}\right|=\left|\begin{array}{cccc}
+1 & a-1 & a & 1\\
+0 & 2a-2 & 2a & 2\\
+0 &2a-2 & 2a & 1\\
+0 & 1-a & a & 2 
+\end{array}\right|= \left|\begin{array}{ccc}
+2a-2 & 2a & 2\\
+2a-2 & 2a & 1\\
+1-a & a & 2 
+\end{array}\right|\\
+= & \left|\begin{array}{ccc}
+0 & 0 & 1\\
+2a-2 & 2a & 1\\
+1-a & a & 2 
+\end{array}\right|= \left|\begin{array}{cc}
+2a-2 & 2a \\
+1-a & a  
+\end{array}\right|=4a^2-4a=4a(a-1).
+\end{align*}$$</li>
+
+<li>Calcular la forma de Hermite por filas según los valores de $a$.<br>
+Por el Teorema de las matrices regulares, si $|A|\not = 0$ la forma de Hermite por filas de $A$ es $I_4$, por tanto si $a\not = 0,1$ entonces $H=I_4$.
+Estudiamos los casos particulares $a=0$ y $a=1$.<br>
+Si $a=0$ 
+$$A=\begin{pmatrix}
+1 & -1 & 0 & 1\\
+-1 & -1 & 0 & 1\\
+0 & -2 & 0 & 1\\
+1 & 0 & 0 & 3 
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & -1 & 0 & 1\\
+0 & -2 & 0 & 2\\
+0 & -2 & 0 & 1\\
+0 & 1 & 0 & 2 
+\end{pmatrix} \sim_f \begin{pmatrix}
+1 & 0 & 0 & -1\\
+0 & 1 & 0 & 2\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 5 
+\end{pmatrix} \sim_f \begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 
+\end{pmatrix}=H. 
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ,[[1,-1,0,1],[-1,-1,0,1],[0,-2,0,1],[1,0,0,3]])
+show(A,"~",A.rref())
+</script>
+</div>  
+
+Si $a=1$
+$$A=\begin{pmatrix}
+1 & 0 & 1 & 1\\
+-1 & 0 & 1 & 1\\
+0 & 0 & 2 & 1\\
+1 & 0 & 2 & 3 
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 0 & 1 & 1\\
+0 & 0 & 2 & 2\\
+0 & 0 & 2 & 1\\
+0 & 0 & 1 & 2 
+\end{pmatrix} \sim_f \begin{pmatrix}
+1 & 0 & 0 & -1\\
+0 & 0 & 1 & 2\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & -1 
+\end{pmatrix} \sim_f \begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 
+\end{pmatrix} =H.
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ,[[1,0,1,1],[-1,0,1,1],[0,0,2,1],[1,0,2,3]])
+show(A,"~",A.rref())
+</script>
+</div>  
+</li>
+
+<li>Discutir el sistema cuya matriz ampliada es $A$ en función de los valores de $a$.<br>
+Como tenemos la forma de Hermite por filas en todos los casos, entonces el sistema es equivalente al que tiene matriz ampliada $H$.<br>
+Si $a\not = 0,1$ entonces 
+$$H= \left(\begin{array}{ccc|c}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{array}\right)
+$$
+y como aparece la ecuación $0=1$ es incompatible.<br>
+Si $a=0$
+$$H=\left( \begin{array}{ccc|c}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{array}\right)
+$$ y también es incompatible.<br>
+Por último para $a=1$
+$$H= \left( \begin{array}{ccc|c}
+1 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{array}\right)
+$$
+también es incompatible.</li>
 </ol>
 
 </details>
