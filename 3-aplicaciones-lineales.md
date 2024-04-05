@@ -279,7 +279,7 @@ Sea $f:V\to V'$ una aplicación lineal.
 
 Los espacios vectoriales $V$ y $V'$ diremos que son isomorfos si existe un isomorfismo $f:V\to V'$, y lo denotaremos por $V\cong V'$.
 
-## Consecuencia
+### Consecuencia
 Los espacios $V$ y $V'$ son isomorfos si y sólo si $\dim(V)=\dim(V')$.
 
 
@@ -377,7 +377,7 @@ $\operatorname{gr}(p_A(\lambda)=n$.
 Si $\lambda$ es un valor propio de $A$, entonces
 
 $$
-V(\lambda)=\lbrace  \mathbf{x}\in K^n \: (A-\lambda I_n)\mathbf{x}=\mathbf{0}\rbrace,
+V(\lambda)=\lbrace  \mathbf{x}\in K^n : (A-\lambda I_n)\mathbf{x}=\mathbf{0}\rbrace,
 $$ 
 
 (en este caso $\mathbf{0}=(0,\ldots,0)\in K^n$) es un subespacio vectorial de $K^n$. Dicho subespacio lo llamamos *subespacio vectorial propio* asociado al valor propio $\lambda$.
