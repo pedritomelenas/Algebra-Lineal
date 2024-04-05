@@ -396,7 +396,7 @@ $$
 \right),
 $$
 
-con $r=\dim(V(\lambda))$. Por tanto el polinomio característico tendrá la forma $(x-\lambda)^rP_N(x)$, y eso implica que la multiplicidad algebraica de $\lambda$ es al menos $r$.
+con $r=\dim(V(\lambda))$. Por tanto el polinomio característico tendrá la forma $(x-\lambda)^rp_N(x)$, y eso implica que la multiplicidad algebraica de $\lambda$ es al menos $r$.
 
 ### Resultado 
 
