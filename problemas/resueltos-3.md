@@ -864,3 +864,300 @@ $$\mathcal{M}(f,B_c,\overline{B})= \begin{pmatrix}
 
 </details>
 </article>
+
+<article>
+Dada la aplicación lineal $f$ que verifica:
+$$\begin{array}{c}
+ f(-1,-1,1)=(0,0,0,0),\\
+ f(1,1,0)=(2,1,1,2),\\
+ f(0,1,1)=(3,1,2,3).\\
+\end{array}
+$$
+
+<ol type="a">
+<li>Calcula la matriz asociada respecto de las bases canónicas.</li>
+<li>Calcula la matriz asociada respecto de las bases
+$$B=\{(1,1,0),(0,1,1),(-1,-1,1)\},$$
+$$B'=\{(1,0,1,1),(0,1,-1,0),(0,0,1,1),(0,0,0,1)\}.$$</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular la matriz asociada respecto de las bases canónicas.<br>
+La matriz asociada respecto de las bases canónicas se obtiene al calcular
+$$\begin{array}{c}
+ f(1,0,0)=(\_,\_,\_,\_)_{B_c},\\
+ f(0,1,0)=(\_,\_,\_,\_)_{B_c},\\
+ f(0,0,1)=(\_,\_,\_,\_)_{B_c}.\\
+\end{array}
+$$
+Estos vectores de $\mathbb{R}^{4}$ escritos por columnas forman la matriz que nos piden.
+Para calcular cada uno de ellos usaremos los datos del problema y que $f$ es una aplicación lineal. Por ejemplo,
+como 
+$$f(0,0,1)=f((-1,-1,1)+(1,1,0)),$$
+entonces, usando que $f$ es lineal en el segundo elemento de la igualdad nos dará
+$$f(0,0,1)=f(-1,-1,1)+f(1,1,0),$$
+y como esos datos los proporciona el enunciado, tenemos
+$$f(0,0,1)=(0,0,0,0)+(2,1,1,2)=(2,1,1,2).$$
+Así obtendríamos una de las columnas de la matriz. Este procedimiento puede automatizarse escribiendo una matriz formada por dos bloques:
+$$\left( \begin{array}{rrr}
+          -1 & 1 & 0\\
+          -1 & 1 & 1\\
+           1 & 0 & 1\\
+\hline 
+           0 & 2 & 3\\
+           0 & 1 & 1\\
+           0 & 1 & 2\\
+           0 & 2 & 3
+         \end{array} \right),
+$$
+en la que en cada columna se ha escrito un vector del primer espacio y debajo su imagen. Realizando operaciones elementales por columnas hasta obtener en el bloque superior la base canónica abajo obtendremos las imágenes de los vectores de la base canónica.
+ $$\left( \begin{array}{rrr}
+          -1 & 1 & 0\\
+          -1 & 1 & 1\\
+           1 & 0 & 1\\
+\hline 
+           0 & 2 & 3\\
+           0 & 1 & 1\\
+           0 & 1 & 2\\
+           0 & 2 & 3
+         \end{array} \right) \sim_{c}
+\left( \begin{array}{rrr}
+          1 & 0 & 0\\
+          0 & 1 & 0\\
+          0 & 0 & 1\\
+\hline 
+           1 & 1 & 2\\
+           1 & 0 & 1\\
+           0 & 1 & 1\\
+           1 & 1 & 2
+         \end{array} \right).
+$$
+El bloque inferior es la matriz asociada a $f$ respecto de las bases canónicas.
+$$
+\mathcal{M}(f,B_{c},B_{c})=\left( \begin{array}{rrr}
+           1 & 1 & 2\\
+           1 & 0 & 1\\
+           0 & 1 & 1\\
+           1 & 1 & 2
+         \end{array} \right).
+$$
+
+Otra forma de resolver este ejercicio es la siguiente. Recoredemos que
+$$\begin{array}{c}
+ f(1,1,0)=(2,1,1,2),\\
+ f(0,1,1)=(3,1,2,3),\\
+ f(-1,-1,1)=(0,0,0,0).\\
+\end{array}
+$$
+es decir, las imágenes de los vectores de la base $B$ escritos por sus coordenadas en $B_c$ de $\mathbb{R}^4$, y por tanto escritos por columnas nos dan la matriz $\mathcal{M}(f,B,B_c)$. 
+Llamémosle 
+$$C=\mathcal{M}(f,B,B_c)=
+\left( \begin{array}{rrr}
+           2 & 3 & 0\\
+           1 & 1 & 0\\
+           1 & 2 & 0\\
+           2 & 3 & 0 
+                    \end{array} \right).$$
+
+Tenemos el diagrama:
+
+$$
+\begin{array}{llcr}
+     &                       &         C              & \\
+ f: & \mathbb{R}^{3}_{B}     & \longrightarrow        &\mathbb{R}^{4}_{B_{c}}   \\
+    &                       &                        &                     \\
+    &   \downarrow_{P}&              & \updownarrow_{I} \\
+    &                        &         ?             &                   \\
+f: & \mathbb{R}^{3}_{B_c}     & \longrightarrow        &\mathbb{R}^{4}_{B_c}   \\
+\end{array}
+$$
+
+y por tanto la matriz $\mathcal{M}(f,B_c,B_c)=I C P^{-1}=CP^{-1}=A$.<br>
+
+También puede usarse esta matriz $C$ para obtener la solución del segundo apartado, en este caso siguiendo el diagrama:
+
+$$
+\begin{array}{llcr}
+     &                       &         C              & \\
+ f: & \mathbb{R}^{3}_{B}     & \longrightarrow        &\mathbb{R}^{4}_{B_{c}}   \\
+    &                       &                        &                     \\
+    &   \updownarrow_{I}&              & \uparrow_{Q} \\
+    &                        &         ?             &                   \\
+f: & \mathbb{R}^{3}_{B}     & \longrightarrow        &\mathbb{R}^{4}_{B'}   \\
+\end{array}
+$$
+</li>
+
+<li>Calcula la matriz asociada respecto de las bases B y B'.<br>
+Una vez que es conocida la matriz asociada a una aplicación lineal respecto de dos bases, por ejemplo 
+$\mathcal{M}(f,B_{c},B_{c})$, podemos dibujar un esquema en el que se reflejan los cambios de base a realizar en cada uno de los espacios:
+
+$$
+\begin{array}{llcr}
+     &                       &         A              & \\
+ f: & \mathbb{R}^{3}_{B_{c}}     & \longrightarrow        &\mathbb{R}^{4}_{B_{c}}   \\
+    &                       &                        &                     \\
+    &   \uparrow_P&              & \uparrow_{Q} \\
+    &                        &         ?             &                   \\
+f: & \mathbb{R}^{3}_{B}     & \longrightarrow        &\mathbb{R}^{4}_{B'}   \\
+\end{array}
+$$
+
+El cambio de base de $B$ a $B_c$ en $\mathbb{R}^3$ tiene matriz asociada 
+$$P=\left( \begin{array}{rrr}
+           1 & 0 & -1\\
+           1 & 1 & -1\\
+           0 & 1 & 1\\
+                    \end{array} \right).
+$$
+El cambio de base de $B'$ a $B_c$ en $\mathbb{R}^4$ tiene matriz asociada 
+$$Q=\left( \begin{array}{rrrr}
+           1 & 0 & 0 & 0\\
+           0 & 1 & 0 & 0\\
+           1 & -1 & 1 & 0\\
+           1 & 0 & 1 & 1
+                    \end{array} \right).$$
+Para realizar el recorrido desde $\mathbb{R}^3_{B}$ a $\mathbb{R}^4_{B'}$ tenemos que multiplicar un vector primero por $P$, luego por $A$ y por último por $Q^{-1}$. Es decir, puesto que el vector se escribe a la derecha por columnas tendremos la fórmula
+
+$$Y'=Q^{-1} A P X,$$
+y por tanto $\mathcal{M}(f,B,B')=Q^{-1} A P$. </li>
+</ol>
+</details>
+</article>
+
+<article>
+
+Una aplicación lineal $f:\mathbb{R}^3 \longrightarrow \mathbb{R}^4 $ viene dada por:
+$$\begin{array}{c}
+ f(1,0,1)=(1+a,1,1,1-a),\\
+ f(1,1,1)=(1,1+a,1-a,1),\\
+ f(0,1,1)=(1,a,a,1).\\
+\end{array}
+$$
+
+<ol type="a">
+<li>Estudia las dimensiones del núcleo y la imagen de $f$ según los valores del parámetro $a$.</li>
+<li>Calcula la matriz asociada a $f$ respecto de las bases canónicas de $\mathbb{R}^3$ y $\mathbb{R}^4$.</li>
+<li>¿Para qué valores de $a$ el vector $(1,a,1+a,1)$ está en la imagen de $f$?</li>
+<li>¿Para qué valores de $a$ el vector $(1,-1,0)$ está en el núcleo de $f$?</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Estudiar las dimensiones del núcleo y la imagen de $f$ según los valores del parámetro $a$.<br>
+Para estudiar las dimensiones del núcleo y la imagen tenemos que calcular el rango de una matriz asociada a $f$, y es indiferente respecto de qué bases esté considerada. Lo más inmediato es utilizar como base de $\mathbb{R}^3$ la base $B=\{(1,0,1),(1,1,1),(0,1,1)\}$ puesto que conocemos sus imágenes, y como base de $\mathbb{R}^4$ la base canónica, pues las imágenes que conocemos están dadas respecto de ella (al no hacerse mención en la expresión  a la base usada se trata de las componentes del vector). Así que usamos los datos del enunciado y tenemos
+$$C=\mathcal{M}(f,B,B_c)=
+\left( \begin{array}{ccc}
+           1+a & 1 & 1\\
+           1 & 1+a & a\\
+           1 & 1-a & a\\
+           1-a & 1 & 1 
+                    \end{array} \right),$$
+de la que tenemos que estudiar el rango. Como el máximo posible es tres, entonces elegimos un menor de orden tres, por ejemplo:
+$$\left| \begin{array}{ccc}
+           1 & 1+a & a\\
+           1 & 1-a & a\\
+           1-a & 1 & 1 
+                    \end{array} \right|= \left| \begin{array}{ccc}
+           1 & 1+a & a\\
+           0 & -2a & 0\\
+           1-a & 1 & 1 
+                    \end{array} \right|= (-2a)(1-a+a^2).$$
+Como $a^2-a+1$ es siempre distinto de cero (la ecuación correspondiente no tiene raices reales), entonces este determinante sólo es cero cuando $a=0$. Por tanto, cuando $a\not = 0$, el rango de la matriz es tres. En el caso $a=0$  sustituyendo en la matriz es fácil observar que el rango es dos. <br>
+Resumiendo lo que hemos obtenido:<br>
+Si $a\not = 0$ la dimensión de la imagen de $f$ es tres y el núcleo es trivial.<br>
+Si $a = 0$ la dimensión de la imagen de $f$ es dos y el núcleo tiene dimensión uno.<br>
+</li>
+
+<li>Calcular la matriz asociada a $f$ respecto de las bases canónicas de $\mathbb{R}^3$ y $\mathbb{R}^4$.<br>
+De los datos del enunciado, procediendo como en el ejercicio anterior, podemos obtener las imágenes de los vectores de la base canónica de $\mathbb{R}^3$:
+$$\left( \begin{array}{ccc}
+          1 & 1 & 0\\
+          0 & 1 & 1\\
+          1 & 1 & 1\\
+\hline 
+            1+a & 1 & 1\\
+           1 & 1+a & a\\
+           1 & 1-a & a\\
+           1-a & 1 & 1 
+         \end{array} \right) \sim_{c}
+\left( \begin{array}{ccc}
+          1 & 0 & 0\\
+          0 & 1 & 0\\
+          0 & 0 & 1\\
+\hline 
+           0 & -a & 1+a\\
+           1 & a & 0\\
+           1-2a & -a & 2a\\
+           0 & a & 1-a
+         \end{array} \right),
+$$
+y por tanto 
+$$A=\mathcal{M}(f,B_c,B_c)=
+\left( \begin{array}{ccc}
+           0 & -a & 1+a\\
+           1 & a & 0\\
+           1-2a & -a & 2a\\
+           0 & a & 1-a
+                    \end{array} \right).$$
+</li>
+
+<li>¿Para qué valores de $a$ el vector $(1,a,1+a,1)$ está en la imagen de $f$?<br>
+Las columnas de una matriz asociada a $f$ nos da un sistema de generadores de $Im(f)$, para probar que un vector pertenece al subespacio generado por un conjunto de vectores tenemos que ver si es combinación lineal de ellos, o lo que es lo mismo, que al añadir ese vector el rango de la matriz no cambia. Podemos usar por ejemplo la matriz $C$ (o también $A$, puesto que ambas están referidas a la base canónica de $\mathbb{R}^4$):
+$$\left( \begin{array}{ccc|c}
+           1+a & 1 & 1 & 1\\
+           1 & 1+a & a & a\\
+           1 & 1-a & a & 1+a\\
+           1-a & 1 & 1 & 1 
+                    \end{array} \right).$$
+Si a la última columna le restamos la tercera y desarrollamos el determinante por la cuarta columna queda:
+$$\left| \begin{array}{cccc}
+           1+a & 1 & 1 & 0\\
+           1 & 1+a & a & 0\\
+           1 & 1-a & a & 1\\
+           1-a & 1 & 1 & 0 
+                    \end{array} \right|=\left| \begin{array}{ccc}
+           1+a & 1 & 1 \\
+           1 & 1+a & a \\
+          1-a & 1 & 1  
+                    \end{array} \right|=\left| \begin{array}{ccc}
+           1+a & 1 & 1 \\
+           1 & 1+a & a \\
+          -2a & 0 & 0  
+                    \end{array} \right|=-2a.$$
+Cuando $a\not = 0$, el rango de $C$ era tres, y el rango al añadir el vector es cuatro, luego el vector no pertenece a la imagen.<br>
+En el caso $a=0$ el rango de $C$ es dos y al añadir el vector $(1,0,1,1)$ el rango aumenta a tres, así que no pertenece a la imagen.</li>
+
+<li>¿Para qué valores de $a$ el vector $(1,-1,0)$ está en el núcleo de $f$?<br>
+En el caso $a\not =0$ el núcleo se reduce al vector $(0,0,0)$,
+así que el vector dado no pertenece al núcleo. <br>
+En el caso $a=0$ podemos calcular la imagen del vector $(1,-1,0)$, para lo que tenemos que usar la matriz asociada a $f$ respecto de la base canónica de $\mathbb{R}^3$, es decir $A$:
+$$f(1,-1,0)=A\left( \begin{array}{r}
+                     1\\
+-1\\
+0
+                    \end{array}\right)=\left( \begin{array}{ccc}
+           0 & 0 & 1\\
+           1 & 0 & 0\\
+           1 & 0 & 0\\
+           0 & 0 & 1
+                    \end{array} \right)\left( \begin{array}{r}
+                     1\\
+-1\\
+0
+                    \end{array}\right)=\left( \begin{array}{r}
+                     0\\
+1\\
+1\\
+0
+                    \end{array}\right)
+$$
+y como no es el vector nulo, no pertenece al núcleo tampoco en este caso.</li>
+</ol>
+</details>
+</article>
