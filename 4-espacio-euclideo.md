@@ -216,7 +216,7 @@ Consideramos $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_n\rbrace$ base ortogonal de 
 
 Supongamos ahora que $(V;\langle \cdot, \cdot \rangle)$ es un espacio vectorial euclídeo y que $S=\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ es una base (no necesariamente ortogonal) de un subespacio vectorial $U$ de $V$.
 
- Si $\mathbf{v}\in V$ y $\mathbf{u}=p_U(\mathbf{v})$, entonces $\langle \mathbf{v}-\mathbf{u}, \mathbf{w} \rangle=0$ para todo $\mathbf{w}\in U$. Por tanto, $\langle \mathbf{v}-\mathbf{u}, \mathbf{u}_j \rangle=0$ para  todo $j\in \{1,\dots,m\}$.
+ Si $\mathbf{v}\in V$ y $\mathbf{u}=p_U(\mathbf{v})$, entonces $\langle \mathbf{v}-\mathbf{u}, \mathbf{w} \rangle=0$ para todo $\mathbf{w}\in U$. Por tanto, $\langle \mathbf{v}-\mathbf{u}, \mathbf{u}_j \rangle=0$ para  todo $j\in \lbrace 1,\dots,m\rbrace$.
 
  Ahora, si $\mathbf{u}=a_1 \mathbf{u}_1+\cdots+a_m \mathbf{u}_m$, entonces
 
