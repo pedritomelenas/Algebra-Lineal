@@ -204,8 +204,19 @@ $$\left(\begin{array}{cc|cc}
 0 & -1 & -2/3 & 1
 \end{array}\right)\sim_f \left(\begin{array}{cc|cc}
 1 &0 & -1/3 & 2\\
-0 & 1 & -2/3 & 1
-\end{array}\right),$$
+0 & 1 & 2/3 & -1
+\end{array}\right)$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+P=matrix([[1,2],[2/3,1/3]])
+I=matrix([[1,0],[0,1]]) 
+PI=P.augment(I,subdivide=True) 
+show(PI,"~",PI.rref())
+</script>
+</div>
 
 $$Q\cdot P{-1}=\begin{pmatrix}
 1 & 2\\ 1 & -1 
@@ -300,6 +311,16 @@ $$A-1\cdot I=\left(
 0 & 0 & 0 & 0
 \end{array}\right).
 $$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[-2,-2,3,2],[0,0,0,1],[-2,-2,3,2],[0,0,0,1]])
+show(A,"~",A.rref())
+</script>
+</div>
+
 Como hay dos ecuaciones, $\operatorname{dim}(V_{\lambda=1})=4-2=2$, unas cartesianas son
 $$V_{\lambda=1}\equiv \left\{ \begin{array}{l}
 2x+2y-3z=0,\\
@@ -327,6 +348,16 @@ $$A-2\cdot I=\left(
 0 & 0 & 0 & 0
 \end{array}\right).
 $$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[-3,-2,3,2],[0,-1,0,1],[-2,-2,2,2],[0,0,0,0]])
+show(A,"~",A.rref())
+</script>
+</div>
+
 Como hay dos ecuaciones, $\operatorname{dim}(V_{\lambda=2})=4-2=2$, unas cartesianas son
 $$V_{\lambda=2}\equiv \left\{ \begin{array}{l}
 x-z=0,\\
@@ -350,6 +381,105 @@ Así concluimos que ambos valores propios tienen multiplicidad geométrica dos, 
 <li>Razonar si $A$ es o no diagonalizable por semejanza ortogonal.<br>
 La matriz no es diagonalizable por semejanza ortogonal porque no es simétrica.
 </li>
+</ol>
+
+</details>
+</article>
+
+<article> 
+
+<ol type="a">
+<li>Dadas las matrices $A=\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}$ y 
+$B=\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$, dar matrices regulares $P$ y $Q$ de forma que $Q\cdot A \cdot P = B$.</li>
+<li>Determinar las coordenadas del vector $p(x)=1+x+x^2$ de $\mathcal{P}_2(\mathbb{R})$ respecto de la base $B'=\{1, 1-x, 1-x^2  \}$.</li>
+<li>Razonar que la aplicación $G: \mathcal{M}_2(\mathbb{R})  \longrightarrow \mathcal{M}_2(\mathbb{R})$ definida por: 
+$$G\left(\begin{pmatrix} a & b \\ c & d \end{pmatrix}\right)=\begin{pmatrix} a\cdot b & 0 \\ c & d \end{pmatrix}$$
+no es lineal.</li>
+<li>Calcular la signatura de la matriz simétrica 
+$$
+C=\begin{pmatrix}
+5 & 2 \\ 2 & \frac{1}{2}
+\end{pmatrix}.
+$$
+</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Dar matrices regulares $P$ y $Q$ de forma que $Q\cdot A \cdot P = B$.<br>
+$$\left(\begin{array}{rcl}
+A&|&I\\
+\hline
+I &| \\ \end{array} \right)=\left(\begin{array}{ll|ll}
+ 1 & 0 & 1 & 0\\ 
+ 0 & 0 & 0 & 1\\
+ \hline
+ 1 & 0 & & \\
+ 0 & 1 & & \\
+ \end{array}\right)\sim_f \left(\begin{array}{ll|ll}
+ 1 & 0 & 1 & 0\\ 
+ 1 & 0 & 1 & 1\\
+ \hline
+ 1 & 0 & & \\
+ 0 & 1 & & \\
+ \end{array}\right)\sim_c \left(\begin{array}{ll|ll}
+ 1 & 1 & 1 & 0\\ 
+ 1 & 1 & 1 & 1\\
+ \hline
+ 1 & 1 & & \\
+ 0 & 1 & & \\
+ \end{array}\right),$$
+luego 
+$$Q=\begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix} \mbox{ y } P=\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}.$$</li>
+
+<li>Determinar las coordenadas del vector $p(x)$ respecto de la base $B'$.<br>
+Si denotamos $1+x+x^2=(\alpha_1, \alpha_2,\alpha_3)_{B'}$, tenemos:
+$$1+x+x^2=\alpha_1 \cdot  1 + \alpha_2 \cdot  (1-x)+\alpha_3 \cdot  (1-x^2)
+=
+(\alpha_1+\alpha_2+\alpha_3) \cdot 1 - \alpha_2 \cdot x - \alpha_ 3 \cdot x^2,
+$$
+y resolviendo $\alpha_1+\alpha_2+\alpha_3=1$, $-\alpha_2=1$, $-\alpha_3=1$, nos queda que
+$$1+x+x^2=(3,-1,-1)_{B'}.$$
+
+Alternativamente, la matriz del cambio de $B'$ a $B_s$ es 
+$
+P=\begin{pmatrix} 1 & 1 & 1 \\ 0 & -1 & 0 \\ 0 & 0 &-1 \end{pmatrix}
+$
+, luego la matriz del cambio de $B_s$ a $B'$ es 
+$$
+P^{-1}=\begin{pmatrix} 1 & 1 & 1 \\ 0 & -1 & 0 \\ 0 & 0 &-1 \end{pmatrix}.
+$$
+Puesto que $1+x+x^2=(1,1,1)_{B_s}$ obtenemos:
+$$
+\begin{pmatrix} 1 & 1 & 1 \\ 0 & -1 & 0 \\ 0 & 0 &-1 \end{pmatrix}\cdot
+\begin{pmatrix}
+1 \\ 1 \\ 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+3 \\ -1 \\ -1
+\end{pmatrix}.
+$$</li>
+
+<li>Razonar que la aplicación $G$ no es lineal.<br>
+Calculamos
+$$G\left(\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}\right)=\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}, G\left(\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}\right)=\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}$$
+Sin embargo la imagen de la suma de estas matrices es
+$$G\left(\begin{pmatrix} 1 & 1 \\ 0 & 0 \end{pmatrix}\right)=\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}\not = G\left(\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}\right)+G\left(\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}\right).$$</li>
+
+<li>Calcular la signatura de C.<br>
+Diagonalizamos por congruencia 
+$$
+C=\begin{pmatrix}
+5 & 2 \\ 2 & \frac{1}{2}
+\end{pmatrix}\sim_f \begin{pmatrix}
+5 & 2 \\ 0 & -\frac{3}{10} 
+\end{pmatrix}\sim_c \begin{pmatrix}
+5 & 0 \\ 0 & -\frac{3}{10} \end{pmatrix},
+$$
+por lo que $\operatorname{sig}(C)=(1,1)$.</li>
 </ol>
 
 </details>

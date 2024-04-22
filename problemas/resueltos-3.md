@@ -174,6 +174,16 @@ $$A-2I=\begin{pmatrix}
 0 & 1 & 0\\
 0 & 0 & 0\\
 \end{pmatrix}.$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[4,2,0],[2,4,0],[1,4,0]])
+show(A,"~",A.rref())
+</script>
+</div>
+
 Entonces nos quedan las cartesianas
 $$\boxed{\begin{array}{l} x=0,\\ y=0. \end{array} }$$
 Como el espacio $(\mathbb{Z}_{5})^3$ tiene dimensión tres y el subespacio tiene dos ecuaciones cartesianas, entonces 
@@ -196,6 +206,16 @@ $$A-3I=\begin{pmatrix}
 0 & 0 & 1\\
 0 & 0 & 0\\
 \end{pmatrix}.$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[3,2,0],[2,3,0],[1,4,4]])
+show(A,"~",A.rref())
+</script>
+</div>
+
 Entonces nos quedan las cartesianas
 $$\boxed{\begin{array}{l} x+4y=0,\\ z=0. \end{array} }$$
 Como el espacio $(\mathbb{Z}_{5})^3$ tiene dimensión tres y el subespacio tiene dos ecuaciones cartesianas, entonces 
@@ -431,6 +451,16 @@ $$(A+3I)=\begin{pmatrix}
 0 & 0 & 0\\
 0 & 0 & 0\\
 \end{pmatrix}.$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(13),[[10,-1,4],[1,9,3],[5,6,2]])
+show(A,"~",A.rref())
+</script>
+</div>
+
 Luego nos queda una única ecuación cartesiana que es $x+9y+3z=0$ y por tanto la multiplicidad geométrica (esto es, la dimensión de $V_{\lambda=2}$) es 2, así que la matriz es diagonalizable.<br>
 Calculamos una base de  $V_{\lambda=-3}$:
 $$\{ (4,1,0),(10,0,1) \}.$$
@@ -446,6 +476,16 @@ Necesitamos también una base de $V_{\lambda=5}$:
 0 & 1 & 5\\
 0 & 0 & 0\\
 \end{pmatrix}.$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(13),[[2,-1,4],[1,1,3],[5,6,-6]])
+show(A,"~",A.rref())
+</script>
+</div>
+
 Nos quedan las ecuaciones $V_{\lambda=5}\equiv \boxed{\begin{array}{l}
 x-2z=0,\\
 y+5z=0.\end{array} }$ y una base es $\{(2,-5,1)\}$.<br>
@@ -579,6 +619,16 @@ A-2I =
 0 & 0 & 0\\
 0 & 0 & 0\\
 \end{array}\right).$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[-2,0,4],[2,0,1],[1,0,-2]])
+show(A,"~",A.rref())
+</script>
+</div>
+
 Luego nos queda una única ecuación cartesiana que es $x-2z=0$ y por tanto la multiplicidad geométrica (esto es, la dimensión de $V_{\lambda=2}$) es 2, así que la matriz es diagonalizable.<br>
 Calculamos una base de  $V_{\lambda=2}$:
 $\{ (0,1,0),(2,0,1) \}$.<br>
@@ -594,6 +644,16 @@ $$A-3I=
  0 & 1 & 3\\
 0 & 0 & 0\\
 \end{array}\right).$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(5),[[-3,0,4],[2,-1,1],[1,0,-3]])
+show(A,"~",A.rref())
+</script>
+</div>
+
 Nos quedan las ecuaciones$V_{\lambda=3}\equiv \boxed{\begin{array}{l}
 x-3z=0,\\
 y+3z=0.\end{array} }$. Además una base es $\{(3,2,1)\}$.<br>
@@ -723,6 +783,16 @@ $$ \begin{pmatrix}
 1/2 & 1/2 & 1/2
 \end{pmatrix}.
 $$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,-1,0],[1,2,1],[0,1,1],[1,1,1]])
+show(A,"~",((A.T).rref()).T)
+</script>
+</div>
+
 Luego la base más sencilla de $\operatorname{Im}(f) $ es $\{(1,0,0,1/2),(0,1,0,1/2),(0,0,1,1/2)\}$.<br>
 Para obtener las cartesianas del núcleo imponemos $AX=0$:
 $$\operatorname{ker}(f)\equiv \left\{ \begin{array}{rl}
@@ -821,6 +891,16 @@ $$A=\begin{pmatrix}
 0 & 1 & 0 & 0
 \end{pmatrix}
 $$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,1,0,1],[-1,2,1,1],[-1,2,1,1]])
+show(A,"~",((A.T).rref()).T)
+</script>
+</div>
+
 Así que la base de $Im(f)$ que obtenemos es $\{ (1,0,0),(0,1,1)\}$.<br>
 Para que $(a,1-a,a)\in Im(f)$ debe ser combinación lineal de estos vectores y por tanto el determinante de la matriz 
 $$\begin{pmatrix}
@@ -1159,5 +1239,278 @@ $$f(1,-1,0)=A\left( \begin{array}{r}
 $$
 y como no es el vector nulo, no pertenece al núcleo tampoco en este caso.</li>
 </ol>
+</details>
+</article>
+
+<article>
+
+Se considera la aplicación lineal
+$$
+F: \mathcal{P}_3(\mathbb{R}) \longrightarrow \mathcal{M}_2(\mathbb{R})
+$$
+determinada por:
+$$
+{\small
+\begin{array}{rcl}
+F(1-x) & = & \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \\
+F(1+x) & = & \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}, \\
+F(x^2+x^3) & = & \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix}, \\
+F(x^2-x^3) & = & \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}, \\
+\end{array}
+}
+$$
+
+
+<ol type="a">
+<li>Determinar la matriz asociada a $F$ respecto de las respectivas bases estándar y	el valor de $F(p(x))$ para un polinomio 
+$p(x)=a_0+a_1 x+ a_2 x^2 +a_3 x^3\in \mathcal{P}_3(\mathbb{R})$.</li>
+<li>Determinar la matriz asociada a $F$ respecto de las bases
+$\overline{B}=\{1+x, 1-x, x^2+x^3, x^2-x^3 \}$ de $\mathcal{P}_3(\mathbb{R})$ y 
+$\overline{B'}=\biggl\{
+\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix},
+\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},
+\begin{pmatrix} 1 & 1 \\ 2 & 3 \end{pmatrix},
+\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
+\biggr\}$ de $\mathcal{M}_2(\mathbb{R})$.</li>
+<li>Determinar bases del núcleo y la imagen de $F$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Determinar la matriz asociada a $F$ respecto de las respectivas bases estándar y	el valor de $F(p(x))$.<br>
+Para determinar la matriz asociada solo tenemos que escribir las imágenes de $1,x,x^2,x^3$ en función de la base estándar de $\mathcal{M}_2(\mathbb{R})$ y colocarlos por columnas.
+Usando los datos dados:
+
+$$F(1)=\frac{1}{2}(F(1+x)+F(1-x))=\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}=(1,1,1,1)_{B_{sm}},$$
+
+$$F(x)=\frac{1}{2}(F(1+x)-F(1-x))=\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}=(1,0,0,1)_{B_{sm}},$$
+
+$$F(x^2)=\frac{1}{2}(F(x^2+x^3)+F(x^2-x^3))=\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}=(1,0,0,1)_{B_{sm}},$$
+
+$$F(x^3)=\frac{1}{2}(F(x^2+x^3)-F(x^2-x^3))=\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}=(1,0,0,1)_{B_{sm}}.$$
+
+Así,
+$$M(F,B_{sp},B_{sm})=\left(\begin{array}{llll}
+1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0\\
+1 & 0 & 0 & 0\\
+1 & 1 & 1 & 1
+\end{array}\right)=A.$$ 
+Dado un polinomio $p(x)=a_0+a_1x+a_2x^2+a_3x^3=(a_0,a_1,a_2,a_3)_{B_{sp}}$ calculamos
+$$F(p(x))=A\left( \begin{array}{l}
+a_0\\
+a_1\\
+a_2\\
+a_3
+\end{array}\right)=\left( \begin{array}{c}
+a_0+a_1+a_2+a_3\\
+a_0\\
+a_0\\
+a_0+a_1+a_2+a_3
+\end{array}\right)_{B_{sm}}.$$
+Así que
+$$F(p(x))=\left( \begin{array}{cc}
+a_0+a_1+a_2+a_3 &
+a_0\\
+a_0&
+a_0+a_1+a_2+a_3
+\end{array}\right)=
+\left( \begin{array}{cl}
+p(1) &
+p(0)\\
+p(0)&
+p(1)
+\end{array}\right).
+$$</li>
+
+<li>Determinar la matriz asociada a $F$ respecto de las bases $\overline{B}$ y $\overline{B'}$.<br>
+Expresamos las imágenes de los vectores de $\overline{B}$ y obtenemos (es muy fácil en este caso) sus coordenadas respecto de $\overline{B'}$:
+$$
+{\small
+\begin{array}{rcll}
+F(1+x) & = & \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} 
+& = (2,-1,0,0)_{\overline{B'}},\\
+F(1-x) & = & \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} 
+& = (0,1,0,0)_{\overline{B'}},\\
+F(x^2+x^3) & = & \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} 
+& = (2,-2,0,0)_{\overline{B'}},\\
+F(x^2-x^3) & = & \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix} 
+& = (0,0,0,0)_{\overline{B'}}.\\
+\end{array}
+}
+$$
+Así,
+$$M(F,\overline{B},\overline{B'})=
+\left(\begin{array}{rrrr}
+2  & 0 & 2 & 0\\
+-1 & 1 & -2 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+\end{array}\right)=C.$$
+
+Alternativamente, de los datos de las bases dadas tenemos que 
+$$
+P=\left(\begin{array}{rrrr}
+ 1 & 1 & 0 & 0 \\
+ 1 & -1 & 0 & 0 \\
+ 0 & 0 & 1 & 1 \\
+ 0 & 0 & 1 & -1
+ \end{array} \right)  
+ \mbox{ y    }\;\; 
+ Q=\begin{pmatrix}
+ 1 & 0 & 1 & 1 \\
+ 1 & 1 & 1 & 2 \\
+ 1 & 1 & 2 & 3 \\
+ 1 & 0 & 3 & 4
+ \end{pmatrix} 
+$$ 
+son las matrices de cambio de base de $\overline{B}$ a $B_{sp}$ y de $\overline{B'}$ a $B_{sm}$ respectivamente. 
+
+Entonces $M(F,\overline{B}, \overline{B'})=Q^{-1}AP$
+
+Calculamos 
+$$Q^{-1}=\left(\begin{array}{rrrr}
+1 & 1 & -1 & 0 \\
+0 & -1 & 2 & -1 \\
+1 & -3 & 3 & -1 \\
+-1 & 2 & -2 & 1
+\end{array}\right).
+$$
+Y finalmente,
+$$ 
+M(F,\overline{B}, \overline{B'})
+=
+Q^{-1}AP
+=
+\left(\begin{array}{cccc}
+2  & 0 & 2 & 0\\
+-1 & 1 & -2 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+\end{array}\right)=C.
+$$</li>
+
+<li>Determinar bases del núcleo y la imagen de $F$.<br>
+Como $\operatorname{rg}(A)=\operatorname{rg}(C)=2$, entonces $\operatorname{dim}(\operatorname{Im}(F))=2$ y $\operatorname{dim}(\operatorname{ker}(F))=2$. Una base de la  imagen (obtenida por operaciones elementales en las columnas de $A$) puede ser: 
+$$\left\{\begin{pmatrix}
+1 & 0 \\ 
+0 & 1 
+\end{pmatrix}, 
+\begin{pmatrix} 0 & 1 \\ 
+1 & 0 
+\end{pmatrix}\right\}=\left\{(1,0,0,1)_{B_{sm}},(0,1,1,0)_{B_{sm}}\right\}.$$
+
+También observando $A$ obtenemos que $F(x-x^2)=F(x-x^3)=0$ y por tanto una base del núcleo puede ser: 
+$$\{ x-x^2, x-x^3\}=\{(0,1,-1,0)_{B_{sp}},(0,1,0,-1)_{B_{sp}} \}.$$
+
+</li>
+</ol>
+</details>
+</article>
+
+<article>
+
+Se considera la matriz:
+$$
+A=\begin{pmatrix}
+ a & 1 & 0 & 0 \\
+ 0 & b & 0 & 0 \\
+ 0 & 0 & a & 1 \\
+ 0 & 0 & 0 & b
+ \end{pmatrix}.
+$$
+
+<ol type="a">
+<li>Estudiar qué condición han de cumplir los parámetros $a$ y $b$ para que $A$ sea diagonalizable.</li>
+<li>Para los valores $a=1$, $b=-1$ determinar su forma diagonal $D$ y una matriz de paso $P$ de forma que $D=P^{-1}\cdot A \cdot P$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Estudiar qué condición han de cumplir los parámetros $a$ y $b$ para que $A$ sea diagonalizable.<br>
+En primer lugar calculamos los valores propios y sus multiplicidades algebraicas
+$$
+|A-\lambda I|=\left| \begin{array}{cccc}
+ a-\lambda & 1 & 0 & 0 \\
+ 0 & b-\lambda & 0 & 0 \\
+ 0 & 0 & a-\lambda & 1 \\
+ 0 & 0 & 0 & b-\lambda
+ \end{array}\right|= (a-\lambda)^2 (b-\lambda)^2.
+$$
+Si $a=b$, hay un solo valor propio $\lambda=a$ con multiplicidad algebraica cuatro. Calculamos su multiplicidad geométrica:
+$$
+V_{\lambda=a}\equiv \begin{pmatrix}
+ 0 & 1 & 0 & 0 \\
+ 0 & 0 & 0 & 0 \\
+ 0 & 0 & 0 & 1 \\
+ 0 & 0 & 0 & 0
+ \end{pmatrix}\begin{pmatrix}
+ x\\ y\\ z\\t
+ \end{pmatrix}= \begin{pmatrix}
+ 0 \\ 0 \\0 \\0
+ \end{pmatrix}.
+$$
+Nos da las ecuaciones $y=0; t=0$ y por tanto tiene dimensión dos, así que como no coincide con la multiplicidad algebraica, entonces no es diagonalizable.<br>
+
+Si $a\not =b$, hay dos valores propios $\lambda=a$ con multiplicidad algebraica dos y $\lambda=b$ también con multiplicidad algebraica dos.<br>
+Calculamos su multiplicidad geométrica:
+$$
+V_{\lambda=a}\equiv \begin{pmatrix}
+ 0 & 1 & 0 & 0 \\
+ 0 & b-a & 0 & 0 \\
+ 0 & 0 & 0 & 1 \\
+ 0 & 0 & 0 & b-a
+ \end{pmatrix}\begin{pmatrix}
+ x\\ y\\ z\\ t
+ \end{pmatrix}= \begin{pmatrix}
+ 0 \\ 0 \\0 \\0
+ \end{pmatrix}.
+$$
+Nos da las ecuaciones $y=0$, $t=0$ y por tanto tiene dimensión dos, así que coincide con la multiplicidad algebraica.
+$$
+V_{\lambda=b}\equiv \begin{pmatrix}
+ a-b & 1 & 0 & 0 \\
+ 0 & 0 & 0 & 0 \\
+ 0 & 0 & a-b & 1 \\
+ 0 & 0 & 0 & 0
+ \end{pmatrix}\begin{pmatrix}
+ x\\ y\\ z\\t
+ \end{pmatrix}= \begin{pmatrix}
+ 0 \\ 0 \\0 \\0
+ \end{pmatrix}.
+$$
+Nos da las ecuaciones $(a-b)x+y=0$, $(a-b)z+t=0$ y por tanto tiene dimensión dos, así que coincide con la multiplicidad algebraica. Por tanto en este caso la matriz si es diagonalizable.
+</li>
+
+<li>Para los valores $a=1$, $b=-1$ determinar su forma diagonal $D$ y una matriz de paso $P$.<br>
+Utilizando los cálculos del segundo caso del apartado anterior  tenemos que 
+$$V_{\lambda=1}\equiv \left\{ \begin{array}{l}
+y=0,\\
+t=0.
+\end{array}\right.$$
+Y una base es $\{(1,0,0,0),(0,0,1,0)\}$. 
+$$V_{\lambda= -1}\equiv \left\{ \begin{array}{l}
+2x+y=0,\\
+2z+t=0.
+\end{array}\right.$$
+Y una base es $\{(1,-2,0,0),(0,0,1,-2)\}$. <br>
+Por tanto, 
+$$D=\begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & -1 & 0\\
+0 & 0 & 0 & -1
+\end{pmatrix}, \hspace{1cm} P=\begin{pmatrix}
+1 & 0 & 1 & 0\\
+0 & 0 & -2 & 0\\
+0 & 1 & 0 & 1\\
+0 & 0 & 0 & -2
+\end{pmatrix}.$$</li>
+</ol>
+
 </details>
 </article>
