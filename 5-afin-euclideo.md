@@ -101,7 +101,7 @@ Resolviendo el sistema, obtenemos que $P=(4,-1,1) _\mathfrak{R}$
 O=vector([1,1,-1])
 MB=matrix([[1,1,1],[1,1,0],[1,0,0]]).T
 P=vector([5,4,3])
-MB\(P-O)
+MB.solve_right(P-O)
 </script>
 </div>  
 
