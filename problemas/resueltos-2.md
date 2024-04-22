@@ -802,8 +802,18 @@ $$\left(\begin{array}{rrrr}
 1 & 0 & 0 & -1\\
 0 & 1 & 0 & 0\\
 0 & 0 & 1 & 0
-\end{array}\right)$$
-y obtenemos que $x_4$ actúa como parámetro mientras que las otras tres incógnitas están despejadas:
+\end{array}\right).$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,1,0,-1],[0,1,1,0],[1,-1,-1,-1]])
+show(A,"~",A.rref())
+</script>
+</div>
+
+Así obtenemos que $x_4$ actúa como parámetro mientras que las otras tres incógnitas están despejadas:
 $$W\equiv \left\{
 \begin{array}{lcrrr}
 x_{1} &=& \lambda,\\
@@ -843,7 +853,19 @@ $$\left(\begin{array}{cc|c}
 1 & 0 & 1\\
 0 & 1 & 2
 \end{array}\right),$$
-luego $v=(1,2)_{B'}$.</li>
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(3),[[2,0],[1,1]])
+b=vector(GF(3),[2,0]) 
+Ab=A.augment(b,subdivide=True) 
+show(Ab,"~",Ab.rref())
+</script>
+</div>
+
+Luego $v=(1,2)_{B'}$.</li>
 
 <li>Como nos dan un sistema de generadores del subespacio podemos buscar la base más sencilla
 $$\begin{pmatrix}
@@ -854,9 +876,19 @@ $$\begin{pmatrix}
  1 & 0 \\
  0 & 1 \\
  0 & 2 \\
-  \end{pmatrix}
+  \end{pmatrix}.
 $$
-y con esta base escribimos las ecuaciones paramétricas más sencillas:
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(GF(3),[[1,1],[2,1],[1,2]])
+show(A,"~",((A.T).rref()).T)
+</script>
+</div>
+
+Y con esta base escribimos las ecuaciones paramétricas más sencillas:
 
 $$\pi\equiv \left\{
 \begin{array}{lcrrr}
@@ -908,11 +940,20 @@ $$\begin{pmatrix}
   \end{pmatrix}\sim_c \begin{pmatrix}
  1 & 0  \\
  0 & 1 \\
- -1 & -1  \\
+ 1 & 1  \\
  0 & 0 
   \end{pmatrix},$$
 luego la base más sencilla de $U$ es 
-$$ \{(1,0,-1,0),(0,1,-1,0)\}.$$
+$$ \{(1,0,1,0),(0,1,1,0)\}.$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[-1,-1],[1,0],[0,-1],[0,0]])
+show(A,"~",((A.T).rref()).T)
+</script>
+</div>
 
 Para calcular las cartesianas de $W$ procedemos en primer lugar a calcular la base más sencilla:
 $$\begin{pmatrix}
@@ -925,8 +966,18 @@ $$\begin{pmatrix}
 0 & 1 & 0\\
 0 & 0 & 1 \\
 1/2 & 1 & 0 
-\end{pmatrix}$$
-y escribimos las paramétricas:
+\end{pmatrix}.$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[0,0,-2],[1,1,1],[1,-1,1],[1,1,0]])
+show(A,"~",((A.T).rref()).T)
+</script>
+</div>
+
+Y escribimos las paramétricas:
 
 $$W\equiv \left\{
 \begin{array}{lclrr}
@@ -1052,6 +1103,120 @@ Por la fórmula de las dimensiones,
 $$\operatorname{dim}(U) +  \operatorname{dim}(W)= \operatorname{dim}(U\cap W) + \operatorname{dim}(U+W),$$
 deducimos que $\operatorname{dim}(U+W)=4=\operatorname{dim}(\mathcal{M}_2(\mathbb{R}))$ y por tanto $U+W=\mathcal{M}_2(\mathbb{R})$.
 </li>
+</ol>
+
+</details>
+</article>
+
+<article>
+
+En el espacio $\mathcal{M}_2(\mathbb{R})$ se consideran los subespacios
+$$U=\mathcal{L}\Biggl(\biggl\{\begin{pmatrix}
+1 & 2 \\ 0 & 0
+\end{pmatrix}, \begin{pmatrix}
+1& 0 \\ 0 & 2\\
+\end{pmatrix}, \begin{pmatrix}
+2  & a \\ 0 & a 
+\end{pmatrix}\biggr\}\Biggr),$$
+y $W$ con ecuaciones cartesianas respecto de la base estándar:
+$$W\equiv 2x-y-t=0.$$
+
+<ol type="a">
+<li>Calcular la base más sencilla de $W$.</li>
+<li>Calcular la dimensión de $U$ según los valores de $a$.</li>
+<li>Probar que cuando $a=2$ se tiene que $U \subseteq W$.</li>
+<li>Calcular unas ecuaciones cartesianas de $U \cap W$ para $a\not = 2$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular la base más sencilla de $W$.<br>
+De la cartesiana $2x-y-t=0$ obtenemos la reducida: $x-\frac{1}{2} y-\frac{1}{2}t=0$.<br>
+Asignando parámetros a las incógnitas secundarias ($y, z$, $t$) y despejando la principal obtenemos
+las paramétricas:
+$$\left\{\begin{array}{ll}
+x=&\frac{1}{2}\lambda_1 + \frac{1}{2}\lambda_3,\\
+y=&\lambda_1,\\
+z=&\lambda_2,\\
+t=&\lambda_3,\\
+\end{array}\right.$$ y por tanto una base es 
+$\{(\frac{1}{2},1,0,0)_{B_{s}},(0,0,1,0)_{B_{s}},
+(\frac{1}{2},0,0,1)_{B_{s}}\}$. <br>
+
+Para obtener la base más sencilla escalonamos la matriz que se obtiene al escribir las coordenadas de estos vectores por columnas:
+$$
+\begin{pmatrix}
+\frac{1}{2} & 0 & \frac{1}{2}\\
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1\\
+\end{pmatrix}
+\sim_c
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1\\
+2 & -1 & 0\\
+\end{pmatrix}.
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1/2,0,1/2],[1,0,0],[0,1,0],[0,0,1]])
+show(A,"~",((A.T).rref()).T)
+</script>
+</div>
+
+Así pues, la base más sencilla es:
+$$
+\left\{
+\begin{pmatrix} 1 & 0 \\ 0 & 2 \end{pmatrix},
+\begin{pmatrix}
+0 & 1 \\ 0 & -1
+\end{pmatrix},
+\begin{pmatrix}
+0 & 0 \\ 1 & 0
+\end{pmatrix}
+\right\}.
+$$</li>
+
+<li>Calcular la dimensión de $U$ según los valores de $a$.<br>
+Escribimos los vectores por sus coordenadas en la base $B_{s}$ y calculamos el rango de la matriz que forman:
+$$\left(\begin{array}{lll}
+1 & 1 & 2\\
+2 & 0 & a\\
+0 & 0 & 0\\
+0 & 2 & a
+\end{array}\right).$$ 
+Como tiene una fila de ceros, el único menor de orden tres que puede ser no nulo es 
+$$\left|\begin{array}{lll}
+1 & 1 & 2\\
+2 & 0 & a\\
+0 & 2 & a
+\end{array}\right|=8-2a-2a=8-4a,$$ 
+así que si $a\not = 2$ el rango es tres y $\operatorname{dim}(U)=3$ y si $a=2$ el rango es dos y $\operatorname{dim}(U)=2$.</li>
+
+<li>Probar que cuando $a=2$ se tiene que $U \subseteq W$.<br>
+Hemos visto que para $a=2$ la dimensión de $U$ es dos y por tanto los dos primeros vectores son base de $U$, además cada uno de ellos verifica la ecuación de $W$ ($2\cdot 1-2-0=0; \, 2\cdot 1-0-2=0$), así que $U\subseteq W$.</li>
+
+<li>Calcular unas ecuaciones cartesianas de $U \cap W$ para $a\not = 2$.<br>
+Si $a\not = 2$ la dimensión de $U$ es tres y unas paramétricas son:
+ $$\left\{\begin{array}{ll}
+x=&\lambda_1+ \lambda_2+2\lambda_3,\\
+y=&2\lambda_1+a\lambda_3,\\
+z=&0,\\
+t=&2\lambda_2+a\lambda_3.\\
+\end{array}\right.$$ 
+Y como solo necesitamos una cartesiana, entonces $z=0$ es la ecuación cartesiana de $U$.<br>
+Por tanto,
+$$U\cap W\equiv \left\{ \begin{array}{r}
+2x-y-t=0,\\
+z=0.
+\end{array}\right..$$</li>
 </ol>
 
 </details>
