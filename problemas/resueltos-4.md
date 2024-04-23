@@ -78,7 +78,7 @@ u_2=(0,0,1,-1),
 e_1=(1,0,0,1),\\
 e_2=(0,0,1,-1)+\lambda_{2,1}(1,0,0,1).
 \end{array}$$
-Calculamos $$\lambda_{2,1}=-\frac{<(0,0,1,-1),(1,0,0,1)>}{<(1,0,0,1),(1,0,0,1)>}=-\frac{-1}{2}=\frac{1}{2}.$$
+Calculamos $$\lambda_{2,1}=-\frac{\langle(0,0,1,-1),(1,0,0,1)\rangle}{\langle(1,0,0,1),(1,0,0,1)\rangle}=-\frac{-1}{2}=\frac{1}{2}.$$
 Así que la base ortogonal de $W$ que obtenemos es:
 $$\{(1,0,0,1),(1/2,0,1,-1/2)\}.$$
 </li>
@@ -119,7 +119,7 @@ show(A,"~",((A.T).rref()).T)
 y obtenemos que $U+W=\mathbb{R}^4$ puesto que obtenemos la base canónica. Ahora usando la fórmula de las dimensiones 
 $$\operatorname{dim}(U) + \operatorname{dim}(W) = \operatorname{dim}(U+W)+ \operatorname{dim}(U\cap W)$$
 obtenemos que $\operatorname{dim}(U\cap W)=0$ y por tanto $U\cap W=\{ 0 \}$.
-Sin embargo, como $<(1,0,0,-1),(0,0,1,-1)>=1$ y $(1,0,0,-1)\in U$ y $(0,0,1,-1)\in W$, entonces $W\not = U^{\perp}$.</li>
+Sin embargo, como $\langle (1,0,0,-1),(0,0,1,-1)\rangle =1$ y $(1,0,0,-1)\in U$ y $(0,0,1,-1)\in W$, entonces $W\not = U^{\perp}$.</li>
 
 <li>Calcular $p_{U}(v)$ y $p_{U^{\perp}}(v)$.<br>
 De la base de $U$ obtenemos las cartesianas de $U^{\perp}$ que son:
@@ -255,7 +255,7 @@ $$\lambda= \pm (b/4)$$ y queda el mismo resultado, por supuesto.</li>
 
 En el espacio vectorial $\mathcal{P}_3(\mathbb{R})$ de los polinomios de grado menor o igual que tres se considera  el subespacio $U$ generado por $x$ y $x^3$ y el producto escalar dado por:
 $$
-<p(x),q(x)>= \int_{-1}^1 p(x)\cdot q(x) dx.
+\langle p(x),q(x)\rangle = \int_{-1}^1 p(x)\cdot q(x) dx.
 $$
 
 <ol type="a">
@@ -269,18 +269,18 @@ $$
 
 <ol type="a">
 <li>Determinar una base ortogonal de $U$.<br>
-Como $\{ x, x^3\}$ es base, y $<x,x^3>=\int_{-1}^1 x^4dx= \left. x^5\right]_{-1}^1=2/5$
+Como $\{ x, x^3\}$ es base, y $\langle x,x^3 \rangle =\int_{-1}^1 x^4dx= \left. x^5\right]_{-1}^1=2/5$
 por lo que no es ortogonal. Usamos el algoritmo de Gram-Schmidt para calcular una:
 
 $$\begin{array}{lr}
 e_1=x, & \\
-e_2=x^3+\lambda_{21}x,& \lambda_{21}= \frac{-<x,x^3>}{<x,x>}.\\
+e_2=x^3+\lambda_{21}x,& \lambda_{21}= \frac{- \langle x,x^3\rangle}{\langle x,x\rangle}.\\
 \end{array}$$
-Calculamos $<x,x>=\int_{-1}^1 x^2dx= \left. x^3\right]_{-1}^1=2/3$ luego
+Calculamos $\langle x,x\rangle =\int_{-1}^1 x^2dx= \left. x^3\right]_{-1}^1=2/3$ luego
 una base ortogonal de $U$ es $\{x,x^3-3/5x\}$.</li>
 
 <li>Determinar una base de su complementario, $U^{\perp}$.<br>
-Podemos observar que $<1,x>=<1,x^3>=0$ y $<x^2,x>=<x^2,x^3>=0$ por lo que $\{1,x^2\}$ es una base de $U^{\perp}$, ya que este subespacio debe tener dimensión dos.</li>
+Podemos observar que $\langle 1,x\rangle =\langle 1,x^3\rangle =0$ y $\langle x^2,x\rangle =\langle x^2,x^3\rangle =0$ por lo que $\{1,x^2\}$ es una base de $U^{\perp}$, ya que este subespacio debe tener dimensión dos.</li>
 
 <li>Determinar la proyección sobre $U$ del vector  $1+x$.<br>
 Puesto que tenemos bases sencillas de $U$ y de $U^{\perp}$ podemos expresar el polinomio dado como combinación lineal de todos ellos:
