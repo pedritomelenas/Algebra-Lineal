@@ -740,7 +740,7 @@ $$
 
 - $(\mathbf{u}+\mathbf{v})\wedge \mathbf{w}=(\mathbf{u}\wedge \mathbf{w})+(\mathbf{v}\wedge \mathbf{w})$; $\mathbf{u}\wedge (\mathbf{v}+ \mathbf{w})=(\mathbf{u}\wedge \mathbf{v})+(\mathbf{u}\wedge \mathbf{w}).$ 
 
-- $\mathbf{u} \wedge \mathbf{v}=0$ si y sólo si $\dim(\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1.$
+- $\mathbf{u} \wedge \mathbf{v}=0$ si y sólo si $\dim(\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace))\le 1.$
 
 - $\Vert \mathbf{u} \wedge \mathbf{v}\Vert = \Vert \mathbf{u}\Vert \Vert\mathbf{v}\Vert \sin(\measuredangle(\mathbf{u},\mathbf{v})).$
 
