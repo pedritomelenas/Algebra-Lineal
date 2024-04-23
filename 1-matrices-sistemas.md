@@ -10,7 +10,7 @@ title: Matrices y sistemas de ecuaciones
 
 ## Matrices
 
-Sean $I=\lbrace 1,2,\dots,m\rbrace$ y $J=\lbrace 1,2,\dots,n\rbrace$. Una *matriz* de orden $m\times n$ sobre un cuerpo $K$ es una aplicación 
+Sean $I=\lbrace 1,2,\dots,m\rbrace$ y $J=\lbrace 1,2,\dots,n\rbrace.$ Una *matriz* de orden $m\times n$ sobre un cuerpo $K$ es una aplicación 
 
 $$
  A:I\times J\to K,\ (i,j)\mapsto a_{ij}.
@@ -27,11 +27,11 @@ $$
    \end{pmatrix},
 $$
 
-y a veces simplemente escribiremos $A=(a_{ij})$, si queda claro dónde varían $i$ y $j$. Diremos que $A$ es una matriz con $m$ filas y $n$ columnas.
+y a veces simplemente escribiremos $A=(a_{ij})$, si queda claro dónde varían $i$ y $j.$ Diremos que $A$ es una matriz con $m$ filas y $n$ columnas.
 
 Una submatriz de $A$ no es más que la matriz que se obtiene cuando escogemos un número de filas y columnas de $A$ (o bien cuando eliminamos algunas filas y columnas).
 
-Denotaremos por $\mathcal M_{m\times n}(K)$ al conjunto de las matrices de orden $m\times n$ sobre $K$. El conjunto $\mathcal M_{m\times n}(K)$ con la suma coordenada a coordenada tiene estructura de grupo, esto es, la suma es asociativa, tiene elemento neutro, toda matriz tiene inversa y es conmutativa.
+Denotaremos por $\mathcal M_{m\times n}(K)$ al conjunto de las matrices de orden $m\times n$ sobre $K.$ El conjunto $\mathcal M_{m\times n}(K)$ con la suma coordenada a coordenada tiene estructura de grupo, esto es, la suma es asociativa, tiene elemento neutro, toda matriz tiene inversa y es conmutativa.
 
 $$
  \begin{pmatrix}
@@ -54,15 +54,15 @@ $$
    \end{pmatrix}.
 $$
 
-Sea $A=(a_{ij})\in \mathcal M_{m\times n}(K)$ y $B=(b_{jk})\in \mathcal M_{n\times p}(K)$. Entonces podemos definir el producto de $A$ y $B$ como $AB=C=(c_{ik})\in \mathcal M_{m\times p}(K)$ con 
+Sea $A=(a_{ij})\in \mathcal M_{m\times n}(K)$ y $B=(b_{jk})\in \mathcal M_{n\times p}(K).$ Entonces podemos definir el producto de $A$ y $B$ como $AB=C=(c_{ik})\in \mathcal M_{m\times p}(K)$ con 
 
 $$c_{ik}=a_{i1}b_{1k}+a_{i2}b_{2k}+\cdots + a_{in}b_{nk}.$$
 
-Una matriz de orden $n\times n$ diremos que es una *matriz cuadrada* de orden $n$. La terna $(\mathcal M_{n\times n}(K),+,\cdot)$ es un anillo.
+Una matriz de orden $n\times n$ diremos que es una *matriz cuadrada* de orden $n.$ La terna $(\mathcal M_{n\times n}(K),+,\cdot)$ es un anillo.
 
 El elemento neutro del producto en $\mathcal M_{n\times n}(K)$ es la *matriz identidad*, que es la matriz que tiene todas sus entradas cero salvo en la diagonal que tiene unos (cero es el elemento neutro de $K$ para la suma, y uno el neutro para el producto). A dicha matriz la denotamos por $I_n$, o simplemente $I$ cuando $n$ queda claro en el contexto.
 
-Una matriz $A\in \mathcal M_{n\times n}(K)$ es *regular* si tiene inversa para el producto, esto es, si existe $B$ tal que $AB=BA=I_n$. En dicho caso, a la matriz $B$ se le denota por $A^{-1}$. Si $A$ y $B$ tienen inversa,
+Una matriz $A\in \mathcal M_{n\times n}(K)$ es *regular* si tiene inversa para el producto, esto es, si existe $B$ tal que $AB=BA=I_n.$ En dicho caso, a la matriz $B$ se le denota por $A^{-1}.$ Si $A$ y $B$ tienen inversa,
 
 $$
 (AB)^{-1}=B^{-1}A^{-1}.
@@ -70,7 +70,7 @@ $$
 
 ## Matrices con formas especiales
 
-Una matrix $A=(a _ {ij})\in \mathcal{M} _ {n\times n}(K)$ decimos que es *triangular superior* si $a_{ij}=0$ para $i>j$, y decimos que es *triangular inferior* si $a_{ij}=0$ para $i < j$. Si la matriz es cuadrada, a los elementos $a_{ii}$ se les conoce como elementos de la diagonal. La matriz es diagonal si $a_{ij}=0$ siempre que $i\neq j$.
+Una matrix $A=(a _ {ij})\in \mathcal{M} _ {n\times n}(K)$ decimos que es *triangular superior* si $a_{ij}=0$ para $i>j$, y decimos que es *triangular inferior* si $a_{ij}=0$ para $i < j.$ Si la matriz es cuadrada, a los elementos $a_{ii}$ se les conoce como elementos de la diagonal. La matriz es diagonal si $a_{ij}=0$ siempre que $i\neq j.$
 
 El pivote de la fila $i$-ésima de A, si ésta tiene alguna entrada distinta de cero, es la primera entrada no nula de dicha fila, a saber, es $a_{ij}\neq 0$ con $j$ mínimo verificando esa condición. 
 
@@ -78,7 +78,7 @@ Decimos que $A$ está en *forma normal o escalonada* por filas (de forma análog
 
 - todas las filas nulas (todas las entradas son ceros) están debajo de las que tienen entradas no nulas.
 
-- si $a_{ij}$ y $a_{kl}$ son los pivotes de la fila $i$-ésima y $k$-ésima, respectivamente, con $i< k$, entonces $j< l$.
+- si $a_{ij}$ y $a_{kl}$ son los pivotes de la fila $i$-ésima y $k$-ésima, respectivamente, con $i< k$, entonces $j< l.$
 
 Diremos que está en *forma escalonada reducida* por filas si además todos los pivotes son uno y son los únicos elementos no nulos de las columnas que los contienen.
 
@@ -95,11 +95,11 @@ $$
 
 esto es, la matriz que se obtiene a partir de $A$ intercambiando filas por columnas. 
 
-Claramente, $(A^t)^t=A$.
+Claramente, $(A^t)^t=A.$
 
 Dadas $A$ y $B$ dos matrices, $(AB)^t=B^tA^t$ (siempre que esos productos tengan sentido).
 
-Decimos que $A$ es *simétrica* si $A^t=A$, y *antisimétrica* si $A^t=-A$.
+Decimos que $A$ es *simétrica* si $A^t=A$, y *antisimétrica* si $A^t=-A.$
 
 ## Equivalencia por filas
 
@@ -111,7 +111,7 @@ Dos matrices $A, B\in \mathcal{M} _ {m\times n}(K)$ se dice que son *equivalente
 
 ### Resultado
 
-Toda matriz $A$ es equivalente por filas a una matriz escalonada reducida por filas $H$, $A\sim_f H$. Esta matriz es única.
+Toda matriz $A$ es equivalente por filas a una matriz escalonada reducida por filas $H$, $A\sim_f H.$ Esta matriz es única.
 
 
 <div class="sage">
@@ -124,17 +124,17 @@ show(A,"~",A.rref())
 
 ###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-1.html) 
 
-Llamamos $E _ {ij}\in \mathcal{M} _ n(K)$ a la matriz que se obtiene al intercambiar la fila $i$-ésima con la $j$-ésima en la matriz identidad. Cambiar la fila $i$-ésima con la $j$-ésima en $A$ se corresponde con calcular $E_{ij}A$. Claramente, $E_{ij}^{-1}=E_{ij}$.
+Llamamos $E _ {ij}\in \mathcal{M} _ n(K)$ a la matriz que se obtiene al intercambiar la fila $i$-ésima con la $j$-ésima en la matriz identidad. Cambiar la fila $i$-ésima con la $j$-ésima en $A$ se corresponde con calcular $E_{ij}A.$ Claramente, $E_{ij}^{-1}=E_{ij}.$
 
-Sea ahora $E_i(k)\in \mathcal{M} _ n(K)$ la matriz que se obtiene al multiplicar la fila $i$-ésima de la matriz identidad por $k\in K$, $k\neq 0$. Multiplicar la fila $i$-ésima de $A$ por $k$ es lo mismo que calcular $E_i(k)A$. Se tiene que $E_{i}(k)^{-1}=E_i(1/k)$.
+Sea ahora $E_i(k)\in \mathcal{M} _ n(K)$ la matriz que se obtiene al multiplicar la fila $i$-ésima de la matriz identidad por $k\in K$, $k\neq 0.$ Multiplicar la fila $i$-ésima de $A$ por $k$ es lo mismo que calcular $E_i(k)A.$ Se tiene que $E_{i}(k)^{-1}=E_i(1/k).$
 
-La matriz $E_{ij}(k)$ es la matriz que se obtiene sumando a la fila $i$-ésima de la identidad la fila $j$-ésima multiplicada por $k$. Así, para sumarle a la fila $i$-ésima de $A$ la fila $j$-ésima multiplicada por $k$, calculamos $E_{ij}(k)\times A$. Tenemos además que $E_{ij}(k)^{-1}=E_{ij}(-k)$.
+La matriz $E_{ij}(k)$ es la matriz que se obtiene sumando a la fila $i$-ésima de la identidad la fila $j$-ésima multiplicada por $k.$ Así, para sumarle a la fila $i$-ésima de $A$ la fila $j$-ésima multiplicada por $k$, calculamos $E_{ij}(k)\times A.$ Tenemos además que $E_{ij}(k)^{-1}=E_{ij}(-k).$
 
 A las matrices de la forma $E_{ij}$, $E_i(k)$, $k\neq 0$, y $E_{ij}(k)$ se les llama *matrices elementales*. 
 
 Por tanto, si $A\sim_f H$, entonces existe $P$ tal que $PA=H$, y además $P$ es un producto de matrices elementales. 
 
-Podemos calcular $P$ de la siguiente forma. Partimos de la matriz $(A \mid I_m)$, la matriz cuyas primeras $n$ columnas son las de $A$, y cuyas últimas columnas son las de $I_m$. Si $A\sim_f H$ y $H$ es la forma escalonada reducida de $A$, entonces 
+Podemos calcular $P$ de la siguiente forma. Partimos de la matriz $(A \mid I_m)$, la matriz cuyas primeras $n$ columnas son las de $A$, y cuyas últimas columnas son las de $I_m.$ Si $A\sim_f H$ y $H$ es la forma escalonada reducida de $A$, entonces 
 $$(A \mid I_m)\sim_f (H \mid P).$$
 
 Nótese que $P$ es un producto de matrices elementales, y, por tanto, tiene inversa y su inversa también es un producto de matrices elementales.
@@ -154,7 +154,7 @@ show(P,A,"=",P*A)
 
 ###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-4.html) 
 
-Si $A\sim_f B$, entonces tanto $A$ como $B$ tienen la misma forma escalonada reducida; llamémosla $H$. De esta forma, existen $P$ y $Q$ regulares tales que $H=PA=QB$, y por tanto $A=P^{-1}QB$. 
+Si $A\sim_f B$, entonces tanto $A$ como $B$ tienen la misma forma escalonada reducida; llamémosla $H.$ De esta forma, existen $P$ y $Q$ regulares tales que $H=PA=QB$, y por tanto $A=P^{-1}QB.$ 
 
 ###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-6.html) 
 
@@ -189,7 +189,7 @@ show(A.inverse())
 
 Se define el *rango* de una matriz $A\in\mathcal{M}_{m\times n}(K)$, $\operatorname{rg}(A)$, como el número de filas no nulas de su forma escalonada reducida por filas. 
 
-Claramente, $\operatorname{rg}(A)\le \min(m,n)$. 
+Claramente, $\operatorname{rg}(A)\le \min(m,n).$ 
 
 <div class="sage">
 <script type="text/x-sage">
@@ -226,12 +226,12 @@ B
 \le \operatorname{rg}(A)+\operatorname{rg}(B).
 $$ 
 
-Si $A\in \mathcal{M}_n(K)$, entonces $A$ tiene inversa sí y sólo si su rango es $n$.
+Si $A\in \mathcal{M}_n(K)$, entonces $A$ tiene inversa sí y sólo si su rango es $n.$
 
 
 ## Matrices equivalentes
 
-Dadas $A,B\in \mathcal{M}_{m\times n}(K)$, decimos que $A$ y $B$ son equivalentes, $A\sim B$, si podemos llegar de $A$ a $B$ efectuando operaciones elementales por filas y por columnas. Por tanto, $A$ y $B$ son equivalentes si y sólo si existen dos matrices regulares $P$ y $Q$ tales que $PAQ=B$.
+Dadas $A,B\in \mathcal{M}_{m\times n}(K)$, decimos que $A$ y $B$ son equivalentes, $A\sim B$, si podemos llegar de $A$ a $B$ efectuando operaciones elementales por filas y por columnas. Por tanto, $A$ y $B$ son equivalentes si y sólo si existen dos matrices regulares $P$ y $Q$ tales que $PAQ=B.$
 
 Una matriz de rango $r$ es siempre equivalente a una matriz de la forma
 
@@ -245,9 +245,9 @@ $$
 
 Por tanto, dos matrices son equivalentes si y sólo si tienen el mismo rango.
 
-Además, $\operatorname{rg}(A)=\operatorname{rg}(A^t)$.
+Además, $\operatorname{rg}(A)=\operatorname{rg}(A^t).$
 
-Dadas dos matrices $A$ y $B$, consideramos $H$ y $C$ las formas escalonadas reducidas por filas y columnas de $A$ y de $B$, respectivamente. Tenemos así que existen $P$ y $Q$ regulares tales que $PA=H$ y $BQ=C$. La matriz $H$ tiene $\operatorname{rg}(A)$ filas no nulas, y $C$ tiene $\operatorname{rg}(B)$ columnas no nulas. Así $PABQ=HC$, y por tanto $AB$ y $HC$ son equivalentes, por lo que $\operatorname{rg}(AB)=\operatorname{rg}(HC)$. De esta forma se prueba que 
+Dadas dos matrices $A$ y $B$, consideramos $H$ y $C$ las formas escalonadas reducidas por filas y columnas de $A$ y de $B$, respectivamente. Tenemos así que existen $P$ y $Q$ regulares tales que $PA=H$ y $BQ=C.$ La matriz $H$ tiene $\operatorname{rg}(A)$ filas no nulas, y $C$ tiene $\operatorname{rg}(B)$ columnas no nulas. Así $PABQ=HC$, y por tanto $AB$ y $HC$ son equivalentes, por lo que $\operatorname{rg}(AB)=\operatorname{rg}(HC).$ De esta forma se prueba que 
 
 $$
 \operatorname{rg}(AB)\le \min(\operatorname{rg}(A),\operatorname{rg}(B)).
@@ -300,7 +300,7 @@ a_{m1} & \ldots & a_{mn} & b_m
 \end{pmatrix}.
 $$
 
-Normalmente denotaremos a esta matriz por $(A \mid b)$.
+Normalmente denotaremos a esta matriz por $(A \mid b).$
 
 Si un sistema tiene solución diremos que es *compatible*, y en caso contrario *incompatible*. Si tiene una única solución, es un sistema *compatible determinado*, y si tiene más de una solución decimos que es un sistema *compatible indeterminado*. 
 
@@ -321,9 +321,9 @@ Dos sistemas de ecuaciones lineales sobre un cuerpo y con igual número de incó
 
 Sea $AX=b$ la expresión matricial de un sistema de ecuaciones lineales con $n$ incógnitas. 
 
-- El sistema es compatible si y sólo si $\operatorname{rg}(A)=\operatorname{rg}(A \mid b)$.
+- El sistema es compatible si y sólo si $\operatorname{rg}(A)=\operatorname{rg}(A \mid b).$
 
-- El sistema es compatible determinado si y sólo si $\operatorname{rg}(A)=\operatorname{rg}(A \mid b)=n$.
+- El sistema es compatible determinado si y sólo si $\operatorname{rg}(A)=\operatorname{rg}(A \mid b)=n.$
 
 ###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/1-8.html) 
 
@@ -340,7 +340,7 @@ $$
 \vert A\vert =a_{i1}\alpha_{i1}+\dots+a_{in}\alpha_{in},
 $$
 
-donde $\alpha_{ij}=(-1)^{i+j}\vert A_{ij}\vert$ se conoce como el adjunto de la entrada $a_{ij}$, con $A_{ij}\in \mathcal M_{(n-1)\times(n-1)}(K)$ la matriz que se obtiene al eliminar la fila $i$-ésima y la columna $j$-ésima de $A$. Esta fórmula se conoce como Desarrollo de Laplace por la fila $i$ del determinante de $A$, y el resultado no depende de $i$. Es más, también se puede desarrollar por cualquier columna. Dado $j$ el Desarrollo de Laplace por la columna $j$ es 
+donde $\alpha_{ij}=(-1)^{i+j}\vert A_{ij}\vert$ se conoce como el adjunto de la entrada $a_{ij}$, con $A_{ij}\in \mathcal M_{(n-1)\times(n-1)}(K)$ la matriz que se obtiene al eliminar la fila $i$-ésima y la columna $j$-ésima de $A.$ Esta fórmula se conoce como Desarrollo de Laplace por la fila $i$ del determinante de $A$, y el resultado no depende de $i.$ Es más, también se puede desarrollar por cualquier columna. Dado $j$ el Desarrollo de Laplace por la columna $j$ es 
 
 $$
 \vert A\vert =a_{1j}\alpha_{1j}+\dots+a_{nj}\alpha_{nj}.
@@ -372,14 +372,14 @@ show(A," tiene determinante ",A.det())
 
 ### Propiedades de los determinantes 
 
-Sea $A\in \mathcal M_{n\times n}(K)$. 
-1. $\vert A\vert = \vert A^t\vert$.
-1. Si se intercambian dos filas (o dos columnas) de $A$ se obtiene una nueva matriz cuyo determinante es $-\vert A\vert$. 
-1. Si multiplicamos todos los elementos de una fila (o de una columna) de $A$ por $\alpha\in K$, obtenemos una matriz con determinante $\alpha \vert A\vert$. 
+Sea $A\in \mathcal M_{n\times n}(K).$ 
+1. $\vert A\vert = \vert A^t\vert.$
+1. Si se intercambian dos filas (o dos columnas) de $A$ se obtiene una nueva matriz cuyo determinante es $-\vert A\vert.$ 
+1. Si multiplicamos todos los elementos de una fila (o de una columna) de $A$ por $\alpha\in K$, obtenemos una matriz con determinante $\alpha \vert A\vert.$ 
 1. Si a una fila de $A$ le sumamos otra fila de $A$ multiplicada por un elemento de $K$, entonces la nueva matriz tiene el mismo determinante que $A$ (lo mismo ocurre si hacemos esta operación con columnas).
-1. Si $f$ es una de las filas de $A$ y $f=f_1+f_2$, entonces $\vert A\vert  = \vert A_1\vert +\vert A_2\vert$, siendo $A_i$ la matriz resultante de cambar la fila $f$ en $A$ por $f_i$, $i\in\lbrace 1,2\rbrace$.
-1. Si una de las filas de $A$ tiene todas sus entradas nulas, entonces $\vert A\vert =0$. 
-1. Si $B\in \mathcal M_{n\times n}(K)$, entonces $\vert A B\vert =\vert A\vert \vert B\vert$.
+1. Si $f$ es una de las filas de $A$ y $f=f_1+f_2$, entonces $\vert A\vert  = \vert A_1\vert +\vert A_2\vert$, siendo $A_i$ la matriz resultante de cambar la fila $f$ en $A$ por $f_i$, $i\in\lbrace 1,2\rbrace.$
+1. Si una de las filas de $A$ tiene todas sus entradas nulas, entonces $\vert A\vert =0.$ 
+1. Si $B\in \mathcal M_{n\times n}(K)$, entonces $\vert A B\vert =\vert A\vert \vert B\vert.$
 
 Para calcular determinantes a veces es más eficiente usar las operaciones que hemos visto anteriormente. Así efectuando operaciones elementales por filas o columnas (intercambio o suma por un factor de otra) podemos llegar a una matriz triangular superior. El determinante de una matriz de esta forma es trivial, pues sólo se multiplican los valores de la diagonal.
 
@@ -399,7 +399,7 @@ $$
  
 ### Resultado
 
-Sea $A\in \mathcal M_{n\times n}(K)$. Entonces $A$ es regular si y sólo si $\vert A\vert \neq 0$. En ese caso 
+Sea $A\in \mathcal M_{n\times n}(K).$ Entonces $A$ es regular si y sólo si $\vert A\vert \neq 0.$ En ese caso 
 
 $$
 A^{-1}=\vert A\vert ^{-1}\bar{A}^t.
@@ -417,7 +417,7 @@ $$
 \frac{1}{\vert A\vert }(\vert M_1\vert ,\ldots,\vert M_n\vert ),
 $$
 
-donde $M_i$ es la matriz que se obtiene a partir de $A$ cambiando la columna $i$-ésima por $b$.
+donde $M_i$ es la matriz que se obtiene a partir de $A$ cambiando la columna $i$-ésima por $b.$
 
 ###### $\to$ [Ejercicios resueltos]({{ site.baseurl | absolute_url }}{% link problemas/resueltos-1.md %}) 
 
