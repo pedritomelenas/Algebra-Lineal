@@ -784,7 +784,7 @@ $$
 
 no es dos, que es lo mismo que decir que $\dim(\mathfrak{L}(\lbrace\mathbf{u},\mathbf{v}\rbrace)\le 1.$
 
-La última igualdad se comprueba tomando cuadrados y usando que $ \sin(\measuredangle(\mathbf{u},\mathbf{v}))^2=1- \cos(\measuredangle(\mathbf{u},\mathbf{v}))$ y que $\langle \mathbf{u},\mathbf{v}\rangle= \Vert\mathbf{u}\Vert \Vert\mathbf{v}\Vert  \cos(\measuredangle(\mathbf{u},\mathbf{v}))^2.$
+La última igualdad se comprueba tomando cuadrados y usando que $ \sin(\measuredangle(\mathbf{u},\mathbf{v}))^2=1- \cos(\measuredangle(\mathbf{u},\mathbf{v}))^2$ y que $\langle \mathbf{u},\mathbf{v}\rangle^2= \Vert\mathbf{u}\Vert^2 \Vert\mathbf{v}\Vert^2  \cos(\measuredangle(\mathbf{u},\mathbf{v}))^2.$
 
 
 <div class="sage">
