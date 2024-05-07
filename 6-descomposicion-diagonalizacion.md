@@ -202,7 +202,7 @@ Claramente, $C$ es de rango pleno por columnas y $F$ es de rango pleno por filas
 Retomemos nuestra matriz 
 
 $$
-A=\begin{pmatrix}1 & 0\\1 & 1\\1 & 2\end{pmatrix}
+A=\begin{pmatrix}1 & 0\\1 & 1\\1 & 2\end{pmatrix}.
 $$
 
 Entonces 
@@ -731,6 +731,17 @@ podemos calcular la descomposición con
 ```
 V,D,U = A.singular_value_decomposition()
 ```
+
+<div class="sage">
+<script type="text/x-sage">
+from sympy import Matrix, latex
+A=Matrix([[1,0],[1,1],[1,2]])
+V,D,U = A.singular_value_decomposition()
+V=V._sage_(); D=D._sage_(); U=U._sage_() #convertimos de sympy a sage
+show(V,D,U)
+</script>
+</div>  
+
 Y obtenemos $A=VDU^t$:
 
 $$
@@ -742,6 +753,15 @@ Si calculamos $UD^{-1}V^t,$ obtenemos
 $$
 A^+ = \begin{pmatrix}\frac{5}{6} & \frac{1}{3} & - \frac{1}{6}\\- \frac{1}{2} & 0 & \frac{1}{2}\end{pmatrix}.
 $$
+
+<div class="sage">
+<script type="text/x-sage">
+from sympy import Matrix, latex, simplify
+A=Matrix([[1,0],[1,1],[1,2]])
+V,D,U = A.singular_value_decomposition()
+show(simplify((U*D^(-1)*V.T))._sage_())
+</script>
+</div>  
 
 ## Norma inducida de una matriz
 
