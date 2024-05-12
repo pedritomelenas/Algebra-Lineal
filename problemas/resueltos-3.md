@@ -1514,3 +1514,148 @@ $$D=\begin{pmatrix}
 
 </details>
 </article>
+
+<article>
+
+<ol type="a">
+<li>Dado el endomorfismo de $\mathbb{R}^3$ que viene dado por
+ $$\begin{array}{ll}
+ f(1,1,-1)&=(1,1,1),\\
+ f(1,-1,1)&=(1,1,0),\\
+ f(-1,1,1)&=(1,0,0).
+ \end{array}$$
+ Calcula la matriz asociada a $f$ respecto de la base
+ $B'=\{(1,1,-1),(1,-1,1),(-1,1,1)\}$</li>
+<li>Dada la matriz $$A=\left(
+\begin{array}{rrr}
+  1 & a & a \\
+  -1 & 1 & -1 \\
+  1 &0  & 2 \\
+\end{array}
+\right).
+$$
+Estudia para qué valores de $a\in\mathbb{R}$  es diagonalizable y para aquellos que lo sea obtén $D$ diagonal y $P$ regular tales que $D=P^{-1}AP$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular la matriz asociada a $f$ respecto de la base $B'$
+Observamos que nos dan las imágenes de los vectores de la base $B'$, pero estas vienen dadas por sus coordenadas en la base canónica y debemos calcular las coordenadas también en la base $B'$. Por tanto necesitamos la matriz de cambio de base de $B_c$ a $B'$, que es la inversa de la matriz
+$$P=\left(\begin{array}{rrr}
+  1 & 1 & -1 \\
+  1 & -1 & 1 \\
+  -1 & 1  & 1 \\
+\end{array}
+\right).
+ $$
+ La calculamos:
+ $$\begin{align*}
+ \left(\begin{array}{rrr|ccc}
+    1 & 1 & -1 & 1 & 0 & 0 \\
+    1 & -1 & 1 & 0 & 1 & 0\\
+    -1 & 1  & 1 & 0 & 0 & 1\\
+  \end{array}
+\right)&\sim_f
+\left(\begin{array}{rrr|rrr}
+    1 & 1 & -1 & 1 & 0 & 0 \\
+    0 & -2 & 2 & -1 & 1 & 0\\
+    0 & 2  & 0 & 1 & 0 & 1\\
+  \end{array}
+\right)\\
+ &\sim_f \left(\begin{array}{rrr|rrr}
+    1 & 1 & -1 & 1 & 0 & 0 \\
+    0 & 2  & 0 & 1 & 0 & 1\\
+    0 & 0  & 2 & 0 & 1 & 1\\
+  \end{array}
+\right)\sim_f
+\left(\begin{array}{rrr|ccc}
+    1 & 0 & 0 & 1/2 & 1/2 & 0 \\
+    0 & 1  & 0 & 1/2 & 0 & 1/2\\
+    0 & 0  & 1 & 0 & 1/2 & 1/2\\
+  \end{array}
+\right),\end{align*}$$
+y ahora calculamos las coordenadas de $(1,1,1),(1,1,0),(1,0,0)$ respecto de $B'$:
+$$\left(\begin{array}{ccc}
+  1/2 & 1/2 & 0 \\
+  1/2 & 0 & 1/2\\
+  0 & 1/2 & 1/2\\
+  \end{array}
+\right)\left(\begin{array}{rrr}
+  1 & 1 & 1 \\
+  1 & 1 & 0\\
+  1 & 0 & 0\\
+  \end{array}
+\right)=  \left(\begin{array}{ccc}
+  1 & 1 & 1/2 \\
+  1 & 1/2 & 1/2\\
+  1 & 1/2 & 0\\
+  \end{array}\right).$$
+Como
+$$\begin{array}{ll}
+ f(1,1,-1)&=(1,1,1)_{B'},\\
+ f(1,-1,1)&=(1,1/2,1/2)_{B'},\\
+ f(-1,1,1)&=(1/2,1/2,0)_{B'},
+ \end{array}$$
+la matriz asociada a $f$ respecto de $B'$ es
+$$C=\left(\begin{array}{ccc}
+1 & 1 & 1/2 \\
+1 & 1/2 & 1/2\\
+1 & 1/2 & 0\\
+\end{array}\right).$$
+</li>
+
+<li>Estudiar para qué valores de $a\in\mathbb{R}$  es diagonalizable y obtener $D$ y $P$.<br>
+En primer lugar calculamos los valores propios:
+ $$|A-\lambda I|=\left|\begin{array}{ccc}
+ 1-\lambda & a & a \\
+ -1 & 1-\lambda & -1 \\
+  1 &0  & 2-\lambda \\
+\end{array}\right|= \left|\begin{array}{ccc}
+ 1-\lambda & a & 0 \\
+ -1 & 1-\lambda & -2+\lambda \\
+  1 &0  & 2-\lambda \\
+\end{array}\right|=\left|\begin{array}{ccc}
+ 1-\lambda & a & 0 \\
+ 0 & 1-\lambda & 0 \\
+  1 &0  & 2-\lambda \\
+\end{array}\right|
+=(2-\lambda)(1-\lambda)^2,$$
+ luego los valores propios son $\lambda=1$ con multiplicidad algebraica dos, y $\lambda=2$ con multiplicidad algebraica uno, y por tanto su multilicidad geométrica también es uno. Es necesario establecer para qué casos la multiplicidad geométrica de $\lambda=1$ es dos para que sea diagonalizable.<br>
+ <strong>$V_{\lambda=1}$:</strong>
+ $$\left(\begin{array}{ccc}
+ 0 & a & a \\
+ -1 & 0 & -1 \\
+  1 &0  & 1 \\
+\end{array}\right)\sim_f \left(\begin{array}{ccc}
+ 1 &0  & 1 \\
+ 0 & a & a \\
+ 0 & 0 & 0 \\
+ \end{array}\right).$$
+ Si $a\not =0$ serían dos ecuaciones cartesianas y $\operatorname{dim}(V_{\lambda=1})=1$, luego solo es diagonalizable para $a=0$. En ese caso la cartesiana  de este subespacio propio es $x+z=0$ y por tanto una base es $\{(1,0,-1),(0,1,0)\}$.<br>
+<strong>$V_{\lambda=2}$:</strong>
+ $$\left(\begin{array}{ccc}
+ -1 & 0 & 0 \\
+ -1 & -1 & -1 \\
+  1 &0  & 0 \\
+\end{array}\right)\sim_f \left(\begin{array}{ccc}
+ 1 & 0 & 0 \\
+ 0 & 1 & 1 \\
+  0 &0  & 0 \\
+\end{array}\right),$$
+que tiene cartesianas $\left\{\begin{array}{l} x=0,\\ y+z=0.\end{array}\right.$ Así una base es $\{(0,1,-1)\}$.
+Por tanto
+$$D=\left(\begin{array}{ccc}
+ 1 & 0 & 0 \\
+ 0 & 1 & 0 \\
+  0 &0  & 2 \\
+\end{array}\right), \hspace{1cm} P=\left(\begin{array}{ccc}
+ 1 & 0 & 0 \\
+ 0 & 1 & 1 \\
+ -1 &0  & -1 \\
+\end{array}\right).$$
+</li>
+</ol>
+</details>
+</article>

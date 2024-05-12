@@ -1958,3 +1958,114 @@ también es incompatible.</li>
 
 </details>
 </article>
+
+<article>
+Para las matrices:
+$$
+A=\begin{pmatrix}
+2 & 1 & 2 \\
+1 & 2 & 2 \\
+2 & 1 & 2 \\
+1 & 2 & 2  
+\end{pmatrix},\;\;
+B=\begin{pmatrix}
+2 & 1 & 2 \\
+1 & 2 & 2 \\
+2 & 1 & 2 \\
+2 & 2 & 2  
+\end{pmatrix},\;\;
+C=\begin{pmatrix}
+1 & 0 & 0  \\
+0 & 1 &  0  \\
+0 & 0 & 0  \\
+0 & 0 & 0  \\
+\end{pmatrix}.
+$$
+Determinar matrices regulares $P$ y $Q$ de forma que:
+$Q\cdot A \cdot P= C$.<br>
+Razonar que 
+no pueden existir matrices regulares $P$ y $Q$ de forma que:
+$Q\cdot B \cdot P=C$
+
+<details>
+<summary>Solución</summary>
+
+El rango de $A$ es dos, las filas priemra y tercera son idénticas y también lo son la segunda y la cuarta, además el menor principal de orden dos es distinto de cero. Como $C$ es de rango dos y del mismo orden, entonces $A$ y $C$ son equivalentes y por tanto existen matrices regulares $Q$ y $P$ verificando $Q\, A \, P=C$. Sin embargo $B$ tiene rango tres (el menor principal de orden tres es distinto de cero) y por tanto no es equivalente con $C$.<br>
+
+Para calcular $Q$ y $P$ realizamos operaciones elementales por filas y columnas sobre $A$ hasta obtener $C$. Una forma posible es transformar $A$ hasta su forma de Hermite por filas y después, a la matriz obtenida se le realizan operaciones elementales por columnas. También podrían realizarse unas y otras operaciones elementales en cualquier orden.
+$$\begin{align*}
+\left(\begin{array}{ccc|cccc}
+2 & 1 & 2 & 1 & 0 & 0 & 0\\
+1 & 2 & 2 & 0 & 1 & 0 & 0\\
+2 & 1 & 2 & 0 & 0 & 1 & 0\\
+1 & 2 & 2 & 0 & 0 & 0 & 1
+\end{array}\right)& \sim_f 
+\left(\begin{array}{ccc|cccc}
+2 & 1 & 2 & 1 & 0 & 0 & 0\\
+1 & 2 & 2 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & -1 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & -1 & 0 & 1
+\end{array}\right)\sim_f 
+\left(\begin{array}{ccc|cccc}
+1 & 1/2 & 1 & 1/2 & 0 & 0 & 0\\
+0 & 3/2 & 1 & -1/2 & 1 & 0 & 0\\
+0 & 0 & 0 & -1 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & -1 & 0 & 1
+\end{array}\right)\\
+& \sim_f \left(\begin{array}{ccc|cccc}
+1 & 1/2 & 1 & 1/2 & 0 & 0 & 0\\
+0 & 1/2 & 1/3 & -1/6 & 1/3 & 0 & 0\\
+0 & 0 & 0 & -1 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & -1 & 0 & 1
+\end{array}\right)\sim_f 
+\left(\begin{array}{ccc|cccc}
+1 & 0 & 2/3 & 2/3 & -1/3 & 0 & 0\\
+0 & 1/2 & 1/3 & -1/6 & 1/3 & 0 & 0\\
+0 & 0 & 0 & -1 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & -1 & 0 & 1
+\end{array}\right)\\
+&\sim_f \left(\begin{array}{ccc|cccc}
+1 & 0 & 2/3 & 2/3 & -1/3 & 0 & 0\\
+0 & 1 & 2/3 & -1/3 & 2/3 & 0 & 0\\
+0 & 0 & 0 & -1 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & -1 & 0 & 1
+\end{array}\right)
+\end{align*}$$
+Ahora por columnas
+$$
+\left(\begin{array}{ccc}
+1 & 0 & 2/3 \\
+0 & 1 & 2/3 \\
+0 & 0 & 0  \\
+0 & 0 & 0  \\
+\hline
+1 & 0 & 0 \\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)\sim_c
+\left(\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 0  \\
+0 & 0 & 0  \\
+\hline
+1 & 0 & -2/3 \\
+0 & 1 & -2/3\\
+0 & 0 & 1
+\end{array}\right).$$
+Luego, una solución (hay muchas) es 
+$$Q=
+\left(\begin{array}{cccc}
+ 2/3 & -1/3 & 0 & 0\\
+ -1/3 & 2/3 & 0 & 0\\
+ -1 & 0 & 1 & 0\\
+ 0 & -1 & 0 & 1
+\end{array}\right),  \hspace{2cm}  
+P=\left(\begin{array}{ccc}
+1 & 0 & -2/3 \\
+0 & 1 & -2/3\\
+0 & 0 & 1
+\end{array}\right).$$
+
+</details>
+</article>

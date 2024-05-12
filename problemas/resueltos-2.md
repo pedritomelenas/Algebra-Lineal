@@ -1221,3 +1221,191 @@ z=0.
 
 </details>
 </article>
+
+<article>
+
+Dada la matriz
+$$A= \left(\begin{array}{rrrr}
+a & -1 & 1 & 0\\
+0 & 0 & a+1 & 0\\
+0 & 0 & a+1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)$$
+
+<ol type="a">
+<li>Se considera el subespacio $U$ de $\mathbb{R}^4$ con ecuaciones cartesianas $AX=0$. Calcula la base más sencilla de $U$ según los valores de $a$.</li>
+<li>Para el subespacio $W$ de $\mathbb{R}^4$ generado por las columnas de $A$ calcula unas ecuaciones cartesianas según los valores de $a$.</li>
+<li> Calcula las dimensiones de $U\cap W$ y $U + W$ según los valores de $a$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular la base más sencilla de $U$ según los valores de $a$.<br>
+Puesto que se trata del sistema $AX=0$, podemos transformarlo en el sistema escalonado reducido equivalente utilizando operaciones elementales por filas sobre $A$.<br>
+En primer lugar distinguimos el caso $a=0$ en el que el elemento en la posición $(1,1)$ no es pivote:
+$$A= \left(\begin{array}{rrrr}
+0 & -1 & 1 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)\sim_f \left(\begin{array}{rrrr}
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0
+\end{array}\right).$$
+En este caso obtenemos que las ecuaciones cartesianas más sencillas de $U$ son
+$$U\equiv \left\{ \begin{array}{c}
+y=0,\\
+z=0,\\
+t=0.
+\end{array} \right. $$
+Por tanto $\operatorname{dim}(U)=1$ y la base más sencilla es $\{(1,0,0,0)\}$.<br>
+Si $a\not = 0$ entonces
+$$A\sim_f \left(\begin{array}{rrrr}
+1 & -1/a & 1/a & 0\\
+0 & 0 & a+1 & 0\\
+0 & 0 & a+1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right),$$
+y de nuevo distinguimos el caso $a=-1$ cuando no hay pivote en la segunda fila y nos queda
+$$A\sim_f \left(\begin{array}{rrrr}
+1 & 1 & -1 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0
+\end{array}\right),$$
+con lo que las cartesianas de $U$ quedan:
+$$U\equiv \left\{ \begin{array}{c}
+x+y-z=0,\\
+t=0.
+\end{array} \right. $$
+Por tanto $\operatorname{dim}(U)=2$ y una base sería $\{(1,-1,0,0),(1,0,1,0)\}$, realizando operaciones elementales nos queda que la base más sencilla es  $\{(1,0,1,0),(0,1,1,0)\}$.<br>
+Por último, si $a\not = 0,-1$ entonces
+$$A\sim_f \left(\begin{array}{rrrr}
+1 & -1/a & 1/a & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & a+1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)\sim_f  \left(\begin{array}{rrrr}
+1 & -1/a & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0
+\end{array}\right).$$
+En este caso obtenemos que las ecuaciones cartesianas más sencillas de $U$ son
+$$U\equiv \left\{ \begin{array}{c}
+x-\frac{1}{a}y=0,\\
+z=0,\\
+t=0.
+\end{array} \right. $$
+Por tanto $\operatorname{dim}(U)=1$ y la base más sencilla es $\{(1,a,0,0)\}$.
+</li>
+
+<li>Calcular unas ecuaciones cartesianas según los valores de $a$.<br>
+Ya hemos visto que el rango de $A$ depende de $a$: es tres si $a\not =-1$ y dos cuando $a=-1$. Así que tenemos ya la dimensión de $W$, que coincide con el rango de $A$.<br>
+Para $a=-1$:
+$$A= \left(\begin{array}{rrrr}
+-1 & -1 & 1 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)\sim_c \left(\begin{array}{rrrr}
+1 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0
+\end{array}\right).$$
+Es claro que unas cartesianas de $W$ son:
+$$W\equiv \left\{ \begin{array}{c}
+y=0,\\
+z=0.
+\end{array} \right. $$
+Cuando $a\neq -1$
+$$A= \left(\begin{array}{rrrr}
+a & -1 & 1 & 0\\
+0 & 0 & a+1 & 0\\
+0 & 0 & a+1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)\sim_c \left(\begin{array}{rrrr}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0
+\end{array}\right),$$
+y unas cartesianas son:
+$$W\equiv y-z=0.$$
+</li>
+
+<li> Calcular las dimensiones de $U\cap W$ y $U + W$ según los valores de $a$.<br>
+Podemos calcular la dimensión de la suma y usar después la fórmula de las dimensiones para obtener la de la intersección. Para ello en cada caso reunimos bases de $U$ y $W$ y calculamos el rango de la matriz que forman, lo que nos da la dimensión de $U+W$:<br>
+<strong>Si $a=0$</strong><br>
+$$\left(\begin{array}{r|rrr}
+1 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)\sim_c \left(\begin{array}{r|rrr}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0
+\end{array}\right),$$
+entonces $\operatorname{dim}(U+W)=3$.<br>
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,0,1,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]])
+show(A,"~",((A.T).rref()).T)
+</script>
+</div>
+
+<strong>Si $a=-1$</strong><br>
+$$\left(\begin{array}{rr|rr}
+1 & 0 & 1 & 0\\
+0 & 1 & 0 & 0\\
+1 & 1 & 0 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)\sim_c \left(\begin{array}{r|rrr}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right),$$
+entonces $\operatorname{dim}(U+W)=4$.<br>
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,0,1,0],[0,1,0,0],[1,1,0,0],[0,0,0,1]])
+show(A,"~",((A.T).rref()).T)
+</script>
+</div>
+
+<strong>Si $a\not =0,-1$</strong><br>
+$$\left(\begin{array}{r|rrr}
+1 & 1 & 0 & 0\\
+a & 0 & 1 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right)\sim_c \left(\begin{array}{r|rrr}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{array}\right),$$
+entonces $\operatorname{dim}(U+W)=4$.<br>
+Así que usando $\operatorname{dim}(U) +\operatorname{dim}(W)=\operatorname{dim}(U+W)+ \operatorname{dim}(U\cap W)$ obtenemos:<br>
+
+Si $a=0$, $\operatorname{dim}(U)=1$, $\operatorname{dim}(W)=3$, $\operatorname{dim}(U+W)=3$ y $\operatorname{dim}(U\cap W)=1$.<br>
+Si $a=-1$, $\operatorname{dim}(U)=2$, $\operatorname{dim}(W)=2$, $\operatorname{dim}(U+W)=4$ y $\operatorname{dim}(U\cap W)=0$.<br>
+Si $a\not =0,-1$, $\operatorname{dim}(U)=1$, $\operatorname{dim}(W)=3$, $\operatorname{dim}(U+W)=4$ y $\operatorname{dim}(U\cap W)=0$.
+</li>
+</ol>
+</details>
+</article>

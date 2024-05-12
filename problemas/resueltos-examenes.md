@@ -484,3 +484,145 @@ por lo que $\operatorname{sig}(C)=(1,1)$.</li>
 
 </details>
 </article>
+
+<article>
+
+<ol type="a">
+<li>De una aplicación lineal $f:\mathbb{R}^{3}\longrightarrow \mathbb{R}^{4}$ se sabe que $f(5,1,1)=f(1,5,1)=f(1,1,5)=(5,5,5,5)$. Determinar bases del núcleo y la imagen de $f$.</li>
+<li>Dar bases $B$ de $\mathbb{R}^{3}$ y 
+$B'$ de $\mathbb{R}^{4}$ de forma que $\mathcal{M}_{B B'}(f)=\begin{pmatrix}
+1 & 0 & 0 \\ 0 & 0 & 0 \\  0 & 0 & 0 \\  0 & 0 & 0 \\
+\end{pmatrix}$.</li>
+<li>Determinar, en función de  $b$ la signatura de la forma cuadrática
+$$\phi(x,y)= x^2+  y^2 + 2b x y.$$</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Determinar bases del núcleo y la imagen de $f$.<br>
+La imagen de $f$ está generada por $\{(5,5,5,5)\}$ así que este vector es una base, o también $\{(1,1,1,1)\}$, que por tanto tiene dimensión uno. <br>
+Como $f(5,1,1)-f(1,5,1)=f(4,-4,0)=(0,0,0,0)$ y $f(5,1,1)-f(1,1,5)=f(4,0,-4)=(0,0,0,0)$ entonces $\{(4,-4,0),(4,0,-4)\}$ es una base del núcleo (que tiene dimensión dos).
+</li>
+
+<li>Dar bases $B$ y $B'$.<br>
+Hay muchas soluciones, las condiciones son: la imagen del primer vector de $B$ es el primer vector de $B'$, los otros dos vectores de $B$ deben estar en el núcleo.  
+</li>
+
+<li>Determinar, en función de  $b$ la signatura de la forma cuadrática $\phi$.<br>
+La matriz asociada a la forma cuadrática es 
+$$A=\begin{pmatrix}
+ 1 & b\\
+ b & 1
+\end{pmatrix}.$$
+Diagonalizando por congruencia
+$$\begin{pmatrix}
+ 1 & b\\
+ b & 1
+\end{pmatrix}\sim_f\begin{pmatrix}
+ 1 & b\\
+ 0 & 1-b^2
+\end{pmatrix}\sim_c \begin{pmatrix}
+ 1 & 0\\
+ 0 & 1-b^2
+\end{pmatrix}.$$ 
+Como el segundo elemento de la diagonal se anula en $b=1$ y $b=-1$ la distinción de casos queda:<br>
+Si $b=\pm 1$ entonces $\operatorname{sig}(A)=(1,0)$.<br>
+Si $-1<b<1$ entonces $\operatorname{sig}(A)=(2,0)$.<br>
+Si $b<-1$ o $ b>1$ entonces $\operatorname{sig}(A)=(1,1)$.<br>
+</li>
+
+</ol>
+</details>
+</article>
+
+<article>
+
+Dadas las matrices
+$$A= \left(\begin{array}{rrr}
+1 & 1 & 0\\
+0 & 0 & 0\\
+0 & 1 & 0
+\end{array}\right),\hspace{2cm}  B= \left(\begin{array}{rrr}
+1 & 1 & 0\\
+1 & 0 & 0\\
+1 & 1 & 0
+\end{array}\right)$$
+
+<ol type="a">
+<li>¿Existen $P, Q$ matrices regulares tales que $Q^{-1}AP=B$?</li>
+<li>¿Existe $P$ regular tal que $AP=B$?</li>
+<li>¿Existe $P$ regular tal que $PA=B$?</li>
+<li>¿Existe $P$ regular tal que $P^{-1}AP=B$?</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>¿Existen $P, Q$ matrices regulares tales que $Q^{-1}AP=B$?<br>
+La pregunta es si las matrices son equivalentes, y esto ocurre si, y solo si, tienen el mismo rango. Es inmediato ver que ambas tienen rango 2, por tanto la respuesta es afirmativa.</li>
+
+<li>¿Existe $P$ regular tal que $AP=B$?<br>
+En este caso nos preguntan si son equivalentes por columnas, si, y solo si, tienen la misma forma de Hermite por columnas. Calculamos en ambos casos:
+$$A= \left(\begin{array}{rrr}
+1 & 1 & 0\\
+0 & 0 & 0\\
+0 & 1 & 0
+\end{array}\right)\sim_c \left(\begin{array}{rrr}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 1 & 0
+\end{array}\right),$$
+$$B= \left(\begin{array}{rrr}
+1 & 1 & 0\\
+1 & 0 & 0\\
+1 & 1 & 0
+\end{array}\right)\sim_c \left(\begin{array}{rrr}
+1 & 0 & 0\\
+0 & 1 & 0\\
+1 & 0 & 0
+\end{array}\right),$$
+y como no son iguales la respuesta es negativa.</li>
+
+<li>¿Existe $P$ regular tal que $PA=B$?<br>
+Ahora nos preguntan si son equivalentes por filas, para lo que calculamos sus formas de Hermite por filas y las comparamos:
+$$A= \left(\begin{array}{rrr}
+1 & 1 & 0\\
+0 & 0 & 0\\
+0 & 1 & 0
+\end{array}\right)\sim_f \left(\begin{array}{rrr}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}\right),$$
+$$B= \left(\begin{array}{rrr}
+1 & 1 & 0\\
+1 & 0 & 0\\
+1 & 1 & 0
+\end{array}\right)\sim_f \left(\begin{array}{rrr}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}\right),$$
+como son iguales entonces la respuesta es afirmativa.</li>
+
+<li>¿Existe $P$ regular tal que $P^{-1}AP=B$?<br>
+Si calculamos los valores propios de ambas:
+$$|A-\lambda I|= \left|\begin{array}{rrr}
+1- \lambda & 1 & 0\\
+0 & -\lambda & 0\\
+0 & 1 & -\lambda
+\end{array}\right|=(1-\lambda)(-\lambda)^2.$$
+Pero el valor propio $\lambda=0$ tiene multiplicidad geométrica uno, luego no es diagonalizable.
+$$|B-\lambda I|= \left|\begin{array}{rrr}
+1-\lambda & 1 & 0\\
+1 & -\lambda & 0\\
+1 & 1 & -\lambda
+\end{array}\right|=(-\lambda)(\lambda^2-\lambda-1),$$
+en este caso aparecen tres valores propios distintos $\{0, \frac{1+\sqrt{5}}{2}, \frac{1-\sqrt{5}}{2}\}$ y por tanto la matriz sí es diagonalizable. Entonces no puede existir una tal $P$, puesto que ello implicaría que $A$ sería también diagonalizable. También es suficiente comprobar que los valores propios son distintos y que $B$ es diagonalizable.
+</li>
+</ol>
+</details>
+</article>

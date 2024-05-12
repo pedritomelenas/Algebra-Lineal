@@ -291,3 +291,310 @@ $$p_U (1+x)=x.$$</li>
 
 </details>
 </article>
+
+<article>
+
+En $\mathbb{R}^{3}$ se consideran el producto escalar cuya matriz de Gram respecto de la base canónica es 
+$$
+\begin{pmatrix}
+1 & 1 & 0\\
+1 & 2 & 0\\
+0 & 0 & 1
+\end{pmatrix}
+$$
+y los subespacios
+$U=L((1,1,2),(2,1,1))$ y $W=L((1,a,1))$, siendo $a$ un parámetro.
+
+<ol type="a">
+<li>Determinar bases de $U+W$ y $U \cap W$ en función de $a$.</li>
+<li>Calcular el complemento ortogonal de $U$.</li>
+<li>Determinar la proyección sobre $U$ del vector $(5,-3,4)$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Determinar bases de $U+W$ y $U \cap W$ en función de $a$.<br>
+
+Los sistemas de generadores dados de $U$ y $W$ son bases, así que $\operatorname{dim}(U)=2$ y $\operatorname{dim}(W)=1$ para todos los valores de $a$. Un sistema de generadores de $U+W$ se obtiene al reuinir bases de ambos, comprobaremos para qué valores de $a$ son linealmente independientes:
+$$\left|\begin{array}{ccc}
+1 & 2 & 1\\
+1 & 1 & a\\
+2 & 1 & 1
+\end{array}\right|=\left|\begin{array}{ccc}
+1 & 0 & 0\\
+1 & -1 & a-1\\
+2 & -3 & -1
+\end{array}\right|=1+3(a-1)=3a-2.
+$$
+Si $a=2/3$ la dimensión de $U+W$ es dos y por tanto $U+W=U$, o lo que es lo mismo, $W\subset U$, así que una base es, por ejemplo, $\{ (1,1,2),(2,1,1)\}$, o también su base más sencilla que es $\{(1,0,-1),(0,1,3)\}$. Por tanto $U\cap W=W$ y una base es $\{(1,a,1)\}$. <br>
+
+Si $a\not = 2/3$ entonces $\operatorname{dim}(U+W)=3$ y por tanto $U+W=\mathbb{R}^{3}$ y una base es la canónica. Por la fórmula de las dimensiones $\operatorname{dim}(U\cap W) + \operatorname{dim}(U+W)= d\operatorname{dim}(U) + \operatorname{dim}(W)$ y por tanto $U\cap W=\{0\}$ que no tiene base.
+</li>
+
+<li>Calcular el complemento ortogonal de $U$.<br>
+
+Por cada vector de la base de $U$ obtenemos una cartesiana de $U^{\perp}$ imponiendo que el producto escalar sea cero (usamos la base más sencilla, aunque sirve cualquier otra):
+$$(1,0,-1)\begin{pmatrix}
+1 & 1 & 0\\
+1 & 2 & 0\\
+0 & 0 & 1
+\end{pmatrix}\begin{pmatrix}
+x\\
+y\\
+z
+\end{pmatrix}=0, \, \, \text{obteniendo   } \,  x+y-z=0;$$
+$$(0,1,3)\begin{pmatrix}
+1 & 1 & 0\\
+1 & 2 & 0\\
+0 & 0 & 1
+\end{pmatrix}\begin{pmatrix}
+x\\
+y\\
+z
+\end{pmatrix}=0, \, \, \text{obteniendo   } \,  x+2y+3z=0.$$
+Así que 
+$$U^{\perp}\equiv \left\{\begin{array}{r}
+x+y-z=0,\\
+x+2y+3z=0.
+\end{array}\right. \sim \left\{\begin{array}{r}
+x-5z=0,\\
+y+4z=0.
+\end{array}\right. 
+$$
+Y una base es $\{ (5,-4,1)\}$.
+</li>
+
+<li>Determinar la proyección sobre $U$ del vector $(5,-3,4)$.<br>
+
+Como sabemos una base (ortogonal, puesto que tiene un solo vector) de $U^{\perp}$ calculamos 
+$$p_{U^{\perp}}(5,-3,4)=\frac{\langle(5,-3,4)(5,-4,1)\rangle}{\langle(5,-4,1)(5,-4,1)\rangle}(5,-4,1)= \frac{18}{18}(5,-4,1)=(5,-4,1).$$
+Luego
+$$p_U(5,-3,4)=(5,-3,4)-p_{U^{\perp}}(5,-3,4)=(5,-3,4)-(5,-4,1)=(0,1,3).$$
+
+</li>
+</ol>
+</details>
+</article>
+
+<article>
+
+Dada la matriz:
+$$A=
+\begin{pmatrix}
+2 & 0 & 0 & -1\\
+0 & 2 & -1 & 0 \\
+0 & -1 & 2 & 0 \\
+-1 & 0 & 0 & 2
+\end{pmatrix}
+$$
+
+Razonar que es diagonalizable y determinar su forma diagonal y una matriz de paso, $P$, verificando que $P^{-1}=P^t$. ¿Cuál es la signatura de $A$?
+
+<details>
+<summary>Solución</summary>
+
+La matriz $A$ es simétrica y el Teorema espectral afirma que toda matriz simétrica y real es diagonali-zable, por tanto $A$ lo es.
+Nos piden una diagonalización por semejanza ortogonal, aí que tenemos que calcular en primer lugar los valores propios: 
+$$\begin{align*}
+|A-\lambda I| & =\left|
+\begin{array}{rrrr}
+2-\lambda & 0 & 0 & -1\\
+0 & 2-\lambda & -1 & 0 \\
+0 & -1 & 2-\lambda & 0 \\
+-1 & 0 & 0 & 2-\lambda
+\end{array}\right|=(F_4+F_1\rightarrow F_4)=
+\left|
+\begin{array}{rrrr}
+2-\lambda & 0 & 0 & -1\\
+0 & 2-\lambda & -1 & 0 \\
+0 & -1 & 2-\lambda & 0 \\
+1-\lambda & 0 & 0 & 1-\lambda
+\end{array}\right|\\
+& =(C_1-C_4 \rightarrow C_1)= 
+\left|\begin{array}{rrrr}
+3-\lambda & 0 & 0 & -1\\
+0 & 2-\lambda & -1 & 0 \\
+0 & -1 & 2-\lambda & 0 \\
+0 & 0 & 0 & 1-\lambda
+\end{array}\right|=(3-\lambda)(1-\lambda)[(2-\lambda)^2-1]=(3-\lambda)^2(1-\lambda)^2.
+\end{align*}
+$$
+Tenemos entonces los valores propios $\lambda=1$ y $\lambda=3$ ambos con multiplicidad algebraica dos. Tenemos entonces que la matriz diagonal semejante y congruente con $A$ es 
+$$D=\begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 1& 0 & 0\\
+0 & 0 & 3 & 0\\
+0 & 0 & 0 & 3
+\end{pmatrix},$$
+y por tanto la signatura de $A$ es $(4,0)$, por tanto definida positiva.<br>
+Calculamos ahora los subespacios propios y elgimos una base ortonormal de cada uno.<br>
+
+<strong>$V_{\lambda=1}$</strong>
+$$(A-1\cdot I)=\begin{pmatrix}
+1 & 0 & 0 & -1\\
+0 & 1 & -1 & 0 \\
+0 & -1 & 1 & 0 \\
+-1 & 0 & 0 & 1
+\end{pmatrix},
+$$  nos da como cartesianas $\left\{\begin{array}{l}
+x-t=0\\
+y-z=0
+\end{array}\right.$  y una base ortogonal es $\{(1,0,0,1),(0,1,1,0)\}$.<br>
+
+<strong>$V_{\lambda=3}$</strong>
+$$(A-1\cdot I)=\begin{pmatrix}
+-1 & 0 & 0 & -1\\
+0 & -1 & -1 & 0 \\
+0 & -1 & -1 & 0 \\
+-1 & 0 & 0 & -1
+\end{pmatrix},
+$$  nos da como cartesianas $\left\{\begin{array}{l}
+x+t=0\\
+y+z=0
+\end{array}\right.$  y una base ortogonal es $\{(1,0,0,-1),(0,1,-1,0)\}$.<br>
+Dividiendo cada vector por su norma obtenemos una base ortonormal de vectores propios, lo que nos da la matriz ortogonal $P$:
+$$P=\begin{pmatrix}
+1/\sqrt{2} & 0 & 0 & 1/\sqrt{2}\\
+0 & 1/\sqrt{2} & 1/\sqrt{2} & 0\\
+0 & 1/\sqrt{2} & -1/\sqrt{2} & 0\\
+1/\sqrt{2} & 0 & 0 & -1/\sqrt{2}\\
+\end{pmatrix}.$$
+
+</details>
+</article>
+
+<article>
+
+En $\mathbb{R}^3$ consideramos el producto escalar que, respecto de la base canónica, tiene matriz de Gram
+ $$G= \left(\begin{array}{rrr}
+1 & 1 & 1\\
+1 & 3 & 0\\
+1 & 0 & 2
+\end{array}\right).$$
+
+<ol type="a">
+<li>Calcula una base ortogonal de este espacio vectorial.</li>
+<li>Calcula $U^{\perp}$ para el subespacio
+ $$U\equiv \left\{ \begin{array}{r}
+ x+y+z=0,\\
+ x-z=0.
+ \end{array}\right.$$</li>
+<li>Calcula $p_U(1,1,1)$ y $p_{U^{\perp}}(1,1,1)$.</li>
+<li>Determina para qué valores de $a$ la fórmula
+$$f(x,y,z)=x^2+2axy+2xz+2ay^2+(a+1)z^2,$$
+define una forma cuadrática definida positiva.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular una base ortogonal de este espacio vectorial.<br>
+Partimos de la base canónica de $\mathbb{R}^{3}$ y aplicamos Gram-Schmidt: $\{u_1=(1,0,0), u_2=(0,1,0),  u_3=(0,0,1)\}$,
+$$e_1=u_1=(1,0,0),$$
+$e_2=u_2+\lambda_{21}e_1,$ necesitamos calcular
+$$\lambda_{21}=\frac{-\langle u_2,e_1\rangle}{\langle e_1,e_1\rangle}=\frac{-1}{1}=-1,$$
+puesto que tanto numerador como denominador aparecen en la matriz de Gram. Así
+$$e_2=(0,1,0)-(1,0,0)=(-1,1,0),$$
+ahora
+$e_3=u_3+\lambda_{31}e_1+\lambda_{32}e_2$, y de nuevo numerador y denominador de $\lambda_{31}$ aparecen en la matriz de Gram:
+$$\lambda_{31}=\frac{-\langle u_3,e_1\rangle}{\langle e_1,e_1\rangle}=\frac{-1}{1}=-1,$$
+pero los de $\lambda_{32}$ deben ser calculados:
+$$\langle u_3,e_2\rangle(0\, 0\, 1)\left(\begin{array}{rrr}
+1 & 1 & 1\\
+1 & 3 & 0\\
+1 & 0 & 2
+\end{array}\right)\left(\begin{array}{r}
+-1 \\
+1\\
+0
+\end{array}\right)=-1,$$
+$$\langle e_2,e_2\rangle(-1\, 1\, 0)\left(\begin{array}{rrr}
+1 & 1 & 1\\
+1 & 3 & 0\\
+1 & 0 & 2
+\end{array}\right)\left(\begin{array}{r}
+-1 \\
+1\\
+0
+\end{array}\right)=2,$$
+luego $\lambda_{32}=1/2$ y por tanto
+$$e_3=(0,0,1)-(1,0,0)+1/2(-1,1,0)=(-3/2,1/2,1).$$
+Luego una base ortogonal es
+$$\{(1,0,0),(-1,1,0),(-3/2,1/2,1)\}.$$
+</li>
+
+<li>Calcular $U^{\perp}$. <br>
+Calculamos en primer lugar una base de $U$, como $\operatorname{dim}(U)=3- \text{nº cartesianas}=1$ basta encontrar un vector que cumpla las cartesianas: $\{u=(1,-2,1)\}$.
+Ahora imponemos la condición $\langle(1,-2,1),(x,y,z)\rangle=0$ que nos da la ecuación cartesiana de $U^{\perp}$:
+$$(1\, -2\,\,  1)\left(\begin{array}{rrr}
+1 & 1 & 1\\
+1 & 3 & 0\\
+1 & 0 & 2
+\end{array}\right)\left(\begin{array}{r}
+x \\
+y\\
+z
+\end{array}\right)=-5y+3z=0.$$</li>
+<li>Calcula $p_U(1,1,1)$ y $p_{U^{\perp}}(1,1,1)$.<br>
+Podemos usar la base ortogonal de $U$: $\{(1,-2,1)\}$ (que lo es por tener un solo vector) y la fórmula de los coeficientes de Fourier:
+$$p_U(1,1,1)=\frac{\langle(1,1,1),(1,-2,1)\rangle}{\langle(1,-2,1),(1,-2,1)\rangle}(1,-2,1).$$
+Calculamos los dos productos escalares y obtenemos
+$$(1\, -2\,\,  1)\left(\begin{array}{rrr}
+1 & 1 & 1\\
+1 & 3 & 0\\
+1 & 0 & 2
+\end{array}\right)\left(\begin{array}{r|r}
+1 & 1\\
+1 & -2\\
+1 & 1
+\end{array}\right)=(-2|13),$$
+$$p_U(1,1,1)=\frac{-2}{13}(1,-2,1)=(-2/13, 4/13, -2/13),$$
+$$p_{U^{\perp}}(1,1,1)=(1,1,1)-(-2/13, 4/13, -2/13)=(15/13, 9/13, 15/13).$$
+</li>
+
+<li>Determina para qué valores de $a$ $f$ es una forma cuadrática definida positiva.<br>
+Calculamos la matriz simétrica asociada a esta forma cuadrática y la diagonalizamos por congruencia para obtener su signatura:
+ $$\left(\begin{array}{ccc}
+1 & a & 1\\
+a & 2a & 0\\
+1 & 0 & a+1
+\end{array}\right)\sim_f \left(\begin{array}{ccc}
+1 & a & 1\\
+0 & 2a-a^2 & -a\\
+0 & -a & a
+\end{array}\right)\sim_c \left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 2a-a^2 & -a\\
+0 & -a & a
+\end{array}\right)$$
+Ahora intercambiamos las filas segunda y tercera y también las columnas segunda y tercera:
+$$\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 2a-a^2 & -a\\
+0 & -a & a
+\end{array}\right)
+\sim_f \left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & -a  & a\\
+0 & 2a-a^2 & -a
+\end{array}\right)\sim_c \left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & a  & -a\\
+0 & -a & 2a-a^2
+\end{array}\right)\sim_f \left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & a  & -a\\
+0 & 0 & a-a^2
+\end{array}\right)\sim_c \left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & a  & 0\\
+0 & 0 & a-a^2
+\end{array}\right).$$
+Luego será definida positiva cuando los tres elementos de la diagonal lo sean, es decir $a>0$ y $a(1-a)>0$ luego debe ser $0<a<1$.
+</li>
+</ol>
+</detail>
+</article>
