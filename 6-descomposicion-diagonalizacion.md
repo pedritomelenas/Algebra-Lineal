@@ -500,8 +500,8 @@ Ahora usamos que $A A^+=(AA^+)^t=(A^+)^tA^t$:
 
 $$
 \begin{aligned}
-\langle A(x-A^+b),(I-AA^+)(-b)\rangle  & =  -x^tA^tb+b^tAA^tb+x^tA^t(A^+)^tA^tb-b^tA A^+AA^+b \\
-& = -x^tA^tb+b^tAA^tb +x^tA^tb-b^tAA^+b=0.
+\langle A(x-A^+b),(I-AA^+)(-b)\rangle  & =  -x^tA^tb+b^tAA^+b+x^tA^t(A^+)^tA^tb-b^tA A^+AA^+b \\
+& = -x^tA^tb+b^tAA^+ b +x^tA^tb-b^tAA^+b=0.
 \end{aligned}
 $$
 
