@@ -2069,3 +2069,150 @@ P=\left(\begin{array}{ccc}
 
 </details>
 </article>
+
+<article>
+
+Dada la matriz
+$$A= \left(\begin{array}{rrrr}
+a & 1 & 0 & 1\\
+1 & a & 0 & 1\\
+1 & 0 & a & 1\\
+1 & 0 & 1 & a
+\end{array}\right).$$
+
+<ol type="a">
+<li>Calcula el determinante de $A$.</li>
+<li>Determina los valores de $A$ para los que la forma de Hermite por filas de $A$ es $I_4$.</li>
+<li>Estudia el rango de $A$ para todos los valores reales de $a$.</li>
+<li>Para $a=-2$ calcula la forma de Hermite por filas de $A$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular el determinante de $A$.<br>
+$$\begin{align*}
+|A| & = \left|\begin{array}{rrrr}
+a & 1 & 0 & 1\\
+1 & a & 0 & 1\\
+1 & 0 & a & 1\\
+1 & 0 & 1 & a
+\end{array}\right|=\begin{array}{l}\text{restamos a cada fila}\\ \text{la anterior,} \\ \text{empezando desde arriba} \end{array}  = \left|\begin{array}{rrrr}
+a-1 & 1-a & 0 & 0\\
+0 & a & -a & 1\\
+0 & 0 & a-1 & 1-a\\
+1 & 0 & 1 & a
+\end{array}\right|\\
+& =\begin{array}{l}\text{desarrollando}\\ \text{por la 1º fila} \end{array}  = 
+(a-1)\left|  \begin{array}{ccc}
+ a & -a & 0 \\
+0 & a-1 & 1-a \\
+ 0 & 1 & a \\
+ \end{array} 
+ \right| + (-1)^{1+2}(1-a) \left|  \begin{array}{ccc}
+0 & -a & 0 \\
+0 & a-1 & 1-a \\
+ 1 & 1 & a \\
+ \end{array}
+ \right|\\
+& =(a-1)a[a(a-1)+(a-1)]+(1-a)[a(1-a)]=(a-1)^2a(a+1)+(a-1)^2a\\
+& =(a-1)^2a[a+1+1]=(a-1)^2a(a+2).
+\end{align*}$$
+</li> 
+
+<li>Determinar los valores de $a$ para los que la forma de Hermite por filas de $A$ es $I_4$.<br>
+Por el Teorema de las matrices regulares, la forma de Hermite por filas es $I_4$ sí y sólo sí $|A|\neq 0$, luego ocurre para todo $a\in\mathbb{R}\setminus\{-2,0,1\}$, esto es , si $a\neq -2, 0, 1$.
+</li>
+
+<li>Estudiar el rango de $A$.<br>
+Si  $a\neq -2, 0, 1$, entonces el $\operatorname{rg}(A)=4$.<br>
+
+Si $a=1$:
+
+$$\left|
+    \begin{array}{cccc}
+      1 & 1 & 0 & 1 \\
+      1 & 1 & 0 & 1 \\
+      1 & 0 & 1 & 1 \\
+      1 & 0 & 1 & 1 \\
+    \end{array}
+  \right| \sim_f\left| \begin{array}{cccc}
+      1 & 1 & 0 & 1 \\
+      0 & -1 & 1 & 0  \\
+      0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 \\
+    \end{array}
+  \right| \Rightarrow \operatorname{rg}(A)=2. $$
+  Si $a=0$:
+
+$$\left|
+    \begin{array}{cccc}
+      0 & 1 & 0 & 1 \\
+      1 & 0 & 0 & 1 \\
+      1 & 0 & 0 & 1 \\
+      1 & 0 & 1 & 0 \\
+    \end{array}
+  \right| \sim_c\left| \begin{array}{cccc}
+      1 & 0 & 0 & 0 \\
+      0 & 1 & 0 & 0  \\
+      0 & 1 & 0 & 0 \\
+      0 & 0 & 1 & 0 \\
+    \end{array}
+  \right| \Rightarrow \operatorname{rg}(A)=3. $$
+  
+  
+Si $a=-2$:
+
+$$\left|
+    \begin{array}{cccc}
+      -2 & 1 & 0 & 1 \\
+      1 & -2 & 0 & 1 \\
+      1 & 0 & -2 & 1 \\
+      1 & 0 & 1 & -2 \\
+    \end{array}
+  \right| \sim_f\left| \begin{array}{cccc}
+      1 & 0 & 1 & -2 \\
+      0 & 1 & 2 & -3  \\
+      0 & -2 & -1 & 3 \\
+      0 & 0 & -3 & 3 \\
+    \end{array}
+  \right| \sim_f \left| \begin{array}{cccc}
+      1 & 0 & 1 & -2 \\
+      0 & 1 & 2 & -3  \\
+      0 & 0& 3 & -3 \\
+      0 & 0 & -3 & 3 \\
+    \end{array}
+  \right| \sim_f \left| \begin{array}{cccc}
+      1 & 0 & 0 & -1 \\
+      0 & 1 & 0 & -1  \\
+      0 & 0& 1 & -1 \\
+      0 & 0 & 0& 0 \\
+    \end{array}
+  \right|    .$$
+  
+Luego $\operatorname{rg}(A)=3$.
+</li>
+
+<li>Para $a=-2$ calcula la forma de Hermite por filas de $A$.<br>
+Se ha calculado en el apartado anterior, $$H=\left( \begin{array}{cccc}
+      1 & 0 & 0 & -1 \\
+      0 & 1 & 0 & -1  \\
+      0 & 0& 1 & -1 \\
+      0 & 0 & 0& 0 \\
+    \end{array}
+\right).$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ,[[-2,1,0,1],[1,-2,0,1],[1,0,-2,1],[1,0,1,-2]])
+show(A,"~",A.rref())
+</script>
+</div>  
+</li>
+
+</ol>
+</details>
+</article>
