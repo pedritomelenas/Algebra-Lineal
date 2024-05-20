@@ -626,3 +626,63 @@ en este caso aparecen tres valores propios distintos $\{0, \frac{1+\sqrt{5}}{2},
 </ol>
 </details>
 </article>
+
+<article>
+
+Dada la matriz
+$$A= \left(\begin{array}{rrr}
+2 & 0 & 2\\
+0 & 1 & 0\\
+2 & 0 & -1
+\end{array}\right).$$
+
+<ol type="a">
+<li>¿Existen $P, Q$ matrices regulares tales que $Q^{-1}AP=I_3$?</li>
+<li>¿Existe $P$ regular tal que $P^{-1}AP=I_3$?</li>
+<li>¿Existe $P$ regular tal que $P^{t}AP=I_3$?</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>¿Existen $P, Q$ matrices regulares tales que $Q^{-1}AP=I_3$?<br>
+Existen $Q , P$ regulares si $A$ e $I$ son equivalentes, esto es, si tienen el mismo rango. Calculamos el rango de $A$.
+Calculamos el determinante de $A$ desarrolando por el elemento 22,
+$$det(A)=\left|
+\begin{array}{ccc}
+ 2 & 0 & 2 \\
+ 0 & 1 & 0 \\
+  2 & 0 & -1 \\
+  \end{array}
+   \right|=\left|
+     \begin{array}{cc}
+      2 & 2 \\
+       2 & -1 \\
+        \end{array}
+  \right| =-6\neq 0.  $$
+Por lo tanto el rango es tres, al igual que el de $I_3$. Las matrices son equivalentes y por lo tanto \textbf{sí}  existen $P$ y $Q$ regulares tales que $Q^{-1}AP=I_3$.
+</li>
+
+<li>¿Existe $P$ regular tal que $P^{-1}AP=I_3$?<br>
+Que exista la matriz $P$ regular tal que $P^{-1}AP=I_3$ equivale a decir que $A$ es diagonalizable por semejanza y su forma diagonal es $I_3$. <br>
+Calculamos los valores propios de $A$:
+$$\left|
+  \begin{array}{ccc}
+    2-\lambda & 0 & 2 \\
+    0 & 1-\lambda & 0 \\
+    2 & 0 & -1-\lambda \\
+  \end{array}
+\right|= (1-\lambda) \left|
+     \begin{array}{cc}
+      2 -\lambda& 2 \\
+       2 & -1-\lambda \\
+        \end{array}
+  \right|= (1-\lambda)(-(2-\lambda)(1+\lambda)-4)=(1-\lambda)(2+\lambda)(3-\lambda)$$
+Como los valores propios de $A$ son 1, -2 y 3, su forma diagonal (si fuera diagonalizable) no puede ser $I_3$, por lo tanto, no existe $P$ regular tal que  $P^{-1}AP=I_3$
+</li>
+
+<li>¿Existe $P$ regular tal que $P^{t}AP=I_3$?<br>
+Si existiera una matriz $P$ cumpliendo la igualdad, estaríamos diciendo que $A$ es congruente con $I_3$ y por tanto su signatura  sería $(3,0)$, pero como los valores propios son  1, -2 y 3, su signatura es $(2,1)$, y por tanto no existe dicha matriz $P.$
+</li>
+</ol>

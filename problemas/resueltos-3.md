@@ -1659,3 +1659,141 @@ $$D=\left(\begin{array}{ccc}
 </ol>
 </details>
 </article>
+
+<article>
+Dado el endomorfismo de $\mathbb{R}^3$ que, respecto de la base canónica, viene dado por la matriz
+ $$\left(
+\begin{array}{rrr}
+  1 & a & a \\
+  -1 & 1 & -1 \\
+  1 &0  & 2 \\
+\end{array}
+\right).
+$$
+
+<ol type="a">
+<li>Calcula las dimensiones del núcleo y la imagen para todos los valores reales de $a$.</li>
+<li>¿Para qué valores de $a$ es una aplicación lineal biyectiva?</li>
+<li>Calcula la matriz asociada a este endomorfismo respecto de la base
+$$ B= \{ (1,0,-1), (1,1,-1),(0,1,-1)\}.$$</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular las dimensiones del núcleo y la imagen para todos los valores reales de $a$.<br>
+Puesto que  $\operatorname{dim}(\operatorname{Im}(f))=\operatorname{rg}(A)$, calculamos el rango de $A$.
+$$\left(
+    \begin{array}{ccc}
+      1 & a & a \\
+      -1 & 1 & -1 \\
+      1 & 0 & 2 \\
+    \end{array}
+  \right)\sim_f \left(
+    \begin{array}{ccc}
+      1 & a & a \\
+      0 & 1+a & a-1 \\
+      0 & -a & 2-a \\
+    \end{array}
+  \right)\sim_f \left(
+    \begin{array}{ccc}
+      1 & a & a \\
+      0 & 1 & 1 \\
+      0 & -a & 2-a \\
+    \end{array}
+  \right)\sim_f\left(
+    \begin{array}{ccc}
+      1 & 0 & 0 \\
+      0 & 1 & 1 \\
+      0 & 0 & 2 \\
+    \end{array}
+  \right),
+$$
+luego el $\operatorname{rg}(A)=3$ para cualquier valor de $a$. También lo podemos hacer por determinantes:
+
+$$\left|
+    \begin{array}{ccc}
+      1 & a & a \\
+      -1 & 1 & -1 \\
+      1 & 0 & 2 \\
+    \end{array}
+  \right|=\left|
+    \begin{array}{ccc}
+      1 & a & a \\
+      0 & 1+a & a-1 \\
+      0 & -a & 2-a \\
+    \end{array}
+  \right| = (1+a)(2-a)-(-a)(a-1)=2+2a-a-a^2-(a-a^2)=2.$$
+
+Por lo tanto $\operatorname{dim}(\operatorname{Im}(f))=3$ para todos los valores de $a$ y como $$\operatorname{dim}(\operatorname{ker}(f))+\operatorname{dim}(\operatorname{Im}(f))=\operatorname{dim}(\mathbb{R}^3),$$  entonces $\operatorname{dim}(\operatorname{ker}(f))=0$  para todos los valores de $a$.
+</li>
+
+<li>¿Para qué valores de $a$ es una aplicación lineal biyectiva?<br>
+Como $\operatorname{ker}(f)=\{0\}$, la aplicación siempre es inyectiva, y como la $\operatorname{dim}(\operatorname{Im}(f))=\operatorname{dim}(\mathbb{R}^3)$, siempre es sobreyectiva, así que es biyectiva para todos los valores de $a$.
+</li>
+
+<li>Calcular la matriz asociada a este endomorfismo respecto de la base $B$.<br>
+Como conocemos los vectores de $B$ por sus coordenadas en $B_c$, la matriz $P$ viene dada por esas coordenadas.
+ $$P=\left(
+  \begin{array}{ccc}
+   1 & 1 & 0 \\
+    0 & 1 & 1 \\
+   -1 & -1 & -1 \\
+\end{array}
+\right),$$
+ 
+luego $$??=P^{-1}\cdot A\cdot P.$$
+Calculamos $P^{-1}$:
+
+$$\left(
+    \begin{array}{ccc|ccc}
+      1& 1 & 0 & 1 & 0 & 0 \\
+      0 & 1 & 1 & 0 & 1 & 0 \\
+      -1 & -1 & -1 & 0 & 0 & 1 \\
+    \end{array}
+  \right)\sim_f \left(
+    \begin{array}{ccc|ccc}
+      1& 1 & 0 & 1 & 0 & 0 \\
+      0 & 1 & 1 & 0 & 1 & 0 \\
+      0 & 0 & 1 & -1 & 0 & -1 \\
+    \end{array}
+  \right) \sim_f \left(
+    \begin{array}{ccc|ccc}
+      1& 0 & 0 & 0 & -1 & -1 \\
+      0 & 1 & 0 & 1 & 1 & 1 \\
+      0 & 0 & 1 & -1 & 0 & -1 \\
+    \end{array}
+  \right).
+$$
+Podemos comprobar el resultado:
+
+$$\left(
+\begin{array}{ccc}
+1 & 1 & 0 \\
+0 & 1 & 1 \\
+-1 & -1 & -1 \\
+\end{array}
+\right) \left(
+\begin{array}{ccc}
+0 & -1 & -1 \\
+1 & 1 & 1 \\
+-1 & 0 & -1 \\
+\end{array}
+\right) =\left(
+\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{array}
+\right),$$
+$$\mathcal{M}(f,B)=P^{-1}\cdot A\cdot P =\left(
+\begin{array}{ccc}
+  1 & 0 & 0 \\
+  -a & 1 & 0 \\
+  a & 0 & 2\\
+\end{array}
+\right).
+$$
+</li>
+</ol>

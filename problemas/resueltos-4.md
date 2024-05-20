@@ -596,5 +596,113 @@ $$\left(\begin{array}{ccc}
 Luego será definida positiva cuando los tres elementos de la diagonal lo sean, es decir $a>0$ y $a(1-a)>0$ luego debe ser $0<a<1$.
 </li>
 </ol>
-</detail>
+</details>
+</article>
+
+<article>
+
+En $\mathcal{P}_2(\mathbb{R})$ consideramos el producto escalar dado por $$\langle p(x),q(x)\rangle=\int_0^1 p(x)q(x)dx.$$
+
+<ol type="a">
+<li>Calcula la matriz de Gram respecto de la base $\{1, 1-x, x^2\}$.</li>
+<li>Calcula una base de $U=\{p(x)\in \mathcal{P}_2(\mathbb{R}) \text{ tal que } p(1)=p'(1)=0\}$.</li>
+<li>Calcula las ecuaciones cartesianas del subespacio  $U^{\perp}$.</li>
+<li>Calcula $p_U(1-2x^2)$ y $p_{U^{\perp}}(1-2x^2)$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular la matriz de Gram respecto de la base $\{1, 1-x, x^2\}$.
+$$\langle 1,1\rangle=\int_0^1 1\cdot 1dx=\left. x \right]_0^1=1,$$
+$$\langle 1,1-x\rangle=\int_0^1 1\cdot (1-x)dx=x-\left. \dfrac{1}{2}x^2\right]_0^1=\dfrac{1}{2},$$
+$$\langle 1,x^2\rangle=\int_0^1 1\cdot x^2dx=\left. \dfrac{1}{3}x^3\right]_0^1=\dfrac{1}{3},$$
+$$\langle 1-x,1-x\rangle=\int_0^1 (1-x)^2dx=\left. \dfrac{1}{3}(x-1)^3\right]_0^1=\dfrac{1}{3},$$
+$$\langle 1-x,x^2\rangle=\int_0^1 (x^2-x^3)dx=\dfrac{1}{3}x^3-\left. \dfrac{1}{4}x^4\right]_0^1=\dfrac{1}{12},$$
+$$\langle x^2,x^2\rangle=\int_0^1 x^4dx=\left. \dfrac{1}{5}x^5\right]_0^1=\dfrac{1}{5},$$
+$$G_B=\left(
+\begin{array}{ccc}
+  1 & \frac{1}{2} & \frac{1}{3} \\
+  \frac{1}{2} & \frac{1}{3} & \frac{1}{12} \\
+  \frac{1}{3} & \frac{1}{12} & \frac{1}{5}\\
+\end{array}\right).$$
+</li>
+
+<li>Calcular una base de $U$.<br>
+$$p(x)=a_0+a_1x+a_2x^2=(a_0,a_1,a_2)_{B_S} \Rightarrow p(1)=a_0+a_1+a_2=0.$$
+Por otro lado, $$p'(x)=a_1+2a_2x \Rightarrow p'(1)=a_1+2a_2=0.$$<br>
+Luego unas ecuaciones cartesianas son $U\equiv \left\{\begin{array}{l} a_0+a_1+a_2=0, \\ a_1+2a_2=0. \end{array}\right.$<br>
+Resolviendo, $$\left\{\begin{array}{l} a_1=-2a_2, \\ a_0-2a_2+a_2=0. \end{array}\right.\Rightarrow \left\{ \begin{array}{l} a_0=\lambda, \\ a_1=-2\lambda,\\ a_2=\lambda. \end{array} \right.$$
+Por lo tanto, una base de $U$ es $\{(1,-2,1)_{B_{S}}\}=\{1-2x+x^2\}$. 
+</li>
+
+<li>Calcula las ecuaciones cartesianas del subespacio  $U^{\perp}$.<br>
+Para usar la matriz de Gram para calcular el producto escalar, será necesario calcular la matriz de Gram con respecto a la base estándar, que no es la del apartado a). Algunos de los cálculos sí sirven: 
+$$\langle 1,1\rangle=1,$$
+$$\langle 1,x\rangle=\int_0^1 1\cdot (x)dx=\left. \dfrac{1}{2}x^2\right]_0^1=\dfrac{1}{2},$$
+$$\langle 1,x^2\rangle=\dfrac{1}{3},$$
+$$\langle x,x\rangle=\int_0^1 x^2dx=\left. \dfrac{1}{3}x^3\right]_0^1=\dfrac{1}{3},$$
+$$\langle x,x^2\rangle=\int_0^1 x^3dx=\left. \dfrac{1}{4}x^4\right]_0^1=\dfrac{1}{4},$$
+$$\langle x^2,x^2\rangle=\dfrac{1}{5},$$
+$$G_{B_{S}}=\left(
+\begin{array}{ccc}
+1 & \frac{1}{2} & \frac{1}{3} \\
+\frac{1}{2} & \frac{1}{3} & \frac{1}{4} \\
+\frac{1}{3} & \frac{1}{4} & \frac{1}{5}\\
+\end{array}
+\right).$$
+Ahora imponemos la condición  $$\langle(1,-2,1)_{B_{S}}, (a_0, a_1,a_2)\rangle=0,$$
+$$(1,-2,1)\left(
+\begin{array}{ccc}
+1 & \frac{1}{2} & \frac{1}{3} \\
+\frac{1}{2} & \frac{1}{3} & \frac{1}{4} \\
+\frac{1}{3} & \frac{1}{4} & \frac{1}{5}\\
+\end{array}
+\right) \left(
+\begin{array}{c}
+a_0 \\
+a_1 \\
+a_2 \\
+\end{array}
+\right)=0. $$          
+Luego unas cartesianas son $\dfrac{1}{3}a_0+\dfrac{1}{12}a_1+\dfrac{1}{30}a_2=0$, o bien   
+$U^{\perp}\equiv a_0+\dfrac{1}{4}a_1+\dfrac{1}{10}a_2=0$.
+</li>
+
+<li>Calcula $p_U(1-2x^2)$ y $p_{U^{\perp}}(1-2x^2)$.<br>
+Como $\operatorname{dim}(U)=1$  es rápido calcular $p_U(1-2x^2)$ usando coeficientes de Fourier. Puesto que $\{ (1,-2,1)_{B_S} \}$ es un base ortogonal de $U$.
+$$p_U((1,0,-2)_{B_S})=\dfrac{\langle(1,0,-2)_{B_S},(1,-2,1)_{B_S}\rangle}{\langle(1,-2,1)_{B_S},(1,-2,1)_{B_S}\rangle} (1,-2,1)_{B_S}.$$
+Calculamos  $$(1,-2,1)\left(
+\begin{array}{ccc}
+1 & \frac{1}{2} & \frac{1}{3} \\
+\frac{1}{2} & \frac{1}{3} & \frac{1}{4} \\
+\frac{1}{3} & \frac{1}{4} & \frac{1}{5}\\
+\end{array}
+\right) \left(
+\begin{array}{c}
+1 \\
+-2 \\
+1 \\
+\end{array}
+\right)=\dfrac{1}{5}; (1,-2,1)\left(
+\begin{array}{ccc}
+1 & \frac{1}{2} & \frac{1}{3} \\
+\frac{1}{2} & \frac{1}{3} & \frac{1}{4} \\
+\frac{1}{3} & \frac{1}{4} & \frac{1}{5}\\
+\end{array}
+\right) \left(
+\begin{array}{c}
+1 \\
+0 \\
+2 \\
+\end{array}
+\right)=\dfrac{4}{15}.$$
+Luego $$p_U((1,0,-2)_{B_S})=\dfrac{\frac{1}{4}}{\frac{1}{5}}(1,-2,1)_{B_S}=\dfrac{20}{15}(1,-2,1)_{B_S}=(\dfrac{4}{3},\dfrac{-8}{3},\dfrac{4}{3})_{B_S},$$ y por lo tanto $$p_{U^{\perp}}((1,0,-2)_{B_S})=(1,0,-2)_{B_S}-(\dfrac{4}{3},\dfrac{-8}{3},\dfrac{4}{3})_{B_S}= (-\dfrac{1}{3},\dfrac{8}{3},\dfrac{-10}{3})_{B_S}.$$
+Podemos comprobar el resultado:
+$$\dfrac{-1}{3}+\dfrac{1}{4}\cdot\dfrac{8}{3}+\dfrac{1}{10}\cdot\dfrac{-10}{3}=-\dfrac{1}{3}+\dfrac{2}{3}-\dfrac{1}{3}=0.$$
+</li>
+</ol>
+
+</details>
 </article>
