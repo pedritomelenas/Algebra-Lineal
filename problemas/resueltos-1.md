@@ -2082,7 +2082,7 @@ a & 1 & 0 & 1\\
 
 <ol type="a">
 <li>Calcula el determinante de $A$.</li>
-<li>Determina los valores de $A$ para los que la forma de Hermite por filas de $A$ es $I_4$.</li>
+<li>Determina los valores de $a$ para los que la forma de Hermite por filas de $A$ es $I_4$.</li>
 <li>Estudia el rango de $A$ para todos los valores reales de $a$.</li>
 <li>Para $a=-2$ calcula la forma de Hermite por filas de $A$.</li>
 </ol>
