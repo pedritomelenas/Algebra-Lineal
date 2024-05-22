@@ -817,7 +817,7 @@ por lo que $\Vert D\Vert \le d_1.$ Nótese que $D\mathbf{e}_1=d_1\mathbf{e_1},$ 
 
 ### Resultado
 
-Sea $A$ una matriz cuadrada invertible, y sea $d$ su mayor valor singular. Entonces
+Sea $A$ una matriz, y sea $d$ su mayor valor singular. Entonces
 
 
 $$
