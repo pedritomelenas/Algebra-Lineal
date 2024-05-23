@@ -706,3 +706,67 @@ $$\dfrac{-1}{3}+\dfrac{1}{4}\cdot\dfrac{8}{3}+\dfrac{1}{10}\cdot\dfrac{-10}{3}=-
 
 </details>
 </article>
+
+<article>
+
+En $\mathcal{P}_3(\mathbb{R})$ se consideran los subespacios vectoriales:<br>
+$$U=\{p(x) \in \mathcal{P}_3(\mathbb{R}) | p(-x)=p(x) \}, W=\{p(x) \in \mathcal{P}_3(\mathbb{R}) | p(-x)=-p(x) \}.$$.
+
+<ol type="a">
+<li>Comprobar que $\mathcal{P}_3(\mathbb{R})= U\oplus W$.</li>
+<li>Descomponer el vector $3x^3+x-2$ como suma de un vector en $U$ y otro en $W$.</li>
+<li>Para el producto escalar dado por 
+$$\langle p(x),q(x)\rangle= \int_{-1} ^1 p(x)q(x)dx.$$
+calcular una base ortogonal de $U$.</li>
+<li>Con el mismo producto escalar, calcular $W^{\perp}$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Comprobar que $\mathcal{P}_3(\mathbb{R})= U\oplus W$.<br>
+Los polinomios que cumplen la condición de $U$ son los polinomios pares, es decir, aquellos en los que solo aparecen las potencias pares de la indeterminada, y los que pertenecen a $W$ son los impares. Podemos realizar estas operaciones sin más que usar las coordenadas respecto de la base estándar $B_s=\{1,x,x^2,x^3\}$:
+$$p(x)=(a_0,a_1,a_2,a_3)_{B_s}=(a_0,-a_1,a_2,-a_3)_{B_s}=p(-x).$$
+Así las cartesianas de $U$ son
+$\left\{\begin{array}{l}
+a_1=0,\\
+a_3=0.
+\end{array}\right.$ Y una base $\{1,x^2\}$.
+$$p(x)=(a_0,a_1,a_2,a_3)_{B_s}=(-a_0,a_1,-a_2,a_3)_{B_s}=-p(-x),$$
+nos da que las cartesianas de $W$ son $\left\{\begin{array}{l}
+a_0=0,\\
+a_2=0.
+\end{array}\right.$  Y una base $\{x,x^3\}$.<br>
+Así que un sistema de generadores de $U+W$ es $\{1,x,x^2,x^3\}$ con lo que $U+W=\mathcal{P}_3(\mathbb{R})$, y además de que porque estos polinomios son linealmente independientes, se puede razonar con la fórmula de las dimensiones que $U\cap W=0$, con lo que se obtiene $\mathcal{P}_3(\mathbb{R})= U\oplus W$.
+</li>
+
+<li>Descomponer el vector $3x^3+x-2$ como suma de un vector en $U$ y otro en $W$.<br>
+Es inmediato que 
+$$3x^3+x-2= (-2) + (x+3x^3)$$
+y el primer polinomio está en $U$ y el segundo en $W$.
+</li>
+
+<li>Para el producto escalar dado calcular una base ortogonal de $U$.<br>
+Partimos de la base de $U$ obtenida $\{1,x^2\}$ y aplicamos Gram-Schimdt:
+$$e_1=1,$$
+$$e_2=x^2-\frac{\langle 1,x^2\rangle}{\langle 1,1\rangle}\cdot 1.$$
+Calculamos
+$\langle 1,1\rangle=\int_{-1} ^1 1\cdot 1 dx =  2,$ 
+$\langle 1,x^2\rangle=\int_{-1} ^1 x^2dx = \frac{2}{3}.$
+Así 
+$e_2= x^2-\frac{1}{3}$  y la base ortogonal de $U$ obtenida es $\{1, x^2-\frac{1}{3}\}$.
+</li>
+
+<li>Calcular $W^{\perp}$.<br>
+Dada la base de $W$, $\{x,x^3\}$ observamos que 
+$$\langle x,1\rangle=\int_{-1} ^1 x\cdot 1 dx = 0,$$
+$$\langle x,x^2\rangle=\int_{-1} ^1 x\cdot x^2 dx = 0,$$
+$$\langle x^3,1\rangle=\int_{-1} ^1 x^3\cdot 1 dx = 0,$$
+$$\langle x^3,x^2\rangle=\int_{-1} ^1 x^3\cdot x^2 dx = 0.$$
+Así que $U=\mathcal{L}(1,x^2)$ es el subespacio ortogonal a $W$.
+</li>
+</ol>
+</details>
+</article>
+

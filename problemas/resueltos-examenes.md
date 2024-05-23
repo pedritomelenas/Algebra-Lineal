@@ -678,7 +678,7 @@ $$\left|
       2 -\lambda& 2 \\
        2 & -1-\lambda \\
         \end{array}
-  \right|= (1-\lambda)(-(2-\lambda)(1+\lambda)-4)=(1-\lambda)(2+\lambda)(3-\lambda)$$
+  \right|= (1-\lambda)(-(2-\lambda)(1+\lambda)-4)=(1-\lambda)(2+\lambda)(3-\lambda).$$
 Como los valores propios de $A$ son 1, -2 y 3, su forma diagonal (si fuera diagonalizable) no puede ser $I_3$, por lo tanto, no existe $P$ regular tal que  $P^{-1}AP=I_3$
 </li>
 
@@ -686,3 +686,172 @@ Como los valores propios de $A$ son 1, -2 y 3, su forma diagonal (si fuera diago
 Si existiera una matriz $P$ cumpliendo la igualdad, estaríamos diciendo que $A$ es congruente con $I_3$ y por tanto su signatura  sería $(3,0)$, pero como los valores propios son  1, -2 y 3, su signatura es $(2,1)$, y por tanto no existe dicha matriz $P.$
 </li>
 </ol>
+</details>
+</article>
+
+<article>
+
+Dada la matriz:
+$$
+A=\begin{pmatrix}
+a & 0 & 0 & 0 \\
+a & 2 & 2 & a \\
+a & 2 & 2 & a \\
+a & 0 & 0 & 0
+\end{pmatrix}.
+$$
+
+<ol type="a">
+<li>Estudiar para qué valores del parámetro $a$ es $A$ diagonalizable.</li>
+<li>Para el valor $a=0$ la matriz $A$ es simétrica, determinar su forma diagonal $D$ así como una matriz ortogonal $P$ de forma que $D=P^{-1}\cdot  A\cdot P=P^{t}\cdot A\cdot P$.
+¿Cuál es la signatura de $A$?</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Estudiar para qué valores del parámetro $a$ es $A$ diagonalizable.<br>
+Calculamos los valores propios y sus multiplicidades algebraicas:
+$$
+\begin{align*}
+|A-\lambda I|&=\left|\begin{array}{cccc}
+a-\lambda & 0 & 0 & 0 \\
+a & 2-\lambda & 2 & a \\
+a & 2 & 2-\lambda & a \\
+a & 0 & 0 & -\lambda
+\end{array}\right|=(a-\lambda)(-\lambda)\left|\begin{array}{cc}
+2-\lambda & 2\\
+2 & 2-\lambda
+\end{array}\right|\\
+&= (a-\lambda)(-\lambda)((2-\lambda)^2-4)=(a-\lambda)(-\lambda)(\lambda^2-4\lambda)=(a-\lambda)(-\lambda)^2(\lambda-4).
+\end{align*}$$
+
+<strong>Caso $a\not =0,4$</strong><br>
+En este caso tenemos que para $\lambda=4$ o $\lambda=a$ ambas multiplicidades algebraicas y geométricas son 1 mientras que para $\lambda=0$
+la multiplicidad algebraica es 2 y habría que estudiar la geométrica:
+$$
+A-0\cdot I=\begin{pmatrix}
+a & 0 & 0 & 0 \\
+a & 2 & 2 & a \\
+a & 2 & 2 & a \\
+a & 0 & 0 & 0
+\end{pmatrix}\sim_f \begin{pmatrix}
+a & 0 & 0 & 0 \\
+0 & 2 & 2 & a \\
+0 & 2 & 2 & a \\
+0 & 0 & 0 & 0
+\end{pmatrix}\sim_f \begin{pmatrix}
+a & 0 & 0 & 0 \\
+0 & 2 & 2 & a \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{pmatrix},
+$$
+que tiene rango 2 ($a\not = 0$) y por tanto $m_g=\operatorname{dim}(V_{\lambda=0})=4-2=2$. Así que en este caso la matriz es diagonalizable.<br>
+<strong>Caso $a=0$</strong><br>
+En este caso la matriz es simétrica, y por tanto diagonalizable.<br>
+
+<strong>Caso $a=4$</strong><br>
+Ahora tenemos que para $\lambda=0$ tanto su multiplicidad algebraica como geométrica es 2 (ha sido calculada cuando $a\not = 0$ en el primer caso) y para $\lambda=0$ la multiplicidad algebraica es 2 y debemos calcular la geométrica.
+$$
+A-4\cdot I=\begin{pmatrix}
+0 & 0 & 0 & 0 \\
+4 & -2 & 2 & 4 \\
+4 & 2 & -2 & 4 \\
+4 & 0 & 0 & 4
+\end{pmatrix}\sim_f \begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & -1 & 1 & 0 \\
+0 & 1 & -1 & 0 \\
+1 & 0 & 0 & 1
+\end{pmatrix},
+$$
+tiene rango 3, así que $m_g=\operatorname{dim}(V_{\lambda=4})=4-3=1$. En este caso la matriz no es  diagonalizable.
+</li>
+
+<li>Para $a=0$ determinar su forma diagonal $D$ así como una matriz ortogonal $P$ de forma que $D=P^{-1}\cdot  A\cdot P=P^{t}\cdot A\cdot P$.
+¿Cuál es la signatura de $A$?<br>
+Como tenemos calculados los valores propios y en este caso son $\lambda=0$, con multiplicidad algebraica $3$ y $\lambda=4,$, con multiplicidad algebraica $1$ entonces la signatura es $(1,0)$.<br>
+Para calcular la matriz ortogonal $P$ diagonalizamos por semejanza ortogonal:
+$$
+A-0\cdot I=\begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & 2 & 2 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{pmatrix},
+$$
+y por tanto una base de $V_{\lambda=0}$ es $\{(1,0,0,0),(0,1,-1,0),(0,0,0,1)\}$ que ya es ortogonal.
+$$
+A-4\cdot I=\begin{pmatrix}
+-4 & 0 & 0 & 0 \\
+0 & -2 & 2 & 0 \\
+0 & 2 & -2 & 0 \\
+0 & 0 & 0 & -4
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & -1 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{pmatrix},
+$$ y por tanto una base de $V_{\lambda=4}$ es $\{(0,1,1,0)\}$ que es obviamente ortogonal.<br>
+Así, una base ortonormal de $\mathbb{R}^{4}$ es 
+$$\{(1,0,0,0),(0,1/\sqrt{2},-1/\sqrt{2},0),(0,0,0,1),(0,1/\sqrt{2},1/\sqrt{2},0)\},$$ y por tanto 
+$$P=\begin{pmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1/\sqrt{2} & 0 & 1/\sqrt{2} \\
+0 & -1/\sqrt{2} & 0 & 1/\sqrt{2} \\
+0 & 0 & 1 & 0
+\end{pmatrix}, \hspace{1cm } D=\begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 4
+\end{pmatrix}.
+$$
+</li>
+</ol>
+</details>
+</article>
+
+<article>
+
+<ol type="a">
+<li>En $\mathbb{R}^{8}$ consideramos dos subespacios $U$ y $W$, ambos de dimensión 5, ¿puede ser $U\cap W=0$? ¿Por qué?</li>
+<li>Para la siguiente matriz determinar su signatura en función de $a$:
+$$
+\begin{pmatrix}
+1 & 0 & 0\\
+0 & 0 & a\\
+0 & a & 0
+\end{pmatrix}.
+$$  </li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>En $\mathbb{R}^{8}$ consideramos dos subespacios $U$ y $W$, ambos de dimensión 5, ¿puede ser $U\cap W=0$? ¿Por qué?<br>
+No puede ocurrir por la fórmula de las dimensiones:
+$$\operatorname{dim}(U) + \operatorname{dim}(W)= \operatorname{dim}(U+W) + \operatorname{dim}(U\cap W),$$
+así
+$$5 + 5 = \operatorname{dim}(U+W) + 0,$$
+y por tanto debería ser $\operatorname{dim}(U+W)=10$, lo que es imposible porque debe estar contenido en  $\mathbb{R}^{8}$ por lo que su dimensión es menor o igual que $8$.
+</li>
+
+<li>Determinar la signatura en función de $a$.<br>
+Pueden calcularse los valores propios:
+$$
+\left| \begin{array}{ccc}
+1-\lambda & 0 & 0\\
+0 &-\lambda & a\\
+0 & a & -\lambda
+\end{array}\right|= (1-\lambda)(\lambda^2 -a^2)=(1-\lambda)(\lambda -a)(\lambda +a).
+$$  
+Así los valores propios son $1, a, -a$ y la signatura es $(1,0)$ si $a=0$ y $(2,1)$ si $a\not =0$.
+</li>
+</ol>
+</details>
+</article>
