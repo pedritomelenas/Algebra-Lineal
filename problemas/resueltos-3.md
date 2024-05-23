@@ -1797,3 +1797,141 @@ $$\mathcal{M}(f,B)=P^{-1}\cdot A\cdot P =\left(
 $$
 </li>
 </ol>
+</details>
+</article>
+
+<article>
+
+Se considera el endomorfismo $f: \mathcal{M}_2(\mathbb{R}) \longrightarrow\mathcal{M}_2(\mathbb{R})$
+dado por:
+$$
+f\begin{pmatrix} a & b \\ c & d \end{pmatrix} = \begin{pmatrix} a+b & a-b\\ c-d & c-d \end{pmatrix}.
+$$
+
+<ol type="a">
+<li>Determinar la matriz asociada a $f$ respecto de la base estándar $B_s$ de $\mathcal{M}_2(\mathbb{R})$.</li>
+<li>Determinar la matriz asociada a $f$ respecto de la base de $\mathcal{M}_2(\mathbb{R})$:
+$$B' = \left\{\begin{pmatrix} 1 & 0 \\ 1 & 0 \end{pmatrix}, \begin{pmatrix} 1 & 0 \\ -1 & 0 \end{pmatrix},
+\begin{pmatrix}0 & 1 \\ 0 & 1 \end{pmatrix}, \begin{pmatrix}0 & 1 \\ 0 & -1 \end{pmatrix}\right\}.$$</li>
+<li>Determinar bases de  $Ker(f)$, $Im(f)$, $Ker(f)\cap Im(f)$ y $Ker(f)+ Im(f)$.</li>
+<li>Determinar una base $B$ de $\mathcal{M}_2(\mathbb{R})$ de forma que la matriz asociada a $f$ respecto de las bases $B_s$ y $B$ sea
+$$
+H=\begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & -1\\
+0 & 0 & 0 & 0
+\end{pmatrix}.
+$$</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Determinar la matriz asociada a $f$ respecto de la base $B_s$.<br>
+
+\begin{alignat}{4}
+   f\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} &= \begin{pmatrix} 1 & 1\\ 0 & 0 \end{pmatrix}=(1,1,0,0)_{B_s},\qquad & f\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} &= \begin{pmatrix} 1 & -1\\ 0 & 0 \end{pmatrix}=(1,-1,0,0)_{B_s},\\
+   f\begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} &= \begin{pmatrix} 0 & 0\\ 1 & 1 \end{pmatrix}=(0,0,1,1)_{B_s},\qquad & f\begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix} &= \begin{pmatrix} 0 & 0\\ -1 & -1 \end{pmatrix}=(0,0,-1,-1)_{B_s}. 
+    \notag
+\end{alignat}
+
+Así, la matriz asociada respecto de $B_s$ es
+$$
+A=\begin{pmatrix}
+1 & 1 & 0 & 0\\
+1 & -1 & 0 & 0\\
+0 & 0 & 1 & -1\\
+0 & 0 & 1 & -1
+\end{pmatrix}.
+$$
+</li>
+
+<li>Determinar la matriz asociada a $f$ respecto de la base B'.<br>
+Puede construirse el diagrama correspondiente y tendremos que 
+$$\mathcal{M}(f,B')= P^{-1}AP,$$ siendo $P$ la matriz de cambio de base de $B'$ a $B_s$:
+$$
+P=\begin{pmatrix}
+1 & 1 & 0 & 0\\
+0 & 0 & 1 & 1\\
+1 & -1 & 0 & 0\\
+0 & 0 & 1 & -1
+\end{pmatrix},
+$$
+o también puede realizarse el mismo procedimiento que en el apartado anterior, teniendo en cuenta que ahora las imágenes hay que expresarlas en función de $B'$:
+
+\begin{alignat}{4}
+  f\begin{pmatrix} 1 & 0 \\ 1 & 0 \end{pmatrix} &= \begin{pmatrix} 1 & 1\\ 1 & 1 \end{pmatrix}=(1,0,1,0)_{B'},\qquad & f\begin{pmatrix} 1 & 0 \\ -1 & 0 \end{pmatrix} &= \begin{pmatrix} 1 & 1\\ -1 & -1 \end{pmatrix}=(0,1,0,1)_{B'},\\
+  f\begin{pmatrix} 0 & 1 \\ 0 & 1 \end{pmatrix} &= \begin{pmatrix} 1 & -1\\ -1 & -1 \end{pmatrix}=(0,1,-1,0)_{B'},\qquad & f\begin{pmatrix} 0 & 1 \\ 0 & -1 \end{pmatrix} &= \begin{pmatrix} 1 & -1\\ 1 & 1 \end{pmatrix}=(1,0,0,-1)_{B'}. 
+  \notag
+\end{alignat}
+
+con lo que la matriz pedida es 
+$$
+\begin{pmatrix}
+1 & 0 & 0 & 1\\
+0 & 1 & 1 & 0\\
+1 & 0 & -1 & 0\\
+0 & 1 &  0& -1
+\end{pmatrix}.
+$$
+</li>
+
+<li>Determinar bases de  $\operatorname{ker}(f)$, $\operatorname{Im}(f)$, $\operatorname{ker}(f)\cap \operatorname{Im}(f)$ y $\operatorname{ker}(f)+ \operatorname{Im}(f)$.<br>
+Usando la matriz $A$, que usa coordenadas respecto de la base estándar, calculamos bases del núcleo y la imagen:
+$$
+\left(\frac{A}{I}\right)=\begin{pmatrix}
+1 & 1 & 0 & 0\\
+1 & -1 & 0 & 0\\
+0 & 0 & 1 & -1\\
+0 & 0 & 1 & -1\\
+\hline
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+\end{pmatrix} \sim_c \begin{pmatrix}
+1 & 0 & 0 & 0\\
+1 & -2 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0\\
+\hline
+1 & -1 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 1\\
+0 & 0 & 0 & 1\\
+\end{pmatrix}  \sim_c \begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 1 & 0\\
+\hline
+1/2 & 1/2 & 0 & 0\\
+1/2 & -1/2 & 0 & 0\\
+0 & 0 & 1 & 1\\
+0 & 0 & 0 & 1\\
+\end{pmatrix}, 
+$$
+y obtenemos que una base de $\operatorname{Im}(f)$ es $\{(1,0,0,0)_{B_s},(0,1,0,0)_{B_s},(0,0,1,1)_{B_s}\}$ y una base de $\operatorname{ker}(f)$  es $\{ (0,0,1,1)_{B_s}\}$ con lo que es evidente que $\operatorname{ker}(f)\subset \operatorname{Im}(f)$ y por tanto $\operatorname{ker}(f)+\operatorname{Im}(f)=\operatorname{Im}(f)$ y $\operatorname{ker}(f)\cap \operatorname{Im}(f)=\operatorname{ker}(f)$.
+</li>
+
+<li>Determinar una base $B$ de $\mathcal{M}_2(\mathbb{R})$ de forma que la matriz asociada a $f$ respecto de las bases $B_s$ y $B$ sea $H$.<br>
+Como nos piden que la base solo cambie en el segundo espacio, basta observar que se trata de que las coordenadas de las matrices calculadas en el primer apartado sean:
+
+$$\begin{pmatrix} 1 & 1\\ 0 & 0 \end{pmatrix}=(1,0,0,0)_{B} 
+\hspace{0.5cm} 
+\begin{pmatrix} 1 & -1\\ 0 & 0 \end{pmatrix}=(0,1,0,0)_{B}
+\hspace{0.5cm} 
+\begin{pmatrix} 0 & 0\\ 1 & 1 \end{pmatrix}=(0,0,1,0)_{B} 
+$$
+Así que están determinados los tres vectores de la base $B$. Para completar la base puede elegirse cualquier matriz linealmente independiente con las tres anteriores, por ejemplo podemos tomar:
+
+$$ \left\{ \begin{pmatrix} 1 & 1\\ 0 & 0 \end{pmatrix},\, 
+\begin{pmatrix} 1 & -1\\ 0 & 0 \end{pmatrix},\,
+\begin{pmatrix} 0 & 0\\ 1 & 1 \end{pmatrix},\, 
+\begin{pmatrix} 0 & 0\\ 0 & 1 \end{pmatrix} \right\}.$$
+</li>
+</ol>
+</details>
+</article>

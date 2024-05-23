@@ -2216,3 +2216,124 @@ show(A,"~",A.rref())
 </ol>
 </details>
 </article>
+
+<article>
+
+Se consideran las matrices:
+$$
+A=\begin{pmatrix}
+-1 & -a & a-1 \\
+2a-1 & a & a-1 \\
+1-2a & 0 & 1
+\end{pmatrix},\;\;\;\;
+B=\begin{pmatrix}
+2 & 3 & 4\\
+-2 &-3 &-4 \\
+3 & 4 & 5
+\end{pmatrix}.
+$$
+
+<ol type="a">
+<li>Determinar para qué valores del parámetro $a$ es la matriz $A$ invertible.</li>
+<li>Determinar para qué valores del parámetro $a$ existe una matriz $P$ regular de forma que $B=A\cdot P$.</li>
+<li>Determinar para qué valores del parámetro $a$ existe una matriz $P$ de forma que $B=A\cdot P$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Determinar para qué valores del parámetro $a$ es la matriz $A$ invertible.<br>
+La matriz $A$ es invertible si, y solo si, su determinante es distinto de cero. Calculamos el determinante realizando primero algunas operaciones elementales:
+$$
+|A|=\left|\begin{array}{ccc}
+-1 & -a & a-1 \\
+2a-1 & a & a-1 \\
+1-2a & 0 & 1
+\end{array}\right|= \left|\begin{array}{ccc}
+-1 & -a & a-1 \\
+0 & a & a \\
+1-2a & 0 & 1
+\end{array}\right|=\left|\begin{array}{ccc}
+-1 & 0 & 2a-1 \\
+0 & a & a \\
+1-2a & 0 & 1
+\end{array}\right|,
+$$
+y desarrollando por la segunda columna,
+$$\left|\begin{array}{ccc}
+-1 & 0 & 2a-1 \\
+0 & a & a \\
+1-2a & 0 & 1
+\end{array}\right|=a(-1+(2a-1)^2)=a(4a^2-4a)=4a^2(a-1).$$
+Así, que $A$ tiene inversa cuando $a\not = 0,1$.
+</li>
+
+<li>Determinar para qué valores del parámetro $a$ existe una matriz $P$ regular de forma que $B=A\cdot P$.<br>
+Para que exista esa matriz regular $P$ (que representa la composición de operaciones elementales y en este caso por columnas porque está a la derecha de A) deben ser $A$ y $B$ equivalentes por columnas, es decir, deben tener la misma forma de Hermite por columnas.<br>
+Entonces calculamos la de $B$:
+$$
+B=\begin{pmatrix}
+2 & 3 & 4\\
+-2 &-3 &-4 \\
+3 & 4 & 5
+\end{pmatrix}\sim_c \begin{pmatrix}
+2 & 3 & 0\\
+-2 &-3 &0 \\
+3 & 4 & -1
+\end{pmatrix} \sim_c \begin{pmatrix}
+2 & 3 & 0\\
+-2 &-3 &0 \\
+0 & 0 & 1
+\end{pmatrix} \sim_c \begin{pmatrix}
+1 & 0 & 0\\
+-1 &0 &0 \\
+0 & 1 & 0
+\end{pmatrix}.
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+B=matrix([[2,3,4],[-2,-3,-4],[3,4,5]])
+show(B,"~",(B.T).rref().T)
+</script>
+</div> 
+
+Puesto que $\operatorname{rg}(B)=2$ solo es posible que sean equivalentes por columnas cuando $a=0$ o $a=1$, porque en otro caso $A$ tiene rango tres.<br>
+Calculamos la forma de Hermite de $A$ en ambos casos:
+$$
+A=\begin{pmatrix}
+-1 & 0 & -1 \\
+-1 & 0 & -1 \\
+1 & 0 & 1
+\end{pmatrix}\sim_c \begin{pmatrix}
+-1 & 0 & 0 \\
+-1 & 0 & 0 \\
+1 & 0 & 0
+\end{pmatrix}.
+$$ 
+En el caso $a=0$ no existe $P$ regular.
+$$
+A=\begin{pmatrix}
+-1 & -1 & 0 \\
+1 & 1 & 0 \\
+-1 & 0 & 1
+\end{pmatrix}\sim_c \begin{pmatrix}
+1 & 0 & 0\\
+-1 &0 &0 \\
+0 & 1 & 0
+\end{pmatrix}. 
+$$
+</li>
+
+<li>Determinar para qué valores del parámetro $a$ existe una matriz $P$ de forma que $B=A\cdot P$.<br>
+Como hemos razonado en el caso anterior, $P$ existe para $a=1$ y es regular. Cuando $a\not=0,1$ como $A$ es regular, podemos despejar $P$ en la fórmula $B=AP$:
+$$P=A^{-1}B,$$
+que existe, aunque no es regular porque $B$ no lo es. Así que existe una tal $P$ para todo $a$ salvo $a=0$.
+</li>
+</ol>
+
+</details>
+</article>
