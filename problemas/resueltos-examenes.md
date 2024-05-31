@@ -855,3 +855,173 @@ Así los valores propios son $1, a, -a$ y la signatura es $(1,0)$ si $a=0$ y $(2
 </ol>
 </details>
 </article>
+
+<article>
+
+En el espacio vectorial $\mathcal{P}_4(\mathbb{R})$ de los polinomios de grado menor o igual que $4$ se consideran los subespacios:
+$$U=L(1+x^2, 1+x+x^2+x^3),\,\,\,\,\, W=L(1+x^4,x^2, 1+x+x^2).$$
+Y consideramos el producto escalar dado por:
+$$\langle p(x),q(x)\rangle=\int_{-1}^{1} p(x)\cdot q(x) dx.$$ 
+
+<ol type="a">
+<li>Determinar bases de $U+W$ y $U\cap W$.</li>
+<li>Calcular una base ortogonal de $U$.</li>
+<li>Determinar la proyección sobre $U$ del vector $p(x)=1+x+x^2+x^3+x^4$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+En todo el ejercicio usaremos coordenadas respecto de la base estándar $B=\{1,x,x^2,x^3,x^4\}$.
+
+<ol type="a">
+<li>Determinar bases de $U+W$ y $U\cap W$.<br>
+En primer lugar calculamos las bases más sencillas de ambos subespacios:
+$$UP=\begin{pmatrix}
+1 & 1\\
+0 & 1\\
+1 & 1\\
+0 & 1\\
+0 & 0
+\end{pmatrix}\sim_c \begin{pmatrix}
+1 & 0\\
+0 & 1\\
+1 & 0\\
+0 & 1\\
+0 & 0
+\end{pmatrix},$$
+$$WP=\begin{pmatrix}
+1 & 0 & 1\\
+0 & 0 & 1\\
+0 & 1 & 1\\
+0 & 0 & 0\\
+1 & 0 & 0
+\end{pmatrix}\sim_c \begin{pmatrix}
+1 & 0 & 0\\
+0 & 0 & 1\\
+0 & 1 & 0\\
+0 & 0 & 0\\
+1 & 0 & -1
+\end{pmatrix},$$
+y reuniendo ambas obtenemos un sistema de generadores de $U+W$:
+$$\begin{pmatrix}
+1 & 0 &1 & 0 & 0\\
+0 & 1 &0 & 0 & 1\\
+1 & 0 &0 & 1 & 0\\
+0 & 1 &0 & 0 & 0\\
+0 & 0 &1 & 0 & -1
+\end{pmatrix} \sim_c \begin{pmatrix}
+1 & 0 &0 & 0 & 0\\
+0 & 1 &0 & 0 & 0\\
+0 & 0 &1 & 0 & 0\\
+0 & 0 &0 & 1 & 0\\
+0 & 0 &0 & 0 & 1
+\end{pmatrix},$$
+con lo que obtenemos que $U+W= \mathcal{P}_4(\mathbb{R})$ y una base es, por ejemplo, la base estándar $B$. Usando la fórmula de las dimensiones 
+$$ \operatorname{dim}(U)+ \operatorname{dim}(W) = \operatorname{dim}(U+W) + \operatorname{dim}(U \cap W),$$
+obtenemos que $\operatorname{dim}(U \cap W)=0$ y por tanto $U\cap W=0$ que no tiene base.  
+</li>
+
+<li>Calcular una base ortogonal de $U$.<br>
+Si calculamos la matriz de Gram de este producto escalar respecto de la base estándar $B$, obtenemos la matriz
+$$G=\begin{pmatrix}
+2 & 0 & 2/3 & 0 & 2/5\\
+0 & 2/3 & 0 & 2/5 & 0\\
+2/3 & 0 & 2/5 & 0 & 2/7\\
+0 & 2/5 & 0 & 2/7 & 0\\
+2/5 & 0 & 2/7 & 0 & 2/9
+\end{pmatrix},
+$$
+puesto que $\langle x^n,x^m\rangle=\int_{-1}^{1} x^{n+m}\cdot q(x) dx= \left. \frac{x^{n+m+1}}{n+m+1}\right]_{-1}^{1}$,  que es $0$ cuando $n+m+1$ es par y $\frac{2}{n+m+1}$ en otro caso.<br>
+Para la base más sencilla de $U$ obtenida en el apartado anterior se tiene que 
+$$\begin{pmatrix}
+1 & 0 & 1 & 0 & 0
+\end{pmatrix} G 
+\begin{pmatrix}
+0 \\ 1 \\ 0 \\ 1 \\ 0
+\end{pmatrix}=0,$$
+con lo que dicha base es ortogonal.
+</li>
+
+<li>Determinar la proyección sobre $U$ del vector $p(x)=1+x+x^2+x^3+x^4$.<br>
+Para calcular la proyección usaremos la fórmula que hace uso de los coeficientes de Fourier respecto de la base ortogonal de $U$ obtenida en el apartado anterior: $\{u_1=(1,0,1,0,0)_B, u_2=(0,1,0,1,0)_B\}.$
+$$p_U (v)= \frac{\langle v,u_1\rangle}{\langle u_1,u_1\rangle}u_1+ \frac{\langle v,u_2\rangle}{\langle u_2,u_2\rangle}u_2,$$
+Haciendo uso de la matriz de Gram calculada en el apartado anterior tenemos:
+$$\begin{array}{l}
+\langle v,u_1\rangle=464/105,\\
+\langle v,u_2\rangle=184/105,\\
+\langle u_1,u_1\rangle= 56/15,\\
+\langle u_2,u_2\rangle= 184/105,\\
+\end{array}
+$$
+y por tanto 
+$$p_U(v)= (58/49,1,58/49,1,0)_B.$$
+</li>
+</ol>
+
+</details>
+</article>
+
+<article>
+
+<ol type="a">
+<li>Probar que si $V$ es un espacio vectorial de dimensión $n$, y $U$ y $W$ son dos subespacios distintos de $V$, ambos de dimensión $n-1$, entonces $\operatorname{dim}(U\cap W)=n-2$.</li>
+<li>De un endomorfismo $f:\mathbb{R}^3 \longrightarrow \mathbb{R}^3$ se sabe que 
+$f(1,2,3)=(1,2,3)$, $f(0,1,2)=(1,2,3)$ y $\operatorname{dim}(\operatorname{Im}(f))=2$. Determinar una base de $\operatorname{ker}(f)$.</li>
+<li>Calcular la signatura de la matriz simétrica:
+$$A=\begin{pmatrix}
+2 & 0 & -2 \\
+0 & 1 & 3 \\
+-2 & 3 & 2
+\end{pmatrix}.
+$$</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Probar que si $V$ es un espacio vectorial de dimensión $n$, y $U$ y $W$ son dos subespacios distintos de $V$, ambos de dimensión $n-1$, entonces $\operatorname{dim}(U\cap W)=n-2$.<br>
+Si los dos subespacios son distintos, entonces $\operatorname{dim}(U+W) > \operatorname{dim}(U) =n-1$ y como no puede ser mayor (porque estamos en un espacio vectorial de dimensión $n$), entonces  $\operatorname{dim}(U+W) =n$. Usando la fórmula de las dimensiones se tiene
+$$ \operatorname{dim}(U) + \operatorname{dim}(W) = \operatorname{dim}(U+W) +\operatorname{dim}(U\cap W),$$
+$$n-1 + n-1 = n + (n-2),$$
+es decir, la única solución es $\operatorname{dim}(U\cap W)= n-2$.
+</li>
+
+<li>De un endomorfismo $f:\mathbb{R}^3 \longrightarrow \mathbb{R}^3$ se sabe que 
+$f(1,2,3)=(1,2,3)$, $f(0,1,2)=(1,2,3)$ y $\operatorname{dim}(\operatorname{Im}(f))=2$. Determinar una base de $\operatorname{ker}(f)$.<br>
+Usando la fórmula de las dimensiones para aplicaciones lineales se tiene que la dimensión de $\operatorname{ker}=1$ (puesto que $\operatorname{dim}(\operatorname{ker}(f)) + \operatorname{dim}(\operatorname{Im}(f))= 3$) y basta con encontrar un vector no nulo cuya imagen valga $(0,0,0)$. Pero es evidente de los datos que 
+$$f(1,1,1)=f(1,2,3)-f(0,1,2)=(0,0,0),$$
+así que $(1,1,1)\in \operatorname{ker}(f)$ y así tenemos una base $\{(1,1,1)\}$.
+</li>
+
+<li>Calcular la signatura de la matriz simétrica $A$.<br>
+Diagonalizamos por congruencia:
+$$\begin{pmatrix}
+2 & 0 & -2 \\
+0 & 1 & 3 \\
+-2 & 3 & 2
+\end{pmatrix}\sim_f \begin{pmatrix}
+2 & 0 & -2 \\
+0 & 1 & 3 \\
+0 & 3 & 0
+\end{pmatrix}\sim_c \begin{pmatrix}
+2 & 0 & 0 \\
+0 & 1 & 3 \\
+0 & 3 & 0
+\end{pmatrix}\sim_f
+\begin{pmatrix}
+2 & 0 & 0 \\
+0 & 1 & 3 \\
+0 & 0 & -9
+\end{pmatrix}\sim_C \begin{pmatrix}
+2 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & -9
+\end{pmatrix}.
+$$
+Así que en la diagonal hay dos elementos positivos y uno negativo, es decir, $\operatorname{sig}(A)=(2,1)$.
+</li>
+</ol>
+</details>
+</article>
