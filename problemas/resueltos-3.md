@@ -1935,3 +1935,173 @@ $$ \left\{ \begin{pmatrix} 1 & 1\\ 0 & 0 \end{pmatrix},\,
 </ol>
 </details>
 </article>
+
+<article>
+
+Se considera la aplicación lineal $D:\mathcal{P}_4(\mathbb{R}) \longrightarrow \mathcal{P}_3(\mathbb{R})$ dada por $D(p(x))=p'(x)$.
+
+<ol type="a">
+<li>Calcular el núcleo de $D$.</li>
+<li>Determinar la matriz asociada respecto de las bases $B_{s,4}=\{1,x,x^2,x^3, x^4\}$ de $\mathcal{P}_4(\mathbb{R})$ y $B_{s,3}=\{1,x,x^2,x^3\}$ de $\mathcal{P}_3(\mathbb{R})$.</li>
+<li>Determinar bases $B$ de $\mathcal{P}_4(\mathbb{R})$ y $B'$ de $\mathcal{P}_3(\mathbb{R})$ de forma que la matriz asociada a $D$ respecto de estas bases sea:
+$$
+M_{BB'}(D)=\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+\end{pmatrix}.
+$$</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular el núcleo de $D$.<br>
+El núcleo de una aplicación lineal son los vectores cuya imagen vale cero, en este caso los polinomios cuya imagen por $D$, es decir, su derivada, vale cero. Es claro que tales polinomios son los polinomios constantes, por tanto el núcleo está formado por los polinomios constantes.
+</li>
+
+<li>Determinar la matriz asociada respecto de las bases $B_{s,4}$ y $B_{s,3}$.<br>
+Para calcular dicha matriz calculamos las imágenes de los vectores de la base $B_{s,4}$ y los escribimos usando coordenadas respecto de $B_{s,3}$:
+$$\begin{array}{l}
+D(1)=0=(0,0,0,0)_{B_{s,3}},\\ 
+D(x)=1=(1,0,0,0)_{B_{s,3}},\\ 
+D(x^2)=2x=(0,2,0,0)_{B_{s,3}},\\
+D(x^3)=3x^2=(0,0,3,0)_{B_{s,3}},\\
+D(x^4)=4x^3=(0,0,0,4)_{B_{s,3}}.\\ 
+\end{array}.$$
+Así la matriz pedida es
+$$A=\begin{pmatrix}
+0 & 1 & 0 & 0 & 0\\
+0 & 0 & 2 & 0 & 0\\
+0 & 0 & 0 & 3 & 0\\
+  0 & 0 & 0 & 0 & 4\\ 
+\end{pmatrix}.$$
+</li>
+
+<li>Determinar bases $B$ y $B'$ de forma que la matriz asociada a $D$ respecto de estas bases sea $M_{BB'}(D)$.<br>
+ Es bastante fácil comprobar que la forma de Hermite por columnas de la matriz $A$ anterior es exactamente la que se da en este apartado. Por tanto existe una matriz regular $P$ tal que $AP= M_{BB'}(D)$. En un diagrama de cambio de base obtendríamos que solo es necesario realizar un cambio de base en el primer espacio para que la matriz asociada a $D$ sea la dada. Además esa nueva base $B$ viene dada por las columnas de $P$, mientras que en el segundo espacio no es necesario cambiar de base.<br>
+ Calculamos una matriz $P$ (la solución no es única) que verifique $AP=M_{BB'}(D)$:
+ $$A=\begin{pmatrix}
+ 0 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 2 & 0 & 0\\
+  0 & 0 & 0 & 3 & 0\\
+   0 & 0 & 0 & 0 & 4\\ 
+   \hline
+   1 & 0 & 0 & 0 & 0\\
+   0 & 1 & 0 & 0 & 0\\
+ 0 & 0 & 1 & 0 & 0\\
+  0 & 0 & 0 & 1 & 0\\
+   0 & 0 & 0 & 0 & 1\\ 
+    \end{pmatrix}\sim_c \begin{pmatrix}
+ 1 & 0 & 0 & 0 & 0\\
+ 0 & 1 & 0 & 0 & 0\\
+  0 & 0 & 1 & 0 & 0\\
+   0 & 0 & 0 & 1& 0\\ 
+   \hline
+   0 & 0 & 0 & 0 & 1\\
+   1 & 0 & 0 & 0 & 0\\
+ 0 & 1/2 & 0 & 0 & 0\\
+  0 & 0 & 1/3 & 0 & 0\\
+   0 & 0 & 0 & 1/4 & 0\\ 
+    \end{pmatrix}.$$
+Así tenemos que $B'=B_{s,3}$ y $B=\{x, x^2/2, x^3/3, x^4/4, 1\}$. 
+</li>
+</ol>
+</details>
+</article>
+
+<article>
+Se considera la matriz:
+$$
+A=\begin{pmatrix}
+a+1 & 0 &0 \\ 1 & 1 & -1 \\ 1 &-1 & 1
+\end{pmatrix}
+$$
+
+<ol type="a">
+<li>Estudiar para qué valores del parámetro $a$ es $A$ diagonalizable.</li>
+<li>Para el valor $a=0$ determinar su forma diagonal $D$ y una matriz de paso $P$ de forma que $D=P^{-1}\cdot A \cdot P$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Estudiar para qué valores del parámetro $a$ es $A$ diagonalizable.<br>
+Calculamos la ecuación característica:
+$$\begin{align*}|A-\lambda I|&= \left|\begin{array}{ccc}
+a+1-\lambda & 0 &0 \\ 1 & 1-\lambda & -1 \\ 1 &-1 & 1-\lambda
+\end{array}\right|= (a+1-\lambda)[(1-\lambda)^2-1]\\
+&=(a+1-\lambda)(\lambda^2-2\lambda)=\lambda(a+1-\lambda)(\lambda-2).
+\end{align*}$$
+Cuando $a+1\not = 0,2$ entonces aparecen tres valores propios distintos, cada uno con multiplicidad algebraica 1 y por tanto la geométrica también es 1, con lo que la matriz es diagonalizable.<br> 
+Quedan por estudiar dos casos:<br> 
+<strong>Cuando $a=-1$:</strong> <br> 
+Nos queda que el valor propio $\lambda=0$ tiene multiplicidad algebraica 2 y por tanto hay que calcular su multiplicidad geométrica.
+$$
+V_{\lambda=0}\equiv \begin{pmatrix}
+0 & 0 &0 \\ 1 & 1 & -1 \\ 1 &-1 & 1
+\end{pmatrix}\begin{pmatrix}
+x \\
+y\\
+z\\
+\end{pmatrix}= \begin{pmatrix}
+0\\ 0 \\0
+\end{pmatrix},
+$$ 
+nos da dos ecuaciones cartesianas y por tanto $m_g(\lambda=0)= \operatorname{dim}(V_{\lambda=0})=1$ y por tanto en este caso no es diagonalizable.<br> 
+<strong>Cuando $a=1$: </strong><br> 
+Tendremos que el valor propio $\lambda=2$ tiene multiplicidad algebraica 2 y por tanto hay que calcular su multiplicidad geométrica.
+$$
+V_{\lambda=2}\equiv \begin{pmatrix}
+0 & 0 &0 \\ 1 & -1 & -1 \\ 1 &-1 & -1
+\end{pmatrix}\begin{pmatrix}
+x \\
+y\\
+z\\
+\end{pmatrix}= \begin{pmatrix}
+0\\ 0 \\0
+\end{pmatrix},
+$$ 
+nos da una ecuación cartesiana y por tanto $m_g(\lambda=2)= \operatorname{dim}(V_{\lambda=0})=2$ y por tanto en este caso sí es diagonalizable.
+</li>
+
+<li>Para el valor $a=0$ determinar su forma diagonal $D$ y una matriz de paso $P$ de forma que $D=P^{-1}\cdot A \cdot P$.<br>
+Para el caso $a=0$ tenemos los valores propios $0,1$ y $2$ que serán los elementos de la matriz diagonal. Calculamos bases de cada uno de los subespacios propios:<br> 
+<strong>$\lambda=0$:</strong><br> 
+$$\begin{pmatrix}
+1 & 0 &0 \\ 1 & 1 & -1 \\ 1 &-1 & 1
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 0 &0 \\ 0 & 1 & -1 \\ 0 &0 & 0
+\end{pmatrix},$$
+nos da unas ecuaciones cartesianas y por tanto una base es $\{(0,1,1)\}$.<br> 
+<strong>$\lambda=1$:</strong><br> 
+$$\begin{pmatrix}
+0 & 0 &0 \\ 1 & 0 & -1 \\ 1 &-1 & 0
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 0 &-1 \\ 0 & 1 & -1 \\ 0 &0 & 0
+\end{pmatrix},$$
+nos da unas ecuaciones cartesianas y una base es $\{(1,1,1)\}$.<br> 
+<strong>$\lambda=2$:</strong><br> 
+$$\begin{pmatrix}
+-1 & 0 &0 \\ 1 & -1 & -1 \\ 1 &-1 & -1
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 0 &0 \\ 0 & 1 & 1 \\ 0 &0 & 0
+\end{pmatrix},$$
+nos da unas ecuaciones cartesianas y  una base es $\{(0,1,-1)\}$.<br> 
+Como solución, por ejemplo, podemos tomar
+$$D=\begin{pmatrix}
+0 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 2
+\end{pmatrix} \hspace{2cm} P=\begin{pmatrix}
+0 & 1 & 0\\
+1 & 1 & 1\\
+1 & 1 & -1
+\end{pmatrix}. $$
+</li>
+</ol>
+</details>
+</article>

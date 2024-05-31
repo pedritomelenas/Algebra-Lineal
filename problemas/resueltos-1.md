@@ -2337,3 +2337,63 @@ que existe, aunque no es regular porque $B$ no lo es. Así que existe una tal $P
 
 </details>
 </article>
+
+<article>
+
+Discutir en función de los parámetros $a$ y $b$ el sistema de ecuaciones lineales:
+$$
+\left\{
+\begin{array}{rcl}
+x+y+z &=& 1, \\
+x+y+az &=& 2, \\
+x+y+bz &=& 3. \\
+\end{array}
+\right.
+$$
+y resolverlo en aquellos casos en que sea compatible.
+
+<details>
+<summary>Solución</summary>
+
+La matriz de coeficientes del sistema 
+$$\begin{pmatrix}
+1 & 1 & 1\\
+1 & 1 & a\\
+1 & 1 & b
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 1 & 1\\
+0 & 0 & a-1\\
+0 & 0 & b-1
+\end{pmatrix},
+$$
+tiene rango 1 si $a=b=1$ y rango 2 en otro caso.
+La matriz ampliada del sistema 
+$$\begin{pmatrix}
+1 & 1 & 1 & 1\\
+1 & 1 & a & 2\\
+1 & 1 & b & 3
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 1 & 1 & 1 \\
+0 & 0 & a-1 & 1\\
+0 & 0 & b-1 & 2
+\end{pmatrix},
+$$
+tiene rango 2 si $b-1=2(a-1)$ ( o lo que es lo mismo $b=2a-1$, que incluye el caso $a=b=1$) y rango 3 en cualquier otro caso.<br>
+Así, el sistema es compatible si, y solo si, $b= 2a-1$ y $a\not = 1$ y en esos casos, como $\operatorname{rg}(A)=\operatorname{rg}(A|B)=2$, que es menor que el número de incógnitas, el sistema es compatible Indeterminado dependiendo de un parámetro. En el resto de los casos es (cuando $a=b=1$ o bien cuando $b\not = 2a-1$) es incompatible.<br>
+Cuando $b=2a-1$ y $a\not = 1$, resolviendo desde la matriz anterior 
+$$
+\begin{pmatrix}
+1 & 1 & 1 & 1 \\
+0 & 0 & a-1 & 1\\
+0 & 0 & 2(a-1) & 2
+\end{pmatrix}\sim_f \begin{pmatrix}
+1 & 1 & 1 & 1 \\
+0 & 0 & a-1 & 1\\
+0 & 0 & 0 & 0
+\end{pmatrix},
+$$
+y el conjunto de soluciones es
+$$\left\{ \left(1-\lambda-\frac{1}{a-1}  , \lambda, \frac{1}{a-1}\right); \lambda \in \mathbb{R} \right\}.$$
+
+</details>
+</article>
