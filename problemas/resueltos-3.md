@@ -2105,3 +2105,111 @@ $$D=\begin{pmatrix}
 </ol>
 </details>
 </article>
+
+
+<article>
+Se considera la aplicación lineal
+$$
+f: \mathcal{M}_2(\mathbb{R}) \longrightarrow \mathcal{M}_2(\mathbb{R}) 
+$$
+definida por:
+$$
+f\left( \begin{pmatrix} a & b \\ c & d\end{pmatrix}\right) = 
+\begin{pmatrix} a+d & b+c \\ b-c & a+d\end{pmatrix}
+$$
+Determinar la matriz asociada a $f$ respecto a la base estándard de $\mathcal{M}_2(\mathbb{R})$ y determinar bases de $\operatorname{ker}(f)$ e $\operatorname{Im}(f)$. ¿Es $f$ inyectiva? ¿Es $f$ sobreyectiva?
+<details>
+<summary>Solución</summary>
+
+La base estándar que vamos a usar en  $\mathcal{M}_2(\mathbb{R})$ es
+$$ B_s= \left\{  \left( \begin{array}{rr}
+1 & 0 \\
+0 & 0 \\
+\end{array} \right), \, \left( \begin{array}{rr}
+0 & 1 \\
+0 & 0 \\
+\end{array} \right), \, \left( \begin{array}{rr}
+0 & 0 \\
+1 & 0 \\
+\end{array} \right), \, \left( \begin{array}{rr}
+0 & 0 \\
+0 & 1 \\
+\end{array} \right) \right\}.$$  
+Calculamos la imagen por $f$ de cada uno de estos vectores y la escribimos en función de $B_s$. 
+$$f(\left( \begin{array}{rr}
+1 & 0 \\
+0 & 0 \\
+\end{array} \right) )= \left( \begin{array}{rr}
+1 & 0 \\
+0 & 1 \\
+\end{array} \right)=(1,0,0,1)_{B_{s}}, $$
+$$f(\left( \begin{array}{rr}
+0 & 1 \\
+0 & 0 \\
+\end{array} \right) )= \left( \begin{array}{rr}
+0 & 1 \\
+1 & 0 \\
+\end{array} \right)=(0,1,1,0)_{B_{s}}, $$
+$$f(\left( \begin{array}{rr}
+0 & 0 \\
+1 & 0 \\
+\end{array} \right) )= \left( \begin{array}{rr}
+0 & 1 \\
+-1 & 0 \\
+\end{array} \right)=(0,1,-1,0)_{B_{s}}, $$
+$$f(\left( \begin{array}{rr}
+0 & 0 \\
+0 & 1 \\
+\end{array} \right) )= \left( \begin{array}{rr}
+1 & 0 \\
+0 & 1 \\
+\end{array} \right)=(1,0,0,1)_{B_{s}}. $$
+
+La matriz asociada resulta de poner estos cuatro vectores por columnas:
+
+$$ A= \left( \begin{array}{rrrr}
+1 & 0 & 0 & 1 \\
+0 & 1 & 1 & 0 \\
+0 & 1 & -1 & 0\\
+1 & 0 & 0 & 1  
+\end{array} \right). $$
+Para calcular simultáneamente una base del núcleo y una de la imagen añadimos la identidad bajo $A$ y hacemos operaciones elementales por columnas:
+$$ \left( \begin{array}{rrrr}
+1 & 0 & 0 & 1 \\
+0 & 1 & 1 & 0 \\
+0 & 1 & -1 & 0\\
+1 & 0 & 0 & 1  \\
+\hline
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1  \\
+\end{array} \right)  \sim_{c}\left( \begin{array}{rrrr}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 1 & -2 & 0\\
+1 & 0 & 0 & 0  \\
+\hline
+1 & 0 & 0 & -1 \\
+0 & 1 & -1 & 0 \\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1  \\
+\end{array} \right)
+\sim_{c}\left( \begin{array}{rrr|r}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0\\
+1 & 0 & 0 & 0  \\
+\hline
+1 & 0 & 0 & -1 \\
+0 & 1/2 & 1/2 & 0 \\
+0 & 1/2 & -1/2 & 0\\
+0 & 0 & 0 & 1  \\
+\end{array} \right).
+$$
+Así tenemos que una base de la imagen es $\{(1,0,0,1),(0,1,0,0),(0,0,1,0)\}$ y una base del núcleo es $\{(-1,0,0,1)\}$.
+Puesto que la dimensión de la imagen es tres, no es sobreyectiva. Como la dimensión del núcleo es uno, no es inyectiva.
+
+</details>
+</article>
+

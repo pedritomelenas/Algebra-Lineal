@@ -1025,3 +1025,472 @@ Así que en la diagonal hay dos elementos positivos y uno negativo, es decir, $\
 </ol>
 </details>
 </article>
+
+<article>
+
+<ol type="a">
+<li>Razonar que si $A$ es una matriz cualquiera de orden $m\times n$, la matriz $A^{t} \cdot A $ es cuadrada y simétrica.</li>
+<li>Calcular la matriz de cambio de base de $B$ a $B'$ siendo $B=\{ (1,1), (-1,1)\}$ y $B'=\{ (1,2), (-1,2)\}$.</li>
+<li>Si $A$ es una matriz cuadrada con un único autovalor $\lambda_1=1$ y se sabe que $A$ es diagonalizable ¿qué se puede decir de $A$?</li>
+<li>Calcular la signatura de 
+$A= \left( \begin{array}{rr}
+  a & 1 \\
+  1 & -a \\
+\end{array} \right)$ 
+en función del parámetro $a$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Razonar que si $A$ es una matriz cualquiera de orden $m\times n$, la matriz $A^{t} \cdot A $ es cuadrada y simétrica.<br>
+Si $A$ tiene orden $n \times m$ entonces el producto $A^t \cdot A$ es de orden $m \times m$.<br>
+Para comprobar que es simétrica calculamos su traspuesta:
+$$(A^t \cdot A)^t = A^t \cdot (A^t)^t = A^t \cdot A,$$
+y como efectivamente coincide con ella, se tiene el resultado.
+</li>
+
+<li>Calcular la matriz de cambio de base de $B$ a $B'$.<br>
+LLamemos 
+$P=\left( \begin{array}{rr}
+1 & -1 \\
+1 & 1 \\
+\end{array} \right)$ que es la matriz de cambio de base de $B$ a la base canónica, y  
+$Q=\left( \begin{array}{rr}
+1 & -1 \\
+2 & 2 \\
+\end{array} \right)$ que es la matriz de cambio de base de $B'$ a la canónica. 
+$$B \longrightarrow^{P}  B_c \longleftarrow^{Q} B',$$
+entonces la matriz de cambio de base de $B$ a $B'$ es $Q^{-1}\cdot P$.<br>
+Calculamos $Q^{-1}$:
+$$
+\left( \begin{array}{rr|rr}
+1 & -1& 1 & 0 \\
+2 & 2 & 0 & 1\\
+\end{array} \right)\sim_{f} \left( \begin{array}{rr|rr}
+1 & -1& 1 & 0 \\
+0 & 4 & -2 & 1\\
+\end{array} \right)
+\sim_{f} \left( \begin{array}{rr|rr}
+1 & -1& 1 & 0 \\
+0 & 1 & -2/4 & 1/4\\
+\end{array} \right)
+\sim_{f} \left( \begin{array}{rr|rr}
+1 & 0& 1/2 & 1/4 \\
+0 & 1 & -1/2 & 1/4\\
+\end{array} \right).
+$$
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,-1,1,0],[2,2,0,1]])
+show(A,"~",A.rref())
+</script>
+</div>  
+
+Así
+$$Q^{-1} \cdot P= \left( \begin{array}{rr}
+1/2 & 1/4 \\
+  -1/2 & 1/4\\
+\end{array} \right)\left( \begin{array}{rr}
+1 & -1 \\
+1 & 1 \\
+\end{array} \right)=\left( \begin{array}{rr}
+3/4 & -1/4 \\
+-1/4 & 3/4 \\
+\end{array} \right).
+$$
+</li>
+
+<li>Si $A$ es una matriz cuadrada con un único autovalor $\lambda_1=1$ y se sabe que $A$ es diagonalizable ¿qué se puede decir de $A$?<br>
+Si $A$ es de orden digamos $n$, tiene como único valor propio $\lambda=1$ y es diagonalizable, entonces la multiplicidad 
+algebraica y geométrica de $\lambda=1$ es $n$, y por tanto  $\operatorname{dim}(V_{\lambda= 1}) = n - \operatorname{rg}(A-I) = n$, es decir, $\operatorname{rg}(A-I)=0$ lo que indica que $A-I=0$ y por tanto $A$ es la matriz identidad.  
+</li>
+
+<li>Calcular la signatura de $A$ en función del parámetro $a$.
+Diagonalizamos por congruencia la matriz:
+$$
+\left( \begin{array}{rr}
+a & 1 \\
+1 & -a \\
+\end{array} \right), 
+$$ 
+pero para elegir el elemento en la posición $(1,1)$ como pivote necesitamos que sea $a\not = 0$, caso que estudiaremos aparte.
+$$
+\left( \begin{array}{rr}
+a & 1 \\
+1 & -a \\
+\end{array} \right) \sim_{f} \left( \begin{array}{rr}
+a & 1 \\
+0 & -2a \\
+\end{array} \right)\sim_{c} \left( \begin{array}{rr}
+a & 0 \\
+0 & -2a \\
+\end{array} \right),
+$$ 
+que tiene signatura $(1,1)$.<br>
+Ahora, para $a=0$
+$$
+\left( \begin{array}{rr}
+0 & 1 \\
+1 & 0 \\
+\end{array} \right) \sim_{f} \left( \begin{array}{rr}
+1 & 1 \\
+1 & 0 \\
+\end{array} \right)\sim_{c} \left( \begin{array}{rr}
+2 & 1 \\
+1 & 0 \\
+\end{array} \right)
+\sim_{f} \left( \begin{array}{rr}
+2 & 1 \\
+0 & -1/2 \\
+\end{array} \right)\sim_{c} \left( \begin{array}{rr}
+2 & 0 \\
+0 & -1/2 \\
+\end{array} \right),
+$$ 
+con lo cual, en todos los casos $\operatorname{sig}(A)=(1,1)$.<br>
+También puede hacerse calculando los valores propios de la matriz:
+$$
+\left| \begin{array}{rr}
+a-\lambda & 1 \\
+1 & -a-\lambda \\
+\end{array} \right|= (a-\lambda)(-a-\lambda)-1= \lambda^2 -1=0,
+$$ 
+que nos da como valores propios $\lambda=1$ y $\lambda=-1$, con lo que se tiene de nuevo $\operatorname{sig}(A)=(1,1)$.
+</li>
+</ol>
+</details>
+</article>
+
+<article>
+
+En el espacio vectorial $\mathcal{M}_2(\mathbb{R})$ se consideran los subespacios
+$$U=\mathcal{L}\left( \left(
+\begin{array}{cc}
+1 & 0 \\
+0& 1 \\
+\end{array}
+\right),
+\left(
+\begin{array}{cc}
+1 & 0 \\
+2 & a \\
+\end{array}
+\right) \right),
+$$
+$$W=\mathcal{L}\left(
+\left(
+\begin{array}{cc}
+a & 1 \\
+2 & 0 \\
+\end{array}
+\right),
+\left(
+\begin{array}{cc}
+1 & -1 \\
+0 & 0 \\
+\end{array}
+\right) \right),
+$$
+y el producto escalar dado por
+$$\langle A,B\rangle=\operatorname{traza}(AB^t)$$
+
+<ol type="a">
+<li>Calcula la base más sencilla de $U+W$ para todos los valores de $a$.</li>
+<li>Calcula unas ecuaciones cartesianas de $U\cap W$ para todos los valores de $a$.</li>
+<li>¿Son $U$ y $W$ complementarios para $a=1$?</li>
+<li>Calcula una base ortogonal de $U$ para $a=1$.</li>
+<li>Calcula una base del subespacio ortogonal a $W$ para $a=1$.</li>
+<li>Calcula la proyección ortogonal sobre $W$ de la matriz
+$A=\left(\begin{array}{cc}
+1 & 2 \\
+3 & 0 \\
+\end{array}
+\right)$
+para $a=1$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcula la base más sencilla de $U+W$ para todos los valores de $a$.<br>
+Comenzamos calculando $U+W$ puesto que conocemos sistemas de generadores de ambos subespacios. Usaremos coordenadas respecto de la base $B_s$ habitual.<br>
+Reunimos los dos sistemas de generadores y hacemos operaciones elementales por columnas:
+$$\left(\begin{array}{cccc}
+1 & 1 & a & 1\\
+0 & 0 & 1 & -1\\
+0 & 2 & 2 & 0\\
+1 & a & 0 & 0\\
+\end{array}\right)\sim_c \left(\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 0 & 1 & -1\\
+0 & 2 & 2 & 0\\
+1 & a-1 & -a & -1\\
+\end{array}\right)\sim_c \left(\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 2 & 2\\
+1 & 1 & a-1 & -a-1\\
+\end{array}\right)\sim_c \left(\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 2 & 0\\
+1 & 1 & a-1 & -2a\\
+\end{array}\right)$$
+Si $a\not = 0$, $\operatorname{dim}(U+W)=4$ y por tanto $U+W=\mathcal{M}_2(\mathbb{R})$ y la base más sencilla es $B_s$.<br>
+Si $a=0$ la base más sencilla son las columnas no nulas de la forma de Hermite por columnas de la matriz anterior 
+$$\left(\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 2 & 0\\
+1 & 1 & -1 & 0\\
+\end{array}\right)\sim
+\left(\begin{array}{cccc}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+1 & 1 & -1/2 & 0\\
+\end{array}\right)$$
+$$\left\{ \left(\begin{array}{cc}
+1 & 0 \\
+0 & 1
+\end{array}\right), \left(\begin{array}{cc}
+0 & 1 \\
+0 & 1
+\end{array}\right),\left(\begin{array}{cc}
+0 & 0 \\
+1 & -1/2
+\end{array}\right) \right\}$$ 
+</li>
+
+<li>Calcula unas ecuaciones cartesianas de $U\cap W$ para todos los valores de $a$.<br>
+Para calcular la intersección utilizamos en primer lugar la fórmula de las dimensiones 
+$$\operatorname{dim}(U)+ \operatorname{dim}(W)=\operatorname{dim}(U+W)+\operatorname{dim}(U\cap W).$$
+Como $\operatorname{dim}(U)+ \operatorname{dim}(W)=2+2=4$ (es inmediato de los datos), tenemos que para $a\not = 0$ $\operatorname{dim}(U\cap W)=0$ mientras que para $a=0$ $\operatorname{dim}(U\cap W)=1$.<br>
+Por tanto para $a\not = 0$ las ecuaciones cartesianas de $U\cap W$ son
+\begin{equation}
+U\cap W \equiv \left\{ \begin{array}{l}
+x=0,\\
+y=0,\\
+z=0,\\
+t=0.
+\end{array}\right.
+\end{equation}
+Para $a=0$ calculamos unas cartesianas de $U$ y unas de $W$ y las reunimos. Para ello comenzamos desde la base más sencilla de cada subespacio para escribir las paramétricas y deducir después las cartesianas.
+Para $U$:
+$$\left(\begin{array}{cc}
+1 & 1 \\
+0 & 0 \\
+0 & 2 \\
+1 & 0 \\
+\end{array}\right)\sim_c \left(\begin{array}{cc}
+1 & 0 \\
+0 & 0 \\
+0 & 2 \\
+1 & -1 \\
+\end{array}\right)\sim_c\left(\begin{array}{cc}
+1 & 0 \\
+0 & 0 \\
+0 & 1 \\
+1 & -1/2 \\
+\end{array}\right).$$
+Luego unas paramétricas son 
+$$U=\left\{ \begin{array}{l}
+x=\lambda_1,\\
+y=0,\\
+z=\lambda_2,\\
+t=\lambda_1-\frac{1}{2}\lambda_2.
+\end{array}\right.  \text{ Y así las cartesianas son } 
+\left\{\begin{array}{l}
+y=0,\\
+2x-z-2t=0.
+\end{array}\right.
+$$
+
+Para $W$:
+$$\left(\begin{array}{cc}
+0 & 1 \\
+1 & -1 \\
+2 & 0 \\
+0 & 0 \\
+\end{array}\right)\sim_c \left(\begin{array}{cc}
+1 & 0 \\
+0 & 1 \\
+2 & 2 \\
+0 & 0 \\
+\end{array}\right).$$
+Luego unas paramétricas son 
+$$W=\left\{ \begin{array}{l}
+x=\lambda_1,\\
+y=\lambda_2,\\
+z=2\lambda_1+2\lambda_2,\\
+t=0.
+\end{array}\right.  \text{ Y así las cartesianas son } 
+\left\{\begin{array}{l}
+2x+2y-z=0,\\
+t=0.
+\end{array}\right.
+$$
+Entonces
+$$U\cap W=\left\{ \begin{array}{l}
+y=0,\\
+2x-z-2t=0,\\
+2x+2y-z=0,\\
+t=0,
+\end{array}\right. \sim_f  \left\{\begin{array}{l}
+y=0,\\
+2x-z=0.\\
+t=0,
+\end{array}\right.
+$$
+</li>
+
+<li>¿Son $U$ y $W$ complementarios para $a=1$?<br>
+Sí, de hecho para $a\not = 0$, puesto que $U+W=\mathcal{M}_2(\mathbb{R})$ y $U\cap W=\{0\}$.
+</li>
+
+<li>Calcula una base ortogonal de $U$ para $a=1$.<br>
+Para calcular una base ortogonal calculemos en primer lugar una base de $U$ para $a=1$:
+$$\left(\begin{array}{cc}
+1 & 1 \\
+0 & 0 \\
+0 & 2 \\
+1 & 1 \\
+\end{array}\right)\sim_c \left(\begin{array}{cc}
+1 & 0 \\
+0 & 0 \\
+0 & 1 \\
+1 & 0 \\
+\end{array}\right)$$
+Ahora usamos el algoritmo de Gram-Schmidt para calcular una base ortogonal a partir de estos dos vectores
+$$u_1=\begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix}, u_2=\begin{pmatrix}
+0 & 0\\
+1 & 0
+\end{pmatrix}.$$
+Luego
+$$e_1= \begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix}, e_2=\begin{pmatrix}
+0 & 0\\
+1 & 0
+\end{pmatrix}+\lambda_{21}\begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix}.$$
+Calculamos 
+$$\lambda_{21}=\frac{-\langle u_{2},e_{1}\rangle}{||e_{1}||^2}.$$
+Empezamos por el numerador:
+$$\biggl\langle\begin{pmatrix}
+0 & 0\\
+1 & 0
+\end{pmatrix}, \begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix}\biggr\rangle=\operatorname{traza}\left(\begin{pmatrix}
+0 & 0\\
+1 & 0
+\end{pmatrix}\cdot \begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix}\right)= \operatorname{traza}\begin{pmatrix}
+0 & 0\\
+1 & 0
+\end{pmatrix}=0.$$
+Luego $e_2=u_2$ y la base de partida ya es ortogonal.
+También puede calcularse la matriz de Gram del producto escalar y usarla para hacer los productos utilizando coordenadas.
+</li>
+
+<li>Calcula una base del subespacio ortogonal a $W$ para $a=1$.<br>
+Para calcular las cartesianas del ortogonal de $W$ partimos de una base de $W$ ($a=1$):
+$$\left(\begin{array}{cc}
+1 & 1 \\
+1 & -1 \\
+2 & 0 \\
+0 & 0 \\
+\end{array}\right)\sim_c \left(\begin{array}{cc}
+1 & 0 \\
+-1 & 2 \\
+0 & 2 \\
+0 & 0 \\
+\end{array}\right) \sim_c \left(\begin{array}{cc}
+1 & 0 \\
+0 & 1 \\
+1 & 1 \\
+0 & 0 \\
+\end{array}\right),$$
+y para cada uno imponemos la condición de que una matriz genérica sea ortogonal:
+ 
+$$\biggl\langle\begin{pmatrix}
+1 & 0\\
+1 & 0
+\end{pmatrix}, \begin{pmatrix}
+x & y\\
+z & t
+\end{pmatrix}\biggr\rangle=\operatorname{traza}\left(\begin{pmatrix}
+1 & 0\\
+1 & 0
+\end{pmatrix}\cdot \begin{pmatrix}
+x & z\\
+y & t
+\end{pmatrix}\right)= \operatorname{traza}\begin{pmatrix}
+x & z\\
+x & z
+\end{pmatrix}=x+z=0,$$
+
+$$\biggl\langle\begin{pmatrix}
+0 & 1\\
+1 & 0
+\end{pmatrix}, \begin{pmatrix}
+x & y\\
+z & t
+\end{pmatrix}\biggr\rangle=\operatorname{traza}\left(\begin{pmatrix}
+0 & 1\\
+1 & 0
+\end{pmatrix}\cdot \begin{pmatrix}
+x & z\\
+y & t
+\end{pmatrix}\right)= \operatorname{traza}\begin{pmatrix}
+y & t\\
+x & z
+\end{pmatrix}=y+z=0.$$
+Luego $$W^{\perp}\equiv \left\{\begin{array}{l}
+x+z=0,\\
+y+z=0.
+\end{array}\right.$$
+
+</li>
+<li>Calcula la proyección ortogonal sobre $W$ de la matriz $A$.<br>
+Calculamos unas cartesianas de $W$ para $a=1$ partiendo de la base más sencilla que ya tenemos del apartado anterior, primero poniendo las paramétricas:
+$$W=\left\{ \begin{array}{l}
+x=\lambda_1,\\
+y=\lambda_2,\\
+z=\lambda_1+\lambda_2,\\
+t=0.
+\end{array}\right.  \text{ que nos dan las cartesianas } 
+\left\{\begin{array}{l}
+x+y-z=0,\\
+t=0.
+\end{array}\right.
+$$
+La matriz del enunciado cumple estas cartesianas, luego está en $W$.
+Entonces $$p_W\left(\begin{pmatrix}
+1 & 2\\
+3 & 0
+\end{pmatrix}\right)=\begin{pmatrix}
+1 & 2\\
+3 & 0
+\end{pmatrix}.$$
+También puede emplearse cualquier otro método (descomponer en dos vectores uno de $W$ y otro de $W^{\perp}$, o usar coeficientes de Fourier).
+</li>
+</ol>
+</details>
+</article>

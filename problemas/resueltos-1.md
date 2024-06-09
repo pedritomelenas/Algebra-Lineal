@@ -2397,3 +2397,191 @@ $$\left\{ \left(1-\lambda-\frac{1}{a-1}  , \lambda, \frac{1}{a-1}\right); \lambd
 
 </details>
 </article>
+
+<article>
+
+Dadas las matrices 
+$$
+A=\left(\begin{array}{rrr}
+   1 & a & -1\\
+   a & 1 & 1\\
+   1 & -1 & a\\
+  0 & 0 & a
+  \end{array}
+\right),\,\,\,\,
+B=\left(\begin{array}{rrr}
+   1 & -1 & 1\\
+   1 & 1 & 0\\
+   0 & -b & b\\
+  b & b & 0
+  \end{array}
+\right)
+$$
+encuentra los valores de $a$ y $b$ para los que las matrices $A$ y $B$ sean:
+
+<ol type="a">
+<li>Encuentra los valores de $a$ y $b$ para los que las matrices $A$ y $B$ sean equivalentes.</li>
+<li>Encuentra los valores de $a$ y $b$ para los que las matrices $A$ y $B$ sean equivalentes por filas.</li>
+<li>Para la pareja de valores $a=0$, $b=1$, calcula una matriz $Q$ tal que $QA=B$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Encontrar los valores de $a$ y $b$ para los que las matrices $A$ y $B$ sean equivalentes.<br>
+Dos matrices del mismo orden son equivalentes cuando tienen el mismo rango.  Calculamos el rango en función de los parámetros:
+en ambos casos elegiremos una submatriz cuadrada de orden 3 y calculamos el determinante.<br>
+Para $A$ elegimos
+$$
+\left|\begin{array}{rrr}
+      a & 1 & 1\\
+   1 & -1 & a\\
+  0 & 0 & a
+  \end{array}
+\right|= a\left|\begin{array}{rr}
+    a & 1 \\
+   1 & -1 \\
+    \end{array}
+\right|= a(-a-1).$$
+Así que si $a\not =0, a\not = -1$, $\operatorname{rg}(A)=3$.<br>
+Para $a=0$
+$$A=\left(\begin{array}{rrr}
+   1 & 0 & -1\\
+   0 & 1 & 1\\
+   1 & -1 & 0\\
+  0 & 0 & 0
+  \end{array}
+\right) \sim_{f} \left(\begin{array}{rrr}
+   1 & 0 & -1\\
+   0 & 1 & 1\\
+   0 & -1 & 1\\
+  0 & 0 & 0
+  \end{array}
+\right) \sim_{f} \left(\begin{array}{rrr}
+   1 & 0 & -1\\
+   0 & 1 & 1\\
+   0 & 0 & 2\\
+  0 & 0 & 0
+  \end{array}
+\right) \sim_{f} \left(\begin{array}{rrr}
+   1 & 0 & 0\\
+   0 & 1 & 0\\
+   0 & 0 & 1\\
+  0 & 0 & 0
+  \end{array}
+\right),
+$$
+tiene también rango tres y la anterior es su forma de Hermite por filas.<br>
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix([[1,0,-1],[0,1,1],[1,-1,0],[0,0,0]])
+show(A,"~",A.rref())
+</script>
+</div>  
+
+
+Para $a=-1$
+$$A=\left(\begin{array}{rrr}
+   1 & -1 & -1\\
+   -1 & 1 & 1\\
+   1 & -1 & -1\\
+  0 & 0 & -1
+  \end{array}
+\right)\sim_{f} \left(\begin{array}{rrr}
+   1 & -1 & -1\\
+   0 & 0 & 0\\
+   0 & 0 & 0\\
+  0 & 0 & -1
+  \end{array}
+\right)\sim_{f} \left(\begin{array}{rrr}
+   1 & -1 & 0\\
+  0 & 0 & 1\\
+   0 & 0 & 0\\
+   0 & 0 & 0\\
+
+  \end{array}
+\right).
+$$  
+tiene rango dos y la anterior es su forma de Hermite por filas.<br>
+
+Para $B$:
+$$\left|\begin{array}{rrr}
+   1 & -1 & 1\\
+   1 & 1 & 0\\
+   0 & -b & b\\
+    \end{array}
+\right|=\left|\begin{array}{rrr}
+   1 & -1 & 1\\
+   0 & 2 & -1\\
+   0 & -b & b\\
+    \end{array}
+\right|=\left|\begin{array}{rr}
+    1 & 0\\
+    -b & b\\
+    \end{array}
+\right|=b.
+$$
+Así, cuando $b\not = 0$, $\operatorname{rg}(B)=3$.
+Para $b=0$
+$$
+B=\left(\begin{array}{rrr}
+   1 & -1 & 1\\
+   1 & 1 & 0\\
+   0 & 0 & 0\\
+  0 & 0 & 0
+  \end{array}
+\right)\sim_{f} \left(\begin{array}{rrr}
+   1 & -1 & 1\\
+   0 & 2 & -1\\
+   0 & 0 & 0\\
+  0 & 0 & 0
+  \end{array}
+\right)\sim_{f} \left(\begin{array}{rrr}
+   1 & 0 & 1/2\\
+   0 & 1 & -1/2\\
+   0 & 0 & 0\\
+  0 & 0 & 0
+  \end{array}
+\right),
+$$
+que tiene rango dos y tenemos su forma de Hermite por filas.<br>
+
+Comprobemos el resultado obtenido con <code>sage</code>.
+
+<div class="sage">
+<script type="text/x-sage">
+B=matrix([[1,-1,1],[1,1,0],[0,0,0],[0,0,0]])
+show(B,"~",B.rref())
+</script>
+</div>  
+
+Por tanto, concluimos que si $a=-1$ y $b=0$, o bien, $a\neq-1$ y $b\neq0$, son equivalentes mientras que si $a=-1$ y $b\neq0$, o bien, $a\neq-1$ y $b=0$, no son equivalentes.
+</li>
+
+<li>Encontrar los valores de $a$ y $b$ para los que las matrices $A$ y $B$ sean equivalentes por filas.<br>
+En el caso de que una matriz $4\times 3$ tenga rango tres, su forma de Hermite por filas es necesariamente 
+$$
+H= \left(\begin{array}{rrr}
+   1 & 0 & 0\\
+   0 & 1 & 0\\
+   0 & 0 & 1\\
+  0 & 0 & 0
+  \end{array}
+\right)
+ $$
+puesto que cada uno de los tres pivotes tienen que estar en columnas distintas. Así que tenemos calculada la forma de Hermite en todos los casos y podemos concluir que no serán equivalentes por filas excepto si $a\neq-1$ y $b\neq0$.
+</li>
+
+<li>Para la pareja de valores $a=0$, $b=1$, calcular una matriz $Q$ tal que $QA=B$.<br>
+En ese caso las matrices son equivalentes por filas, para encontrar una matriz $Q$, calculamos $Q_1$ y $Q_2$ tales que:
+$$ Q_{1}A=H,  \hspace{2cm} Q_{2}B=H.$$
+Igualando y despejando $B$ sería $Q=Q_{2}^{-1}Q_{1}$. 
+</li>
+</ol>
+
+</details>
+</article>

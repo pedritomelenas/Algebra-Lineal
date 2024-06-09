@@ -710,7 +710,7 @@ $$\dfrac{-1}{3}+\dfrac{1}{4}\cdot\dfrac{8}{3}+\dfrac{1}{10}\cdot\dfrac{-10}{3}=-
 <article>
 
 En $\mathcal{P}_3(\mathbb{R})$ se consideran los subespacios vectoriales:<br>
-$$U=\{p(x) \in \mathcal{P}_3(\mathbb{R}) | p(-x)=p(x) \}, W=\{p(x) \in \mathcal{P}_3(\mathbb{R}) | p(-x)=-p(x) \}.$$.
+$$U=\{p(x) \in \mathcal{P}_3(\mathbb{R}) | p(-x)=p(x) \}, W=\{p(x) \in \mathcal{P}_3(\mathbb{R}) | p(-x)=-p(x) \}.$$
 
 <ol type="a">
 <li>Comprobar que $\mathcal{P}_3(\mathbb{R})= U\oplus W$.</li>
@@ -770,3 +770,156 @@ Así que $U=\mathcal{L}(1,x^2)$ es el subespacio ortogonal a $W$.
 </details>
 </article>
 
+<article>
+
+En el espacio $\mathcal{P}_3(\mathbb{R})$ de los polinomios de grado menor o igual que tres, se consideran los subespacios
+$$P=\{ p(x)\in \mathcal{P}_3(\mathbb{R}) |\,  p(x)=p(-x) \}$$
+$$I=\{ p(x)\in \mathcal{P}_3(\mathbb{R}) |\, p(x)=-p(-x) \}$$
+y el producto escalar
+$$\langle p(x),q(x)\rangle = \int_{-1}^{1} p(x)q(x)dx $$
+
+<ol type="a">
+<li>Calcular bases de $P$ e $I$ y comprobar que $I$ y $P$ son complementarios.</li>
+<li>Calcular  bases ortogonales de $P$ y de $I$.</li>
+<li>¿Es $P$ el complemento ortogonal de $I$ respecto de este producto escalar?</li>
+<li>Escribir la fórmula para calcular la proyección ortogonal de un polinomio genérico $p(x)=a_0 +a_1 x+a_2 x^2 +a_3 x^3$ sobre $P$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular bases de $P$ e $I$ y comprobar que $I$ y $P$ son complementarios.<br>
+Para calcular la base de $P$ escribimos la condición $p(x)=p(-x)$ sobre un polinomio genérico, $p(x)=a_0+a_1 x+a_2 x^2 +a_3 x^3$:
+$$a_0+a_1 x+a_2 x^2 +a_3 x^3=a_0-a_1 x+a_2 x^2 -a_3 x^3,$$
+y nos queda $2a_1 x+ 2a_3x^3=0$, por tanto, para que este polinomio sea cero, deben ser cero ambos coeficientes:
+$$a_1=0,\\
+a_3=0,$$
+que son las ecuaciones cartesianas del subespacio. Una base será $\{1,x^2\}$, o bien, utilizando coordenadas respecto 
+de la base estándar $\{1,x,x^2,x^3\}$, $\{(1,0,0,0),(0,0,1,0)\}$.<br>
+De la misma forma para calcular la base de $I$ escribimos la condición $p(x)=-p(-x)$ sobre un polinomio genérico, $p(x)=a_0+a_1 x+a_2 x^2 +a_3 x^3$:
+$$a_0+a_1 x+a_2 x^2 +a_3 x^3=-(a_0-a_1 x+a_2 x^2 -a_3 x^3), $$
+y nos queda $2a_0 + 2a_2x^2=0$, por tanto, para que este polinomio sea cero, deben ser cero ambos coeficientes:
+$$a_0=0,\\
+a_2=0,$$
+que son las ecuaciones cartesianas del subespacio. Una base será $\{x,x^3\}$, o bien, utilizando coordenadas respecto 
+de la base estándar $\{1,x,x^2,x^3\}$, $\{(0,1,0,0),(0,0,0,1)\}$.
+</li>
+
+<li>Calcular  bases ortogonales de $P$ y de $I$.<br>
+Utilizando el método de Gram-Schmidt en ambos casos, sólo es necesario el cálculo de un vector.<br>
+Comenzamos con $P$:
+$$p_1(x)=1,\\
+p_2 (x)= x^2 +\lambda \cdot 1,$$
+Calculamos el valor de $\lambda$ para que $\langle p_1(x),p_2(x)\rangle=0$:
+$$0= \int_{-1}^{1} p_1(x)p_2(x)dx = \int_{-1}^{1} 1\cdot(x^2+\lambda )dx = \left. \frac{x^3}{3}+ \lambda x \right]_{-1}^{1} = 
+(1/3 +\lambda )-(-1/3-\lambda),
+$$
+y nos queda  $ 2(1/3 + \lambda)=0$ con lo que $\lambda = -1/3$. Así una base ortogonal de $P$ es $\{1, x^2-1/3 \}$.<br>
+Ahora para  $I$:
+$$p_1(x)=x,\\
+p_2 (x)= x^3 +\lambda \cdot 1.$$
+Calculamos el valor de $\lambda$ para que $\langle p_1(x),p_2(x)\rangle=0$:
+$$0= \int_{-1}^{1} p_1(x)p_2(x)dx = \int_{-1}^{1} x\cdot(x^3+\lambda x )dx = \left. \frac{x^5}{5}+ \lambda \frac{x^3}{3} \right]_{-1}^{1} = 
+(1/5 + (1/3)\lambda )-(-(1/5)-(1/3)\lambda),
+$$
+y nos queda $ 2(1/5 + (1/3)\lambda)=0$ con lo que $\lambda = -5/3$.Así una base ortogonal de $I$ es $\{x, x^3-(5/3)x \}$.
+</li>
+
+<li>¿Es $P$ el complemento ortogonal de $I$ respecto de este producto escalar?<br>
+Sólo es necesario comprobar que cada uno de los vectores de una base de $P$ es ortogonal con todos los de una base de $I$.<br>
+Usamos las bases calculadas en el apartado a):
+$$\langle 1,x\rangle=\int_{-1}^{1} 1\cdot x dx =  \left. \frac{x^2}{2}\right]_{-1}^{1}=0$$
+$$\langle 1,x^3\rangle=\int_{-1}^{1} 1\cdot x^3 dx =  \left. \frac{x^4}{4}\right]_{-1}^{1}=0$$
+$$\langle x^2,x\rangle=\int_{-1}^{1} x^2\cdot x dx =  \left. \frac{x^4}{4}\right]_{-1}^{1}=0$$
+$$\langle x^2,x^3\rangle=\int_{-1}^{1} x^2\cdot x^3 dx =  \left. \frac{x^6}{6}\right]_{-1}^{1}=0$$
+</li>
+<li>Escribir la fórmula para calcular la proyección ortogonal de un polinomio genérico $p(x)=a_0 +a_1 x+a_2 x^2 +a_3 x^3$ sobre $P$.<br>
+Pueden usarse las cartesianas de $P$ y de su ortogonal que es $I$ para descomponer el vector genérico
+$$(a_0,a_1,a_2,a_3)=(a,b,c,d)+(a_0 -a,a_1 -b, a_2 -c, a_3 -d).$$
+Como el primer vector debe estar en $P$ se tiene $b=0$ y $d=0$. Como el segundo sumando debe estar en $I$ entonces $a_0-a=0$ y $a_2-c=0$.
+Entonces se tiene que la proyección sobre $P$ es $(a_0,0,a_2,0)$ o bien $a_0+a_2x^2$.
+</li>
+</ol>
+</details>
+</article>
+
+<article>
+
+En $\mathbb{R}^{4}$ con el producto escalar usual se considera el subespacio
+$$U= \mathcal{L} ((1,1,0,1)),$$
+y el endomorfismo $f:\mathbb{R}^{4} \to \mathbb{R}^{4}$ dado por 
+$$\begin{array}{rl}
+f(1,-1,0,0)&=(1,-1,0,0),\\
+f(1,0,0,-1)&=(1,0,0,-1),\\
+f(0,0,1,0)&=(0,0,1,0),\\
+f(1,1,0,1)&=(0,0,0,0).\\
+\end{array}
+$$
+
+<ol type="a">
+<li>Calcula la proyección ortogonal sobre $U$ de cada uno de los vectores de la base canónica.</li>
+<li>Calcula la proyección ortogonal sobre $U^{\perp}$ de cada uno de los vectores de la base canónica.</li>
+<li>Calcula la matriz asociada a $f$ respecto de la base $\overline{B}=\{(1,-1,0,0),(1,0,0,-1),(0,0,1,0),(1,1,0,1)\}$.</li>
+<li>Calcula la matriz asociada al endomorfismo respecto de la base canónica.</li>
+<li>Calcula bases del núcleo y la imagen de $f$.</li>
+</ol>
+
+<details>
+<summary>Solución</summary>
+
+<ol type="a">
+<li>Calcular la proyección ortogonal sobre $U$ de cada uno de los vectores de la base canónica.<br>
+Como $U$ tiene dimensión 1, es fácil calcular la proyección usando los coeficientes de Fourier:
+$$\begin{align*}
+p_U (1,0,0,0)&=\frac{\langle(1,0,0,0),(1,1,0,1)\rangle}{\langle(1,1,0,1),(1,1,0,1)\rangle}(1,1,0,1)=\frac{1}{3}(1,1,0,1)=(1/3,1/3,0,1/3),\\
+p_U (0,1,0,0)&=\frac{\langle(0,1,0,0),(1,1,0,1)\rangle}{\langle(1,1,0,1),(1,1,0,1)\rangle}(1,1,0,1)=\frac{1}{3}(1,1,0,1)=(1/3,1/3,0,1/3),\\
+p_U (0,0,1,0)&=\frac{\langle(0,0,1,0),(1,1,0,1)\rangle}{\langle(1,1,0,1),(1,1,0,1)\rangle}(1,1,0,1)=(0,0,0,0),\\
+p_U (0,0,0,1)&=\frac{\langle(0,0,0,1),(1,1,0,1)\rangle}{\langle(1,1,0,1),(1,1,0,1)\rangle}(1,1,0,1)=\frac{1}{3}(1,1,0,1)=(1/3,1/3,0,1/3).\\
+\end{align*}$$
+</li>
+
+<li>Calcular la proyección ortogonal sobre $U^{\perp}$ de cada uno de los vectores de la base canónica.<br>
+$p_{U^{\perp}} (v)=v-p_U (v)$
+$$\begin{align*}
+p_{U^{\perp}}(1,0,0,0)&=(1,0,0,0)-(1/3,1/3,0,1/3)=(2/3, -1/3,0, -1/3),\\
+p_{U^{\perp}}(0,1,0,0)&=(0,1,0,0)-(1/3,1/3,0,1/3)=(-1/3, 2/3,0, -1/3),\\
+p_{U^{\perp}}(0,0,1,0)&=(0,0,1,0)-(0,0,0,0)=(0,0,1,0),\\
+p_{U^{\perp}}(0,0,0,1)&=(0,0,0,1)-(1/3,1/3,0,1/3)=(-1/3, -1/3,0, 2/3).\\
+\end{align*}$$
+</li>
+
+<li>Calcular la matriz asociada a $f$ respecto de la base $\overline{B}$.<br>
+Tenemos calculadas las imágenes de los vectores de $\overline{B}$, así que sólo tenemos que calcular sus coordenadas respecto de $\overline{B}$, que son inmediatas
+$$\begin{array}{rll}
+f(1,-1,0,0)&=(1,-1,0,0)&=(1,0,0,0)_{\overline{B}},\\
+f(1,0,0,-1)&=(1,0,0,-1)&=(0,1,0,0)_{\overline{B}},\\
+f(0,0,1,0)&=(0,0,1,0)&=(0,0,1,0)_{\overline{B}},\\
+f(1,1,0,1)&=(0,0,0,0)&=(0,0,0,0)_{\overline{B}}.\\
+\end{array}$$
+Así que 
+$$\mathcal{M}(f,\overline{B})=\begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 &  0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 
+\end{pmatrix}.$$
+</li>
+
+<li>Calcular la matriz asociada al endomorfismo respecto de la base canónica.<br>
+$f$ es la proyección ortogonal sobre $U^{\perp}$, por lo que 
+ $$\mathcal{M}(f,B_c)=\begin{pmatrix}
+2/3 & -1/3 & 0 & -1/3\\
+-1/3 & 2/3 &  0 & -1/3\\
+0 & 0 & 1 & 0\\
+-1/3 & -1/3 & 0 & 2/3 
+\end{pmatrix}.$$
+</li>
+
+<li>Calcular bases del núcleo y la imagen de $f$.<br>
+Como $\operatorname{dim}(\operatorname{Im}(f))=\operatorname{rg}(\mathcal{M}(f,\overline{B}))=3$ entonces una base de la imagen son los tres primeros vectores de la base $\overline{B}$, es decir, $\operatorname{Im}(f)=U^{\perp}$.
+Así $\operatorname{dim}(\operatorname{ker}(f))=1$ y como $f(1,1,0,1)=(0,0,0,0)$, entonces una base de $\operatorname{ker}(f)$ es $\{(1,1,0,1)\}$, con lo que $\operatorname{ker}(f)=U$. 
+</li>
+</ol>
+</details>
+</article>
