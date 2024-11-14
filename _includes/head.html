@@ -115,3 +115,21 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     }
   }
 </script>
+
+<script type="text/javascript" language="javascript">
+  function CF() {
+    var xs = document.querySelectorAll("[class*='cf']");
+    var div = document.getElementById("showallbutton");
+    var i;
+    //console.log(xs);
+    console.log(casilla_cf.checked);
+    for(i=0; i<xs.length; i++) {
+        x = xs[i]
+        if (casilla_cf.checked) {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        } 
+      }  
+  }
+</script>

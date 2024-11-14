@@ -32,13 +32,17 @@ article {
 }
 </style>
 
-
 # Matrices y sistemas de ecuaciones
 
-<p>  <button id="showallbutton" class="button" style="float: right;" onclick="mostrarCF();">Ocultar CF</button> </p>
-
-
 Los ejercicios aquí mostrados han sido amablemente proporcionados por [Evangelina Santos](https://www.ugr.es/~esantos/) y maquetados por [Juan Rivas](https://github.com/MrRiversGit).
+
+<p> En principio se muestran ejercicios sobre cuerpos finitos y sobre los racionales y reales. Puedes cambiar esta opción marcando o desmarcando la siguiente casilla.<br>
+<input type="checkbox" id="casilla_cf" value="cfon" checked onclick="CF();"> Mostrar ejercicios sobre cuerpos finitos. </p>
+
+<!--
+Si quieres ocultar o mostrar los ejercicios referentes a cuerpos finitos, puedes hacerlo pulsando este botón. <button id="showallbutton" class="button" style="display:inline;vertical-align: middle;" onclick="mostrarCF();">Ocultar CF</button>  
+ </p>-->
+
 
 ## Ejercicios resueltos 
 
