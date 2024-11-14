@@ -9,27 +9,9 @@ tag: problemas
     font-size: 18px;
   }
 }
-
-
-body {
-  counter-reset: article;
-}
-
-article:before {
-  counter-increment: article;
-  content: "Ejercicio " counter(article) ". ";
-  font-weight: bold;
-}
-
-article {
-  border-style: solid;
-  border-width: 1px 1px 1px 5px;
-  border-color: gray gray gray gray;
-  border-radius: 5px;
-  padding: 0.5em 0.5em 0em 0.5em;
-  margin-bottom: 0.5em;
-}
 </style>
+
+<!-- LTeX: language=es-ES --->
 
 # Exámenes de la asignatura
 

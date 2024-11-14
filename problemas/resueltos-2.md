@@ -9,32 +9,15 @@ tag: problemas
     font-size: 18px;
   }
 }
-
-
-
-body {
-  counter-reset: article;
-}
-
-article:before {
-  counter-increment: article;
-  content: "Ejercicio " counter(article) ". ";
-  font-weight: bold;
-}
-
-article {
-  border-style: solid;
-  border-width: 1px 1px 1px 5px;
-  border-color: gray gray gray gray;
-  border-radius: 5px;
-  padding: 0.5em 0.5em 0em 0.5em;
-  margin-bottom: 0.5em;
-}
 </style>
 
+<!-- LTeX: language=es-ES --->
 # Espacios vectoriales
 
 Los ejercicios aquí mostrados han sido amablemente proporcionados por [Evangelina Santos](https://www.ugr.es/~esantos/) y maquetados por [Juan Rivas](https://github.com/MrRiversGit).
+
+En principio se muestran ejercicios sobre cuerpos finitos y sobre los racionales y reales. Puedes cambiar esta opción marcando o desmarcando la siguiente casilla.<br>
+<input type="checkbox" id="casilla_cf" value="cfon" checked onclick="CF();"> Mostrar ejercicios sobre cuerpos finitos. 
 
 ## Ejercicios resueltos 
 
@@ -536,7 +519,7 @@ $$\begin{pmatrix}
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 Determina si los siguientes conjuntos de vectores generan al
 espacio vectorial dado.
 
@@ -601,7 +584,7 @@ que como tiene una fila entera de ceros tiene rango menor que cuatro, luego no s
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 
 Sea $V = \mathbb{Z}_3^4$ y sean los subespacios vectoriales
 
@@ -829,7 +812,7 @@ son unas ecuaciones paramétricas de $W$.</li>
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 <ol type="a">
 
 <li>Calcula las coordenadas del vector $v=(1,1)_B$ respecto de $B'$ siendo

@@ -9,35 +9,15 @@ tag: problemas
     font-size: 18px;
   }
 }
-
-
-
-body {
-  counter-reset: article;
-}
-
-article:before {
-  counter-increment: article;
-  content: "Ejercicio " counter(article) ". ";
-  font-weight: bold;
-}
-
-article {
-  border-style: solid;
-  border-width: 1px 1px 1px 5px;
-  border-color: gray gray gray gray;
-  border-radius: 5px;
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  margin-bottom: 0.5em;
-}
 </style>
 
+<!-- LTeX: language=es-ES --->
 # Matrices y sistemas de ecuaciones
 
 Los ejercicios aquí mostrados han sido amablemente proporcionados por [Evangelina Santos](https://www.ugr.es/~esantos/) y maquetados por [Juan Rivas](https://github.com/MrRiversGit).
 
-<p> En principio se muestran ejercicios sobre cuerpos finitos y sobre los racionales y reales. Puedes cambiar esta opción marcando o desmarcando la siguiente casilla.<br>
-<input type="checkbox" id="casilla_cf" value="cfon" checked onclick="CF();"> Mostrar ejercicios sobre cuerpos finitos. </p>
+En principio se muestran ejercicios sobre cuerpos finitos y sobre los racionales y reales. Puedes cambiar esta opción marcando o desmarcando la siguiente casilla.<br>
+<input type="checkbox" id="casilla_cf" value="cfon" checked onclick="CF();"> Mostrar ejercicios sobre cuerpos finitos. 
 
 <!--
 Si quieres ocultar o mostrar los ejercicios referentes a cuerpos finitos, puedes hacerlo pulsando este botón. <button id="showallbutton" class="button" style="display:inline;vertical-align: middle;" onclick="mostrarCF();">Ocultar CF</button>  

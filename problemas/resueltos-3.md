@@ -9,35 +9,20 @@ tag: problemas
     font-size: 18px;
   }
 }
-
-
-body {
-  counter-reset: article;
-}
-
-article:before {
-  counter-increment: article;
-  content: "Ejercicio " counter(article) ". ";
-  font-weight: bold;
-}
-
-article {
-  border-style: solid;
-  border-width: 1px 1px 1px 5px;
-  border-color: gray gray gray gray;
-  border-radius: 5px;
-  padding: 0.5em 0.5em 0em 0.5em;
-  margin-bottom: 0.5em;
-}
 </style>
 
+<!-- LTeX: language=es-ES --->
 # Aplicaciones lineales
 
 Los ejercicios aquí mostrados han sido amablemente proporcionados por [Evangelina Santos](https://www.ugr.es/~esantos/) y maquetados por [Juan Rivas](https://github.com/MrRiversGit).
 
+En principio se muestran ejercicios sobre cuerpos finitos y sobre los racionales y reales. Puedes cambiar esta opción marcando o desmarcando la siguiente casilla.<br>
+<input type="checkbox" id="casilla_cf" value="cfon" checked onclick="CF();"> Mostrar ejercicios sobre cuerpos finitos. 
+
+
 ## Ejercicios resueltos 
 
-<article>
+<article class="cf" style="display:block;">
 Determina cuáles de las siguientes aplicaciones son lineales:
 
 <ol type="a">
@@ -119,7 +104,7 @@ $$M_{B_sB_s}(D)=\begin{pmatrix}
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 
 Se considera la matriz sobre $\mathbb{Z}_5$: 
 $$A=\begin{pmatrix}
@@ -397,7 +382,7 @@ Concluimos que solo es diagonalizable en el caso $a=b=0$.
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 Sea $f:(\mathbb{Z}_{13})^3 \longrightarrow  (\mathbb{Z}_{13})^3 $ la aplicación lineal dada
 por:
 $$f(x,y,z)=(7x+12y+4z, x+6y+3z, 5x+6y+12z).$$
@@ -566,7 +551,7 @@ Basta realizar la operación $f^{2432}(1,2,3)=A^{2431}(1,2,3)^T$.</li>
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 Sea $f:(\mathbb{Z}_{5})^3\longrightarrow (\mathbb{Z}_{5})^3$ la
 aplicación lineal dada por:
 $$

@@ -122,7 +122,7 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     var div = document.getElementById("showallbutton");
     var i;
     //console.log(xs);
-    console.log(casilla_cf.checked);
+    //console.log(casilla_cf.checked);
     for(i=0; i<xs.length; i++) {
         x = xs[i]
         if (casilla_cf.checked) {
@@ -133,3 +133,28 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
       }  
   }
 </script>
+
+
+<!-- contador para artículos (ejercicios) -->
+
+<style>
+  body {
+    counter-reset: article;
+  }
+  
+  article:before {
+    counter-increment: article;
+    content: "Ejercicio " counter(article) ". ";
+    font-weight: bold;
+  }
+  
+  article {
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    border-color: gray gray gray gray;
+    border-radius: 5px;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    margin-bottom: 0.5em;
+  }
+  </style>
+  
