@@ -32,13 +32,17 @@ article {
 }
 </style>
 
+
 # Matrices y sistemas de ecuaciones
+
+<p>  <button id="showallbutton" class="button" style="float: right;" onclick="mostrarCF();">Ocultar CF</button> </p>
+
 
 Los ejercicios aquí mostrados han sido amablemente proporcionados por [Evangelina Santos](https://www.ugr.es/~esantos/) y maquetados por [Juan Rivas](https://github.com/MrRiversGit).
 
 ## Ejercicios resueltos 
 
-<article>
+<article class="cf" style="display:block;">
 Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$ y $\mathbb{Z}_5$.
 
 $$\left\{\begin{aligned} x_{2}-2x_{3}&= -4,\\ x_{1}+x_{2}-x_{3}&=0,\\ 2x_{1}-x_{2}+x_{3}&=3. \end{aligned}\right.$$
@@ -342,7 +346,7 @@ y de esta forma es compatible determinado.
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$, $\mathbb{Z}_5$ y $\mathbb{Z}_2$.
 
 $$\left\{\begin{aligned} x-y+z+t+v&=0,\\ x+y+z+t-v&=0,\\ -x-y+z+t-v&=0. \end{aligned}\right.$$
@@ -496,7 +500,7 @@ luego es compatible indeterminado y tiene un total de $2^4=16$ soluciones.
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 Resuelve el siguiente sistema de ecuaciones lineales considerado en $\mathbb{Q}$, $\mathbb{Z}_3$, $\mathbb{Z}_5$ y $\mathbb{Z}_7$.
 
 $$\left\{\begin{aligned} x_{1}+x_{2}+x_{3}&= 2,\\ x_{1}+2x_{2}+x_{3}&=1,\\ x_{2}&=3. \end{aligned}\right.$$
@@ -508,7 +512,7 @@ Trabajaremos directamente con la matriz de coeficientes ampliada, buscando en ca
 
 <h3>En $\mathbb{Z}_7$:</h3>
 
-$$\begin{align*}\left(\begin{array}{ccc|c}
+$$\begin{aligned}\left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 1 & 2\\
 1 & 2 & 1 & 1\\
 0 & 1 & 0 &  3
@@ -536,7 +540,7 @@ f_2-6f_3\rightarrow f_2 \end{array}}
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
 \end{array}\right).
-\end{align*}
+\end{aligned}
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -556,7 +560,7 @@ Como hay un pivote en la columna de términos independientes (es decir, aparece 
 
 <h3>En $\mathbb{Z}_5$:</h3>
 
-$$\begin{align*}
+$$\begin{aligned}
 \left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 1 & 2\\
 1 & 2 & 1 & 1\\
@@ -585,7 +589,7 @@ f_2-4f_3\rightarrow f_2 \end{array}}
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
 \end{array}\right).
-\end{align*}
+\end{aligned}
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -603,7 +607,7 @@ Como hay un pivote en la columna de términos independientes (es decir, aparece 
 
 <h3>En $\mathbb{Z}_3$:</h3>
 
-$$\begin{align*}
+$$\begin{aligned}
 \left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 1 & 2\\
 1 & 2 & 1 & 1\\
@@ -632,7 +636,7 @@ f_2-4f_3\rightarrow f_2 \end{array}}
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
 \end{array}\right).
-\end{align*}
+\end{aligned}
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -650,7 +654,7 @@ Como hay un pivote en la columna de términos independientes (es decir, aparece 
 
 <h3>En $\mathbb{Q}$:</h3>
 
-$$\begin{align*}
+$$\begin{aligned}
 \left(\begin{array}{ccc|c}
 \boxed{1} & 1 & 1 & 2\\
 1 & 2 & 1 & 1\\
@@ -680,7 +684,7 @@ f_2+f_3\rightarrow f_2 \end{array}}
 0 & \boxed{1} & 0 &  0\\
 0 & 0 & 0 & \boxed{1}\\
 \end{array}\right).
-\end{align*}
+\end{aligned}
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -698,7 +702,7 @@ Como hay un pivote en la columna de términos independientes (es decir, aparece 
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 En el cuerpo $\mathbb{Z}_5$ se considera la matriz
 $$C = \begin{pmatrix} 1&1&1&1 \\ 0&2&1&2 \\ 0&4&1&1 \\ \end{pmatrix}.$$
 
@@ -715,7 +719,7 @@ $$C = \begin{pmatrix} 1&1&1&1 \\ 0&2&1&2 \\ 0&4&1&1 \\ \end{pmatrix}.$$
 Realizamos operaciones elemntales por filas hasta obtener una matriz escalonada reducida por filas:
 
 $$
-\begin{align*}
+\begin{aligned}
 \left( 
 \begin{array}{rrrr}
 \boxed{1} & 1 & 1 & 1\\
@@ -753,7 +757,7 @@ f_2-3f_3\rightarrow f_2 \end{array}}
 0 & 0 & \boxed{1} & 3\\
 \end{array}
 \right).
-\end{align*}
+\end{aligned}
 $$
 
 Por tanto la forma de Hermite por filas es 
@@ -800,7 +804,7 @@ Hay cuatro elecciones posibles. Solo damos un ejemplo de cómo calcularlo.
 Elegimos por ejemplo las tres primeras columnas (como el determinante vale $2-4=-2=3$ en  $\mathbb{Z}_5$, es regular) y unimos una matriz identidad a la derecha. Para calcular la inversa realizamos operaciones elementales por filas en las filas de $(A\mid I)$:
 
 $$
-\begin{align*}
+\begin{aligned}
 (A \mid I)& =\left( 
 \begin{array}{rrr|rrr}
 \boxed{1} & 1 & 1 & 1 & 0 & 0\\
@@ -838,7 +842,7 @@ f_2-3f_3\rightarrow f_2 \end{array}}
 0 & 0 & \boxed{1} & 0 & 2 & 4\\
 \end{array}
 \right)=(I\mid A^{-1}).
-\end{align*}
+\end{aligned}
 $$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
@@ -877,7 +881,7 @@ $$\left(
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 Encuentra, si es posible, $P \in \mathcal{M}_{4}(\mathbb{Z}_3)$, regular, tal que $PA=B$, donde
 $$A = \begin{pmatrix} 1&1&0&2&1 \\ 2&1&1&2&0 \\ 0&2&1&0&2 \\ 0&1&2&1&0 \end{pmatrix}, \qquad B = \begin{pmatrix} 1&1&0&1&2 \\ 1&2&2&1&0 \\ 1&0&1&2&0 \\ 2&2&0&0&0 \end{pmatrix}.$$
 
@@ -890,7 +894,7 @@ Sabemos que $A\sim_f B$ si y sólo si existe  $P$ regular tal que $PA=B$. Por ta
 <li> En primer lugar calculamos las formas de Hermite por filas para comprobar que ambas, la de $A$ y la de $B$ son iguales. Al mismo tiempo calcularemos matrices de paso correspondientes a cada una de ellas.
 
 $$
-\begin{align*}
+\begin{aligned}
 (A \mid I) & = \left(\begin{array}{ccccc|cccc}
 \boxed{1} & 1 & 0 & 2 & 1 & 1 & 0 & 0 & 0  \\
 2 & 1 & 1 & 2 & 0 & 0 & 1 & 0 & 0  \\ 
@@ -926,10 +930,10 @@ $$
 0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 2 & 0 \\ 
 0 & 0 & 0 & 0 & 0 & 2 & 2 & 2 & 1 \\
 \end{array}\right)=(H_A|P_A).
-\end{align*}$$
+\end{aligned}$$
 
 $$
-\begin{align*}
+\begin{aligned}
 (B \mid I) & = \left(\begin{array}{ccccc|cccc}
 \boxed{1} & 1 & 0 & 1 & 2 & 1 & 0 & 0 & 0  \\
 1 & 2 & 2 & 1 & 0 & 0 & 1 & 0 & 0  \\ 
@@ -952,7 +956,7 @@ $$
 0 & 0 & 0 & \boxed{1} & 2 & 1 & 1 & 1 & 0 \\ 
 0 & 0 & 0 & 0 & 0 & 0 & 2 & 2 & 1 \\
 \end{array}\right)=(H_B \mid P_B).
-\end{align*}
+\end{aligned}
 $$</li>
 
 <li> Hemos comprobado que $H_A=H_B$ y por tanto $A\sim_f B$ y existe una matriz $P$ tal que $PA=B$.</li>
@@ -966,7 +970,7 @@ Luego una matriz que verifica la condición pedida sería el producto $(P_B)^{-1
 
 Para calcularla necesitamos en primer lugar calcular la inversa de $P_B$, también usando operaciones elementales por filas.
 
-$$\begin{align*}
+$$\begin{aligned}
 (P_B \mid I) & = \left(\begin{array}{cccc|cccc}
  1 & 1 & 2 & 0  & 1 & 0 & 0 & 0\\
  2 & 1 & 0 & 0  & 0 & 1 & 0 & 0\\ 
@@ -1020,7 +1024,7 @@ $$\begin{align*}
  0 & 0 & \boxed{1} & 0  & 1 & 0 & 2 & 0\\ 
  0 & 0 & 0 & \boxed{1}  & 2 & 2 & 0 & 1\\
 \end{array}\right).
-\end{align*}$$
+\end{aligned}$$
 
 Comprobemos el resultado obtenido con <code>sage</code>.
 
@@ -1068,7 +1072,7 @@ P*A==B
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 Sea $$A=\left (\begin{array}{cccc} 2 & 1 & 3 & 0 \\ 1 & 2 & 1 & 1 \\ 3 & 4 & 2 & 1 \end{array}\right ) \in \mathcal{M}_{3\times 4}({\mathbb{Z}}_5)$$
 
 <ol type="a">
@@ -1298,7 +1302,7 @@ $$\left(\begin{array}{ccc}
 Si pensamos primero en el orden de $C$, como $A$ tiene tres filas y cuatro columnas, necesariamente $C$ debe tener tres columnas. Por otro lado, como la matriz identidad es cuadrada, en este caso será una matriz $4\times4$, por lo que $C$ debe tener cuatro filas.<br>
 
 El argumento más fácil de utilizar es posterior al momento en que nos encontramos en el desarrollo del tema. Se usa:
-$$\operatorname{rg}(A\cdot B)\leq mín\{\operatorname{rg}(A),\operatorname{rg}(B)\}$$
+$$\operatorname{rg}(A\cdot B)\leq \min\{\operatorname{rg}(A),\operatorname{rg}(B)\}$$
 en este caso, por los órdenes de $A$ y $C$ su rango máximo posible es $3$, luego $\operatorname{rg}(C\cdot A)\leq 3$ mientras que $\operatorname{rg}(I_4)=4.$<br>
 
 También es posible plantearlo de una forma similar al apartado 2, al resolver los sistemas encontraremos que son incompatibles.</li>
@@ -1394,7 +1398,7 @@ show(Ab,"~",Ab.rref())
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 Calcula el rango de la siguiente matriz, con coeficientes en $\mathbb{Z}_3$, según los valores de los parámetros $a$ y $b$.
 $$\begin{pmatrix} 1 & a & 0 & 1 \\ 2 & 1 & 1 & b \\ 0 & a & b & a+b \end{pmatrix}$$
 
@@ -1466,7 +1470,7 @@ que también tiene rango 2 (recordemos que estamos en $\mathbb{Z}_3$).
 </details>
 </article>
 
-<article>
+<article class="cf" style="display:block;">
 Sea $$A=\left( \begin{array}{cccc} 3-\lambda & 1 & 1 & 0\\ 5 &-\lambda & 0 & 0\\ 0 & -\lambda & -\lambda & 1\\ 0 & -1 & -1 & 2-\lambda \end{array}\right).$$
 <ol type="a">
 <li>Calcula el determinante de la matriz $A$ considerando sus coeficientes en $\mathbb{Q}$.</li>
@@ -1830,7 +1834,7 @@ $$
 
 <ol type="a">
 <li>Calcular el determinante.<br>
-$$\begin{align*}
+$$\begin{aligned}
 |A|= &\left|\begin{array}{cccc}
 1 & a-1 & a & 1\\
 -1 & a-1 & a & 1\\
@@ -1854,7 +1858,7 @@ $$\begin{align*}
 2a-2 & 2a \\
 1-a & a  
 \end{array}\right|=4a^2-4a=4a(a-1).
-\end{align*}$$</li>
+\end{aligned}$$</li>
 
 <li>Calcular la forma de Hermite por filas según los valores de $a$.<br>
 Por el Teorema de las matrices regulares, si $|A|\not = 0$ la forma de Hermite por filas de $A$ es $I_4$, por tanto si $a\not = 0,1$ entonces $H=I_4$.
@@ -1993,7 +1997,7 @@ $Q\cdot B \cdot P=C$
 El rango de $A$ es dos, las filas priemra y tercera son idénticas y también lo son la segunda y la cuarta, además el menor principal de orden dos es distinto de cero. Como $C$ es de rango dos y del mismo orden, entonces $A$ y $C$ son equivalentes y por tanto existen matrices regulares $Q$ y $P$ verificando $Q\, A \, P=C$. Sin embargo $B$ tiene rango tres (el menor principal de orden tres es distinto de cero) y por tanto no es equivalente con $C$.<br>
 
 Para calcular $Q$ y $P$ realizamos operaciones elementales por filas y columnas sobre $A$ hasta obtener $C$. Una forma posible es transformar $A$ hasta su forma de Hermite por filas y después, a la matriz obtenida se le realizan operaciones elementales por columnas. También podrían realizarse unas y otras operaciones elementales en cualquier orden.
-$$\begin{align*}
+$$\begin{aligned}
 \left(\begin{array}{ccc|cccc}
 2 & 1 & 2 & 1 & 0 & 0 & 0\\
 1 & 2 & 2 & 0 & 1 & 0 & 0\\
@@ -2030,7 +2034,7 @@ $$\begin{align*}
 0 & 0 & 0 & -1 & 0 & 1 & 0\\
 0 & 0 & 0 & 0 & -1 & 0 & 1
 \end{array}\right)
-\end{align*}$$
+\end{aligned}$$
 Ahora por columnas
 $$
 \left(\begin{array}{ccc}
@@ -2092,7 +2096,7 @@ a & 1 & 0 & 1\\
 
 <ol type="a">
 <li>Calcular el determinante de $A$.<br>
-$$\begin{align*}
+$$\begin{aligned}
 |A| & = \left|\begin{array}{rrrr}
 a & 1 & 0 & 1\\
 1 & a & 0 & 1\\
@@ -2104,7 +2108,7 @@ a-1 & 1-a & 0 & 0\\
 0 & 0 & a-1 & 1-a\\
 1 & 0 & 1 & a
 \end{array}\right|\\
-& =\begin{array}{l}\text{desarrollando}\\ \text{por la 1º fila} \end{array}  = 
+& =\begin{array}{l}\text{desarrollando}\\ \text{por la primera fila} \end{array}  = 
 (a-1)\left|  \begin{array}{ccc}
  a & -a & 0 \\
 0 & a-1 & 1-a \\
@@ -2118,7 +2122,7 @@ a-1 & 1-a & 0 & 0\\
  \right|\\
 & =(a-1)a[a(a-1)+(a-1)]+(1-a)[a(1-a)]=(a-1)^2a(a+1)+(a-1)^2a\\
 & =(a-1)^2a[a+1+1]=(a-1)^2a(a+2).
-\end{align*}$$
+\end{aligned}$$
 </li> 
 
 <li>Determinar los valores de $a$ para los que la forma de Hermite por filas de $A$ es $I_4$.<br>
