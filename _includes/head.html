@@ -83,3 +83,35 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
 
 </head>
+
+
+<!---Mostrar cuerpos finitos-->
+<script type="text/javascript" language="javascript">
+  function mostrarCF() {
+    var xs = document.querySelectorAll("[class*='cf']");
+    var div = document.getElementById("showallbutton");
+    var i;
+    //console.log(xs);
+    if(div.innerHTML == "Ocultar CF"){
+      div.innerHTML = "Mostrar CF";
+      for(i=0; i<xs.length; i++) {
+        x = xs[i]
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        } 
+      }  
+    }else{
+      div.innerHTML = "Ocultar CF";
+      for(i=0; i<xs.length; i++) {
+        var x = xs[i]
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }   
+      }   
+    }
+  }
+</script>
