@@ -1,5 +1,5 @@
 ---
-title: Problemas resueltos
+title: 
 ---
 
 # Problemas resueltos
