@@ -1,6 +1,3 @@
----
-title: null
----
 
 # Problemas resueltos
 
