@@ -135,6 +135,7 @@ A las matrices de la forma $E_{ij}$, $E_i(k)$, $k\neq 0$, y $E_{ij}(k)$ se les l
 Por tanto, si $A\sim_f H$, entonces existe $P$ tal que $PA=H$, y además $P$ es un producto de matrices elementales. 
 
 Podemos calcular $P$ de la siguiente forma. Partimos de la matriz $(A \mid I_m)$, la matriz cuyas primeras $n$ columnas son las de $A$, y cuyas últimas columnas son las de $I_m.$ Si $A\sim_f H$ y $H$ es la forma escalonada reducida de $A$, entonces 
+
 $$(A \mid I_m)\sim_f (H \mid P).$$
 
 Nótese que $P$ es un producto de matrices elementales, y, por tanto, tiene inversa y su inversa también es un producto de matrices elementales.
@@ -164,6 +165,7 @@ Si $A\sim_f B$, entonces tanto $A$ como $B$ tienen la misma forma escalonada red
 Si $A\in\mathcal{M} _ n(K)$ es una matriz cuadrada y $H$ es su forma escalonada por filas, entonces $PA=H$ con $P$ un producto de matrices elementales. 
 
 La matriz $A$ tiene inversa si y sólo si $H$ es la matriz identidad, y por tanto, $A$ es un producto de matrices elementales. Para calcular la inversa de $A$, podemos usar las operaciones elementales por filas que llevan de $A$ a $H=I_n$, 
+
 $$(A\mid I_n)\sim_f (I_n\mid A^{-1}).$$
 
 
