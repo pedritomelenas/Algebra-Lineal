@@ -597,27 +597,27 @@ $$
 
 que son las ecuaciones paramétricas de $U$ (respecto de la base estándar en $\mathbb{R}^3$).
 
-Si consideramos $\lambda$ y $\mu$ variables, y para el término independiente usamos una columna (una para cada una de las coordenadas), le sistema anterior se puede escribir como 
+Si consideramos $\lambda$ y $\mu$ variables, y para el término independiente usamos una columna para las coordenadas, el sistema anterior se puede escribir como 
 
 $$
-\left(\begin{array}{rr|rrr}
-1 & 0 & 1 & 0 & 0 \\
-1 & 1 & 0 & 1 & 0 \\
-0 & 1 & 0 & 0 & 1
+\left(\begin{array}{rr|r}
+1 & 0 & x \\
+1 & 1 & y \\
+0 & 1 & z
 \end{array}\right).
 $$
 
 Si ahora calculamos la forma escalonada reducida por filas, obtenemos
 
 $$
-\left(\begin{array}{rr|rrr}
-1 & 0 & 0 & 1 & -1 \\
-0 & 1 & 0 & 0 & 1 \\
-0 & 0 & 1 & -1 & 1
+\left(\begin{array}{rr|c}
+1 & 0 & y-z \\
+0 & 1 & z \\
+0 & 0 & x-y-z
 \end{array}\right).
 $$
 
-La última fila nos dice que $x-y+z=0,$ que es la ecuación cartesiana o implícita de $U$ (respecto de la base usual de $\mathbb{R}^3$).
+Un elemento de coordenadas $(x,y,z)$ está en $U$ si el sistema anterior tiene solución, y eso ocurre si el rango de la matriz de coeficientes coincide con el de la matriz amplizada. Esto equivale a que $x-y+z=0,$ que es la ecuación cartesiana o implícita de $U$ (respecto de la base usual de $\mathbb{R}^3$).
 
 <div class="sage">
 <script type="text/x-sage">
