@@ -361,7 +361,7 @@ $$
 $$
 
 Así, los valores propios de $A$ son las raíces del polinomio $\vert A-\lambda I_n\vert \in K[\lambda],$ que se conoce como *polinomio característico* de $A,$ y lo denotaremos por $p_A(\lambda).$ Nótese que
-$\operatorname{gr}(p_A(\lambda)=n.$
+$\operatorname{gr}(p_A(\lambda))=n.$
 
 ### Propiedades 
 
@@ -369,7 +369,7 @@ $\operatorname{gr}(p_A(\lambda)=n.$
 
 2. Los valores propios de $A$ y $A^t$ coinciden.
 
-3. $\vert A\vert =0$ si y sólo si 0 es un valor propio de $A.$
+3. $\vert A\vert =0$ si y sólo si $0$ es un valor propio de $A.$
 
 4. Si $A$ es regular y $\lambda$ es un valor propio de $A,$ entonces $\lambda^{-1}$ lo es de $A^{-1}.$
 
