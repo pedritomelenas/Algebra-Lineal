@@ -273,7 +273,7 @@ $$
 \Vert \mathbf{v}-\mathbf{u} \Vert = \Vert \mathbf{v}-p_U(\mathbf{v})+p_U(\mathbf{v})-\mathbf{u} \Vert, 
 $$
 
-y como $\mathbf{v}-p_U(\mathbf{v})\in U^\perp$ y $p_U(\mathbf{v})-\mathbf{w}\in U,$ aplicando el Teorema de Pitágoras tenemos que 
+y como $\mathbf{v}-p_U(\mathbf{v})\in U^\perp$ y $p_U(\mathbf{v})-\mathbf{u}\in U,$ aplicando el Teorema de Pitágoras tenemos que 
 
 $$
 \Vert \mathbf{v}-\mathbf{u} \Vert^2 = \Vert \mathbf{v}-p_U(\mathbf{v)}\Vert^2+\Vert p_U(\mathbf{v})-\mathbf{u} \Vert^2, 
@@ -304,7 +304,7 @@ $$
 
 Si $B=\lbrace \mathbf{e} _1,\dots,\mathbf{e} _n\rbrace$ es una base ortonormal de $V,$ y $A=\mathcal{M}(f;B),$ entonces $a _{ij}=\langle f(\mathbf{e} _j),\mathbf{e}_i\rangle=\langle \mathbf{e} _j,f(\mathbf{e} _i) \rangle=a _{ji},$ y por tanto $A$ es simétrica.
 
-El recíproco también es cierto pues si $A$ es simétrica, entonces si $x$ y $y$ son las coordenadas de $\mathbf{u}$ y $\mathbf{v},$ respectivamente, tenemos que $\langle f(\mathbf{u}),\mathbf{v}\rangle = (Ax)^ty=x^tA^ty=x^t(Ay)=\langle \mathbf{u},f(\mathbf{v})\rangle.$
+El recíproco también es cierto pues si $A$ es simétrica, entonces si $x$ y $y$ son las coordenadas de $\mathbf{u}$ y $\mathbf{v},$ respectivamente, tenemos que $\langle f(\mathbf{u}),\mathbf{v}\rangle = (Ax^t)^ty^t=xA^ty^t=x(Ay^t)=\langle \mathbf{u},f(\mathbf{v})\rangle.$
 
 ### Resultado
 
