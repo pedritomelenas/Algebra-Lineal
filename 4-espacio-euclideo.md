@@ -2,6 +2,7 @@
 layout: page
 title: Espacio euclídeo
 ---
+<!-- LTeX: language=es -->
 
 # Espacios vectoriales euclídeos
 
@@ -30,8 +31,7 @@ que verifica las siguientes propiedades;
 
 ### Ejemplos 
 
-- $\langle \mathbf{u}, \mathbf{v} \rangle = {u}_1 {v}_1+\cdots+{u}_n {v}_n,$ para cualesquiera
-    $\mathbf{u}=({u}_1,\ldots,{u}_n)$ y $\mathbf{v}=({v}_1,\ldots, {v}_n)\in \mathbb{R}^n.$
+- $\langle \mathbf{u}, \mathbf{v} \rangle = {u}_1 {v}_1+\cdots+{u}_n {v}_n,$ para cualesquiera $\mathbf{u}=({u}_1,\ldots,{u}_n)$ y $\mathbf{v}=({v}_1,\ldots, {v}_n)\in \mathbb{R}^n.$
 
 - $\langle f,g \rangle = \displaystyle\int_a^b f(x) g(x) dx,$ para cualesquiera $f$ y $g$  funciones continuas en $[a,b].$
 
@@ -41,6 +41,27 @@ que verifica las siguientes propiedades;
 
 Un espacio vectorial $V$ dotado de un producto escalar $\langle \cdot, \cdot \rangle$ se denomina *espacio vectorial euclídeo* y se denota por $(V;\langle \cdot, \cdot \rangle).$
 
+## Matriz de Gram
+{: matriz-gram}
+
+Sea $(V;\langle \cdot, \cdot \rangle)$ un espacio vectorial euclídeo y sea $B=\lbrace \mathbf{v}_1,\dots,\mathbf{v}_n\rbrace$ una base de $V.$ Dado $\mathbf{u},\mathbf{v}\in V$ con coordenadas $(x_1,\dots,x_n)$ y $(y_1,\dots,y_n)$ respecto de $B,$ respectivamente, tenemos que 
+
+$$
+\begin{aligned}
+\langle \mathbf{u},\mathbf{v} \rangle  & =  \langle x_1 \mathbf{v}_1+\cdots+x_n \mathbf{v}_n, \mathbf{v}\rangle = x_1 \langle \mathbf{v}_1,\mathbf{v} \rangle + \cdots + x_n \langle \mathbf{v}_n,\mathbf{v} \rangle \\ 
+& = (x_1 \dots x_n) \begin{pmatrix} \langle \mathbf{v}_1,\mathbf{v} \rangle \\ \vdots \\ \langle \mathbf{v}_n,\mathbf{v} \rangle \end{pmatrix} = (x_1 \dots x_n) \begin{pmatrix} y_1 \langle \mathbf{v}_1,\mathbf{v}_1 \rangle + \dots + y_n \langle \mathbf{v}_1,\mathbf{v}_n \rangle \\ \vdots \\ y_1 \langle \mathbf{v}_n,\mathbf{v}_1 \rangle + \dots + y_n \langle \mathbf{v}_n,\mathbf{v}_n \rangle \end{pmatrix} \\ & = (x_1 \dots x_n) \begin{pmatrix} \langle \mathbf{v}_1,\mathbf{v}_1 \rangle & \cdots & \langle \mathbf{v}_1,\mathbf{v}_n \rangle \\ \vdots & \ddots & \vdots \\ \langle \mathbf{v}_n,\mathbf{v}_1 \rangle & \cdots & \langle \mathbf{v}_n,\mathbf{v}_n \rangle \end{pmatrix} \begin{pmatrix} y_1 \\ \vdots \\ y_n \end{pmatrix}.
+\end{aligned}
+$$
+
+La matriz
+
+$$
+G = \begin{pmatrix} \langle \mathbf{v}_1,\mathbf{v}_1 \rangle & \cdots & \langle \mathbf{v}_1,\mathbf{v}_n \rangle \\ \vdots & \ddots & \vdots \\ \langle \mathbf{v}_n,\mathbf{v}_1 \rangle & \cdots & \langle \mathbf{v}_n,\mathbf{v}_n \rangle \end{pmatrix}
+$$
+
+es la *matriz de Gram* de $\langle \cdot,\cdot\rangle$ asociada a la base $B.$
+
+###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-1.html) 
 
 ## Norma
 
@@ -60,13 +81,17 @@ Para todo $\mathbf{v}\in V$ y $a\in K,$
 - $\Vert \mathbf{v}\Vert=0$ si y sólo si $\mathbf{v}=\mathbf{0},$
 - $\Vert a\mathbf{v}\Vert=\vert a\vert \Vert \mathbf{v}\Vert.$
 
-### [Desigualdad de Cauchy-Schwartz](https://es.wikipedia.org/wiki/Desigualdad_de_Cauchy-Bunyakovsky-Schwarz)
+### Desigualdad de Cauchy-Schwartz 
 
 Dados $\mathbf{u},\mathbf{v}\in V,$
 
 $$
 \vert\langle \mathbf{u},\mathbf{v}\rangle | \le \Vert \mathbf{u}\Vert \Vert \mathbf{v}\Vert.
 $$
+
+Demostración en [wikipedia](https://es.wikipedia.org/wiki/Desigualdad_de_Cauchy-Bunyakovsky-Schwarz).
+
+
 
 Como consecuencia de la desigualdad de Cauchy-Schwartz obtenemos que 
 
@@ -234,7 +259,7 @@ Supongamos ahora que $(V;\langle \cdot, \cdot \rangle)$ es un espacio vectorial 
  \end{array}\right.
  $$
 
-A la matriz de coeficientes de este sistema 
+Nótese que la matriz de coeficientes de este sistema es 
 
 $$
 G = \begin{pmatrix} 
@@ -244,9 +269,9 @@ G = \begin{pmatrix}
 \end{pmatrix},
 $$
 
-se le conoce como *matriz de Gram* de $\langle \cdot,\cdot\rangle$ asociada a la base $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ de $U.$
+que es la matriz de Gram de $\langle \cdot,\cdot\rangle$ (restringigo a $U$) asociada a la base asociada a la base $\lbrace\mathbf{u}_1,\ldots,\mathbf{u}_m\rbrace$ de $U.$
 
-Si $B=\lbrace\mathbf{v}_1,\dots,\mathbf{v}_n\rbrace$ es una base de $V,$ y $G$ es la matriz de Gram de $\langle \cdot,\cdot\rangle$ respecto de esa base, para cualesquiera $\mathbf{u}$ y $\mathbf{v}$ de $V$ con coordenadas $(u_1,\dots,u_n)$ y $(v_1,\dots,v_n),$ se tiene que 
+<!--Si $B=\lbrace\mathbf{v}_1,\dots,\mathbf{v}_n\rbrace$ es una base de $V,$ y $G$ es la matriz de Gram de $\langle \cdot,\cdot\rangle$ respecto de esa base, para cualesquiera $\mathbf{u}$ y $\mathbf{v}$ de $V$ con coordenadas $(u_1,\dots,u_n)$ y $(v_1,\dots,v_n),$ se tiene que 
 
 $$
 \langle \mathbf{u},\mathbf{v}\rangle =(u_1,\dots,u_n)\ G 
@@ -255,9 +280,8 @@ v_1\\
 \vdots\\ 
 v_n
 \end{pmatrix}.
-$$
+$$-->
 
-###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-1.html) 
 
 ### Teorema de Pitágoras
 
