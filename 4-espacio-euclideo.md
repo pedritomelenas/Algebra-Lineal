@@ -282,6 +282,31 @@ v_n
 \end{pmatrix}.
 $$-->
 
+### Ejemplo
+{: ejemplo-ortogonal}
+
+Consideremos en $\mathbb{R}^2$ es producto escalar usual, y tomemos como $U=\operatorname{L}_{\mathbb{R}}((2,1))$. Si ampliamos la base de $U$ con el vector $(1,-2)$, que es ortogonal a $(2,1)$, obtenemos la base ortogonal $B=\lbrace (2,1),(1,-2)\rbrace$ de $\mathbb{R}^2.$  Es fácil comprobar que la ecuación cartesiana de $U$ es $x_1-2x_2=0.$
+
+Sea $\mathbf{v}=(4,2)$. Entonces, $\mathbf{v}\in U$ y por tanto $p_U(\mathbf{v})=\mathbf{v}$. 
+
+Tomemos ahora $\mathbf{v}=(4,1)$ y calculemos su proyección ortogonal sobre $U$ usando los dos métodos descritos anteriormente. Usando los coeficiente de Fourier de $\mathbf{v}$ respecto de la base $B$, obtenemos que 
+
+$$
+\mathbf{v}= \frac{\langle (2,1), (4,1)\rangle}{\Vert (2,1)\Vert^2}(2,1)+\frac{\langle (1,-2),(4,1)\rangle}{\Vert (1,-2)\Vert^2}(1,-2) = \frac{9}{5}(2,1)+\frac{2}{5}(1,-2),  
+$$
+
+y por tanto $p_U(\mathbf{v})=\frac{9}{5}(2,1).$
+
+Veamos ahora cómo se calcula la proyección ortogonal usando el segundo método. Sabemos que $p_U(\mathbf{v})=(a,b)$ está en $U$ y que $\mathbf{v}-p_U(\mathbf{v})=(4-a,1-b)$ es ortogonal a $U$. Por tanto, $a-2b=0$ (la condición de que pertenece a $U$ y por tanto verifica sus ecuaciones implícitas) y $\langle (4-a,1-b),(2,1)\rangle=0,$ lo que nos da la ecuación $2(4-a)+1(1-b)=0.$ De aquí deducimos que $(a,b)$ es la solución del sistema
+
+$$
+\begin{cases}
+a-2b=0,\\
+2a+b=9.
+\end{cases}
+$$
+
+De aquí obtenemos $(a,b)=\frac{9}{5}(2,1)$.
 
 ### Teorema de Pitágoras
 
