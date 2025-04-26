@@ -364,7 +364,7 @@ $$
 
 dándose la igualdad para $\mathbf{u}=p_U(\mathbf{v}).$
 
-En la siguiente figura, retomamos el ejemplo anterior y observamos cómo varía la distancia entre el vector $\mathbf{v}$ y un vector $\mathbf{u}$ del espacio vectorial $U$. 
+En la siguiente figura, retomamos el ejemplo anterior y observamos cómo varía $\Vert \mathbf{v}-\mathbf{u}\Vert$ para $\mathbf{u}\in U$. 
 
 <div id="jxgbox2" class="jxgbox" style="width:50%; height:300px;"></div>
 
