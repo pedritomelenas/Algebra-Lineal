@@ -308,6 +308,30 @@ $$
 
 De aquí obtenemos $(a,b)=\frac{9}{5}(2,1)$.
 
+En la siguiente figura puedes desplazar el vector $v$ para observar cómo varía su proyección ortogonal sobre $U$.
+
+<div id="jxgbox1" class="jxgbox" style="width:50%; height:300px;"></div>
+
+<script>
+var board = JXG.JSXGraph.initBoard('jxgbox1', {
+        boundingbox: [-1, 5, 5, -1],
+        axis:true,
+        keepAspectRatio: true,
+        
+        defaultAxes: {
+            y: { ticks: { visible: true, majorHeight: 5,insertTicks: false, minorTicks:0, ticksDistance: 1 } }, //hides grid
+            x: { ticks: { visible: true, majorHeight: 5, insertTicks: false, minorTicks:0, ticksDistance: 1} }
+        }
+        });
+var linea = board.create('line', [[0,0],[2,1]], {strokeColor:'blue', strokeWidth:2, fixed:true, highlight:false});
+var p = board.create('point', [4, 1], {name:'v', label:{autoPosition: true, offset:[10, 10]}} );
+var vector = board.create('arrow',[[0,0],p]);
+
+var pp = board.create('orthogonalprojection', [p, linea], {name:"p_U(v)", label:{autoPosition: true, offset:[10, 10]}, color:'none', highlightStrokeColor:'none', highlightFillColor:'none'} );
+var vectorpp = board.create('arrow',[[0,0],pp], {name:'\(p_U(v)\)' });
+</script>
+
+
 ### Teorema de Pitágoras
 
 Nótese que si $\mathbf{u}$ y $\mathbf{v}$ son ortogonales, entonces 
@@ -339,6 +363,31 @@ $$
 $$
 
 dándose la igualdad para $\mathbf{u}=p_U(\mathbf{v}).$
+
+En la siguiente figura, retomamos el ejemplo anterior y observamos cómo varía la distancia entre el vector $\mathbf{v}$ y un vector $\mathbf{u}$ del espacio vectorial $U$. 
+
+<div id="jxgbox2" class="jxgbox" style="width:50%; height:300px;"></div>
+
+<script>
+var board2 = JXG.JSXGraph.initBoard('jxgbox2', {
+        boundingbox: [-1, 5, 5, -1],
+        axis:true,
+        keepAspectRatio: true,
+        
+        defaultAxes: {
+            y: { ticks: { visible: true, majorHeight: 5,insertTicks: false, minorTicks:0, ticksDistance: 1 } }, //hides grid
+            x: { ticks: { visible: true, majorHeight: 5, insertTicks: false, minorTicks:0, ticksDistance: 1} }
+        }
+        });
+var linea2 = board2.create('line', [[0,0],[2,1]], {strokeColor:'blue', strokeWidth:2, fixed:true, highlight:false});
+var p2 = board2.create('point', [4, 1], {name:'v', label:{offset:[-10, -20]}, fixed:true,color:'none', highlightStrokeColor:'none', highlightFillColor:'none'} );
+var vector2 = board2.create('arrow',[[0,0],p2],{highlight:false});
+var u = board2.create('glider', [2, 1,linea2], {name:'u', label:{autoPosition: true, offset:[10, 10]}} );
+var vectoru = board2.create('arrow',[[0,0],u],{highlight:false});
+var pp2 = board2.create('orthogonalprojection', [p2, linea2], {name:"p_U(v)", label:{offset:[-10, -20]}, color:'none', highlightStrokeColor:'none', highlightFillColor:'none'} );
+var vectorpp2 = board2.create('arrow',[[0,0],pp2], {name:'\(p_U(v)\)', highlight:false });
+board2.create('text',[1,3,function(){return "|| v-u || ="+ Math.sqrt(((u.X()-p2.X())**2+(u.Y()-p2.Y())**2)).toFixed(2) + " " }],{fontSize:14})
+</script>
 
 ###### $\to$ [Ejemplo Merino-Santos](https://www.ugr.es/~lmerino/3-3.html) 
 

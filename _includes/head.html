@@ -43,28 +43,29 @@
 
 <!-- Mathjax-->
 
+
 <script type="text/x-mathjax-config">
-  var font = "Neo-Euler";
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [['$','$'],  ['\\(', '\\)']],
       displayMath: [['\\[','\\]']],
       processEscapes: true,
     },
-    "SVG":{ 
-      font:font
-    },
     "HTML-CSS": {
-      webFont: font,
-      imageFont: font,
-      preferredFont: font,
+      webFont: "Neo-Euler",
+      imageFont: null,
+      preferredFont: null,
       availableFonts: [],
-      scale: 85,
-      mtextFontInherit: true
+      scale: 85
     }
   }); 
 </script> 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!--<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
 
 
 <!--KaTex
@@ -94,6 +95,12 @@
 <!--GeoGebra-->
 
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+<!-- jsxgraph -->
+
+<link href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js" type="text/javascript" charset="UTF-8"></script>
+
 
 </head>
 
