@@ -7,7 +7,6 @@ title: Inversas generalizadas
 
 Este guión se basa en los libros [L. Merino, E. Santos, [Álgebra Lineal con Métodos Elementales](https://www.amazon.es/%C3%81lgebra-lineal-m%C3%A9todos-elementales-GONZALEZ/dp/8497324811)] y [I. Ojeda, J. Gago, [Métodos matemáticos para la Estadística](https://publicauex.unex.es/libro/metodos-matematicos-para-estadistica_135467/)].
 
-
 ## Motivación
 
 Supongamos que el sistema $Ax=b$ no tiene solución (sistema incompatible). Pretendemos buscar un $y$ de forma que $Ax=y$ si tenga solución y de forma que $y$ sea lo más "cercano" posible a $b.$
@@ -118,6 +117,8 @@ $$
 
 por lo que $A^D=A^t(AA^t)^{-1}$ es una inversa a la derecha de $A$: $AA^D=I_m.$
 
+Supongamos ahora que $A$ tiene una inversa a la derecha a la que denotamos por $B$: $AB=I_m$. Dado $b\in K^m,$ tenemos que $ABb=Ib=b,$ por lo que el sistema $Ax=b$ tiene solución $x=Bb$. Esto prueba que $\operatorname{C}(A)=\{ Ax : x\in K^n\}= K^m.$ Por tanto, $\dim(\operatorname{F}(A))=\operatorname{rg}(A)=m$, y $A$ es de rango pleno por filas.
+
 Por otro lado, $A^tA\in\mathcal{M}_n(K),$ y de nuevo $\operatorname{rg}(A^tA)=\operatorname{rg}(A).$ Así, $A^tA$ tendrá inversa si y sólo si $\operatorname{rg}(A)=n,$ y esto sólo ocurre si $A$ es de rango pleno por columnas. En esta situación
 
 $$
@@ -125,6 +126,8 @@ $$
 $$
 
 y de esta forma $A^I=(A^tA)^{-1}A^t$ es una inversa a la izquierda de A: $A^IA=I_n.$
+
+Si $A$ tiene inversa a la izquierda, entonces existe $B$ tal que $BA=I_n.$ Supongamos que $x\in K^n$ verifica que $Ax=0$. Entonces, $BAx=x=BAx=B0=0,$ por lo que $x=0$. Esto quiere decir que el núcleo de $A$ es trivial, y por tanto $n=0+\operatorname{rg}(A)$, lo que implica que $A$ es de rango pleno por columnas.
 
 ### Teorema de existencia de inversas a izquierda y a derecha
 
