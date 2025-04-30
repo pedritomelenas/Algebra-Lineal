@@ -9,7 +9,7 @@ Este guión se basa en los libros [L. Merino, E. Santos, [Álgebra Lineal con M�
 
 ## Motivación
 
-Supongamos que el sistema $Ax=b$ no tiene solución (sistema incompatible). Pretendemos buscar un $y$ de forma que $Ax=y$ si tenga solución y de forma que $y$ sea lo más "cercano" posible a $b.$
+Supongamos que el sistema $Ax=b$ no tiene solución (sistema incompatible). Pretendemos buscar un $y$ de forma que $Ax=y$ si tenga solución y de forma que $y$ sea lo más "cercano" posible a $b.$ Esto es, intentamos minimizar $\Vert Ax-b\Vert$ con $x\in K^n.$
 
 Si la matriz $A\in \mathcal{M}_{m\times n}(K),$ el conjunto $U=\lbrace Ax : x \in K^n\rbrace$ es un subespacio vectorial de $K^m$ generado por las columnas de $A.$ Por el teorema de mejor aproximación, $p_U(b)$ (la proyección ortogonal de $b$ en $U$) es el elemento de $U$ más cercano a $b.$ Por tanto, existe un $z\in K^n$ tal que $Az=p_U(b).$
 
