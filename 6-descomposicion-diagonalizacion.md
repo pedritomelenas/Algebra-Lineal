@@ -3,6 +3,8 @@ layout: page
 title: Inversas generalizadas
 ---
 
+<!-- LTeX: language=es -->
+
 # Inversas generalizadas. Mínimos cuadrados
 
 Este guión se basa en los libros [L. Merino, E. Santos, [Álgebra Lineal con Métodos Elementales](https://www.amazon.es/%C3%81lgebra-lineal-m%C3%A9todos-elementales-GONZALEZ/dp/8497324811)] y [I. Ojeda, J. Gago, [Métodos matemáticos para la Estadística](https://publicauex.unex.es/libro/metodos-matematicos-para-estadistica_135467/)].
@@ -79,7 +81,16 @@ $$
 \begin{pmatrix}3 & 3\\3 & 5\end{pmatrix} \begin{pmatrix} \alpha\\ \beta\end{pmatrix} = \begin{pmatrix} 6 \\ 7 \end{pmatrix},
 $$
 
-tiene solución (única) $\alpha=3/2,$ $\beta=1/2.$ Así, la recta $y=\frac{3}2+\frac{1}2 x$ es la que verifica que al evaluar $x$ en $0,$ $1$ y $2$ proporciona los valores más cercanos a $1,$ $3$ y $2$ (y son $3/2,$ $2$ y $5/2$). 
+tiene solución (única) $\alpha=3/2,$ $\beta=1/2.$ <!--Así, la recta $y=\frac{3}2+\frac{1}2 x$ es la que verifica que al evaluar $x$ en $0,$ $1$ y $2$ proporciona los valores más cercanos a $1,$ $3$ y $2$ (y son $3/2,$ $2$ y $5/2$). --> 
+Tenemos por tanto que la solución $z=(3/2,1/2)$ minimiza $\Vert A \binom{\alpha}{\beta}- b\Vert$ con $(\alpha,\beta)\in \mathbb{R}^2.$ 
+
+Consideremos el polinomio $p(x)=\alpha + \beta x.$ Entonces, $p(0)=\alpha$, $p(1)=\alpha + \beta$ y $p(2)=\alpha + 2\beta.$ Así, 
+
+$$
+\left\Vert A \binom{\alpha}{\beta}- b\right\Vert^2 = \Vert (p(0), p(1), p(2))-(1,3,2)\Vert^2 = (p(0)-1)^2+(p(1)-3)^2+(p(2)-2)^2.
+$$ 
+
+Si llamamos $x_1=0$, $x_2=1$ y $x_3=2$, e $y_1=1$, $y_2=3$ y $y_3=2$, tenemos que el polinomio $3/2+1/2 x$ minimiza $\sum_{i=1}^3 (p(x_i)-y_i)^2$ con $p(x)$ un polinomio de grado uno con coeficientes reales.
 
 ## Espacios de filas y columnas de $A^tA$
 
@@ -103,13 +114,13 @@ Dada una matriz $A.$
 
 1. $\operatorname{F}(A^tA)=\operatorname{F}(A).$
 1. $\operatorname{C}(A^tA)=\operatorname{C}(A^t).$
-3. $\operatorname{rg}(A^tA)=\operatorname{rg}(AA^t)=\operatorname{rg}(A).$
+3. $\operatorname{rg}(A^tA)=\operatorname{rg}(A)=\operatorname{rg}(A^t)=\operatorname{rg}(AA^t).$
 
 ## Inversas a izquierda y a derecha de una matriz
 
 Dada una matriz $A\in \mathcal{M}_{m\times n}(K),$ decimos que es de *rango pleno por filas* si $\dim(\operatorname{F}(A))=m,$ y es de *rango pleno por columnas* si $\dim(\operatorname{C}(A))=n.$ Nótese que $\operatorname{rg}(A)=\dim(\operatorname{F}(A))=\dim(\operatorname{C}(A)).$ Por tanto, $A$ es de rango pleno por filas si y sólo si $\operatorname{rg}(A)=m,$ y $A$ es de rango pleno por columnas si y sólo si $\operatorname{rg}(A)=n.$
 
-Nótese que $AA^t\in \mathcal{M}_m(K),$ y $\operatorname{rg}(AA^t)=\operatorname{rg}(A).$ Por tanto, $AA^t$ es invertible si y sólo si $\operatorname{rg}(A)=m,$ lo que equivale a que $A$ sea de rango pleno por filas. En este caso
+Sabemos que $AA^t\in \mathcal{M}_m(K)$ y $\operatorname{rg}(AA^t)=\operatorname{rg}(A).$ Por tanto, $AA^t$ es invertible si y sólo si $\operatorname{rg}(A)=m,$ lo que equivale a que $A$ sea de rango pleno por filas. En este caso
 
 $$
 A(A^t(AA^t)^{-1})=(AA^t)(AA^t)^{-1}=I_m,
@@ -117,7 +128,7 @@ $$
 
 por lo que $A^D=A^t(AA^t)^{-1}$ es una inversa a la derecha de $A$: $AA^D=I_m.$
 
-Supongamos ahora que $A$ tiene una inversa a la derecha a la que denotamos por $B$: $AB=I_m$. Dado $b\in K^m,$ tenemos que $ABb=Ib=b,$ por lo que el sistema $Ax=b$ tiene solución $x=Bb$. Esto prueba que $\operatorname{C}(A)=\lbrace Ax : x\in K^n\rbrace= K^m.$ Por tanto, $\dim(\operatorname{F}(A))=\operatorname{rg}(A)=m$, y $A$ es de rango pleno por filas.
+Supongamos ahora que $A$ tiene una inversa a la derecha a la que denotamos por $B$: $AB=I_m$. Dado $b\in K^m,$ tenemos que $ABb=Ib=b,$ por lo que el sistema $Ax=b$ tiene solución $x=Bb$. Esto prueba que $\operatorname{C}(A)=\lbrace Ax : x\in K^n\rbrace= K^m.$ Por tanto, $\dim(\operatorname{C}(A))=m=\operatorname{rg}(A)$, y $A$ es de rango pleno por filas.
 
 Por otro lado, $A^tA\in\mathcal{M}_n(K),$ y de nuevo $\operatorname{rg}(A^tA)=\operatorname{rg}(A).$ Así, $A^tA$ tendrá inversa si y sólo si $\operatorname{rg}(A)=n,$ y esto sólo ocurre si $A$ es de rango pleno por columnas. En esta situación
 
@@ -129,7 +140,7 @@ y de esta forma $A^I=(A^tA)^{-1}A^t$ es una inversa a la izquierda de A: $A^IA=I
 
 Si $A$ tiene inversa a la izquierda, entonces existe $B$ tal que $BA=I_n.$ Supongamos que $x\in K^n$ verifica que $Ax=0$. Entonces, $BAx=x=BAx=B0=0,$ por lo que $x=0$. Esto quiere decir que el núcleo de $A$ es trivial, y por tanto $n=0+\operatorname{rg}(A)$, lo que implica que $A$ es de rango pleno por columnas.
 
-Acabmos de probar el siguiente resultado.
+Acabamos de probar el siguiente resultado.
 
 ### Teorema de existencia de inversas a izquierda y a derecha
 
