@@ -120,6 +120,16 @@ Dada una matriz $A.$
 
 Dada una matriz $A\in \mathcal{M}_{m\times n}(K),$ decimos que es de *rango pleno por filas* si $\dim(\operatorname{F}(A))=m,$ y es de *rango pleno por columnas* si $\dim(\operatorname{C}(A))=n.$ Nótese que $\operatorname{rg}(A)=\dim(\operatorname{F}(A))=\dim(\operatorname{C}(A)).$ Por tanto, $A$ es de rango pleno por filas si y sólo si $\operatorname{rg}(A)=m,$ y $A$ es de rango pleno por columnas si y sólo si $\operatorname{rg}(A)=n.$
 
+
+### Observación
+
+Sea $f: V\to V'$ una aplicación lineal con matriz asociada $A$ respecto de unas bases dadas en $V$ y $V'.$ 
+
+- Sabemos que $f$ es sobreyectiva si y sólo si $\operatorname{Im}(f)=V'.$ Esto ocurre si y sólo si $A$ es de rango pleno por filas. Por tanto, $f$ es sobreyectiva si y sólo si $A$ tiene una inversa a la derecha.
+
+- Para que $f$ sea inyectiva, su núcleo tiene que ser trivial. Sabemos que $\dim(V)=n=\dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f)).$ Así $f$ es inyectiva si y sólo si $n=\dim(\operatorname{Im}(f))=\dim(\operatorname{C}(A)),$ por lo que esto equivale a que $A$ sea de rango pleno por columnas. Así, $f$ es inyectiva si y sólo si $A$ tiene una inversa por la izquierda.
+
+
 Sabemos que $AA^t\in \mathcal{M}_m(K)$ y $\operatorname{rg}(AA^t)=\operatorname{rg}(A).$ Por tanto, $AA^t$ es invertible si y sólo si $\operatorname{rg}(A)=m,$ lo que equivale a que $A$ sea de rango pleno por filas. En este caso
 
 $$
@@ -179,15 +189,6 @@ show((A.T*A)^(-1))
 show((A.T*A)^(-1)*A.T)
 </script>
 </div>  
-
-
-### Observación
-
-Sea $f: V\to V'$ una aplicación lineal con matriz asociada $A$ respecto de unas bases dadas en $V$ y $V'.$ 
-
-- Sabemos que $f$ es sobreyectiva si y sólo si $\operatorname{Im}(f)=V'.$ Esto ocurre si y sólo si $A$ es de rango pleno por filas. Por tanto, $f$ es sobreyectiva si y sólo si $A$ tiene una inversa a la derecha.
-
-- Para que $f$ sea inyectiva, su núcleo tiene que ser trivial. Sabemos que $\dim(V)=n=\dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f)).$ Así $f$ es inyectiva si y sólo si $n=\dim(\operatorname{Im}(f))=\dim(\operatorname{C}(A)),$ por lo que esto equivale a que $A$ sea de rango pleno por columnas. Así, $f$ es inyectiva si y sólo si $A$ tiene una inversa por la izquierda.
 
 ## Factorizaciones de rango pleno
 
