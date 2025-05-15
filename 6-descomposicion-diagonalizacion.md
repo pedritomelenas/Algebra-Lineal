@@ -565,7 +565,7 @@ $$
 \Vert x\Vert ^2 = \Vert A^+b\Vert ^2 +\Vert z\Vert ^2\ge \Vert A^+b\Vert ^2,
 $$
 
-con lo que queda probado que $A^+$ es la solución mínimo-cuadrática de norma mínima.
+con lo que queda probado que $A^+b$ es la solución mínimo-cuadrática de norma mínima.
 
 ## Descomposición por valores singulares
 
