@@ -499,7 +499,12 @@ $$
 
 Por ser $C$ de rango pleno for columnas, la única solución mínimo-cuadrática de $Cy=b$ es $y=C^Ib.$ Por otro lado $F$ es de rango pleno por filas, por lo que la solución de norma mínima de $Fx=C^Ib$ es $x=F^DC^Ib= A^+b.$
 
-Veamos que efectivamente $A^+b$ es la solución mínimo cuadrática de norma mínima del sistema $Ax=b.$ Para ello escribimos $Ax-b=Ax-AA^+b+AA^+b-b=A(x-A^+b)+(I-AA^+)(-b).$
+Veamos que efectivamente $A^+b$ es la solución mínimo cuadrática de norma mínima del sistema $Ax=b.$ Para ello tenemos que comprobar
+
+- $\Vert AA^+b-b\Vert \le \Vert Ax-b\Vert$ para todo $x\in K^n,$ (solución mínimo cuadrática de $Ax=b$), y
+- $\Vert A^+b\Vert \le \Vert x\Vert$ para todo $x$ con $\Vert Ax-b\Vert = \Vert A(A^+b)-b\Vert.$
+
+Empezamos escribiendo $Ax-b=Ax-AA^+b+AA^+b-b=A(x-A^+b)+(I-AA^+)(-b).$
 
 Comprobemos que $A(x-A^+b)$ y $(I-AA^+)(-b)$ son ortogonales (usaremos que $(A^+)^t=(A^t)^+$).
 
