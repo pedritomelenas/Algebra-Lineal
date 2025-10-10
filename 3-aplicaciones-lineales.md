@@ -352,6 +352,55 @@ En adelante, $A$ representará una matriz cuadrada de orden $n\times n$ sobre un
 
 Un elemento $\lambda\in K$ es un *valor propio* de $A$ si existe $\mathbf{v}\in K^n\setminus\lbrace (0,\ldots,0)\rbrace$ tal que $A\mathbf{v}=\lambda \mathbf{v}.$ En tal caso diremos que $\mathbf{v}$ es un *vector propio* asociado al valor propio $\lambda.$
 
+
+### Ejemplo
+
+Sea 
+
+$$
+A=\left(\begin{array}{rr}\frac{1}{2} & - \frac{3}{2}\\ -\frac{3}{2} & \frac{1}{2}\end{array}\right).
+$$
+
+En la siguiente figura se muestra el vector $v$ en azul y su imagen $w=Av$ en verde. En rojo está representado el subsepacio generado por $v$ (una recta). Cuando el vector $v$ está "cerca" de ser un vector propio, la flecha que lo representa se hace más gruesa. Puedes mover el vector $v$ pulsando en la punta del vector y arrastrando el ratón.
+
+<div id="jxgbox" class="jxgbox" style="max-width:40%; aspect-ratio:1/1">
+</div>
+
+
+<script>
+// Enable MathJax for all JSXGraph elements!
+// Use '\\( ... \\)' or '\\[ ... \\]` for LaTeX math text
+JXG.Options.text.useMathJax = true;
+
+const board = JXG.JSXGraph.initBoard('jxgbox', {
+    boundingbox: [-5, 5, 5, -5],
+    axis: true,
+    pan: { enabled: true },      // Disable pan for 3D view
+    zoom: { enabled: true }      // Disable zoom for 3D view
+});
+
+const err = 0.05;
+
+const cero = board.create('point', [0, 0], { name: 'O', size: 3, color: 'none', fixed: true });
+
+let p1 = board.create('point', [2, 3], { name: 'v', size: 3, color: 'none' });
+
+const l1 = board.create('line', [cero, p1], { strokeColor: 'red', strokeWidth: 1, name: 'L' });
+
+//when p1 is close to be an eigenvector, we make it fat
+let v1 = board.create('arrow', [cero, p1], { strokeColor: 'blue', strokeWidth: ()=> (Math.abs((p1.X()-p1.Y())/Math.sqrt(2)) < err) || (Math.abs((p1.X()+p1.Y())/Math.sqrt(2)) < err) ? 5: 2, name: 'v' });
+
+// p2 is the image of p1 by the linear transformation given by the matrix 
+// [[ 1/2, -3/2],
+//  [-3/2,  1/2]]
+let p2 = board.create('point', [()=>1/2*p1.X()-3/2*p1.Y(), ()=>-3/2*p1.X()+1/2*p1.Y()], { name: 'w', size: 3, color: 'none', fixed: true });
+
+const v2 = board.create('arrow', [cero, p2], { strokeColor: 'green', strokeWidth: 2, name: 'w' });
+
+</script>
+
+Este ejemplo está basado en una demostración de [Andreas Maurischat](https://jsxgraph.org/conf2025/program/maurischat/).
+
 ### Teorema de caracterización de los valores propios 
 
 Sea $A\in \mathcal{M}_{n}(K),$ con $K$ un cuerpo y $n$ un entero positivo.  Un elemento $\lambda \in K$ es un valor propio de $A$ si y sólo si
