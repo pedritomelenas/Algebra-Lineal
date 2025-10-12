@@ -354,6 +354,7 @@ Un elemento $\lambda\in K$ es un *valor propio* de $A$ si existe $\mathbf{v}\in 
 
 
 ### Ejemplo
+{: #ejemplo-interactivo-vectores-propios}
 
 Sea 
 
@@ -396,6 +397,8 @@ let v1 = board.create('arrow', [cero, p1], { strokeColor: 'blue', strokeWidth: (
 let p2 = board.create('point', [()=>1/2*p1.X()-3/2*p1.Y(), ()=>-3/2*p1.X()+1/2*p1.Y()], { name: 'w', size: 3, color: 'none', fixed: true });
 
 const v2 = board.create('arrow', [cero, p2], { strokeColor: 'green', strokeWidth: 2, name: 'w' });
+
+let text1 = board.create('text', [1, 4.5, 'vector propio'], { visible:  ()=> (Math.abs((p1.X()-p1.Y())/Math.sqrt(2)) < err) || (Math.abs((p1.X()+p1.Y())/Math.sqrt(2)) < err)});
 
 </script>
 
