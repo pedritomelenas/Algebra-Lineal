@@ -384,7 +384,13 @@ const err = 0.05;
 
 const cero = board.create('point', [0, 0], { name: 'O', size: 3, color: 'none', fixed: true });
 
-let p1 = board.create('point', [2, 3], { name: 'v', size: 3, color: 'none' });
+const vp1 = board.create('point',[1,1], {fixed: true, visible: false});
+const vp2 = board.create('point',[1,-1], {fixed: true, visible: false});
+
+const el1 = board.create('line', [cero, vp1], {fixed:true, visible: false});
+const el2 = board.create('line', [cero, vp2], {fixed:true, visible: false});
+
+let p1 = board.create('point', [2, 3], { name: 'v', size: 3, color: 'none', attractorDistance: err, attractors:[ el1, el2] });
 
 const l1 = board.create('line', [cero, p1], { strokeColor: 'red', strokeWidth: 1, name: 'L' });
 
