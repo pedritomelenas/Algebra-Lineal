@@ -3,6 +3,8 @@ layout: page
 title: Aplicaciones lineales
 ---
 
+<!--LTeX: language=es-->
+
 # Aplicaciones lineales
 
 *Este guión está basado en los guiones de [ALEM](https://www.ugr.es/~pedro/alem/).*
