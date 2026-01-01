@@ -412,7 +412,7 @@ function mostrar(){
 
 //let text1 = board.create('text', [1, 4.5, 'vector propio'], { visible:  ()=> mostrar() });
 
-let text = board.create("text", [1, 4, ()=> mostrar() ? '\\(A v = ' + ((Math.abs(p1.X()/p2.X()-0.5)<err)?'\\frac{1}2':'-') + 'v\\)' :'\\( A \\begin{pmatrix}' + p1.X().toFixed(2) +'\\\\' + p1.Y().toFixed(2) + '\\end{pmatrix} = \\begin{pmatrix}' + p2.X().toFixed(2) + '\\\\' + p2.Y().toFixed(2) + '\\end{pmatrix} \\)'],{fontSize: 16, color: 'black',highlight: false, fixed: true });
+let text = board.create("text", [1, 4, ()=> mostrar() ? '\\(A v = ' + ((Math.abs(p1.X()-0.5*p2.X())<err)?'\\frac{1}2':'-') + 'v\\)' :'\\( A \\begin{pmatrix}' + p1.X().toFixed(2) +'\\\\' + p1.Y().toFixed(2) + '\\end{pmatrix} = \\begin{pmatrix}' + p2.X().toFixed(2) + '\\\\' + p2.Y().toFixed(2) + '\\end{pmatrix} \\)'],{fontSize: 16, color: 'black',highlight: false, fixed: true });
 
 </script>
 
