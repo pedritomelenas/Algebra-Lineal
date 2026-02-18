@@ -72,11 +72,11 @@ $$
 
 Una matrix $A=(a _ {ij})\in \mathcal{M} _ {n\times n}(K)$ decimos que es *triangular superior* si $a_{ij}=0$ para $i>j$, y decimos que es *triangular inferior* si $a_{ij}=0$ para $i < j.$ Si la matriz es cuadrada, a los elementos $a_{ii}$ se les conoce como elementos de la diagonal. La matriz es diagonal si $a_{ij}=0$ siempre que $i\neq j.$
 
-El pivote de la fila $i$-ésima de A, si ésta tiene alguna entrada distinta de cero, es la primera entrada no nula de dicha fila, a saber, es $a_{ij}\neq 0$ con $j$ mínimo verificando esa condición. 
+El *pivote* de la fila $i$-ésima de A, si ésta tiene alguna entrada distinta de cero, es la primera entrada no nula de dicha fila, a saber, es $a_{ij}\neq 0$ con $j$ mínimo verificando esa condición. 
 
 Decimos que $A$ está en *forma normal o escalonada* por filas (de forma análoga se define por columnas) si 
 
-- todas las filas nulas (todas las entradas son ceros) están debajo de las que tienen entradas no nulas.
+- todas las filas nulas (todas sus entradas son ceros) están debajo de las que tienen entradas no nulas.
 
 - si $a_{ij}$ y $a_{kl}$ son los pivotes de la fila $i$-ésima y $k$-ésima, respectivamente, con $i< k$, entonces $j< l.$
 
@@ -128,7 +128,7 @@ Llamamos $E _ {ij}\in \mathcal{M} _ n(K)$ a la matriz que se obtiene al intercam
 
 Sea ahora $E_i(k)\in \mathcal{M} _ n(K)$ la matriz que se obtiene al multiplicar la fila $i$-ésima de la matriz identidad por $k\in K$, $k\neq 0.$ Multiplicar la fila $i$-ésima de $A$ por $k$ es lo mismo que calcular $E_i(k)A.$ Se tiene que $E_{i}(k)^{-1}=E_i(1/k).$
 
-La matriz $E_{ij}(k)$ es la matriz que se obtiene sumando a la fila $i$-ésima de la identidad la fila $j$-ésima multiplicada por $k.$ Así, para sumarle a la fila $i$-ésima de $A$ la fila $j$-ésima multiplicada por $k$, calculamos $E_{ij}(k)\times A.$ Tenemos además que $E_{ij}(k)^{-1}=E_{ij}(-k).$
+La matriz $E_{ij}(k)$ es la matriz que se obtiene sumando a la fila $i$-ésima de la matriz identidad la fila $j$-ésima multiplicada por $k.$ Así, para sumarle a la fila $i$-ésima de $A$ la fila $j$-ésima multiplicada por $k$, calculamos $E_{ij}(k)\times A.$ Tenemos además que $E_{ij}(k)^{-1}=E_{ij}(-k).$
 
 A las matrices de la forma $E_{ij}$, $E_i(k)$, $k\neq 0$, y $E_{ij}(k)$ se les llama *matrices elementales*. 
 
