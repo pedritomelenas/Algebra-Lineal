@@ -503,7 +503,7 @@ $$
 
 Su polinomio característico es $p_A(x)= x^{4} - 2 x^{2} + 1,$ cuyas raíces son $1$ y $-1$ con multiplicidad $2.$
 
-Por un lado $V(1)=\operatorname{N}(A-I)=\mathcal{L}(\lbrace (1,0,-2,0),(3,-4,0,-2)\rbrace)$ y $V(-1)=\operatorname{N}(A+I)=\mathcal{L}(\lbrace (0,0,1,-1)\rbrace).$ Por tanto $A$ no es diagonalizable, pues la multiplicidad algebraica de $-1$ es $2,$ mientras que la geométrica es $1.$ 
+Por un lado $V(1)=\operatorname{N}(A+I)=\mathcal{L}(\lbrace (1,0,-2,0),(3,-4,0,-2)\rbrace)$ y $V(-1)=\operatorname{N}(A+I)=\mathcal{L}(\lbrace (0,0,1,-1)\rbrace).$ Por tanto $A$ no es diagonalizable, pues la multiplicidad algebraica de $-1$ es $2,$ mientras que la geométrica es $1.$ 
 
 Nos falta un vector, que lo buscamos en $\operatorname{N}(A+I)^2=\mathcal{L}(\lbrace (0,0,1,0),(0,0,0,1)\rbrace).$ Tenemos pues que $(A+I)^2(0,0,0,1)^t=(0,0,0,0),$ por lo que $(A+I)(0,0,0,1)^t\in \operatorname{N}(A+I).$ Si tomamos $u_2=(0,0,0,1)\not\in \operatorname{N}(A+I)$ y $u_1=(A+I)u_2=(0,0,1,-1)\in \operatorname{N}(A+I),$ tenemos que $A u_1=-u_1$ y $A u_2=u_1-u_2.$ 
 
