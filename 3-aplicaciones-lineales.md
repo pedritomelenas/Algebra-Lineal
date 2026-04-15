@@ -48,7 +48,7 @@ Sea $f:V\to V'$ una aplicación lineal entre los espacios vectoriales $V$ y $V'.
 
 ## Expresión matricial una aplicación lineal
 
-Sea $f:V\to V'$ una aplicación lineal, y $B=\lbrace\mathbf{v}_1,\ldots, \mathbf{v}_n\rbrace$ y $B'=\lbrace\mathbf{v}_1',\ldots, \mathbf{v}_m'\rbrace$ bases de $V$ y $V',$ respectivamente. Sean $\mathbf{x}=x_1\mathbf{v}_1+\cdots+ x_n \mathbf{v}_n$ y $f(\mathbf{x})=x_1'\mathbf{v}_1'+\cdots + x_m'\mathbf{v}_m\in V'.$ Queremos estudiar la relación que existe entre las coordenadas de $\mathbf{x}$ y $f(\mathbf{x})$ en $B$ y $B',$ respectivamente.
+Sea $f:V\to V'$ una aplicación lineal, y $B=\lbrace\mathbf{v}_1,\ldots, \mathbf{v}_n\rbrace$ y $B'=\lbrace\mathbf{v}_1',\ldots, \mathbf{v}_m'\rbrace$ bases de $V$ y $V',$ respectivamente. Sean $\mathbf{x}=x_1\mathbf{v}_1+\cdots+ x_n \mathbf{v}_n$ y $f(\mathbf{x})=x_1'\mathbf{v}_1'+\cdots + x_m'\mathbf{v}_m'\in V'.$ Queremos estudiar la relación que existe entre las coordenadas de $\mathbf{x}$ y $f(\mathbf{x})$ en $B$ y $B',$ respectivamente.
 
 Supongamos que 
 
