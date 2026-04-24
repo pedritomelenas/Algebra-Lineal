@@ -395,7 +395,7 @@ $$\bar{A}=
     \alpha_{11} & \alpha_{12} & \ldots & \alpha_{1n}\\
     \alpha_{21} & \alpha_{22} & \ldots & \alpha_{2n}\\
     \vdots & \vdots & \ddots & \vdots \\
-    \alpha_{m1} & a_{m2} & \ldots & \alpha_{nn}
+    \alpha_{n1} & a_{n2} & \ldots & \alpha_{nn}
    \end{pmatrix}.
 $$
  
