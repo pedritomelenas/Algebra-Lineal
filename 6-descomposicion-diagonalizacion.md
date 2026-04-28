@@ -125,9 +125,9 @@ Dada una matriz $A\in \mathcal{M}_{m\times n}(K),$ decimos que es de *rango plen
 
 Sea $f: V\to V'$ una aplicación lineal con matriz asociada $A$ respecto de unas bases dadas en $V$ y $V'.$ 
 
-- Sabemos que $f$ es sobreyectiva si y sólo si $\operatorname{Im}(f)=V'.$ Esto ocurre si y sólo si $A$ es de rango pleno por filas. Por tanto, $f$ es sobreyectiva si y sólo si $A$ tiene una inversa a la derecha.
+- Sabemos que $f$ es sobreyectiva si y sólo si $\operatorname{Im}(f)=V'.$ Esto ocurre si y sólo si $A$ es de rango pleno por filas. 
 
-- Para que $f$ sea inyectiva, su núcleo tiene que ser trivial. Sabemos que $\dim(V)=n=\dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f)).$ Así $f$ es inyectiva si y sólo si $n=\dim(\operatorname{Im}(f))=\dim(\operatorname{C}(A)),$ por lo que esto equivale a que $A$ sea de rango pleno por columnas. Así, $f$ es inyectiva si y sólo si $A$ tiene una inversa por la izquierda.
+- Para que $f$ sea inyectiva, su núcleo tiene que ser trivial. Sabemos que $\dim(V)=n=\dim(\operatorname{N}(f))+\dim(\operatorname{Im}(f)).$ Así $f$ es inyectiva si y sólo si $n=\dim(\operatorname{Im}(f))=\dim(\operatorname{C}(A)),$ por lo que esto equivale a que $A$ sea de rango pleno por columnas. 
 
 
 Sabemos que $AA^t\in \mathcal{M}_m(K)$ y $\operatorname{rg}(AA^t)=\operatorname{rg}(A).$ Por tanto, $AA^t$ es invertible si y sólo si $\operatorname{rg}(A)=m,$ lo que equivale a que $A$ sea de rango pleno por filas. En este caso
